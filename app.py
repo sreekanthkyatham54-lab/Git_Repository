@@ -182,38 +182,63 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
-# Real nav buttons — hidden visually, triggered by clicks
-# Use a simple column row of minimal buttons for actual navigation
-nav_cols = st.columns(len(pages) + 1)
-for i, p in enumerate(pages):
-    with nav_cols[i]:
-        # Style these buttons to be invisible — they're just the click targets
-        st.markdown(f"""<style>
-        div[data-testid="stHorizontalBlock"]:nth-of-type(1) > div:nth-child({i+1}) button {{
-            opacity:0!important;height:1px!important;padding:0!important;
-            margin:0!important;min-height:0!important;font-size:0!important;
-            pointer-events:none!important;
-        }}
-        </style>""", unsafe_allow_html=True)
-        st.button(p, key=f"nav_{p}", on_click=lambda p=p: st.session_state.update(current_page=p))
+# Nav buttons: real st.buttons styled to look like the HTML nav links above
+# Hide them visually but keep pointer-events ON so clicks work
+st.markdown(f"""
+<style>
+/* Nav button row — zero height, buttons overlap with HTML nav above */
+div[data-testid="stHorizontalBlock"].ts-nav-btns {{
+    position:relative;
+    margin-top:-60px!important;
+    height:60px!important;
+    background:transparent!important;
+    border:none!important;
+    z-index:10;
+    padding:0 2rem 0 204px!important;
+    gap:0!important;
+}}
+div[data-testid="stHorizontalBlock"].ts-nav-btns > div {{
+    padding:0!important;
+    flex:0 0 auto!important;
+    width:auto!important;
+}}
+/* Make nav buttons transparent but clickable */
+div[data-testid="stHorizontalBlock"].ts-nav-btns .stButton>button {{
+    background:transparent!important;color:transparent!important;
+    border:none!important;border-radius:0!important;box-shadow:none!important;
+    height:60px!important;padding:0 18px!important;min-width:80px!important;
+    font-size:0!important;opacity:0!important;
+    cursor:pointer!important;
+    transition:none!important;transform:none!important;
+}}
+div[data-testid="stHorizontalBlock"].ts-nav-btns .stButton>button:hover{{
+    opacity:0!important;transform:none!important;
+}}
+/* Dark toggle: last col, visible */
+div[data-testid="stHorizontalBlock"].ts-nav-btns > div:last-child .stButton>button {{
+    background:transparent!important;color:{muted}!important;border:none!important;
+    border-radius:6px!important;box-shadow:none!important;font-size:1rem!important;
+    padding:4px 10px!important;height:36px!important;opacity:1!important;
+    position:relative;
+}}
+div[data-testid="stHorizontalBlock"].ts-nav-btns > div:last-child .stButton>button:hover{{
+    background:var(--card2)!important;opacity:1!important;transform:none!important;
+}}
+</style>
+""", unsafe_allow_html=True)
 
-with nav_cols[len(pages)]:
-    dark_icon = "☀️" if dark else "🌙"
-    st.markdown(f"""<style>
-    div[data-testid="stHorizontalBlock"]:nth-of-type(1) > div:last-child button {{
-        background:transparent!important;color:{muted}!important;border:none!important;
-        border-radius:6px!important;box-shadow:none!important;
-        font-size:1.1rem!important;padding:4px 8px!important;
-        position:fixed!important;top:14px!important;right:80px!important;z-index:99999!important;
-        opacity:1!important;height:auto!important;pointer-events:auto!important;
-    }}
-    div[data-testid="stHorizontalBlock"]:nth-of-type(1) > div:last-child button:hover{{
-        background:var(--card2)!important;transform:none!important;opacity:1!important;
-    }}
-    </style>""", unsafe_allow_html=True)
-    if st.button(dark_icon, key="theme_btn"):
-        st.session_state.dark_mode = not st.session_state.dark_mode
-        st.rerun()
+dark_icon = "☀️" if dark else "🌙"
+with st.container():
+    nav_cols = st.columns([1]*len(pages) + [0.4])
+    for i, p in enumerate(pages):
+        with nav_cols[i]:
+            if st.button(f"{icons[p]} {p}", key=f"nav_{p}"):
+                st.session_state.current_page = p
+                st.rerun()
+    with nav_cols[len(pages)]:
+        if st.button(dark_icon, key="theme_btn"):
+            st.session_state.dark_mode = not st.session_state.dark_mode
+            st.rerun()
 
 # ── PAGE CONTENT ──────────────────────────────────────────────────────────────
 st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)

@@ -128,7 +128,12 @@ def render(all_ipos):
             icon = "👤" if msg["role"] == "user" else "🤖"
             st.markdown(f"<div class='{css}'>{icon} {msg['content']}</div>", unsafe_allow_html=True)
 
-        user_input = st.chat_input("Ask about this IPO...", key=f"chat_input_{ipo_id}")
+        ci_col1, ci_col2 = st.columns([5, 1])
+        with ci_col1:
+            typed = st.text_input("", placeholder="Ask about this IPO...", key=f"chat_input_{ipo_id}", label_visibility="collapsed")
+        with ci_col2:
+            send_clicked = st.button("Ask →", key=f"send_{ipo_id}")
+        user_input = typed if send_clicked and typed else None
         question   = user_input or st.session_state[pending_key]
 
         if question:

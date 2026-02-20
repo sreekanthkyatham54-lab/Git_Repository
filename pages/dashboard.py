@@ -130,45 +130,33 @@ def _render_ipo_card(ipo, is_active):
     except:
         open_date_fmt = str(ipo["open_date"])
 
-    # Analyze button rendered as HTML inside the card — eliminates column alignment issues
-    analyze_key = f"analyze_{ipo['id']}"
-    st.markdown(f"""
-    <div class='ipo-card'>
-        <div class='ipo-card-body'>
-            <div style='display:flex;align-items:center;gap:8px;margin-bottom:8px;'>
-                {exchange_badge} {status_badge}
+    # Wrap in a styled container div, Analyze button is real st.button in col2
+    with st.container():
+        c1, c2 = st.columns([11, 2])
+        with c1:
+            st.markdown(f"""
+            <div style='background:var(--card);border:1.5px solid var(--border);border-radius:12px;
+                        padding:20px;transition:border-color 0.2s,box-shadow 0.2s;'>
+                <div style='display:flex;align-items:center;gap:8px;margin-bottom:8px;'>
+                    {exchange_badge} {status_badge}
+                </div>
+                <div style='font-size:1.05rem;font-weight:700;'>{ipo['company']}</div>
+                <div style='font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;margin:4px 0 12px;'>{ipo['sector']}</div>
+                <div style='display:flex;gap:16px;flex-wrap:wrap;margin-top:4px;'>
+                    <div><div style='font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;'>Issue Price</div><div style='font-size:0.9rem;font-weight:600;font-family:monospace;'>₹{ipo['issue_price']}</div></div>
+                    <div><div style='font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;'>Size</div><div style='font-size:0.9rem;font-weight:600;font-family:monospace;'>₹{ipo['issue_size_cr']}Cr</div></div>
+                    <div><div style='font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;'>GMP</div><div class='metric-value {gmp_color}' style='font-size:0.9rem;font-weight:600;font-family:monospace;'>{gmp_sign}₹{ipo['gmp']} ({gmp_sign}{gmp_pct}%)</div></div>
+                    <div><div style='font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;'>Subscribed</div><div class='metric-value {sub_color}' style='font-size:0.9rem;font-weight:600;font-family:monospace;'>{sub_display}</div></div>
+                    <div><div style='font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;'>Opens</div><div style='font-size:0.85rem;font-weight:600;font-family:monospace;'>{open_date_fmt}</div></div>
+                    <div><div style='font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;'>Recommendation</div><div style='margin-top:2px;'>{rec_html}</div></div>
+                </div>
+                <div style='margin-top:12px;font-size:0.83rem;color:var(--muted);line-height:1.5;'>{str(ipo.get("summary",""))[:160]}...</div>
             </div>
-            <div class='ipo-company'>{ipo['company']}</div>
-            <div class='ipo-sector'>{ipo['sector']}</div>
-            <div class='metric-row'>
-                <div class='metric-item'><div class='metric-label'>Issue Price</div><div class='metric-value'>₹{ipo['issue_price']}</div></div>
-                <div class='metric-item'><div class='metric-label'>Size</div><div class='metric-value'>₹{ipo['issue_size_cr']}Cr</div></div>
-                <div class='metric-item'><div class='metric-label'>GMP</div><div class='metric-value {gmp_color}'>{gmp_sign}₹{ipo['gmp']} ({gmp_sign}{gmp_pct}%)</div></div>
-                <div class='metric-item'><div class='metric-label'>Subscribed</div><div class='metric-value {sub_color}'>{sub_display}</div></div>
-                <div class='metric-item'><div class='metric-label'>Opens</div><div class='metric-value' style='font-size:0.82rem;'>{open_date_fmt}</div></div>
-                <div class='metric-item'><div class='metric-label'>Recommendation</div><div style='margin-top:2px;'>{rec_html}</div></div>
-            </div>
-            <div class='ipo-summary'>{str(ipo.get("summary",""))[:160]}...</div>
-        </div>
-        <div class='ipo-card-action'>
-            <button class='analyze-btn' onclick="
-                const btn = document.querySelector('[data-testid=stButton] button[kind]');
-                window.parent.document.querySelectorAll('button').forEach(b => {{
-                    if(b.innerText.includes('{ipo['id']}')) b.click();
-                }});
-            ">Analyze →</button>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Hidden real button for actual navigation (HTML button above triggers via JS fallback)
-    if st.button("→", key=analyze_key, help=f"Analyze {ipo['company']}"):
-        st.session_state.selected_ipo_id = ipo["id"]
-        st.session_state.current_page    = "IPO Detail"
-        st.rerun()
-    # Hide the Streamlit button visually
-    st.markdown(f"""<style>
-    button[data-testid="baseButton-secondary"][kind][aria-label="Analyze {ipo['company']}"] {{
-        display:none!important;
-    }}
-    </style>""", unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
+        with c2:
+            st.markdown("<div style='height:40px'></div>", unsafe_allow_html=True)
+            if st.button("Analyze →", key=f"analyze_{ipo['id']}"):
+                st.session_state.selected_ipo_id = ipo["id"]
+                st.session_state.current_page    = "IPO Detail"
+                st.rerun()
+    st.markdown("<div style='height:14px'></div>", unsafe_allow_html=True)
