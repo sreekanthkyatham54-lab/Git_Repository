@@ -15,6 +15,11 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+# Fix 1: Hide collapse arrow — sidebar always visible
+st.markdown("""<style>
+[data-testid="collapsedControl"] { display: none !important; }
+section[data-testid="stSidebar"] { min-width: 260px !important; max-width: 260px !important; }
+</style>""", unsafe_allow_html=True)
 
 # ── SESSION STATE ─────────────────────────────────────────────────────────────
 if "selected_ipo_id" not in st.session_state:
