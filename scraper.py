@@ -443,10 +443,10 @@ def scrape_historical_ipos() -> list[dict]:
                         "issue_price": issue_price,
                         "listing_price": listing_price,
                         "current_price": current_price,
-                        "gmp_before_listing": 0,
-                        "gmp_predicted_gain": 0.0,
+                        "gmp_before_listing": None,
+                        "gmp_predicted_gain": None,
                         "actual_listing_gain": listing_gain,
-                        "gmp_accurate": False,
+                        "gmp_accurate": None,
                         "sector": "—",
                         "exchange": "BSE SME",
                     })

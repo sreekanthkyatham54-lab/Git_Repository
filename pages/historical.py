@@ -6,23 +6,25 @@ import plotly.express as px
 
 
 def render(historical_ipos):
-    st.markdown("<div class='app-title' style='margin-bottom:8px;'>📜 Historical <span style='color:#00d4aa;'>IPO Data</span></div>", unsafe_allow_html=True)
-    st.markdown("<div class='app-subtitle' style='margin-bottom:24px;'>DID GMP COME TRUE? · LISTING PERFORMANCE · TRACK RECORD</div>", unsafe_allow_html=True)
+    st.markdown("### 📜 Historical IPO Data")
+    st.markdown("<div style='font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px;'>DID GMP COME TRUE? · LISTING PERFORMANCE · TRACK RECORD</div>", unsafe_allow_html=True)
 
-    # Summary stats
+    # Only count IPOs that have GMP accuracy data
+    ipos_with_gmp = [i for i in historical_ipos if i.get("gmp_accurate") is not None]
     total = len(historical_ipos)
-    gmp_accurate = sum(1 for i in historical_ipos if i["gmp_accurate"])
-    positive_listings = sum(1 for i in historical_ipos if i["actual_listing_gain"] > 0)
-    avg_listing_gain = sum(i["actual_listing_gain"] for i in historical_ipos) / total
-    big_winners = sum(1 for i in historical_ipos if i["actual_listing_gain"] > 30)
+    total_with_gmp = len(ipos_with_gmp)
+    gmp_accurate = sum(1 for i in ipos_with_gmp if i["gmp_accurate"])
+    positive_listings = sum(1 for i in historical_ipos if (i.get("actual_listing_gain") or 0) > 0)
+    avg_listing_gain = sum((i.get("actual_listing_gain") or 0) for i in historical_ipos) / total if total else 0
+    big_winners = sum(1 for i in historical_ipos if (i.get("actual_listing_gain") or 0) > 30)
 
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.metric("GMP Accuracy Rate", f"{(gmp_accurate/total)*100:.0f}%", f"{gmp_accurate}/{total} correct")
+        acc_pct = f"{(gmp_accurate/total_with_gmp)*100:.0f}%" if total_with_gmp else "N/A"
+        st.metric("GMP Accuracy Rate", acc_pct, f"{gmp_accurate}/{total_with_gmp} with GMP data")
     with col2:
         st.metric("Positive Listings", f"{(positive_listings/total)*100:.0f}%", f"{positive_listings}/{total} profitable")
     with col3:
-        delta_color = "normal" if avg_listing_gain >= 0 else "inverse"
         st.metric("Avg Listing Gain", f"{avg_listing_gain:.1f}%")
     with col4:
         st.metric("Big Winners (>30%)", big_winners, f"out of {total}")
@@ -90,44 +92,62 @@ def render(historical_ipos):
         filtered = [i for i in filtered if i["actual_listing_gain"] < 0]
 
     for ipo in filtered:
-        listing_color = "#00d4aa" if ipo["actual_listing_gain"] > 0 else "#ff4757"
-        listing_sign = "+" if ipo["actual_listing_gain"] > 0 else ""
-        gmp_sign = "+" if ipo["gmp_before_listing"] > 0 else ""
+        listing_gain = ipo.get("actual_listing_gain") or 0
+        listing_color = "#00d4aa" if listing_gain > 0 else "#ff4757"
+        listing_sign = "+" if listing_gain > 0 else ""
         
-        accuracy_badge = "<span style='background:rgba(0,212,170,0.15); color:#00d4aa; border:1px solid rgba(0,212,170,0.3); padding:2px 10px; border-radius:10px; font-size:0.72rem;'>✓ GMP Accurate</span>" if ipo["gmp_accurate"] else "<span style='background:rgba(255,71,87,0.15); color:#ff4757; border:1px solid rgba(255,71,87,0.3); padding:2px 10px; border-radius:10px; font-size:0.72rem;'>✗ GMP Missed</span>"
-        
-        current_vs_listing = ((ipo["current_price"] - ipo["listing_price"]) / ipo["listing_price"]) * 100
+        gmp_val = ipo.get("gmp_before_listing")
+        gmp_pred = ipo.get("gmp_predicted_gain")
+        if gmp_val is not None and gmp_val != 0:
+            gmp_sign = "+" if gmp_val > 0 else ""
+            gmp_display = f"{gmp_sign}₹{gmp_val} ({gmp_sign}{gmp_pred:.1f}%)" if gmp_pred else f"{gmp_sign}₹{gmp_val}"
+            gmp_color = "#4a9eff"
+        else:
+            gmp_display = "N/A"
+            gmp_color = "#8892a4"
+
+        gmp_acc = ipo.get("gmp_accurate")
+        if gmp_acc is True:
+            accuracy_badge = "<span style='background:rgba(0,212,170,0.15);color:#00d4aa;border:1px solid rgba(0,212,170,0.3);padding:2px 10px;border-radius:10px;font-size:0.72rem;'>✓ GMP Accurate</span>"
+        elif gmp_acc is False:
+            accuracy_badge = "<span style='background:rgba(255,71,87,0.15);color:#ff4757;border:1px solid rgba(255,71,87,0.3);padding:2px 10px;border-radius:10px;font-size:0.72rem;'>✗ GMP Missed</span>"
+        else:
+            accuracy_badge = "<span style='background:rgba(136,146,164,0.15);color:#8892a4;border:1px solid rgba(136,146,164,0.3);padding:2px 10px;border-radius:10px;font-size:0.72rem;'>— No GMP Data</span>"
+
+        listing_p = ipo.get("listing_price", 0)
+        current_p = ipo.get("current_price", listing_p)
+        current_vs_listing = ((current_p - listing_p) / listing_p) * 100 if listing_p else 0
         current_sign = "+" if current_vs_listing >= 0 else ""
         
         st.markdown(f"""
-        <div style='background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:18px; margin-bottom:14px;'>
+        <div style='background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px; margin-bottom:14px;'>
             <div style='display:flex; justify-content:space-between; align-items:flex-start;'>
                 <div>
-                    <div style='font-size:1rem; font-weight:600; color:#e8edf5; margin-bottom:4px;'>{ipo['company']}</div>
-                    <div style='font-size:0.75rem; color:#8892a4; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:10px;'>{ipo['sector']} · {ipo['exchange']} · Listed {ipo['listing_date']}</div>
+                    <div style='font-size:1rem; font-weight:600; margin-bottom:4px;'>{ipo['company']}</div>
+                    <div style='font-size:0.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.8px; margin-bottom:10px;'>{ipo.get('sector','—')} · {ipo.get('exchange','—')} · Listed {ipo.get('listing_date','—')}</div>
                 </div>
                 <div>{accuracy_badge}</div>
             </div>
             <div style='display:flex; gap:20px; flex-wrap:wrap;'>
                 <div>
-                    <div style='font-size:0.7rem; color:#8892a4; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:2px;'>Issue Price</div>
-                    <div style='font-size:0.95rem; font-weight:600; font-family:monospace; color:#e8edf5;'>₹{ipo['issue_price']}</div>
+                    <div style='font-size:0.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.8px; margin-bottom:2px;'>Issue Price</div>
+                    <div style='font-size:0.95rem; font-weight:600; font-family:monospace;'>₹{ipo.get('issue_price','—')}</div>
                 </div>
                 <div>
-                    <div style='font-size:0.7rem; color:#8892a4; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:2px;'>GMP Before Listing</div>
-                    <div style='font-size:0.95rem; font-weight:600; font-family:monospace; color:#4a9eff;'>{gmp_sign}₹{ipo['gmp_before_listing']} ({gmp_sign}{ipo['gmp_predicted_gain']:.1f}%)</div>
+                    <div style='font-size:0.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.8px; margin-bottom:2px;'>GMP Before Listing</div>
+                    <div style='font-size:0.95rem; font-weight:600; font-family:monospace; color:{gmp_color};'>{gmp_display}</div>
                 </div>
                 <div>
-                    <div style='font-size:0.7rem; color:#8892a4; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:2px;'>Listing Price</div>
-                    <div style='font-size:0.95rem; font-weight:600; font-family:monospace; color:#e8edf5;'>₹{ipo['listing_price']}</div>
+                    <div style='font-size:0.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.8px; margin-bottom:2px;'>Listing Price</div>
+                    <div style='font-size:0.95rem; font-weight:600; font-family:monospace;'>₹{listing_p}</div>
                 </div>
                 <div>
-                    <div style='font-size:0.7rem; color:#8892a4; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:2px;'>Listing Gain</div>
-                    <div style='font-size:0.95rem; font-weight:700; font-family:monospace; color:{listing_color};'>{listing_sign}{ipo['actual_listing_gain']:.1f}%</div>
+                    <div style='font-size:0.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.8px; margin-bottom:2px;'>Listing Gain</div>
+                    <div style='font-size:0.95rem; font-weight:700; font-family:monospace; color:{listing_color};'>{listing_sign}{listing_gain:.1f}%</div>
                 </div>
                 <div>
-                    <div style='font-size:0.7rem; color:#8892a4; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:2px;'>Current Price</div>
-                    <div style='font-size:0.95rem; font-weight:600; font-family:monospace; color:#e8edf5;'>₹{ipo['current_price']} <span style='font-size:0.8rem; color:{"#00d4aa" if current_vs_listing >= 0 else "#ff4757"};'>({current_sign}{current_vs_listing:.1f}% from listing)</span></div>
+                    <div style='font-size:0.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.8px; margin-bottom:2px;'>Current Price</div>
+                    <div style='font-size:0.95rem; font-weight:600; font-family:monospace;'>₹{current_p} <span style='font-size:0.8rem; color:{"#00d4aa" if current_vs_listing >= 0 else "#ff4757"};'>({current_sign}{current_vs_listing:.1f}% from listing)</span></div>
                 </div>
             </div>
         </div>

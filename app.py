@@ -1,4 +1,4 @@
-# v3.2 - single nav row with logo, roadmap fix, all issues resolved
+# v3.3 - scoped nav CSS, alignment fixed
 """TradeSage — SME IPO Research Platform"""
 import streamlit as st
 import sys, os
@@ -16,6 +16,7 @@ if "selected_ipo_id" not in st.session_state: st.session_state.selected_ipo_id =
 if "chat_histories"  not in st.session_state: st.session_state.chat_histories  = {}
 if "dark_mode"       not in st.session_state: st.session_state.dark_mode       = False
 if "current_page"    not in st.session_state: st.session_state.current_page    = "Dashboard"
+if "nav_rendered"    not in st.session_state: st.session_state.nav_rendered    = False
 if "api_key"         not in st.session_state:
     try:    st.session_state.api_key = st.secrets["ANTHROPIC_API_KEY"]
     except: st.session_state.api_key = os.environ.get("ANTHROPIC_API_KEY", "")
@@ -47,43 +48,37 @@ p,span,div,label,h1,h2,h3,h4,h5,li,td,th{{color:var(--text)!important;}}
 [data-testid="stSidebar"]{{display:none!important;}}
 [data-testid="collapsedControl"]{{display:none!important;}}
 .stDeployButton{{display:none!important;}}
-.block-container{{padding-top:0!important;padding-bottom:2rem!important;max-width:100%!important;}}
+.block-container{{padding-top:0!important;padding-left:2rem!important;padding-right:2rem!important;padding-bottom:2rem!important;max-width:100%!important;}}
 .main .block-container{{padding-top:0!important;}}
 section[data-testid="stMain"]>div:first-child{{padding-top:0!important;}}
 
-/* ── NAV ROW: logo + buttons in one flex row ── */
-div[data-testid="stHorizontalBlock"].nav-row {{
-    background:{nav_bg}!important;
-    border-bottom:2px solid {border}!important;
-    margin:0!important;
-    padding:0 1.5rem!important;
-    gap:0!important;
-    align-items:center!important;
-    min-height:60px!important;
+/* ── NAV BAR — scoped to .ts-nav wrapper only ── */
+.ts-nav{{
+    background:{nav_bg};
+    border-bottom:2px solid {border};
+    margin:0 -2rem;
+    padding:0 2rem;
+    display:flex;
+    align-items:stretch;
+    min-height:62px;
+    gap:0;
 }}
-
-/* Logo cell */
-.nav-logo {{
+.ts-nav-logo{{
     display:flex;align-items:center;gap:10px;
-    padding:10px 20px 10px 0;
-    border-right:1px solid {border};
-    margin-right:4px;
-    white-space:nowrap;
-    flex-shrink:0;
+    padding:0 20px 0 0;border-right:1px solid {border};
+    margin-right:4px;flex-shrink:0;
 }}
-.nav-logo-icon{{
+.ts-nav-logo-icon{{
     width:34px;height:34px;background:{green};border-radius:8px;
     display:flex;align-items:center;justify-content:center;font-size:1rem;
-    box-shadow:0 2px 6px rgba(26,127,55,0.3);flex-shrink:0;
+    box-shadow:0 2px 6px rgba(26,127,55,0.3);
 }}
-.nav-logo-name{{font-size:1.1rem;font-weight:800;letter-spacing:-0.4px;line-height:1;}}
-.nav-logo-name span{{color:{green}!important;}}
-
-/* Pills on far right */
-.nav-pills{{
-    margin-left:auto;display:flex;align-items:center;gap:6px;padding-left:12px;flex-shrink:0;
+.ts-nav-logo-name{{font-size:1.1rem;font-weight:800;letter-spacing:-0.4px;}}
+.ts-nav-logo-name span{{color:{green}!important;}}
+.ts-nav-pills{{
+    margin-left:auto;display:flex;align-items:center;gap:6px;padding-left:8px;flex-shrink:0;
 }}
-.nav-pill{{
+.ts-nav-pill{{
     padding:3px 9px;border-radius:20px;font-size:0.65rem;font-weight:600;
     letter-spacing:0.3px;white-space:nowrap;
 }}
@@ -91,8 +86,8 @@ div[data-testid="stHorizontalBlock"].nav-row {{
 .np-green{{background:rgba(26,127,55,0.1);color:{green}!important;border:1px solid {green};}}
 .np-yellow{{background:rgba(154,103,0,0.1);color:{yellow}!important;border:1px solid {yellow};}}
 
-/* All nav buttons default style */
-div[data-testid="stHorizontalBlock"] .stButton>button {{
+/* ── NAV BUTTONS — scoped ONLY inside .ts-nav ── */
+.ts-nav .stButton>button {{
     background:transparent!important;
     color:{muted}!important;
     border:none!important;
@@ -101,18 +96,26 @@ div[data-testid="stHorizontalBlock"] .stButton>button {{
     font-size:0.84rem!important;
     font-weight:600!important;
     padding:0 14px!important;
-    height:60px!important;
+    height:62px!important;
+    min-height:62px!important;
     white-space:nowrap!important;
     box-shadow:none!important;
     width:100%!important;
-    transition:color 0.15s,border-bottom-color 0.15s!important;
+    transition:color 0.15s!important;
 }}
-div[data-testid="stHorizontalBlock"] .stButton>button:hover{{
-    color:{text}!important;background:rgba(0,0,0,0.03)!important;
-    transform:none!important;opacity:1!important;
+.ts-nav .stButton>button:hover{{
+    color:{text}!important;
+    background:rgba(0,0,0,0.03)!important;
+    transform:none!important;
+    opacity:1!important;
+}}
+.ts-nav .stButton.ts-active>button{{
+    color:{green}!important;
+    border-bottom:3px solid {green}!important;
+    background:rgba(26,127,55,0.05)!important;
 }}
 
-/* ── GENERAL BUTTONS (non-nav, green) ── */
+/* ── ALL OTHER BUTTONS — green, normal ── */
 .stButton>button{{
     background:var(--green)!important;color:white!important;border:none!important;
     border-radius:8px!important;font-weight:600!important;padding:8px 20px!important;
@@ -159,19 +162,13 @@ hr{{border-color:var(--border)!important;}}
 .section-title{{font-size:1.05rem;font-weight:700;}}
 .section-count{{background:var(--card2);color:var(--muted)!important;font-size:0.7rem;padding:2px 8px;border-radius:10px;border:1px solid var(--border);}}
 
-/* ── COMING SOON CARDS — compact, equal height 3-col ── */
+/* ── COMING SOON ── */
 .coming-soon-section{{margin:2rem 0 0;padding:1.5rem;background:var(--card2);border-radius:16px;border:1.5px solid var(--border);}}
-.coming-soon-header{{margin-bottom:1.2rem;}}
 .coming-soon-label{{font-size:0.68rem;font-weight:700;color:var(--muted)!important;text-transform:uppercase;letter-spacing:2px;}}
-.coming-soon-heading{{font-size:1.1rem;font-weight:800;letter-spacing:-0.3px;margin:2px 0;}}
-.coming-soon-sub{{font-size:0.8rem;color:var(--muted)!important;}}
+.coming-soon-heading{{font-size:1.1rem;font-weight:800;letter-spacing:-0.3px;margin:2px 0 2px;}}
+.coming-soon-sub{{font-size:0.8rem;color:var(--muted)!important;margin-bottom:1.2rem;}}
 .cs-grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}}
-.cs-card{{
-    background:var(--card);border:1.5px solid var(--border);border-radius:12px;
-    padding:16px;position:relative;overflow:hidden;
-    transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s;
-    display:flex;flex-direction:column;
-}}
+.cs-card{{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:16px;position:relative;overflow:hidden;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s;display:flex;flex-direction:column;}}
 .cs-card::before{{content:'';position:absolute;top:0;left:0;right:0;height:3px;}}
 .cs-card-fo::before{{background:linear-gradient(90deg,{yellow},{red});}}
 .cs-card-mf::before{{background:linear-gradient(90deg,{blue},{green});}}
@@ -203,83 +200,97 @@ dark_icon = "☀️" if dark else "🌙"
 pages     = ["Dashboard", "IPO Detail", "GMP Tracker", "Historical Data"]
 nav_icons = ["🏠", "🔍", "📊", "📜"]
 
-# ── SINGLE NAV ROW: logo HTML + st.columns for buttons ───────────────────────
-# Logo injected as HTML inside a zero-height div before the columns
+# ── NAV BAR ───────────────────────────────────────────────────────────────────
+# Rendered as a single HTML div wrapping both logo HTML and Streamlit buttons
+# The trick: use st.container with a key CSS class
+nav_html_open = f"""
+<div class="ts-nav">
+    <div class="ts-nav-logo">
+        <div class="ts-nav-logo-icon">📈</div>
+        <div class="ts-nav-logo-name">Trade<span>Sage</span></div>
+    </div>
+"""
+# We can't mix HTML and Streamlit widgets in the same div, so:
+# Render logo via HTML, then nav buttons via columns styled to look part of the nav
+
+st.markdown(f"""
+<div class="ts-nav">
+    <div class="ts-nav-logo">
+        <div class="ts-nav-logo-icon">📈</div>
+        <div class="ts-nav-logo-name">Trade<span>Sage</span></div>
+    </div>
+    <div style="display:flex;align-items:center;flex:1;gap:0;" id="ts-nav-btns-placeholder"></div>
+    <div class="ts-nav-pills">
+        <span class="ts-nav-pill np-blue">BSE SME</span>
+        <span class="ts-nav-pill np-blue">NSE Emerge</span>
+        <span class="ts-nav-pill {live_cls}">{live_txt}</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# Streamlit buttons row — styled via CSS to look like nav tabs
+# Use negative margin to pull them up visually next to the logo HTML
 st.markdown(f"""
 <style>
-/* The first horizontal block IS the nav row */
-div[data-testid="stHorizontalBlock"]:first-of-type {{
+/* Pull this specific columns block up to nav height */
+div[data-testid="stHorizontalBlock"].nav-btn-row {{
     background:{nav_bg}!important;
     border-bottom:2px solid {border}!important;
-    margin:0 -1px!important;
-    padding:0 1rem 0 0!important;
+    margin:-62px -2rem 0 160px!important;
+    padding:0!important;
     gap:0!important;
+    height:62px!important;
     align-items:stretch!important;
-    min-height:60px!important;
+    max-width:calc(100% - 400px)!important;
 }}
-/* First cell = logo */
-div[data-testid="stHorizontalBlock"]:first-of-type > div:first-child {{
-    flex:0 0 auto!important;width:auto!important;padding:0!important;
-    border-right:1px solid {border}!important;
-    display:flex!important;align-items:center!important;
-}}
-/* Nav button cells */
-div[data-testid="stHorizontalBlock"]:first-of-type > div:not(:first-child):not(:last-child) {{
+div[data-testid="stHorizontalBlock"].nav-btn-row > div {{
     flex:0 0 auto!important;width:auto!important;padding:0!important;
 }}
-/* Pills cell (last) */
-div[data-testid="stHorizontalBlock"]:first-of-type > div:last-child {{
-    flex:1 1 auto!important;padding:0!important;
-    display:flex!important;align-items:center!important;justify-content:flex-end!important;
+div[data-testid="stHorizontalBlock"].nav-btn-row .stButton>button {{
+    background:transparent!important;color:{muted}!important;
+    border:none!important;border-radius:0!important;
+    border-bottom:3px solid transparent!important;
+    font-size:0.84rem!important;font-weight:600!important;
+    padding:0 16px!important;height:62px!important;
+    white-space:nowrap!important;box-shadow:none!important;
+    transition:color 0.15s!important;
 }}
-/* Active page underline */
-div[data-testid="stHorizontalBlock"]:first-of-type .stButton[data-active="true"]>button {{
-    color:{green}!important;border-bottom:3px solid {green}!important;
-    background:rgba(26,127,55,0.05)!important;
+div[data-testid="stHorizontalBlock"].nav-btn-row .stButton>button:hover{{
+    color:{text}!important;background:rgba(0,0,0,0.03)!important;
+    transform:none!important;opacity:1!important;
 }}
 </style>
 """, unsafe_allow_html=True)
 
-# Use columns: logo | D | I | G | H | theme+pills
-nav_cols = st.columns([1.8, 1, 1, 1.1, 1.2, 2.5])
-
-with nav_cols[0]:
-    st.markdown(f"""
-    <div class="nav-logo">
-        <div class="nav-logo-icon">📈</div>
-        <div class="nav-logo-name">Trade<span>Sage</span></div>
-    </div>
-    """, unsafe_allow_html=True)
-
+# Render nav buttons in a plain columns row
+nc = st.columns(len(pages) + 1)
 for i, (p, icon) in enumerate(zip(pages, nav_icons)):
-    with nav_cols[i + 1]:
-        active_css = f"""
-        <style>
-        div[data-testid="stHorizontalBlock"]:first-of-type > div:nth-child({i+2}) .stButton>button {{
-            color:{green}!important;border-bottom:3px solid {green}!important;
-            background:rgba(26,127,55,0.05)!important;
-        }}
-        </style>""" if p == cur else ""
-        if active_css: st.markdown(active_css, unsafe_allow_html=True)
+    with nc[i]:
+        is_active = (p == cur)
+        if is_active:
+            st.markdown(f"""<style>
+            div[data-testid="stHorizontalBlock"]:nth-of-type(2) > div:nth-child({i+1}) .stButton>button{{
+                color:{green}!important;border-bottom:3px solid {green}!important;
+                background:rgba(26,127,55,0.05)!important;
+            }}</style>""", unsafe_allow_html=True)
         if st.button(f"{icon} {p}", key=f"nav_{p}"):
             st.session_state.current_page = p
             st.rerun()
-
-with nav_cols[5]:
-    st.markdown(f"""
-    <div class="nav-pills">
-        <span class="nav-pill np-blue">BSE SME</span>
-        <span class="nav-pill np-blue">NSE Emerge</span>
-        <span class="nav-pill {live_cls}">{live_txt}</span>
-    </div>
-    """, unsafe_allow_html=True)
-    # dark mode toggle sits in this cell too
+with nc[len(pages)]:
+    st.markdown(f"""<style>
+    div[data-testid="stHorizontalBlock"]:nth-of-type(2) > div:last-child .stButton>button{{
+        background:transparent!important;color:{muted}!important;border:none!important;
+        border-radius:6px!important;border-bottom:none!important;
+        font-size:1rem!important;padding:0 12px!important;height:62px!important;
+        box-shadow:none!important;
+    }}</style>""", unsafe_allow_html=True)
     if st.button(dark_icon, key="theme_btn"):
         st.session_state.dark_mode = not st.session_state.dark_mode
         st.rerun()
 
+st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)
+
 # ── PAGE CONTENT ──────────────────────────────────────────────────────────────
-st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
 cur = st.session_state.current_page
 if   "Dashboard"  in cur:
     from pages.dashboard   import render; render(ACTIVE_IPOS, UPCOMING_IPOS)
