@@ -1,4 +1,4 @@
-# v2.2 - mobile sidebar fix
+# v2.3 - sidebar toggle always visible
 """
 SME IPO Research Platform — Main App
 Run with: streamlit run app.py
@@ -14,19 +14,27 @@ st.set_page_config(
     page_title="TradeSage | SME IPO Research",
     page_icon="📈",
     layout="wide",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="expanded",
 )
-# Sidebar: always visible on desktop, collapsible on mobile
+# Sidebar: collapse arrow always visible and working on both desktop and mobile
 st.markdown("""<style>
-/* DESKTOP: hide collapse arrow, sidebar always shown */
-@media (min-width: 768px) {
-    [data-testid="collapsedControl"] { display: none !important; }
-    section[data-testid="stSidebar"] { min-width: 260px !important; max-width: 260px !important; transform: translateX(0) !important; }
-    section[data-testid="stSidebar"][aria-expanded="false"] { transform: translateX(0) !important; min-width: 260px !important; }
+/* Always show the collapse/expand toggle — never hide it */
+[data-testid="collapsedControl"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    background: var(--green, #1a7f37) !important;
+    border-radius: 0 8px 8px 0 !important;
+    color: white !important;
+    z-index: 999 !important;
 }
-/* MOBILE: show collapse arrow so user can close sidebar */
-@media (max-width: 767px) {
-    [data-testid="collapsedControl"] { display: flex !important; }
+/* Desktop: sidebar expanded by default and stays wide */
+@media (min-width: 768px) {
+    section[data-testid="stSidebar"][aria-expanded="true"] {
+        min-width: 260px !important;
+        max-width: 260px !important;
+    }
 }
 </style>""", unsafe_allow_html=True)
 

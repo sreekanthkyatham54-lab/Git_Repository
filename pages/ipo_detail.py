@@ -1,3 +1,4 @@
+# v2.3 - button-triggered tabs, no page-load blocking
 """IPO Detail page — AI Q&A, Scorecard, Industry Analysis, Financials, News"""
 import streamlit as st
 import plotly.graph_objects as go
@@ -69,6 +70,11 @@ def render(all_ipos):
     st.markdown("---")
 
     # ── TABS ─────────────────────────────────────────────────────────────────
+    # Track which tabs have been opened to avoid blocking page load
+    tabs_opened_key = f"tabs_opened_{ipo['id']}"
+    if tabs_opened_key not in st.session_state:
+        st.session_state[tabs_opened_key] = set()
+
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "🤖 AI Q&A", "📊 AI Scorecard", "🏭 Industry & Peers", "📈 Financials", "📰 News"
     ])
@@ -137,28 +143,24 @@ def render(all_ipos):
     # ── TAB 2: AI SCORECARD ──────────────────────────────────────────────────
     with tab2:
         st.markdown("### 📊 AI Investment Scorecard")
-
-        # Auto-generate scorecard on first view (cached in session state)
         scorecard_key = f"scorecard_result_{ipo['id']}"
-        if scorecard_key not in st.session_state:
-            with st.spinner("🤖 Generating AI scorecard..."):
-                try:
-                    from utils.ai_utils import get_ai_recommendation
-                    result = get_ai_recommendation(st.session_state.api_key, ipo)
-                    st.session_state[scorecard_key] = result
-                except Exception as e:
-                    st.session_state[scorecard_key] = None
-                    st.error(f"Error generating scorecard: {e}")
 
         if st.session_state.get(scorecard_key):
             _render_ai_scorecard(st.session_state[scorecard_key], ipo)
+            if st.button("🔄 Regenerate", key=f"regen_{ipo['id']}"):
+                del st.session_state[scorecard_key]
+                st.rerun()
         else:
             _render_static_scorecard(ipo)
-
-        if st.button("🔄 Regenerate Scorecard", key=f"regen_{ipo['id']}"):
-            if scorecard_key in st.session_state:
-                del st.session_state[scorecard_key]
-            st.rerun()
+            if st.button("🤖 Generate AI Scorecard", key=f"gen_scorecard_{ipo['id']}"):
+                with st.spinner("Analysing DRHP, financials, valuation..."):
+                    try:
+                        from utils.ai_utils import get_ai_recommendation
+                        result = get_ai_recommendation(st.session_state.api_key, ipo)
+                        st.session_state[scorecard_key] = result
+                        st.rerun()
+                    except Exception as e:
+                        st.error(f"Error: {e}")
 
     # ── TAB 3: INDUSTRY & PEERS ──────────────────────────────────────────────
     with tab3:
@@ -193,24 +195,22 @@ def render(all_ipos):
 
         st.markdown("<br>", unsafe_allow_html=True)
 
-        # Auto-generate industry analysis (cached)
         peer_key = f"peer_result_{ipo['id']}"
-        if peer_key not in st.session_state:
-            with st.spinner("🤖 Analysing industry & peers..."):
-                try:
-                    from utils.ai_utils import compare_with_industry
-                    analysis = compare_with_industry(st.session_state.api_key, ipo)
-                    st.session_state[peer_key] = analysis
-                except Exception as e:
-                    st.session_state[peer_key] = f"Could not generate analysis: {e}"
-
         if st.session_state.get(peer_key):
             st.markdown(f"<div class='chat-message-ai'>{st.session_state[peer_key].replace(chr(10), '<br>')}</div>", unsafe_allow_html=True)
-
-        if st.button("🔄 Refresh Analysis", key=f"refresh_peer_{ipo['id']}"):
-            if peer_key in st.session_state:
+            if st.button("🔄 Refresh Analysis", key=f"refresh_peer_{ipo['id']}"):
                 del st.session_state[peer_key]
-            st.rerun()
+                st.rerun()
+        else:
+            if st.button("🤖 Get AI Industry Analysis", key=f"gen_peer_{ipo['id']}"):
+                with st.spinner("Comparing with industry and peers..."):
+                    try:
+                        from utils.ai_utils import compare_with_industry
+                        analysis = compare_with_industry(st.session_state.api_key, ipo)
+                        st.session_state[peer_key] = analysis
+                        st.rerun()
+                    except Exception as e:
+                        st.error(f"Error: {e}")
 
     # ── TAB 4: FINANCIALS ────────────────────────────────────────────────────
     with tab4:
@@ -271,25 +271,23 @@ def render(all_ipos):
         st.markdown("### 📰 Latest News & Updates")
         news_items = NEWS.get(ipo["id"], [])
         if not news_items:
-            # Auto-generate news summary via AI
             news_key = f"news_{ipo['id']}"
-            if news_key not in st.session_state:
-                with st.spinner("🤖 Fetching latest news summary..."):
-                    try:
-                        from utils.ai_utils import chat_with_ipo
-                        news_prompt = f"Summarise what is publicly known about {ipo['company']} IPO — any news, analyst views, subscription trends, GMP movement, or market sentiment. Keep it concise and factual."
-                        news_resp = chat_with_ipo(st.session_state.api_key, ipo, [], news_prompt)
-                        st.session_state[news_key] = news_resp
-                    except Exception as e:
-                        st.session_state[news_key] = None
-
             if st.session_state.get(news_key):
                 st.markdown(f"<div class='chat-message-ai'>🤖 {st.session_state[news_key].replace(chr(10),'<br>')}</div>", unsafe_allow_html=True)
                 if st.button("🔄 Refresh News", key=f"refresh_news_{ipo['id']}"):
                     del st.session_state[news_key]
                     st.rerun()
             else:
-                st.info("No news found for this IPO yet.")
+                if st.button("🤖 Get AI News Summary", key=f"gen_news_{ipo['id']}"):
+                    with st.spinner("Fetching news summary..."):
+                        try:
+                            from utils.ai_utils import chat_with_ipo
+                            news_prompt = f"Summarise what is publicly known about {ipo['company']} IPO — any news, analyst views, subscription trends, GMP movement, or market sentiment. Keep it concise and factual."
+                            news_resp = chat_with_ipo(st.session_state.api_key, ipo, [], news_prompt)
+                            st.session_state[news_key] = news_resp
+                            st.rerun()
+                        except Exception as e:
+                            st.error(f"Error: {e}")
         else:
             for n in news_items:
                 st.markdown(f"""
@@ -312,13 +310,25 @@ def _render_static_scorecard(ipo):
         </div>
     </div>
     """, unsafe_allow_html=True)
+    st.info("AI scorecard could not be generated. Check that the API key is set in Streamlit secrets.")
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("<div style='font-size:0.85rem;color:var(--green);font-weight:600;margin-bottom:8px;'>✓ Key Positives</div>", unsafe_allow_html=True)
-        st.markdown(f"<div class='alert-green' style='font-size:0.85rem;'>{ipo.get('drhp_highlights','Run DRHP scraper to get detailed analysis.')}</div>", unsafe_allow_html=True)
+        highlights_raw = ipo.get('drhp_highlights', '') or ''
+        if len(highlights_raw) > 300:
+            highlights_short = highlights_raw[:300].rsplit('.', 1)[0] + '...'
+        else:
+            highlights_short = highlights_raw or 'Run DRHP scraper to extract key highlights.'
+        st.markdown(f"<div class='alert-green' style='font-size:0.85rem;'>{highlights_short}</div>", unsafe_allow_html=True)
     with col2:
         st.markdown("<div style='font-size:0.85rem;color:var(--red);font-weight:600;margin-bottom:8px;'>⚠ Key Risks</div>", unsafe_allow_html=True)
-        st.markdown(f"<div class='alert-red' style='font-size:0.85rem;'>{ipo.get('risks_text','Run DRHP scraper to get risk factors.')}</div>", unsafe_allow_html=True)
+        risks_raw = ipo.get('risks_text', '') or ''
+        # Truncate long legal boilerplate — take first 300 chars up to a sentence
+        if len(risks_raw) > 300:
+            risks_short = risks_raw[:300].rsplit('.', 1)[0] + '...'
+        else:
+            risks_short = risks_raw or 'Run DRHP scraper to extract risk factors.'
+        st.markdown(f"<div class='alert-red' style='font-size:0.85rem;'>{risks_short}</div>", unsafe_allow_html=True)
 
 
 def _render_ai_scorecard(r, ipo):
