@@ -1,4 +1,4 @@
-"""IPO Detail page — AI Q&A, Recommendation Scorecard, Industry Analysis, News"""
+"""IPO Details page — AI Q&A, Recommendation Scorecard, Industry Analysis, News"""
 import streamlit as st
 import plotly.graph_objects as go
 import sys, os
