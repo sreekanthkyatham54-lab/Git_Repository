@@ -1,4 +1,4 @@
-# v2.3 - button-triggered tabs, no page-load blocking
+# v2.4 - disk cache for AI tabs, fixed sidebar toggle
 """IPO Detail page — AI Q&A, Scorecard, Industry Analysis, Financials, News"""
 import streamlit as st
 import plotly.graph_objects as go
@@ -22,7 +22,22 @@ def _gmp_pct(ipo):
         return 0.0
 
 
+def _load_ai_cache():
+    """Load pre-generated AI cache from disk."""
+    try:
+        import json
+        cache_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "ai_cache.json")
+        if os.path.exists(cache_file):
+            return json.load(open(cache_file))
+    except:
+        pass
+    return {}
+
+
 def render(all_ipos):
+    # Load disk cache once
+    ai_cache = _load_ai_cache()
+
     # ── BACK BUTTON ──────────────────────────────────────────────────────────
     if st.button("← Back to Dashboard", key="back_btn"):
         st.session_state.current_page = "🏠 Dashboard"
@@ -42,12 +57,14 @@ def render(all_ipos):
 
     selected_name = st.selectbox("Select IPO to analyze", ipo_names, index=default_idx)
     ipo = next(i for i in all_ipos if i["company"] == selected_name)
+    ipo_id = ipo["id"]
+    cached = ai_cache.get(ipo_id, {})
 
     st.markdown("---")
 
     # ── OVERVIEW METRICS ─────────────────────────────────────────────────────
-    gmp_pct = _gmp_pct(ipo)
-    gmp     = float(ipo.get("gmp") or 0)
+    gmp_pct  = _gmp_pct(ipo)
+    gmp      = float(ipo.get("gmp") or 0)
     gmp_sign = "+" if gmp >= 0 else ""
 
     col1, col2, col3, col4, col5 = st.columns(5)
@@ -70,11 +87,6 @@ def render(all_ipos):
     st.markdown("---")
 
     # ── TABS ─────────────────────────────────────────────────────────────────
-    # Track which tabs have been opened to avoid blocking page load
-    tabs_opened_key = f"tabs_opened_{ipo['id']}"
-    if tabs_opened_key not in st.session_state:
-        st.session_state[tabs_opened_key] = set()
-
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "🤖 AI Q&A", "📊 AI Scorecard", "🏭 Industry & Peers", "📈 Financials", "📰 News"
     ])
@@ -83,13 +95,13 @@ def render(all_ipos):
     with tab1:
         st.markdown(f"""
         <div class='alert-green'>
-            <strong>Ask anything about {ipo['company']}</strong> — financials, risks, promoters, 
+            <strong>Ask anything about {ipo['company']}</strong> — financials, risks, promoters,
             valuation, whether to subscribe, GMP signals, and more.
         </div>
         """, unsafe_allow_html=True)
 
-        chat_key  = f"chat_{ipo['id']}"
-        pending_key = f"pending_q_{ipo['id']}"
+        chat_key    = f"chat_{ipo_id}"
+        pending_key = f"pending_q_{ipo_id}"
         if chat_key not in st.session_state.chat_histories:
             st.session_state.chat_histories[chat_key] = []
         if pending_key not in st.session_state:
@@ -107,24 +119,23 @@ def render(all_ipos):
         q_cols = st.columns(3)
         for i, q in enumerate(suggested_qs):
             with q_cols[i % 3]:
-                if st.button(q, key=f"sq_{ipo['id']}_{i}"):
+                if st.button(q, key=f"sq_{ipo_id}_{i}"):
                     st.session_state[pending_key] = q
 
         st.markdown("---")
-
         for msg in st.session_state.chat_histories[chat_key]:
-            css = "chat-message-user" if msg["role"] == "user" else "chat-message-ai"
+            css  = "chat-message-user" if msg["role"] == "user" else "chat-message-ai"
             icon = "👤" if msg["role"] == "user" else "🤖"
             st.markdown(f"<div class='{css}'>{icon} {msg['content']}</div>", unsafe_allow_html=True)
 
-        user_input = st.chat_input("Ask about this IPO...", key=f"chat_input_{ipo['id']}")
-        question = user_input or st.session_state[pending_key]
+        user_input = st.chat_input("Ask about this IPO...", key=f"chat_input_{ipo_id}")
+        question   = user_input or st.session_state[pending_key]
 
         if question:
             st.session_state[pending_key] = None
             st.session_state.chat_histories[chat_key].append({"role": "user", "content": question})
             st.markdown(f"<div class='chat-message-user'>👤 {question}</div>", unsafe_allow_html=True)
-            with st.spinner("🤖 Analyzing..."):
+            with st.spinner("🤖 Analysing..."):
                 try:
                     from utils.ai_utils import chat_with_ipo
                     response = chat_with_ipo(st.session_state.api_key, ipo,
@@ -136,23 +147,30 @@ def render(all_ipos):
                     st.error(f"❌ Error: {e}")
 
         if st.session_state.chat_histories.get(chat_key):
-            if st.button("🗑 Clear Chat", key=f"clear_{ipo['id']}"):
+            if st.button("🗑 Clear Chat", key=f"clear_{ipo_id}"):
                 st.session_state.chat_histories[chat_key] = []
                 st.rerun()
 
     # ── TAB 2: AI SCORECARD ──────────────────────────────────────────────────
     with tab2:
         st.markdown("### 📊 AI Investment Scorecard")
-        scorecard_key = f"scorecard_result_{ipo['id']}"
+        scorecard_key = f"scorecard_result_{ipo_id}"
+
+        # Priority: 1) session cache, 2) disk cache, 3) generate on demand
+        if scorecard_key not in st.session_state and cached.get("scorecard"):
+            st.session_state[scorecard_key] = cached["scorecard"]
 
         if st.session_state.get(scorecard_key):
             _render_ai_scorecard(st.session_state[scorecard_key], ipo)
-            if st.button("🔄 Regenerate", key=f"regen_{ipo['id']}"):
+            cached_at = cached.get("scorecard_at", "")[:16].replace("T", " ")
+            if cached_at:
+                st.caption(f"🕐 Last updated: {cached_at}")
+            if st.button("🔄 Regenerate", key=f"regen_{ipo_id}"):
                 del st.session_state[scorecard_key]
                 st.rerun()
         else:
             _render_static_scorecard(ipo)
-            if st.button("🤖 Generate AI Scorecard", key=f"gen_scorecard_{ipo['id']}"):
+            if st.button("🤖 Generate AI Scorecard", key=f"gen_scorecard_{ipo_id}"):
                 with st.spinner("Analysing DRHP, financials, valuation..."):
                     try:
                         from utils.ai_utils import get_ai_recommendation
@@ -166,9 +184,11 @@ def render(all_ipos):
     with tab3:
         st.markdown("### 🏭 Industry & Peer Comparison")
 
-        col_l, col_r = st.columns(2)
-        pe = ipo.get('pe_ratio') or 0
+        pe     = ipo.get('pe_ratio') or 0
         ind_pe = ipo.get('industry_pe') or 0
+        peers  = ipo.get('peers') or []
+
+        col_l, col_r = st.columns(2)
         with col_l:
             disc_prem = 'discount' if (pe and ind_pe and pe < ind_pe) else 'premium'
             diff = abs((ind_pe or 0) - (pe or 0))
@@ -183,9 +203,8 @@ def render(all_ipos):
             </div>
             """, unsafe_allow_html=True)
 
-        peers = ipo.get('peers') or []
         with col_r:
-            peers_html = ''.join([f"<div style='padding:6px 0;border-bottom:1px solid var(--border);font-size:0.9rem;'>🏢 {p}</div>" for p in peers]) if peers else "<div style='color:var(--text-muted);font-size:0.85rem;'>Peer data available after DRHP scrape</div>"
+            peers_html = ''.join([f"<div style='padding:6px 0;border-bottom:1px solid var(--border);font-size:0.9rem;'>🏢 {p}</div>" for p in peers]) if peers else "<div style='color:var(--text-muted);font-size:0.85rem;'>No peer data yet</div>"
             st.markdown(f"""
             <div style='background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px;'>
                 <div style='font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;'>Listed Peers</div>
@@ -195,14 +214,27 @@ def render(all_ipos):
 
         st.markdown("<br>", unsafe_allow_html=True)
 
-        peer_key = f"peer_result_{ipo['id']}"
+        peer_key = f"peer_result_{ipo_id}"
+        if peer_key not in st.session_state and cached.get("industry"):
+            st.session_state[peer_key] = cached["industry"]
+
         if st.session_state.get(peer_key):
             st.markdown(f"<div class='chat-message-ai'>{st.session_state[peer_key].replace(chr(10), '<br>')}</div>", unsafe_allow_html=True)
-            if st.button("🔄 Refresh Analysis", key=f"refresh_peer_{ipo['id']}"):
+            cached_at = cached.get("industry_at", "")[:16].replace("T", " ")
+            if cached_at:
+                st.caption(f"🕐 Last updated: {cached_at}")
+            if st.button("🔄 Refresh Analysis", key=f"refresh_peer_{ipo_id}"):
                 del st.session_state[peer_key]
                 st.rerun()
         else:
-            if st.button("🤖 Get AI Industry Analysis", key=f"gen_peer_{ipo['id']}"):
+            st.markdown(f"""
+            <div style='background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px;font-size:0.9rem;line-height:1.7;'>
+                <strong>{ipo['company']}</strong> operates in the <strong>{ipo.get('sector','—')}</strong> sector,
+                trading at P/E <strong>{pe}x</strong> vs industry average <strong>{ind_pe}x</strong>.
+                {f"Peers include: {', '.join(peers)}." if peers else ""}
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button("🤖 Get AI Industry Analysis", key=f"gen_peer_{ipo_id}"):
                 with st.spinner("Comparing with industry and peers..."):
                     try:
                         from utils.ai_utils import compare_with_industry
@@ -249,10 +281,8 @@ def render(all_ipos):
                     plot_bgcolor="rgba(0,0,0,0)", showlegend=False, height=280,
                     margin=dict(l=10,r=10,t=40,b=10))
                 st.plotly_chart(fig2, use_container_width=True)
-
             try:
-                rev = ipo["revenue_cr"]
-                prof = ipo["profit_cr"]
+                rev = ipo["revenue_cr"]; prof = ipo["profit_cr"]
                 if len(rev) >= 2 and rev[0] > 0:
                     n = len(rev) - 1
                     rev_cagr = round(((rev[-1]/rev[0])**(1/n) - 1)*100, 1)
@@ -269,26 +299,8 @@ def render(all_ipos):
     # ── TAB 5: NEWS ──────────────────────────────────────────────────────────
     with tab5:
         st.markdown("### 📰 Latest News & Updates")
-        news_items = NEWS.get(ipo["id"], [])
-        if not news_items:
-            news_key = f"news_{ipo['id']}"
-            if st.session_state.get(news_key):
-                st.markdown(f"<div class='chat-message-ai'>🤖 {st.session_state[news_key].replace(chr(10),'<br>')}</div>", unsafe_allow_html=True)
-                if st.button("🔄 Refresh News", key=f"refresh_news_{ipo['id']}"):
-                    del st.session_state[news_key]
-                    st.rerun()
-            else:
-                if st.button("🤖 Get AI News Summary", key=f"gen_news_{ipo['id']}"):
-                    with st.spinner("Fetching news summary..."):
-                        try:
-                            from utils.ai_utils import chat_with_ipo
-                            news_prompt = f"Summarise what is publicly known about {ipo['company']} IPO — any news, analyst views, subscription trends, GMP movement, or market sentiment. Keep it concise and factual."
-                            news_resp = chat_with_ipo(st.session_state.api_key, ipo, [], news_prompt)
-                            st.session_state[news_key] = news_resp
-                            st.rerun()
-                        except Exception as e:
-                            st.error(f"Error: {e}")
-        else:
+        news_items = NEWS.get(ipo_id, [])
+        if news_items:
             for n in news_items:
                 st.markdown(f"""
                 <div style='background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:12px;'>
@@ -296,6 +308,32 @@ def render(all_ipos):
                     <div style='font-size:0.95rem;font-weight:500;line-height:1.5;'>{n['title']}</div>
                 </div>
                 """, unsafe_allow_html=True)
+        else:
+            news_key = f"news_{ipo_id}"
+            if news_key not in st.session_state and cached.get("news"):
+                st.session_state[news_key] = cached["news"]
+
+            if st.session_state.get(news_key):
+                st.markdown(f"<div class='chat-message-ai'>🤖 {st.session_state[news_key].replace(chr(10),'<br>')}</div>", unsafe_allow_html=True)
+                cached_at = cached.get("news_at", "")[:16].replace("T", " ")
+                if cached_at:
+                    st.caption(f"🕐 Last updated: {cached_at}")
+                if st.button("🔄 Refresh News", key=f"refresh_news_{ipo_id}"):
+                    del st.session_state[news_key]
+                    st.rerun()
+            else:
+                if st.button("🤖 Get AI News Summary", key=f"gen_news_{ipo_id}"):
+                    with st.spinner("Fetching news summary..."):
+                        try:
+                            from utils.ai_utils import chat_with_ipo
+                            news_prompt = (f"Summarise what is publicly known about {ipo['company']} IPO — "
+                                          f"any news, analyst views, subscription trends, GMP movement, "
+                                          f"or market sentiment. Keep it concise and factual.")
+                            news_resp = chat_with_ipo(st.session_state.api_key, ipo, [], news_prompt)
+                            st.session_state[news_key] = news_resp
+                            st.rerun()
+                        except Exception as e:
+                            st.error(f"Error: {e}")
 
 
 def _render_static_scorecard(ipo):
@@ -310,25 +348,15 @@ def _render_static_scorecard(ipo):
         </div>
     </div>
     """, unsafe_allow_html=True)
-    st.info("AI scorecard could not be generated. Check that the API key is set in Streamlit secrets.")
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("<div style='font-size:0.85rem;color:var(--green);font-weight:600;margin-bottom:8px;'>✓ Key Positives</div>", unsafe_allow_html=True)
-        highlights_raw = ipo.get('drhp_highlights', '') or ''
-        if len(highlights_raw) > 300:
-            highlights_short = highlights_raw[:300].rsplit('.', 1)[0] + '...'
-        else:
-            highlights_short = highlights_raw or 'Run DRHP scraper to extract key highlights.'
-        st.markdown(f"<div class='alert-green' style='font-size:0.85rem;'>{highlights_short}</div>", unsafe_allow_html=True)
+        highlights = (ipo.get('drhp_highlights') or '')[:300]
+        st.markdown(f"<div class='alert-green' style='font-size:0.85rem;'>{highlights or 'Generate AI scorecard for detailed analysis.'}</div>", unsafe_allow_html=True)
     with col2:
         st.markdown("<div style='font-size:0.85rem;color:var(--red);font-weight:600;margin-bottom:8px;'>⚠ Key Risks</div>", unsafe_allow_html=True)
-        risks_raw = ipo.get('risks_text', '') or ''
-        # Truncate long legal boilerplate — take first 300 chars up to a sentence
-        if len(risks_raw) > 300:
-            risks_short = risks_raw[:300].rsplit('.', 1)[0] + '...'
-        else:
-            risks_short = risks_raw or 'Run DRHP scraper to extract risk factors.'
-        st.markdown(f"<div class='alert-red' style='font-size:0.85rem;'>{risks_short}</div>", unsafe_allow_html=True)
+        risks = (ipo.get('risks_text') or '')[:300]
+        st.markdown(f"<div class='alert-red' style='font-size:0.85rem;'>{risks or 'Generate AI scorecard for risk factors.'}</div>", unsafe_allow_html=True)
 
 
 def _render_ai_scorecard(r, ipo):
@@ -363,7 +391,7 @@ def _render_ai_scorecard(r, ipo):
         st.markdown(f"<div style='font-size:0.85rem;color:var(--text-muted);margin-top:6px;'><strong>GMP Signal:</strong> {r.get('gmp_view','')}</div>", unsafe_allow_html=True)
     with col4:
         st.markdown("**🚩 Red Flags**")
-        for f in r.get("red_flags", []) or ["No major red flags identified"]:
-            color_f = "var(--red)" if r.get("red_flags") else "var(--green)"
-            st.markdown(f"<div style='font-size:0.85rem;color:{color_f};padding:3px 0;'>⚠ {f}</div>", unsafe_allow_html=True)
+        for f in (r.get("red_flags") or ["No major red flags identified"]):
+            c = "var(--red)" if r.get("red_flags") else "var(--green)"
+            st.markdown(f"<div style='font-size:0.85rem;color:{c};padding:3px 0;'>⚠ {f}</div>", unsafe_allow_html=True)
         st.markdown(f"<br><div style='font-size:0.85rem;color:var(--text-muted);'><strong>Suitable for:</strong> {r.get('suitable_for','')}</div>", unsafe_allow_html=True)

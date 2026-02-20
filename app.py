@@ -1,4 +1,4 @@
-# v2.3 - sidebar toggle always visible
+# v2.4 - fixed sidebar toggle, disk cache for AI tabs
 """
 SME IPO Research Platform — Main App
 Run with: streamlit run app.py
@@ -16,25 +16,33 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-# Sidebar: collapse arrow always visible and working on both desktop and mobile
+# Sidebar toggle — ensure button is always clickable and visible
 st.markdown("""<style>
-/* Always show the collapse/expand toggle — never hide it */
 [data-testid="collapsedControl"] {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
-    pointer-events: auto !important;
-    background: var(--green, #1a7f37) !important;
+    pointer-events: all !important;
+    width: 32px !important;
+    height: 32px !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 0px !important;
+    z-index: 99999 !important;
+    background: #1a7f37 !important;
     border-radius: 0 8px 8px 0 !important;
-    color: white !important;
-    z-index: 999 !important;
+    border: none !important;
+    cursor: pointer !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
-/* Desktop: sidebar expanded by default and stays wide */
-@media (min-width: 768px) {
-    section[data-testid="stSidebar"][aria-expanded="true"] {
-        min-width: 260px !important;
-        max-width: 260px !important;
-    }
+[data-testid="collapsedControl"]:hover {
+    background: #2ea043 !important;
+    width: 36px !important;
+}
+section[data-testid="stSidebar"][aria-expanded="true"] {
+    min-width: 260px !important;
+    max-width: 260px !important;
 }
 </style>""", unsafe_allow_html=True)
 

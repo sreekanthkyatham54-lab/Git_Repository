@@ -1,3 +1,4 @@
+# v2.1 - GMP fix, auto-tabs, date format
 """Dashboard page — Active & Upcoming IPO list"""
 import streamlit as st
 
