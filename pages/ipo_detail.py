@@ -31,15 +31,27 @@ def render(all_ipos):
     with col1:
         st.metric("Issue Price", f"₹{ipo['issue_price']}")
     with col2:
-        gmp_delta = f"+{ipo['gmp_percent']:.1f}%" if ipo["gmp"] >= 0 else f"{ipo['gmp_percent']:.1f}%"
-        st.metric("GMP", f"₹{ipo['gmp']}", gmp_delta)
+        # FIX 3: GMP % = GMP / Issue Price * 100 (premium over issue price)
+        issue_price = float(ipo.get('issue_price') or 0)
+        gmp = float(ipo.get('gmp') or 0)
+        gmp_pct = round((gmp / issue_price * 100), 1) if issue_price > 0 else 0
+        gmp_delta = f"+{gmp_pct}% over issue" if gmp >= 0 else f"{gmp_pct}% over issue"
+        st.metric("GMP", f"₹{gmp}", gmp_delta)
     with col3:
         st.metric("Issue Size", f"₹{ipo['issue_size_cr']}Cr")
     with col4:
         if ipo["subscription_times"] > 0:
             st.metric("Subscribed", f"{ipo['subscription_times']}x")
         else:
-            st.metric("Opens", ipo["open_date"])
+            # FIX 4: Format date as DD/MM/YY
+            raw_date = ipo.get("open_date", "")
+            try:
+                from datetime import datetime
+                d = datetime.strptime(raw_date, "%Y-%m-%d")
+                display_date = d.strftime("%d/%m/%y")
+            except Exception:
+                display_date = raw_date
+            st.metric("Opens", display_date)
     with col5:
         risk_delta = {"Low": "✓", "Low-Medium": "✓", "Medium": "~", "High": "⚠"}
         st.metric("Risk Level", ipo["risk"], risk_delta.get(ipo["risk"], ""))
@@ -100,37 +112,28 @@ def render(all_ipos):
         question = user_input or st.session_state[pending_key]
 
         if question:
-            # Clear the pending question immediately
             st.session_state[pending_key] = None
+            st.session_state.chat_histories[chat_key].append(
+                {"role": "user", "content": question}
+            )
+            st.markdown(f"<div class='chat-message-user'>👤 {question}</div>", unsafe_allow_html=True)
 
-            if not st.session_state.api_key:
-                st.warning("⚠️ Please enter your Claude API key in the sidebar to use AI Q&A.")
-            else:
-                # Add user message
-                st.session_state.chat_histories[chat_key].append(
-                    {"role": "user", "content": question}
-                )
-                # Show it immediately
-                st.markdown(f"<div class='chat-message-user'>👤 {question}</div>", unsafe_allow_html=True)
-
-                with st.spinner("🤖 Analyzing..."):
-                    try:
-                        from utils.ai_utils import chat_with_ipo
-                        response = chat_with_ipo(
-                            st.session_state.api_key,
-                            ipo,
-                            st.session_state.chat_histories[chat_key][:-1],
-                            question,
-                        )
-                        st.session_state.chat_histories[chat_key].append(
-                            {"role": "assistant", "content": response}
-                        )
-                        st.markdown(f"<div class='chat-message-ai'>🤖 {response}</div>", unsafe_allow_html=True)
-                    except Exception as e:
-                        error_msg = str(e)
-                        st.session_state.chat_histories[chat_key].pop()  # remove unanswered user msg
-                        st.error(f"❌ AI Error: {error_msg}")
-                        st.info("💡 Check: Is your API key correct? Does it have credits? Try visiting console.anthropic.com")
+            with st.spinner("🤖 Analyzing..."):
+                try:
+                    from utils.ai_utils import chat_with_ipo
+                    response = chat_with_ipo(
+                        st.session_state.api_key,
+                        ipo,
+                        st.session_state.chat_histories[chat_key][:-1],
+                        question,
+                    )
+                    st.session_state.chat_histories[chat_key].append(
+                        {"role": "assistant", "content": response}
+                    )
+                    st.markdown(f"<div class='chat-message-ai'>🤖 {response}</div>", unsafe_allow_html=True)
+                except Exception as e:
+                    st.session_state.chat_histories[chat_key].pop()
+                    st.error(f"❌ AI Error: {str(e)}")
 
         if st.session_state.chat_histories.get(chat_key):
             if st.button("🗑 Clear Chat", key=f"clear_{ipo['id']}"):
@@ -140,25 +143,20 @@ def render(all_ipos):
     # ── TAB 2: AI SCORECARD ──────────────────────────────────────────────────────
     with tab2:
         st.markdown("### AI Investment Scorecard")
-        
-        if not st.session_state.api_key:
-            # Show static recommendation from data
-            _render_static_scorecard(ipo)
-        else:
-            if st.button("🤖 Generate AI Scorecard", key=f"scorecard_{ipo['id']}"):
-                with st.spinner("AI analyzing DRHP, financials, valuation..."):
-                    try:
-                        from utils.ai_utils import get_ai_recommendation
-                        result = get_ai_recommendation(st.session_state.api_key, ipo)
-                        st.session_state[f"scorecard_result_{ipo['id']}"] = result
-                    except Exception as e:
-                        st.error(f"Error: {e}")
+        if st.button("🤖 Generate AI Scorecard", key=f"scorecard_{ipo['id']}"):
+            with st.spinner("AI analyzing DRHP, financials, valuation..."):
+                try:
+                    from utils.ai_utils import get_ai_recommendation
+                    result = get_ai_recommendation(st.session_state.api_key, ipo)
+                    st.session_state[f"scorecard_result_{ipo['id']}"] = result
+                except Exception as e:
+                    st.error(f"Error: {e}")
 
-            if f"scorecard_result_{ipo['id']}" in st.session_state:
-                r = st.session_state[f"scorecard_result_{ipo['id']}"]
-                _render_ai_scorecard(r, ipo)
-            else:
-                _render_static_scorecard(ipo)
+        if f"scorecard_result_{ipo['id']}" in st.session_state:
+            r = st.session_state[f"scorecard_result_{ipo['id']}"]
+            _render_ai_scorecard(r, ipo)
+        else:
+            _render_static_scorecard(ipo)
 
     # ── TAB 3: INDUSTRY & PEERS ──────────────────────────────────────────────────
     with tab3:
@@ -191,31 +189,15 @@ def render(all_ipos):
         
         st.markdown("<br>", unsafe_allow_html=True)
         
-        # AI Peer Analysis
-        if not st.session_state.api_key:
-            st.markdown(f"""
-            <div class='alert-yellow'>
-                💡 Add your Claude API key to get AI-powered peer comparison and industry analysis for {ipo['company']}
-            </div>
-            """, unsafe_allow_html=True)
-            st.markdown(f"""
-            <div style='background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:16px; font-size:0.9rem; line-height:1.7; color:#e8edf5;'>
-                <strong>{ipo['company']}</strong> operates in the <strong>{ipo['sector']}</strong> sector.
-                The company is trading at <strong>P/E {ipo['pe_ratio']}x</strong> vs industry average of <strong>{ipo['industry_pe']}x</strong>, 
-                suggesting a {'discount' if ipo['pe_ratio'] < ipo['industry_pe'] else 'premium'} to peers.
-                Key peers include {', '.join(ipo['peers'])}.
-                <br><br>{ipo['drhp_highlights']}
-            </div>
-            """, unsafe_allow_html=True)
-        else:
-            if st.button("🤖 Get AI Industry Analysis", key=f"peer_{ipo['id']}"):
-                with st.spinner("Comparing with industry and peers..."):
-                    try:
-                        from utils.ai_utils import compare_with_industry
-                        analysis = compare_with_industry(st.session_state.api_key, ipo)
-                        st.session_state[f"peer_result_{ipo['id']}"] = analysis
-                    except Exception as e:
-                        st.error(f"Error: {e}")
+        # AI Peer Analysis — always available (key loaded from secrets)
+        if st.button("🤖 Get AI Industry Analysis", key=f"peer_{ipo['id']}"):
+            with st.spinner("Comparing with industry and peers..."):
+                try:
+                    from utils.ai_utils import compare_with_industry
+                    analysis = compare_with_industry(st.session_state.api_key, ipo)
+                    st.session_state[f"peer_result_{ipo['id']}"] = analysis
+                except Exception as e:
+                    st.error(f"Error: {e}")
 
             result_text = st.session_state.get(f"peer_result_{ipo['id']}")
             if result_text:

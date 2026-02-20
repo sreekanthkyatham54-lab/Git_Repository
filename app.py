@@ -10,23 +10,30 @@ sys.path.insert(0, os.path.dirname(__file__))
 from data_loader import load_ipo_data
 
 st.set_page_config(
-    page_title="SME IPO Research | India",
+    page_title="TradeSage | SME IPO Research",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
-# Session state — must be before anything reads it
-if "api_key" not in st.session_state:
-    st.session_state.api_key = ""
+# ── SESSION STATE ─────────────────────────────────────────────────────────────
 if "selected_ipo_id" not in st.session_state:
     st.session_state.selected_ipo_id = None
 if "chat_histories" not in st.session_state:
     st.session_state.chat_histories = {}
 if "dark_mode" not in st.session_state:
-    st.session_state.dark_mode = False   # Light by default
+    st.session_state.dark_mode = False
 if "current_page" not in st.session_state:
     st.session_state.current_page = "🏠 Dashboard"
+
+# ── FIX 1: Load API key from Streamlit secrets (hidden from users) ────────────
+# On Streamlit Cloud: set ANTHROPIC_API_KEY in app secrets
+# Locally: create .streamlit/secrets.toml with ANTHROPIC_API_KEY = "sk-ant-..."
+if "api_key" not in st.session_state:
+    try:
+        st.session_state.api_key = st.secrets["ANTHROPIC_API_KEY"]
+    except Exception:
+        st.session_state.api_key = os.environ.get("ANTHROPIC_API_KEY", "")
 
 dark = st.session_state.dark_mode
 
@@ -41,7 +48,6 @@ else:
     accent_green = "#1a7f37"; accent_red = "#cf222e"
     accent_yellow = "#9a6700"; accent_blue = "#0969da"
 
-
 st.markdown(f"""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
@@ -52,8 +58,10 @@ st.markdown(f"""
 }}
 html,body,.stApp{{background-color:var(--bg-primary)!important;font-family:'Inter',sans-serif!important;color:var(--text-primary)!important;}}
 p,span,div,label,h1,h2,h3,h4,h5,li,td,th{{color:var(--text-primary)!important;}}
-#MainMenu,footer{{visibility:hidden;}}
+#MainMenu,footer,header{{visibility:hidden;}}
 .stDeployButton{{display:none;}}
+/* Hide the Fork/GitHub button Streamlit adds top-right */
+[data-testid="stToolbar"]{{display:none!important;}}
 [data-testid="stSidebar"]{{background:var(--bg-card)!important;border-right:2px solid var(--border)!important;}}
 [data-testid="stSidebar"] *{{color:var(--text-primary)!important;}}
 [data-testid="collapsedControl"]{{background:var(--green)!important;border-radius:0 8px 8px 0!important;opacity:1!important;visibility:visible!important;display:flex!important;color:white!important;}}
@@ -98,9 +106,9 @@ hr{{border-color:var(--border)!important;}}
 </style>
 """, unsafe_allow_html=True)
 
-# ── SIDEBAR ──────────────────────────────────────────────────────────────────
+# ── SIDEBAR ───────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown(f"<div style='padding:8px 0 16px'><div style='font-size:1.2rem;font-weight:700;'>📈 IPO Research</div><div style='font-size:0.72rem;color:{text_muted};margin-top:2px;'>SME · BSE · NSE Emerge</div></div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='padding:8px 0 16px'><div style='font-size:1.2rem;font-weight:700;'>📈 TradeSage</div><div style='font-size:0.72rem;color:{text_muted};margin-top:2px;'>SME IPO · BSE · NSE Emerge</div></div>", unsafe_allow_html=True)
 
     theme_label = "☀️ Switch to Light" if dark else "🌙 Switch to Dark"
     if st.button(theme_label, key="theme_toggle"):
@@ -108,14 +116,8 @@ with st.sidebar:
         st.rerun()
 
     st.markdown("---")
-    api_key = st.text_input("🔑 Claude API Key", type="password", value=st.session_state.api_key, placeholder="sk-ant-...", help="Get at console.anthropic.com")
-    if api_key:
-        st.session_state.api_key = api_key
-        st.markdown(f'<div style="color:{accent_green};font-size:0.78rem;margin-top:-6px;">✓ API key saved</div>', unsafe_allow_html=True)
-    else:
-        st.markdown(f'<div style="color:{text_muted};font-size:0.78rem;margin-top:-6px;">AI features need API key</div>', unsafe_allow_html=True)
 
-    st.markdown("---")
+    # ── FIX 2: Single navigation (removed duplicate top-right links) ──────────
     pages = ["🏠 Dashboard", "🔍 IPO Detail", "📊 GMP Tracker", "📜 Historical Data"]
     current_idx = pages.index(st.session_state.current_page) if st.session_state.current_page in pages else 0
     page = st.radio("Navigate", pages, index=current_idx, label_visibility="collapsed")
