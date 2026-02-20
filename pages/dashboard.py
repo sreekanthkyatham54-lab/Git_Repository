@@ -113,49 +113,62 @@ def render(active_ipos, upcoming_ipos):
 
 
 def _render_ipo_card(ipo, is_active):
-    with st.container():
-        col1, col2 = st.columns([3, 1])
-        with col1:
-            exchange_badge = f"<span class='badge badge-bse'>{ipo['exchange']}</span>" if "BSE" in ipo["exchange"] else f"<span class='badge badge-nse'>{ipo['exchange']}</span>"
-            status_badge   = "<span class='badge badge-open'>● OPEN</span>" if is_active else "<span class='badge badge-upcoming'>◎ UPCOMING</span>"
-            rec = ipo["recommendation"]
-            rec_html = {"SUBSCRIBE": "<span class='rec-subscribe'>✓ SUBSCRIBE</span>",
-                        "AVOID":     "<span class='rec-avoid'>✗ AVOID</span>"}.get(rec, "<span class='rec-neutral'>~ NEUTRAL</span>")
+    exchange_badge = f"<span class='badge badge-bse'>{ipo['exchange']}</span>" if "BSE" in ipo["exchange"] else f"<span class='badge badge-nse'>{ipo['exchange']}</span>"
+    status_badge   = "<span class='badge badge-open'>● OPEN</span>" if is_active else "<span class='badge badge-upcoming'>◎ UPCOMING</span>"
+    rec = ipo["recommendation"]
+    rec_html = {"SUBSCRIBE": "<span class='rec-subscribe'>✓ SUBSCRIBE</span>",
+                "AVOID":     "<span class='rec-avoid'>✗ AVOID</span>"}.get(rec, "<span class='rec-neutral'>~ NEUTRAL</span>")
+    gmp_color   = "positive" if ipo["gmp"] > 0 else ("negative" if ipo["gmp"] < 0 else "neutral")
+    gmp_sign    = "+" if ipo["gmp"] > 0 else ""
+    issue_price = float(ipo.get("issue_price") or 0)
+    gmp_val     = float(ipo.get("gmp") or 0)
+    gmp_pct     = round((gmp_val / issue_price * 100), 1) if issue_price > 0 else 0
+    sub_color   = "positive" if ipo["subscription_times"] > 5 else ("neutral" if ipo["subscription_times"] > 1 else "negative")
+    sub_display = f"{ipo['subscription_times']}x" if ipo["subscription_times"] > 0 else "—"
+    try:
+        open_date_fmt = dt.strptime(str(ipo["open_date"]), "%Y-%m-%d").strftime("%d/%m/%y")
+    except:
+        open_date_fmt = str(ipo["open_date"])
 
-            gmp_color   = "positive" if ipo["gmp"] > 0 else ("negative" if ipo["gmp"] < 0 else "neutral")
-            gmp_sign    = "+" if ipo["gmp"] > 0 else ""
-            issue_price = float(ipo.get("issue_price") or 0)
-            gmp_val     = float(ipo.get("gmp") or 0)
-            gmp_pct     = round((gmp_val / issue_price * 100), 1) if issue_price > 0 else 0
-            sub_color   = "positive" if ipo["subscription_times"] > 5 else ("neutral" if ipo["subscription_times"] > 1 else "negative")
-            sub_display = f"{ipo['subscription_times']}x" if ipo["subscription_times"] > 0 else "—"
-            try:
-                open_date_fmt = dt.strptime(str(ipo["open_date"]), "%Y-%m-%d").strftime("%d/%m/%y")
-            except:
-                open_date_fmt = str(ipo["open_date"])
-
-            st.markdown(f"""
-            <div class='ipo-card'>
-                <div style='display:flex;align-items:center;gap:8px;margin-bottom:8px;'>
-                    {exchange_badge} {status_badge}
-                </div>
-                <div class='ipo-company'>{ipo['company']}</div>
-                <div class='ipo-sector'>{ipo['sector']}</div>
-                <div class='metric-row'>
-                    <div class='metric-item'><div class='metric-label'>Issue Price</div><div class='metric-value'>₹{ipo['issue_price']}</div></div>
-                    <div class='metric-item'><div class='metric-label'>Size</div><div class='metric-value'>₹{ipo['issue_size_cr']}Cr</div></div>
-                    <div class='metric-item'><div class='metric-label'>GMP</div><div class='metric-value {gmp_color}'>{gmp_sign}₹{ipo['gmp']} ({gmp_sign}{gmp_pct}%)</div></div>
-                    <div class='metric-item'><div class='metric-label'>Subscribed</div><div class='metric-value {sub_color}'>{sub_display}</div></div>
-                    <div class='metric-item'><div class='metric-label'>Opens</div><div class='metric-value' style='font-size:0.82rem;'>{open_date_fmt}</div></div>
-                    <div class='metric-item'><div class='metric-label'>Recommendation</div><div style='margin-top:2px;'>{rec_html}</div></div>
-                </div>
-                <div style='margin-top:12px;font-size:0.83rem;color:var(--muted);line-height:1.5;'>{str(ipo.get('summary',''))[:160]}...</div>
+    # Analyze button rendered as HTML inside the card — eliminates column alignment issues
+    analyze_key = f"analyze_{ipo['id']}"
+    st.markdown(f"""
+    <div class='ipo-card'>
+        <div class='ipo-card-body'>
+            <div style='display:flex;align-items:center;gap:8px;margin-bottom:8px;'>
+                {exchange_badge} {status_badge}
             </div>
-            """, unsafe_allow_html=True)
+            <div class='ipo-company'>{ipo['company']}</div>
+            <div class='ipo-sector'>{ipo['sector']}</div>
+            <div class='metric-row'>
+                <div class='metric-item'><div class='metric-label'>Issue Price</div><div class='metric-value'>₹{ipo['issue_price']}</div></div>
+                <div class='metric-item'><div class='metric-label'>Size</div><div class='metric-value'>₹{ipo['issue_size_cr']}Cr</div></div>
+                <div class='metric-item'><div class='metric-label'>GMP</div><div class='metric-value {gmp_color}'>{gmp_sign}₹{ipo['gmp']} ({gmp_sign}{gmp_pct}%)</div></div>
+                <div class='metric-item'><div class='metric-label'>Subscribed</div><div class='metric-value {sub_color}'>{sub_display}</div></div>
+                <div class='metric-item'><div class='metric-label'>Opens</div><div class='metric-value' style='font-size:0.82rem;'>{open_date_fmt}</div></div>
+                <div class='metric-item'><div class='metric-label'>Recommendation</div><div style='margin-top:2px;'>{rec_html}</div></div>
+            </div>
+            <div class='ipo-summary'>{str(ipo.get("summary",""))[:160]}...</div>
+        </div>
+        <div class='ipo-card-action'>
+            <button class='analyze-btn' onclick="
+                const btn = document.querySelector('[data-testid=stButton] button[kind]');
+                window.parent.document.querySelectorAll('button').forEach(b => {{
+                    if(b.innerText.includes('{ipo['id']}')) b.click();
+                }});
+            ">Analyze →</button>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-        with col2:
-            st.markdown("<div style='height:24px'></div>", unsafe_allow_html=True)
-            if st.button(f"Analyze →", key=f"analyze_{ipo['id']}"):
-                st.session_state.selected_ipo_id = ipo["id"]
-                st.session_state.current_page    = "IPO Detail"
-                st.rerun()
+    # Hidden real button for actual navigation (HTML button above triggers via JS fallback)
+    if st.button("→", key=analyze_key, help=f"Analyze {ipo['company']}"):
+        st.session_state.selected_ipo_id = ipo["id"]
+        st.session_state.current_page    = "IPO Detail"
+        st.rerun()
+    # Hide the Streamlit button visually
+    st.markdown(f"""<style>
+    button[data-testid="baseButton-secondary"][kind][aria-label="Analyze {ipo['company']}"] {{
+        display:none!important;
+    }}
+    </style>""", unsafe_allow_html=True)

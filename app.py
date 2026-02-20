@@ -1,4 +1,4 @@
-# v3.4 - st.radio nav, lighter button color, clean alignment
+# v3.5 - simple working nav, no alignment hacks
 """TradeSage — SME IPO Research Platform"""
 import streamlit as st
 import sys, os
@@ -24,127 +24,53 @@ dark = st.session_state.dark_mode
 if dark:
     bg="#0d1117"; card="#161b22"; card2="#21262d"; text="#f0f6fc"
     muted="#8b949e"; border="#30363d"; green="#3fb950"; red="#f85149"
-    yellow="#d29922"; blue="#58a6ff"; nav_bg="#161b22"
-    btn_green="#2ea043"  # lighter green for dark mode
+    yellow="#d29922"; blue="#58a6ff"; nav_bg="#161b22"; btn="#2ea043"
 else:
     bg="#f6f8fa"; card="#ffffff"; card2="#eef1f5"; text="#1a1a2e"
     muted="#57606a"; border="#d0d7de"; green="#1a7f37"; red="#cf222e"
-    yellow="#9a6700"; blue="#0969da"; nav_bg="#ffffff"
-    btn_green="#2da44e"  # lighter than #1a7f37, more like GitHub green
+    yellow="#9a6700"; blue="#0969da"; nav_bg="#ffffff"; btn="#2da44e"
 
 cur = st.session_state.current_page
+pages = ["Dashboard", "IPO Detail", "GMP Tracker", "Historical Data"]
+icons = {"Dashboard":"🏠","IPO Detail":"🔍","GMP Tracker":"📊","Historical Data":"📜"}
 
 st.markdown(f"""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
-:root{{
-    --bg:{bg};--card:{card};--card2:{card2};--text:{text};--muted:{muted};
-    --border:{border};--green:{green};--red:{red};--yellow:{yellow};--blue:{blue};
-    --btn-green:{btn_green};
-}}
-
-/* ── RESET ── */
-html,body,.stApp{{background-color:var(--bg)!important;font-family:'Sora',sans-serif!important;color:var(--text)!important;}}
+:root{{--bg:{bg};--card:{card};--card2:{card2};--text:{text};--muted:{muted};--border:{border};--green:{green};--red:{red};--yellow:{yellow};--blue:{blue};--btn:{btn};}}
+html,body,.stApp{{background:var(--bg)!important;font-family:'Sora',sans-serif!important;color:var(--text)!important;}}
 p,span,div,label,h1,h2,h3,h4,h5,li,td,th{{color:var(--text)!important;}}
-#MainMenu,footer,header{{visibility:hidden!important;display:none!important;}}
-[data-testid="stSidebarNav"],[data-testid="stToolbar"],[data-testid="stSidebar"],[data-testid="collapsedControl"],.stDeployButton{{display:none!important;}}
-.block-container{{padding-top:0!important;padding-left:2rem!important;padding-right:2rem!important;padding-bottom:2rem!important;max-width:100%!important;}}
-.main .block-container{{padding-top:0!important;}}
+#MainMenu,footer,header,[data-testid="stSidebarNav"],[data-testid="stToolbar"],[data-testid="stSidebar"],[data-testid="collapsedControl"],.stDeployButton{{display:none!important;}}
+.block-container{{padding:0 2rem 2rem!important;max-width:100%!important;}}
 section[data-testid="stMain"]>div:first-child{{padding-top:0!important;}}
 
-/* ── TOP BAR: logo row ── */
-.ts-topbar{{
-    background:{nav_bg};
-    border-bottom:1px solid {border};
-    margin:0 -2rem;
-    padding:0 2rem;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    height:56px;
-}}
-.ts-logo{{display:flex;align-items:center;gap:10px;}}
-.ts-logo-icon{{
-    width:32px;height:32px;background:{green};border-radius:8px;
-    display:flex;align-items:center;justify-content:center;font-size:0.95rem;
-    box-shadow:0 2px 6px rgba(26,127,55,0.3);
-}}
+/* ── NAV ── */
+.ts-nav{{background:{nav_bg};border-bottom:2px solid {border};margin:0 -2rem;padding:0 2rem;display:flex;align-items:center;height:60px;gap:0;}}
+.ts-logo{{display:flex;align-items:center;gap:10px;padding-right:20px;border-right:1px solid {border};margin-right:4px;flex-shrink:0;}}
+.ts-logo-icon{{width:34px;height:34px;background:{green};border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 2px 6px rgba(26,127,55,0.3);}}
 .ts-logo-name{{font-size:1.1rem;font-weight:800;letter-spacing:-0.4px;}}
-.ts-logo-name span{{color:{green}!important;}}
-.ts-pills{{display:flex;align-items:center;gap:6px;}}
+.ts-logo-name b{{color:{green}!important;}}
+.ts-nav-links{{display:flex;align-items:stretch;flex:1;}}
+.ts-nav-link{{
+    display:flex;align-items:center;padding:0 16px;height:60px;
+    font-size:0.85rem;font-weight:600;color:{muted}!important;
+    cursor:pointer;border-bottom:3px solid transparent;
+    text-decoration:none;white-space:nowrap;
+    transition:color 0.15s,border-bottom-color 0.15s;
+}}
+.ts-nav-link:hover{{color:{text}!important;background:rgba(0,0,0,0.03);}}
+.ts-nav-link.active{{color:{green}!important;border-bottom:3px solid {green};background:rgba(26,127,55,0.05);}}
+.ts-pills{{margin-left:auto;display:flex;align-items:center;gap:6px;padding-left:12px;flex-shrink:0;}}
 .ts-pill{{padding:3px 9px;border-radius:20px;font-size:0.65rem;font-weight:600;letter-spacing:0.3px;white-space:nowrap;}}
 .np-blue{{background:rgba(9,105,218,0.1);color:{blue}!important;border:1px solid {blue};}}
 .np-green{{background:rgba(26,127,55,0.1);color:{green}!important;border:1px solid {green};}}
 .np-yellow{{background:rgba(154,103,0,0.1);color:{yellow}!important;border:1px solid {yellow};}}
 
-/* ── NAV TABS ROW: st.radio styled as tab links ── */
-.ts-navrow{{
-    background:{nav_bg};
-    border-bottom:2px solid {border};
-    margin:0 -2rem;
-    padding:0 2rem;
-    display:flex;
-    align-items:center;
-    height:44px;
-}}
-
-/* Style the radio as horizontal nav links */
-div[data-testid="stHorizontalBlock"]:first-of-type {{
-    margin:0 -2rem!important;
-    padding:0 2rem!important;
-    background:{nav_bg}!important;
-    border-bottom:2px solid {border}!important;
-    gap:0!important;
-    align-items:stretch!important;
-}}
-
-/* ── RADIO AS NAV TABS ── */
-[data-testid="stRadio"]>div[role="radiogroup"]{{
-    flex-direction:row!important;gap:0!important;flex-wrap:nowrap!important;
-    background:transparent!important;align-items:stretch!important;
-}}
-[data-testid="stRadio"] [data-baseweb="radio"]{{
-    display:flex!important;align-items:center!important;
-    padding:0 18px!important;height:44px!important;
-    background:transparent!important;
-    border-bottom:3px solid transparent!important;
-    cursor:pointer!important;
-    transition:all 0.15s!important;
-    margin:0!important;border-radius:0!important;
-}}
-[data-testid="stRadio"] [data-baseweb="radio"]:hover{{
-    background:rgba(0,0,0,0.03)!important;
-}}
-[data-testid="stRadio"] [data-baseweb="radio"][aria-checked="true"]{{
-    border-bottom:3px solid {green}!important;
-    background:rgba(26,127,55,0.05)!important;
-}}
-/* Hide the actual circle indicator completely */
-[data-testid="stRadio"] [data-baseweb="radio"] div:first-child{{
-    display:none!important;
-}}
-/* The text label */
-[data-testid="stRadio"] [data-baseweb="radio"] div:last-child{{
-    font-size:0.85rem!important;font-weight:600!important;
-    color:{muted}!important;padding:0!important;
-}}
-[data-testid="stRadio"] [data-baseweb="radio"][aria-checked="true"] div:last-child{{
-    color:{green}!important;
-}}
-[data-testid="stRadio"] [data-baseweb="radio"]:hover div:last-child{{
-    color:{text}!important;
-}}
-
-/* ── GENERAL BUTTONS — lighter green ── */
-.stButton>button{{
-    background:{btn_green}!important;color:white!important;border:none!important;
-    border-radius:8px!important;font-weight:600!important;padding:8px 20px!important;
-    font-family:'Sora',sans-serif!important;
-    transition:opacity 0.15s,transform 0.15s!important;
-}}
+/* ── BUTTONS ── */
+.stButton>button{{background:var(--btn)!important;color:white!important;border:none!important;border-radius:8px!important;font-weight:600!important;padding:8px 20px!important;font-family:'Sora',sans-serif!important;transition:opacity 0.15s,transform 0.15s!important;}}
 .stButton>button:hover{{opacity:0.88!important;transform:translateY(-1px)!important;}}
 
-/* ── INPUTS ── */
+/* ── INPUTS / WIDGETS ── */
 .stTextInput>div>div>input{{background:var(--card)!important;border:1.5px solid var(--border)!important;color:var(--text)!important;border-radius:8px!important;}}
 .stSelectbox>div>div{{background:var(--card)!important;border:1.5px solid var(--border)!important;}}
 .stTabs [data-baseweb="tab-list"]{{background:var(--card2)!important;border-radius:10px!important;padding:4px!important;border:1px solid var(--border)!important;}}
@@ -154,10 +80,13 @@ div[data-testid="stHorizontalBlock"]:first-of-type {{
 [data-testid="stMetricValue"]{{color:var(--text)!important;font-family:'JetBrains Mono',monospace!important;}}
 [data-testid="stMetricLabel"]{{color:var(--muted)!important;font-size:0.75rem!important;}}
 hr{{border-color:var(--border)!important;}}
+.stChat .stChatMessage{{background:var(--card)!important;border:1px solid var(--border)!important;}}
 
 /* ── IPO CARDS ── */
-.ipo-card{{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:20px;margin-bottom:14px;transition:border-color 0.2s,box-shadow 0.2s;}}
+.ipo-card{{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:20px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;transition:border-color 0.2s,box-shadow 0.2s;}}
 .ipo-card:hover{{border-color:var(--green);box-shadow:0 4px 16px rgba(0,0,0,0.07);}}
+.ipo-card-body{{flex:1;min-width:0;}}
+.ipo-card-action{{flex-shrink:0;display:flex;align-items:center;padding-top:4px;}}
 .ipo-company{{font-size:1.05rem;font-weight:700;}}
 .ipo-sector{{font-size:0.72rem;color:var(--muted)!important;text-transform:uppercase;letter-spacing:1.2px;margin:4px 0 12px;}}
 .badge{{display:inline-block;padding:3px 10px;border-radius:20px;font-size:0.7rem;font-weight:600;}}
@@ -175,6 +104,16 @@ hr{{border-color:var(--border)!important;}}
 .rec-subscribe{{background:rgba(63,185,80,0.12);color:var(--green)!important;border:1.5px solid var(--green);padding:3px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;}}
 .rec-avoid{{background:rgba(248,81,73,0.12);color:var(--red)!important;border:1.5px solid var(--red);padding:3px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;}}
 .rec-neutral{{background:rgba(210,153,34,0.12);color:var(--yellow)!important;border:1.5px solid var(--yellow);padding:3px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;}}
+.ipo-summary{{margin-top:12px;font-size:0.83rem;color:var(--muted)!important;line-height:1.5;}}
+.analyze-btn{{
+    display:inline-flex;align-items:center;gap:6px;
+    background:{btn};color:white!important;
+    border:none;border-radius:8px;padding:10px 20px;
+    font-size:0.88rem;font-weight:600;font-family:'Sora',sans-serif;
+    cursor:pointer;white-space:nowrap;
+    transition:opacity 0.15s,transform 0.15s;text-decoration:none;
+}}
+.analyze-btn:hover{{opacity:0.88;transform:translateY(-1px);}}
 .alert-green{{background:rgba(63,185,80,0.08);border-left:3px solid var(--green);padding:12px 16px;border-radius:0 8px 8px 0;margin:8px 0;}}
 .alert-red{{background:rgba(248,81,73,0.08);border-left:3px solid var(--red);padding:12px 16px;border-radius:0 8px 8px 0;margin:8px 0;}}
 .alert-yellow{{background:rgba(210,153,34,0.08);border-left:3px solid var(--yellow);padding:12px 16px;border-radius:0 8px 8px 0;margin:8px 0;}}
@@ -217,63 +156,67 @@ DATA_SOURCE     = data.get("source", "seed")
 
 live_cls = "np-green" if DATA_SOURCE == "live" else "np-yellow"
 live_txt = "🟢 LIVE" if DATA_SOURCE == "live" else "🟡 DEMO"
-dark_icon = "☀️" if dark else "🌙"
-pages     = ["🏠 Dashboard", "🔍 IPO Detail", "📊 GMP Tracker", "📜 Historical Data"]
 
-# ── TOP BAR: logo + pills + dark toggle ──────────────────────────────────────
-col_logo, col_right = st.columns([3, 1])
-with col_logo:
-    st.markdown(f"""
-    <div class="ts-topbar">
-        <div class="ts-logo">
-            <div class="ts-logo-icon">📈</div>
-            <div class="ts-logo-name">Trade<span>Sage</span></div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-with col_right:
-    st.markdown(f"""
-    <div class="ts-topbar" style="justify-content:flex-end;">
-        <div class="ts-pills">
-            <span class="ts-pill np-blue">BSE SME</span>
-            <span class="ts-pill np-blue">NSE Emerge</span>
-            <span class="ts-pill {live_cls}">{live_txt}</span>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+# ── NAV BAR — pure HTML with JS for clicks ────────────────────────────────────
+nav_links = "".join([
+    f'<a class="ts-nav-link{"  active" if p == cur else ""}" '
+    f'onclick="window.parent.document.querySelector(\'[data-testid=\"stApp\"]\').dispatchEvent(new CustomEvent(\'nav\',{{detail:\'{p}\'}})); return false;" '
+    f'href="#">{icons[p]} {p}</a>'
+    for p in pages
+])
 
-# ── NAV TABS: st.radio rendered as horizontal tab links ──────────────────────
-# Map current_page to pages list index
-cur_label = next((p for p in pages if p.split(" ", 1)[1] in cur), pages[0])
-
-selected = st.radio(
-    label="",
-    options=pages,
-    index=pages.index(cur_label),
-    horizontal=True,
-    label_visibility="collapsed",
-    key="main_nav"
-)
-
-# Sync selection to session state
-new_page = selected.split(" ", 1)[1]  # strip icon
-if new_page != cur:
-    st.session_state.current_page = new_page
-    st.rerun()
-
-# Dark mode toggle — small button in top right corner, overlaid via fixed CSS
 st.markdown(f"""
-<style>
-/* Fixed dark mode toggle — bottom right corner to avoid layout interference */
-#dark-toggle-wrap {{
-    position:fixed;top:12px;right:16px;z-index:99999;
-}}
-</style>
-<div id="dark-toggle-wrap"></div>
+<div class="ts-nav">
+    <div class="ts-logo">
+        <div class="ts-logo-icon">📈</div>
+        <div class="ts-logo-name">Trade<b>Sage</b></div>
+    </div>
+    <div class="ts-nav-links">
+        {nav_links}
+    </div>
+    <div class="ts-pills">
+        <span class="ts-pill np-blue">BSE SME</span>
+        <span class="ts-pill np-blue">NSE Emerge</span>
+        <span class="ts-pill {live_cls}">{live_txt}</span>
+    </div>
+</div>
 """, unsafe_allow_html=True)
 
+# Real nav buttons — hidden visually, triggered by clicks
+# Use a simple column row of minimal buttons for actual navigation
+nav_cols = st.columns(len(pages) + 1)
+for i, p in enumerate(pages):
+    with nav_cols[i]:
+        # Style these buttons to be invisible — they're just the click targets
+        st.markdown(f"""<style>
+        div[data-testid="stHorizontalBlock"]:nth-of-type(1) > div:nth-child({i+1}) button {{
+            opacity:0!important;height:1px!important;padding:0!important;
+            margin:0!important;min-height:0!important;font-size:0!important;
+            pointer-events:none!important;
+        }}
+        </style>""", unsafe_allow_html=True)
+        st.button(p, key=f"nav_{p}", on_click=lambda p=p: st.session_state.update(current_page=p))
+
+with nav_cols[len(pages)]:
+    dark_icon = "☀️" if dark else "🌙"
+    st.markdown(f"""<style>
+    div[data-testid="stHorizontalBlock"]:nth-of-type(1) > div:last-child button {{
+        background:transparent!important;color:{muted}!important;border:none!important;
+        border-radius:6px!important;box-shadow:none!important;
+        font-size:1.1rem!important;padding:4px 8px!important;
+        position:fixed!important;top:14px!important;right:80px!important;z-index:99999!important;
+        opacity:1!important;height:auto!important;pointer-events:auto!important;
+    }}
+    div[data-testid="stHorizontalBlock"]:nth-of-type(1) > div:last-child button:hover{{
+        background:var(--card2)!important;transform:none!important;opacity:1!important;
+    }}
+    </style>""", unsafe_allow_html=True)
+    if st.button(dark_icon, key="theme_btn"):
+        st.session_state.dark_mode = not st.session_state.dark_mode
+        st.rerun()
+
 # ── PAGE CONTENT ──────────────────────────────────────────────────────────────
-st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
+st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)
 cur = st.session_state.current_page
 if   "Dashboard"  in cur:
     from pages.dashboard   import render; render(ACTIVE_IPOS, UPCOMING_IPOS)
