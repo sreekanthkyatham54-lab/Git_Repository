@@ -28,6 +28,12 @@ def load_ipo_data():
     else:
         data = _load_seed(); data["source"] = "seed"
 
+    # Fix historical IPOs: compute gmp_before_listing from issue_price + gmp_predicted_gain if zero/missing
+    for ipo in data.get("historical_ipos", []):
+        gmp_val = ipo.get("gmp_before_listing", 0)
+        if not gmp_val and ipo.get("gmp_predicted_gain") and ipo.get("issue_price"):
+            ipo["gmp_before_listing"] = round(ipo["issue_price"] * ipo["gmp_predicted_gain"] / 100)
+
     # Enrich with DRHP DB if available
     try:
         from db_reader import enrich_ipo_with_drhp, get_db_stats

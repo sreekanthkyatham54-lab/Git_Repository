@@ -67,63 +67,49 @@ def render(active_ipos, upcoming_ipos):
     # ── COMING SOON TEASER ────────────────────────────────────────────────────
     st.markdown("""
     <div class="coming-soon-section">
-        <div class="coming-soon-title">🔮 Roadmap</div>
-        <div class="coming-soon-heading">What's Coming to TradeSage</div>
-        <div class="coming-soon-sub">We're building the most comprehensive investment research platform for Indian retail investors.</div>
+        <div class="coming-soon-header">
+            <div class="coming-soon-label">🔮 Roadmap</div>
+            <div class="coming-soon-heading">What's Coming to TradeSage</div>
+            <div class="coming-soon-sub">Building the most comprehensive investment research platform for Indian retail investors.</div>
+        </div>
+        <div class="cs-grid">
+            <div class="cs-card cs-card-fo">
+                <div class="cs-top"><div class="cs-icon">📈</div><div class="cs-name">F&amp;O Copilot</div></div>
+                <div class="cs-desc">Real-time options chain analysis, strategy builder, and AI-generated trade setups for F&amp;O traders.</div>
+                <ul class="cs-features">
+                    <li>Options chain heatmap</li>
+                    <li>Strategy P&amp;L simulator</li>
+                    <li>IV percentile alerts</li>
+                    <li>Max pain calculator</li>
+                </ul>
+                <span class="cs-pill">Coming Q1 2026</span>
+            </div>
+            <div class="cs-card cs-card-mf">
+                <div class="cs-top"><div class="cs-icon">📊</div><div class="cs-name">MF Screener</div></div>
+                <div class="cs-desc">AI-powered mutual fund analysis with portfolio overlap detection, factor scoring, and personalised recommendations.</div>
+                <ul class="cs-features">
+                    <li>Fund vs benchmark analysis</li>
+                    <li>Portfolio overlap checker</li>
+                    <li>SIP return projections</li>
+                    <li>Tax efficiency scoring</li>
+                </ul>
+                <span class="cs-pill">Coming Q2 2026</span>
+            </div>
+            <div class="cs-card cs-card-crypto">
+                <div class="cs-top"><div class="cs-icon">₿</div><div class="cs-name">Crypto Tracker</div></div>
+                <div class="cs-desc">Indian crypto market intelligence — INR pricing, regulatory updates, on-chain signals, and AI sentiment.</div>
+                <ul class="cs-features">
+                    <li>INR-denominated pricing</li>
+                    <li>Regulatory news feed</li>
+                    <li>On-chain analytics</li>
+                    <li>Portfolio tracker</li>
+                </ul>
+                <span class="cs-pill">Coming Q2 2026</span>
+            </div>
+        </div>
     </div>
+    <br>
     """, unsafe_allow_html=True)
-
-    cs_col1, cs_col2, cs_col3 = st.columns(3)
-
-    with cs_col1:
-        st.markdown("""
-        <div class="cs-card cs-card-fo">
-            <div class="cs-icon">📈</div>
-            <div class="cs-name">F&O Copilot</div>
-            <div class="cs-desc">Real-time options chain analysis, strategy builder, and AI-generated trade setups for futures & options traders.</div>
-            <ul class="cs-features">
-                <li>Options chain heatmap</li>
-                <li>Strategy P&L simulator</li>
-                <li>IV percentile alerts</li>
-                <li>Max pain calculator</li>
-            </ul>
-            <span class="cs-pill">Coming Q1 2026</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with cs_col2:
-        st.markdown("""
-        <div class="cs-card cs-card-mf">
-            <div class="cs-icon">📊</div>
-            <div class="cs-name">MF Screener</div>
-            <div class="cs-desc">AI-powered mutual fund analysis with portfolio overlap detection, factor scoring, and personalised fund recommendations.</div>
-            <ul class="cs-features">
-                <li>Fund vs benchmark analysis</li>
-                <li>Portfolio overlap checker</li>
-                <li>SIP return projections</li>
-                <li>Tax efficiency scoring</li>
-            </ul>
-            <span class="cs-pill">Coming Q2 2026</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with cs_col3:
-        st.markdown("""
-        <div class="cs-card cs-card-crypto">
-            <div class="cs-icon">₿</div>
-            <div class="cs-name">Crypto Tracker</div>
-            <div class="cs-desc">Indian crypto market intelligence — exchange rates, regulatory updates, on-chain signals, and AI sentiment analysis.</div>
-            <ul class="cs-features">
-                <li>INR-denominated pricing</li>
-                <li>Regulatory news feed</li>
-                <li>On-chain analytics</li>
-                <li>Portfolio tracker</li>
-            </ul>
-            <span class="cs-pill">Coming Q2 2026</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-    st.markdown("<br>", unsafe_allow_html=True)
 
 
 def _render_ipo_card(ipo, is_active):
@@ -168,8 +154,8 @@ def _render_ipo_card(ipo, is_active):
             """, unsafe_allow_html=True)
 
         with col2:
-            st.markdown("<div style='height:30px'></div>", unsafe_allow_html=True)
-            if st.button("Analyze →", key=f"analyze_{ipo['id']}"):
+            st.markdown("<div style='height:24px'></div>", unsafe_allow_html=True)
+            if st.button(f"Analyze →", key=f"analyze_{ipo['id']}"):
                 st.session_state.selected_ipo_id = ipo["id"]
                 st.session_state.current_page    = "IPO Detail"
                 st.rerun()

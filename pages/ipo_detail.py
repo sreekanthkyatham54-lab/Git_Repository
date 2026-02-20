@@ -156,29 +156,33 @@ def render(all_ipos):
         st.markdown("### 📊 AI Investment Scorecard")
         scorecard_key = f"scorecard_result_{ipo_id}"
 
-        # Load from disk cache into session on first visit
-        if scorecard_key not in st.session_state:
-            if cached.get("scorecard"):
-                st.session_state[scorecard_key] = cached["scorecard"]
-            else:
-                # Auto-generate if no cache exists
-                with st.spinner("🤖 Generating scorecard..."):
-                    try:
-                        from utils.ai_utils import get_ai_recommendation
-                        st.session_state[scorecard_key] = get_ai_recommendation(st.session_state.api_key, ipo)
-                    except Exception as e:
-                        st.session_state[scorecard_key] = None
+        # Load from disk cache silently if available
+        if scorecard_key not in st.session_state and cached.get("scorecard"):
+            st.session_state[scorecard_key] = cached["scorecard"]
+
+        # Always show static scorecard first
+        _render_static_scorecard(ipo)
 
         if st.session_state.get(scorecard_key):
+            st.markdown("---")
             _render_ai_scorecard(st.session_state[scorecard_key], ipo)
             cached_at = cached.get("scorecard_at", "")[:16].replace("T", " ")
             if cached_at:
-                st.caption(f"🕐 Cached: {cached_at} · Refreshes twice daily")
+                st.caption(f"🕐 AI analysis cached: {cached_at} · Auto-refreshes twice daily")
+            if st.button("🔄 Regenerate AI Analysis", key=f"regen_{ipo_id}"):
+                del st.session_state[scorecard_key]
+                st.rerun()
         else:
-            _render_static_scorecard(ipo)
-        if st.button("🔄 Regenerate", key=f"regen_{ipo_id}"):
-            del st.session_state[scorecard_key]
-            st.rerun()
+            st.markdown("<div style='height:8px'></div>", unsafe_allow_html=True)
+            st.markdown("<div style='font-size:0.8rem;color:var(--muted);margin-bottom:6px;'>Powered by Claude · Takes 5–10 seconds</div>", unsafe_allow_html=True)
+            if st.button("🤖 Generate AI Scorecard", key=f"gen_scorecard_{ipo_id}"):
+                with st.spinner("🤖 Analysing DRHP, financials, valuation..."):
+                    try:
+                        from utils.ai_utils import get_ai_recommendation
+                        st.session_state[scorecard_key] = get_ai_recommendation(st.session_state.api_key, ipo)
+                        st.rerun()
+                    except Exception as e:
+                        st.error(f"Error: {e}")
 
     # ── TAB 3: INDUSTRY & PEERS ──────────────────────────────────────────────
     with tab3:
@@ -215,25 +219,27 @@ def render(all_ipos):
         st.markdown("<br>", unsafe_allow_html=True)
 
         peer_key = f"peer_result_{ipo_id}"
-        if peer_key not in st.session_state:
-            if cached.get("industry"):
-                st.session_state[peer_key] = cached["industry"]
-            else:
-                with st.spinner("🤖 Analysing industry & peers..."):
-                    try:
-                        from utils.ai_utils import compare_with_industry
-                        st.session_state[peer_key] = compare_with_industry(st.session_state.api_key, ipo)
-                    except Exception as e:
-                        st.session_state[peer_key] = None
+        if peer_key not in st.session_state and cached.get("industry"):
+            st.session_state[peer_key] = cached["industry"]
 
         if st.session_state.get(peer_key):
             st.markdown(f"<div class='chat-message-ai'>{st.session_state[peer_key].replace(chr(10), '<br>')}</div>", unsafe_allow_html=True)
             cached_at = cached.get("industry_at", "")[:16].replace("T", " ")
             if cached_at:
-                st.caption(f"🕐 Cached: {cached_at} · Refreshes twice daily")
-        if st.button("🔄 Refresh Analysis", key=f"refresh_peer_{ipo_id}"):
-            if peer_key in st.session_state: del st.session_state[peer_key]
-            st.rerun()
+                st.caption(f"🕐 AI analysis cached: {cached_at} · Auto-refreshes twice daily")
+            if st.button("🔄 Refresh Analysis", key=f"refresh_peer_{ipo_id}"):
+                del st.session_state[peer_key]
+                st.rerun()
+        else:
+            st.markdown("<div style='font-size:0.8rem;color:var(--muted);margin-bottom:6px;'>Powered by Claude · Takes 5–10 seconds</div>", unsafe_allow_html=True)
+            if st.button("🤖 Get AI Industry Analysis", key=f"gen_peer_{ipo_id}"):
+                with st.spinner("🤖 Comparing with industry and peers..."):
+                    try:
+                        from utils.ai_utils import compare_with_industry
+                        st.session_state[peer_key] = compare_with_industry(st.session_state.api_key, ipo)
+                        st.rerun()
+                    except Exception as e:
+                        st.error(f"Error: {e}")
 
     # ── TAB 4: FINANCIALS ────────────────────────────────────────────────────
     with tab4:
@@ -301,28 +307,30 @@ def render(all_ipos):
                 """, unsafe_allow_html=True)
         else:
             news_key = f"news_{ipo_id}"
-            if news_key not in st.session_state:
-                if cached.get("news"):
-                    st.session_state[news_key] = cached["news"]
-                else:
-                    with st.spinner("🤖 Getting news summary..."):
+            if news_key not in st.session_state and cached.get("news"):
+                st.session_state[news_key] = cached["news"]
+
+            if st.session_state.get(news_key):
+                st.markdown(f"<div class='chat-message-ai'>🤖 {st.session_state[news_key].replace(chr(10),'<br>')}</div>", unsafe_allow_html=True)
+                cached_at = cached.get("news_at", "")[:16].replace("T", " ")
+                if cached_at:
+                    st.caption(f"🕐 AI analysis cached: {cached_at} · Auto-refreshes twice daily")
+                if st.button("🔄 Refresh News", key=f"refresh_news_{ipo_id}"):
+                    del st.session_state[news_key]
+                    st.rerun()
+            else:
+                st.markdown("<div style='font-size:0.8rem;color:var(--muted);margin-bottom:6px;'>Powered by Claude · Takes 5–10 seconds</div>", unsafe_allow_html=True)
+                if st.button("🤖 Get AI News Summary", key=f"gen_news_{ipo_id}"):
+                    with st.spinner("🤖 Fetching news & sentiment..."):
                         try:
                             from utils.ai_utils import chat_with_ipo
                             news_prompt = (f"Summarise what is publicly known about {ipo['company']} IPO — "
                                           f"any news, analyst views, subscription trends, GMP movement, "
                                           f"or market sentiment. Keep it concise and factual.")
                             st.session_state[news_key] = chat_with_ipo(st.session_state.api_key, ipo, [], news_prompt)
+                            st.rerun()
                         except Exception as e:
-                            st.session_state[news_key] = None
-
-            if st.session_state.get(news_key):
-                st.markdown(f"<div class='chat-message-ai'>🤖 {st.session_state[news_key].replace(chr(10),'<br>')}</div>", unsafe_allow_html=True)
-                cached_at = cached.get("news_at", "")[:16].replace("T", " ")
-                if cached_at:
-                    st.caption(f"🕐 Cached: {cached_at} · Refreshes twice daily")
-            if st.button("🔄 Refresh News", key=f"refresh_news_{ipo_id}"):
-                if news_key in st.session_state: del st.session_state[news_key]
-                st.rerun()
+                            st.error(f"Error: {e}")
 
 
 def _render_static_scorecard(ipo):
