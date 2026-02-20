@@ -64,6 +64,8 @@ st.markdown(f"""
 html,body,.stApp{{background-color:var(--bg-primary)!important;font-family:'Inter',sans-serif!important;color:var(--text-primary)!important;}}
 p,span,div,label,h1,h2,h3,h4,h5,li,td,th{{color:var(--text-primary)!important;}}
 #MainMenu,footer,header{{visibility:hidden;}}
+[data-testid="stSidebarNav"]{{display:none!important;}}
+[data-testid="stSidebarNavItems"]{{display:none!important;}}
 .stDeployButton{{display:none;}}
 /* Hide the Fork/GitHub button Streamlit adds top-right */
 [data-testid="stToolbar"]{{display:none!important;}}
