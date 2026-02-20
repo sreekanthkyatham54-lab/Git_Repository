@@ -13,7 +13,7 @@ def render(active_ipos, upcoming_ipos):
 
     # Stats bar
     total = len(active_ipos) + len(upcoming_ipos)
-    avg_gmp = sum(i["gmp_percent"] for i in active_ipos) / len(active_ipos) if active_ipos else 0
+    avg_gmp = sum(round(float(i["gmp"] or 0) / float(i["issue_price"] or 1) * 100, 1) for i in active_ipos) / len(active_ipos) if active_ipos else 0
     subscribe_count = sum(1 for i in active_ipos + upcoming_ipos if i["recommendation"] == "SUBSCRIBE")
 
     col1, col2, col3, col4 = st.columns(4)
@@ -99,9 +99,18 @@ def _render_ipo_card(ipo, is_active):
 
             gmp_color = "positive" if ipo["gmp"] > 0 else ("negative" if ipo["gmp"] < 0 else "neutral")
             gmp_sign = "+" if ipo["gmp"] > 0 else ""
+            issue_price = float(ipo.get("issue_price") or 0)
+            gmp_val = float(ipo.get("gmp") or 0)
+            gmp_pct = round((gmp_val / issue_price * 100), 1) if issue_price > 0 else 0
             sub_color = "positive" if ipo["subscription_times"] > 5 else ("neutral" if ipo["subscription_times"] > 1 else "negative")
-
             sub_display = f"{ipo['subscription_times']}x" if ipo["subscription_times"] > 0 else "—"
+            # Format date DD/MM/YY
+            from datetime import datetime as dt
+            try:
+                d = dt.strptime(str(ipo["open_date"]), "%Y-%m-%d")
+                open_date_fmt = d.strftime("%d/%m/%y")
+            except:
+                open_date_fmt = str(ipo["open_date"])
 
             st.markdown(f"""
             <div class='ipo-card'>
@@ -121,7 +130,7 @@ def _render_ipo_card(ipo, is_active):
                     </div>
                     <div class='metric-item'>
                         <div class='metric-label'>GMP</div>
-                        <div class='metric-value {gmp_color}'>{gmp_sign}₹{ipo['gmp']} ({gmp_sign}{ipo['gmp_percent']:.1f}%)</div>
+                        <div class='metric-value {gmp_color}'>{gmp_sign}₹{ipo['gmp']} ({gmp_sign}{gmp_pct}%)</div>
                     </div>
                     <div class='metric-item'>
                         <div class='metric-label'>Subscribed</div>
@@ -129,7 +138,7 @@ def _render_ipo_card(ipo, is_active):
                     </div>
                     <div class='metric-item'>
                         <div class='metric-label'>Opens</div>
-                        <div class='metric-value' style='font-size:0.82rem;'>{ipo['open_date']}</div>
+                        <div class='metric-value' style='font-size:0.82rem;'>{open_date_fmt}</div>
                     </div>
                     <div class='metric-item'>
                         <div class='metric-label'>Recommendation</div>

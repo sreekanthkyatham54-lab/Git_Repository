@@ -7,6 +7,11 @@ from data.ipo_data import NEWS, GMP_HISTORY
 
 
 def render(all_ipos):
+    # Fix 4: Back button to Dashboard
+    if st.button("← Back to Dashboard", key="back_to_dashboard"):
+        st.session_state.current_page = "🏠 Dashboard"
+        st.rerun()
+
     st.markdown("<div class='app-title' style='margin-bottom:8px;'>🔍 IPO <span style='color:#00d4aa;'>Deep Dive</span></div>", unsafe_allow_html=True)
     st.markdown("<div class='app-subtitle' style='margin-bottom:24px;'>AI-POWERED ANALYSIS · DRHP Q&A · PEER COMPARISON</div>", unsafe_allow_html=True)
 

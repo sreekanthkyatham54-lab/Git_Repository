@@ -15,10 +15,12 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-# Fix 1: Hide collapse arrow — sidebar always visible
+# Fix 3: Permanently visible sidebar - hide collapse controls completely
 st.markdown("""<style>
-[data-testid="collapsedControl"] { display: none !important; }
-section[data-testid="stSidebar"] { min-width: 260px !important; max-width: 260px !important; }
+[data-testid="collapsedControl"] { display: none !important; visibility: hidden !important; width: 0 !important; }
+button[kind="header"] { display: none !important; }
+section[data-testid="stSidebar"] { min-width: 260px !important; max-width: 260px !important; transform: translateX(0) !important; visibility: visible !important; }
+section[data-testid="stSidebar"][aria-expanded="false"] { transform: translateX(0) !important; min-width: 260px !important; }
 </style>""", unsafe_allow_html=True)
 
 # ── SESSION STATE ─────────────────────────────────────────────────────────────
