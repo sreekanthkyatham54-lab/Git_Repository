@@ -10,11 +10,30 @@ def render(active_ipos, upcoming_ipos):
     avg_gmp = sum(round(float(i["gmp"] or 0) / float(i["issue_price"] or 1) * 100, 1) for i in active_ipos) / len(active_ipos) if active_ipos else 0
     subscribe_count = sum(1 for i in active_ipos + upcoming_ipos if i["recommendation"] == "SUBSCRIBE")
 
-    col1, col2, col3, col4 = st.columns(4)
-    with col1: st.metric("Active IPOs",      len(active_ipos),          "Open Now")
-    with col2: st.metric("Upcoming IPOs",    len(upcoming_ipos),         "Opening Soon")
-    with col3: st.metric("Avg GMP (Active)", f"{avg_gmp:.1f}%",          "Grey Market")
-    with col4: st.metric("Subscribe Calls",  f"{subscribe_count}/{total}","AI Recommended")
+    st.markdown(f"""
+    <div style='display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;'>
+        <div style='background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:16px 20px;'>
+            <div style='font-size:0.75rem;color:var(--muted);font-weight:600;letter-spacing:0.3px;margin-bottom:4px;'>Active IPOs</div>
+            <div style='font-size:2rem;font-weight:700;font-family:monospace;'>{len(active_ipos)}</div>
+            <div style='font-size:0.78rem;color:var(--green);font-weight:600;margin-top:4px;'>↑ Open Now</div>
+        </div>
+        <div style='background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:16px 20px;'>
+            <div style='font-size:0.75rem;color:var(--muted);font-weight:600;letter-spacing:0.3px;margin-bottom:4px;'>Upcoming IPOs</div>
+            <div style='font-size:2rem;font-weight:700;font-family:monospace;'>{len(upcoming_ipos)}</div>
+            <div style='font-size:0.78rem;color:var(--green);font-weight:600;margin-top:4px;'>↑ Opening Soon</div>
+        </div>
+        <div style='background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:16px 20px;'>
+            <div style='font-size:0.75rem;color:var(--muted);font-weight:600;letter-spacing:0.3px;margin-bottom:4px;'>Avg GMP (Active)</div>
+            <div style='font-size:2rem;font-weight:700;font-family:monospace;'>{avg_gmp:.1f}%</div>
+            <div style='font-size:0.78rem;color:var(--green);font-weight:600;margin-top:4px;'>↑ Grey Market</div>
+        </div>
+        <div style='background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:16px 20px;'>
+            <div style='font-size:0.75rem;color:var(--muted);font-weight:600;letter-spacing:0.3px;margin-bottom:4px;'>Subscribe Calls</div>
+            <div style='font-size:2rem;font-weight:700;font-family:monospace;'>{subscribe_count}/{total}</div>
+            <div style='font-size:0.78rem;color:var(--green);font-weight:600;margin-top:4px;'>↑ AI Recommended</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
     st.markdown("---")
 

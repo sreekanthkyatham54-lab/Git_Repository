@@ -125,6 +125,91 @@ hr{{border-color:var(--border)!important;}}
 .cs-features li::before{{content:"→ ";color:var(--green)!important;font-weight:700;}}
 .cs-pill{{display:inline-block;padding:3px 10px;border-radius:20px;font-size:0.65rem;font-weight:700;background:rgba(26,127,55,0.1);color:var(--green)!important;border:1px solid var(--green);}}
 @media(max-width:768px){{.cs-grid{{grid-template-columns:1fr;}}}}
+
+/* ── MOBILE RESPONSIVE ── */
+/* Hamburger button - hidden on desktop */
+.ts-hamburger {{
+    display:none;
+    flex-direction:column;justify-content:center;align-items:center;
+    width:36px;height:36px;cursor:pointer;gap:5px;margin-left:auto;flex-shrink:0;
+    background:transparent;border:none;padding:4px;
+}}
+.ts-hamburger span {{
+    display:block;width:22px;height:2px;background:{text};
+    border-radius:2px;transition:all 0.25s;
+}}
+/* Mobile nav drawer */
+.ts-mobile-nav {{
+    display:none;
+    position:fixed;top:0;right:-100%;width:75%;max-width:280px;height:100vh;
+    background:{card};border-left:1px solid {border};
+    z-index:99999;transition:right 0.3s ease;
+    flex-direction:column;padding:20px;box-shadow:-4px 0 20px rgba(0,0,0,0.15);
+}}
+.ts-mobile-nav.open {{ right:0; }}
+.ts-mobile-overlay {{
+    display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);
+    z-index:99998;
+}}
+.ts-mobile-overlay.open {{ display:block; }}
+.ts-mobile-nav-header {{
+    display:flex;align-items:center;justify-content:space-between;
+    margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid {border};
+}}
+.ts-mobile-nav-close {{
+    font-size:1.4rem;cursor:pointer;color:{muted};background:none;border:none;
+    line-height:1;padding:4px;
+}}
+.ts-mobile-nav-link {{
+    display:flex;align-items:center;gap:12px;padding:14px 8px;
+    font-size:1rem;font-weight:600;color:{muted}!important;
+    text-decoration:none!important;border-radius:8px;
+    border-left:3px solid transparent;margin-bottom:4px;
+    transition:all 0.15s;
+}}
+.ts-mobile-nav-link:hover {{ background:{card2};color:{text}!important; }}
+.ts-mobile-nav-link.active {{
+    color:{green}!important;border-left:3px solid {green};
+    background:rgba(26,127,55,0.08);
+}}
+.ts-mobile-pills {{
+    margin-top:auto;padding-top:20px;border-top:1px solid {border};
+    display:flex;flex-wrap:wrap;gap:6px;
+}}
+
+@media (max-width:768px) {{
+    /* Show hamburger, hide desktop nav links and pills */
+    .ts-hamburger {{ display:flex!important; }}
+    .ts-nav-links {{ display:none!important; }}
+    .ts-pills {{ display:none!important; }}
+    .ts-mobile-nav {{ display:flex!important; }}
+    
+    /* Nav bar height on mobile */
+    .ts-nav {{ height:54px!important; }}
+    .ts-logo {{ padding-right:12px!important; }}
+    .ts-logo-name {{ font-size:1rem!important; }}
+    
+    /* 2x2 grid for metric cards on mobile */
+    [data-testid="stMetric"] {{
+        min-width:0!important;
+    }}
+    /* Force the 4-col metric row to wrap 2x2 */
+    div[data-testid="stHorizontalBlock"]:has([data-testid="stMetric"]) {{
+        flex-wrap:wrap!important;gap:10px!important;
+    }}
+    div[data-testid="stHorizontalBlock"]:has([data-testid="stMetric"]) > div {{
+        flex:1 1 calc(50% - 5px)!important;min-width:calc(50% - 5px)!important;max-width:calc(50% - 5px)!important;
+    }}
+    
+    /* IPO card full width on mobile */
+    .block-container {{ padding:0 1rem 1.5rem!important; }}
+    
+    /* Analyze button col - stack on mobile */
+    div[data-testid="stHorizontalBlock"]:has(>.stButton) {{
+        flex-wrap:wrap!important;
+    }}
+}}
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -143,11 +228,35 @@ live_txt = "🟢 LIVE" if DATA_SOURCE == "live" else "🟡 DEMO"
 # Navigation uses ?page=X query params — no Streamlit buttons in nav at all
 def nav_link(page):
     active = "active" if page == cur else ""
-    return f'<a class="ts-nav-link {active}" href="?page={page}">{icons[page]} {page}</a>'
+    return f'<a class="ts-nav-link {active}" href="?page={page}" target="_self">{icons[page]} {page}</a>'
 
 st.markdown(f"""
+<!-- Overlay for closing drawer -->
+<div class="ts-mobile-overlay" id="ts-overlay" onclick="closeMenu()"></div>
+
+<!-- Mobile slide-in nav drawer -->
+<div class="ts-mobile-nav" id="ts-mobile-nav">
+    <div class="ts-mobile-nav-header">
+        <div class="ts-logo" style="border:none;padding:0;">
+            <div class="ts-logo-icon" style="width:28px;height:28px;font-size:0.85rem;">📈</div>
+            <div class="ts-logo-name" style="font-size:1rem;">Trade<b>Sage</b></div>
+        </div>
+        <button class="ts-mobile-nav-close" onclick="closeMenu()">✕</button>
+    </div>
+    <a class="ts-mobile-nav-link {"active" if cur=="Dashboard" else ""}" href="?page=Dashboard" target="_self">🏠 Dashboard</a>
+    <a class="ts-mobile-nav-link {"active" if cur=="IPO Detail" else ""}" href="?page=IPO Detail" target="_self">🔍 IPO Detail</a>
+    <a class="ts-mobile-nav-link {"active" if cur=="GMP Tracker" else ""}" href="?page=GMP Tracker" target="_self">📊 GMP Tracker</a>
+    <a class="ts-mobile-nav-link {"active" if cur=="Historical Data" else ""}" href="?page=Historical Data" target="_self">📜 Historical Data</a>
+    <div class="ts-mobile-pills">
+        <span class="ts-pill np-blue">BSE SME</span>
+        <span class="ts-pill np-blue">NSE Emerge</span>
+        <span class="ts-pill {live_cls}">{live_txt}</span>
+    </div>
+</div>
+
+<!-- Top nav bar -->
 <div class="ts-nav">
-    <a class="ts-logo" href="?page=Dashboard" style="text-decoration:none;">
+    <a class="ts-logo" href="?page=Dashboard" target="_self" style="text-decoration:none;">
         <div class="ts-logo-icon">📈</div>
         <div class="ts-logo-name">Trade<b>Sage</b></div>
     </a>
@@ -162,8 +271,25 @@ st.markdown(f"""
         <span class="ts-pill np-blue">NSE Emerge</span>
         <span class="ts-pill {live_cls}">{live_txt}</span>
     </div>
+    <!-- Hamburger: only visible on mobile via CSS -->
+    <button class="ts-hamburger" onclick="openMenu()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+    </button>
 </div>
 <div style="height:16px"></div>
+
+<script>
+function openMenu() {{
+    document.getElementById('ts-mobile-nav').classList.add('open');
+    document.getElementById('ts-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}}
+function closeMenu() {{
+    document.getElementById('ts-mobile-nav').classList.remove('open');
+    document.getElementById('ts-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+}}
+</script>
 """, unsafe_allow_html=True)
 
 # ── PAGE CONTENT ──────────────────────────────────────────────────────────────
