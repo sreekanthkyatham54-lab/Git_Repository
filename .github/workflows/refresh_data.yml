@@ -1,0 +1,35 @@
+name: Refresh IPO Data
+
+on:
+  schedule:
+    - cron: '30 2 * * *'   # 8:00 AM IST (UTC+5:30 = UTC 02:30)
+    - cron: '30 8 * * *'   # 2:00 PM IST (UTC+5:30 = UTC 08:30)
+  workflow_dispatch:        # Manual trigger button in GitHub Actions tab
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 lxml
+
+      - name: Run IPO scraper
+        run: python scraper.py
+
+      - name: Commit and push fresh data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/live_ipo_data.json
+          git diff --cached --quiet || git commit -m "Auto-refresh: IPO data $(date +'%Y-%m-%d %H:%M IST')"
+          git push

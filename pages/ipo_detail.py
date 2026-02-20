@@ -31,12 +31,10 @@ def render(all_ipos):
     with col1:
         st.metric("Issue Price", f"₹{ipo['issue_price']}")
     with col2:
-        # FIX 3: GMP % = GMP / Issue Price * 100 (premium over issue price)
         issue_price = float(ipo.get('issue_price') or 0)
         gmp = float(ipo.get('gmp') or 0)
         gmp_pct = round((gmp / issue_price * 100), 1) if issue_price > 0 else 0
-        gmp_delta = f"+{gmp_pct}% over issue" if gmp >= 0 else f"{gmp_pct}% over issue"
-        st.metric("GMP", f"₹{gmp}", gmp_delta)
+        st.metric("GMP", f"₹{gmp}", f"+{gmp_pct}% vs issue price")
     with col3:
         st.metric("Issue Size", f"₹{ipo['issue_size_cr']}Cr")
     with col4:
