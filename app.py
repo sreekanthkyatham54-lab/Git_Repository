@@ -98,40 +98,41 @@ div[data-testid="stHorizontalBlock"]:first-of-type {{
     align-items:stretch!important;
 }}
 
-/* Radio widget as nav */
-[data-testid="stRadio"] > div {{
-    flex-direction:row!important;
-    gap:0!important;
-    flex-wrap:nowrap!important;
-    background:transparent!important;
-    align-items:stretch!important;
+/* ── RADIO AS NAV TABS ── */
+[data-testid="stRadio"]>div[role="radiogroup"]{{
+    flex-direction:row!important;gap:0!important;flex-wrap:nowrap!important;
+    background:transparent!important;align-items:stretch!important;
 }}
-[data-testid="stRadio"] label {{
+[data-testid="stRadio"] [data-baseweb="radio"]{{
     display:flex!important;align-items:center!important;
-    padding:10px 18px!important;
-    font-size:0.85rem!important;font-weight:600!important;
-    color:{muted}!important;
-    cursor:pointer!important;
-    border-bottom:3px solid transparent!important;
-    white-space:nowrap!important;
-    transition:color 0.15s,border-bottom-color 0.15s!important;
-    border-radius:0!important;
-    margin:0!important;
+    padding:0 18px!important;height:44px!important;
     background:transparent!important;
+    border-bottom:3px solid transparent!important;
+    cursor:pointer!important;
+    transition:all 0.15s!important;
+    margin:0!important;border-radius:0!important;
 }}
-[data-testid="stRadio"] label:hover{{color:{text}!important;background:rgba(0,0,0,0.03)!important;}}
-[data-testid="stRadio"] label[data-baseweb="radio"]:has(input:checked),
-[data-testid="stRadio"] label[aria-checked="true"]{{
-    color:{green}!important;
+[data-testid="stRadio"] [data-baseweb="radio"]:hover{{
+    background:rgba(0,0,0,0.03)!important;
+}}
+[data-testid="stRadio"] [data-baseweb="radio"][aria-checked="true"]{{
     border-bottom:3px solid {green}!important;
     background:rgba(26,127,55,0.05)!important;
 }}
-/* Hide the actual radio circles */
-[data-testid="stRadio"] input[type="radio"]{{display:none!important;}}
-[data-testid="stRadio"] [data-testid="stMarkdownContainer"]{{display:none!important;}}
-/* The visible label text */
-[data-testid="stRadio"] label > div:last-child{{
-    font-size:0.85rem!important;font-weight:600!important;padding:0!important;
+/* Hide the actual circle indicator completely */
+[data-testid="stRadio"] [data-baseweb="radio"] div:first-child{{
+    display:none!important;
+}}
+/* The text label */
+[data-testid="stRadio"] [data-baseweb="radio"] div:last-child{{
+    font-size:0.85rem!important;font-weight:600!important;
+    color:{muted}!important;padding:0!important;
+}}
+[data-testid="stRadio"] [data-baseweb="radio"][aria-checked="true"] div:last-child{{
+    color:{green}!important;
+}}
+[data-testid="stRadio"] [data-baseweb="radio"]:hover div:last-child{{
+    color:{text}!important;
 }}
 
 /* ── GENERAL BUTTONS — lighter green ── */
