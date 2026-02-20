@@ -1,4 +1,4 @@
-# v2.5 - auto-load tabs, clean sidebar
+# v3.0 - top nav, no sidebar
 """IPO Detail page — AI Q&A, Scorecard, Industry Analysis, Financials, News"""
 import streamlit as st
 import plotly.graph_objects as go
@@ -40,7 +40,7 @@ def render(all_ipos):
 
     # ── BACK BUTTON ──────────────────────────────────────────────────────────
     if st.button("← Back to Dashboard", key="back_btn"):
-        st.session_state.current_page = "🏠 Dashboard"
+        st.session_state.current_page = "Dashboard"
         st.rerun()
 
     st.markdown("<div style='font-size:1.5rem;font-weight:700;margin:8px 0 2px;'>🔍 IPO Deep Dive</div>", unsafe_allow_html=True)
