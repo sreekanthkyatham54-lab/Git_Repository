@@ -1,17 +1,9 @@
-# v2.1 - GMP fix, auto-tabs, date format
+# v2.7 - removed duplicate header
 """Dashboard page — Active & Upcoming IPO list"""
 import streamlit as st
 
 
 def render(active_ipos, upcoming_ipos):
-    # Header
-    st.markdown("""
-    <div class='app-header'>
-        <div class='app-title'>SME <span>IPO Research</span></div>
-        <div class='app-subtitle'>INDIA · BSE SME · NSE EMERGE · AI-POWERED ANALYSIS</div>
-    </div>
-    """, unsafe_allow_html=True)
-
     # Stats bar
     total = len(active_ipos) + len(upcoming_ipos)
     avg_gmp = sum(round(float(i["gmp"] or 0) / float(i["issue_price"] or 1) * 100, 1) for i in active_ipos) / len(active_ipos) if active_ipos else 0
