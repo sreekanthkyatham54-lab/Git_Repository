@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from data_loader import load_ipo_data
 
 st.set_page_config(
-    page_title="TradeSage | SME IPO Research",
+    page_title="TradeSage | India IPO Research",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -248,6 +248,7 @@ st.markdown(f"""
     <a class="ts-mobile-nav-link {"active" if cur=="GMP Tracker" else ""}" href="?page=GMP Tracker" target="_self">📊 GMP Tracker</a>
     <a class="ts-mobile-nav-link {"active" if cur=="Historical Data" else ""}" href="?page=Historical Data" target="_self">📜 Historical Data</a>
     <div class="ts-mobile-pills">
+        <span class="ts-pill np-blue">Mainboard</span>
         <span class="ts-pill np-blue">BSE SME</span>
         <span class="ts-pill np-blue">NSE Emerge</span>
         <span class="ts-pill {live_cls}">{live_txt}</span>
@@ -267,6 +268,7 @@ st.markdown(f"""
         {nav_link("Historical Data")}
     </div>
     <div class="ts-pills">
+        <span class="ts-pill np-blue">Mainboard</span>
         <span class="ts-pill np-blue">BSE SME</span>
         <span class="ts-pill np-blue">NSE Emerge</span>
         <span class="ts-pill {live_cls}">{live_txt}</span>

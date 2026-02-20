@@ -38,13 +38,15 @@ def render(active_ipos, upcoming_ipos):
     st.markdown("---")
 
     # ── FILTERS ───────────────────────────────────────────────────────────────
-    col_f1, col_f2, col_f3 = st.columns([2, 2, 3])
-    with col_f1: exchange_filter = st.selectbox("Exchange", ["All", "BSE SME", "NSE Emerge"])
-    with col_f2: rec_filter      = st.selectbox("Recommendation", ["All", "SUBSCRIBE", "NEUTRAL", "AVOID"])
-    with col_f3: search          = st.text_input("Search IPOs", placeholder="Company name or sector...")
+    col_f1, col_f2, col_f3, col_f4 = st.columns([1.5, 1.8, 1.8, 2.5])
+    with col_f1: type_filter     = st.selectbox("Type", ["All", "Mainboard", "SME"])
+    with col_f2: exchange_filter = st.selectbox("Exchange", ["All", "BSE SME", "NSE Emerge", "BSE / NSE"])
+    with col_f3: rec_filter      = st.selectbox("Recommendation", ["All", "SUBSCRIBE", "NEUTRAL", "AVOID"])
+    with col_f4: search          = st.text_input("Search IPOs", placeholder="Company name or sector...")
 
     def filter_ipos(ipos):
         f = ipos
+        if type_filter     != "All": f = [i for i in f if i.get("ipo_type","SME") == type_filter]
         if exchange_filter != "All": f = [i for i in f if i["exchange"] == exchange_filter]
         if rec_filter      != "All": f = [i for i in f if i["recommendation"] == rec_filter]
         if search:
@@ -134,6 +136,7 @@ def render(active_ipos, upcoming_ipos):
 def _render_ipo_card(ipo, is_active):
     exchange_badge = f"<span class='badge badge-bse'>{ipo['exchange']}</span>" if "BSE" in ipo["exchange"] else f"<span class='badge badge-nse'>{ipo['exchange']}</span>"
     status_badge   = "<span class='badge badge-open'>● OPEN</span>" if is_active else "<span class='badge badge-upcoming'>◎ UPCOMING</span>"
+    type_badge = "<span style='display:inline-block;padding:3px 8px;border-radius:20px;font-size:0.65rem;font-weight:700;background:rgba(139,92,246,0.1);color:#7c3aed;border:1px solid #7c3aed;'>MAINBOARD</span>" if ipo.get("ipo_type") == "Mainboard" else ""
     rec = ipo["recommendation"]
     rec_html = {"SUBSCRIBE": "<span class='rec-subscribe'>✓ SUBSCRIBE</span>",
                 "AVOID":     "<span class='rec-avoid'>✗ AVOID</span>"}.get(rec, "<span class='rec-neutral'>~ NEUTRAL</span>")
@@ -157,7 +160,7 @@ def _render_ipo_card(ipo, is_active):
             <div style='background:var(--card);border:1.5px solid var(--border);border-radius:12px;
                         padding:20px;transition:border-color 0.2s,box-shadow 0.2s;'>
                 <div style='display:flex;align-items:center;gap:8px;margin-bottom:8px;'>
-                    {exchange_badge} {status_badge}
+                    {exchange_badge} {status_badge} {type_badge}
                 </div>
                 <div style='font-size:1.05rem;font-weight:700;'>{ipo['company']}</div>
                 <div style='font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;margin:4px 0 12px;'>{ipo['sector']}</div>

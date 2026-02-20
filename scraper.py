@@ -1,242 +1,191 @@
 """
-scraper.py — Live SME IPO Data Scraper
+scraper.py — All India IPO Scraper (Mainboard + SME)
 Sources:
-  - IPO List + Dates: ipowatch.in/upcoming-sme-ipo-list/
-  - GMP Data:        ipowatch.in/ipo-grey-market-premium-latest-ipo-gmp/
-  - IPO Detail:      ipowatch.in/<ipo-slug>-ipo-date-review-price-allotment-details/
+  - All IPO List + GMP: ipowatch.in
+    - SME:       /upcoming-sme-ipo-list/
+    - Mainboard: /upcoming-ipo-list/
+    - GMP:       /ipo-grey-market-premium-latest-ipo-gmp/
+  - Historical:  /ipo-performance-tracker/
 
 Run manually:  python scraper.py
-Schedule daily: Add to Windows Task Scheduler or cron (Linux/Mac)
-
-Output: data/live_ipo_data.json  (read by the Streamlit app automatically)
+Output: data/live_ipo_data.json
 """
 
 import requests
 from bs4 import BeautifulSoup
-import json
-import os
-import re
-import time
+import json, os, re, time
 from datetime import datetime, date
 
-# ── CONFIG ────────────────────────────────────────────────────────────────────
 HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/120.0.0.0 Safari/537.36"
-    ),
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept-Language": "en-US,en;q=0.9",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
-
-BASE_URL = "https://ipowatch.in"
+BASE_URL   = "https://ipowatch.in"
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "data", "live_ipo_data.json")
-DELAY = 1.5  # seconds between requests — be polite to the server
+DELAY = 1.5
 
 
-# ── HELPERS ───────────────────────────────────────────────────────────────────
-def fetch(url: str) -> BeautifulSoup | None:
-    """Fetch a URL and return BeautifulSoup, or None on failure."""
+def fetch(url):
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=15)
-        resp.raise_for_status()
-        return BeautifulSoup(resp.text, "html.parser")
+        r = requests.get(url, headers=HEADERS, timeout=15)
+        r.raise_for_status()
+        return BeautifulSoup(r.text, "html.parser")
     except Exception as e:
-        print(f"  ⚠ Failed to fetch {url}: {e}")
+        print(f"  ⚠ Failed {url}: {e}")
         return None
 
 
-def parse_price(text: str) -> float:
-    """Extract numeric price from strings like '₹46', '₹43 to ₹46', '₹108'."""
-    if not text:
-        return 0.0
-    # Take the last number (upper band if range)
+def parse_price(text):
+    if not text: return 0.0
     nums = re.findall(r"[\d,]+\.?\d*", text.replace(",", ""))
     return float(nums[-1]) if nums else 0.0
 
 
-def parse_size_cr(text: str) -> float:
-    """Extract crore value from strings like '₹26 Cr.'"""
+def parse_size_cr(text):
     nums = re.findall(r"[\d,]+\.?\d*", text.replace(",", ""))
     return float(nums[0]) if nums else 0.0
 
 
-def parse_date_range(text: str) -> tuple[str, str]:
-    """
-    Parse date strings like '23-25 Feb', '20-24 Feb', '18-20 Feb', '30-03 Feb'.
-    Returns (open_date, close_date) as 'YYYY-MM-DD'.
-    Handles year rollover (Dec→Jan) and cross-month ranges (e.g. 30 Jan - 3 Feb).
-    """
+def parse_date_range(text):
     today = date.today()
-    month_map = {
-        "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
-        "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12,
-    }
+    month_map = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,
+                 "jul":7,"aug":8,"sep":9,"oct":10,"nov":11,"dec":12}
     text = text.strip().lower()
-
-    # Pattern: "20-24 feb" or "23-25 feb 2026" or "30-03 feb" (cross-month)
     match = re.search(r"(\d+)[-–](\d+)\s+([a-z]+)(?:\s+(\d{4}))?", text)
     if not match:
-        # Single date: "23 feb"
         match2 = re.search(r"(\d+)\s+([a-z]+)(?:\s+(\d{4}))?", text)
-        if not match2:
-            return "", ""
-        d1 = d2 = int(match2.group(1))
-        mon = month_map.get(match2.group(2)[:3], today.month)
+        if not match2: return "", ""
+        d1 = int(match2.group(1)); mon = month_map.get(match2.group(2)[:3], today.month)
         yr = int(match2.group(3)) if match2.group(3) else today.year
         try:
-            open_d = date(yr, mon, d1).strftime("%Y-%m-%d")
-            return open_d, open_d
-        except Exception:
-            return "", ""
-
-    d1 = int(match.group(1))
-    d2 = int(match.group(2))
+            od = date(yr, mon, d1).strftime("%Y-%m-%d"); return od, od
+        except: return "", ""
+    d1, d2 = int(match.group(1)), int(match.group(2))
     mon = month_map.get(match.group(3)[:3], today.month)
     yr = int(match.group(4)) if match.group(4) else today.year
-
     try:
-        # Handle cross-month: open day > close day means open is in previous month
-        # e.g. "30-03 Feb" = open Jan 30, close Feb 3
         if d1 > d2 and d1 > 20:
-            open_mon = mon - 1 if mon > 1 else 12
-            open_yr = yr if mon > 1 else yr - 1
-            open_d = date(open_yr, open_mon, d1).strftime("%Y-%m-%d")
-            close_d = date(yr, mon, d2).strftime("%Y-%m-%d")
+            om = mon-1 if mon>1 else 12; oy = yr if mon>1 else yr-1
+            od = date(oy, om, d1).strftime("%Y-%m-%d"); cd = date(yr, mon, d2).strftime("%Y-%m-%d")
         else:
-            open_d = date(yr, mon, d1).strftime("%Y-%m-%d")
-            close_d = date(yr, mon, d2).strftime("%Y-%m-%d")
-
-        # Year sanity: if the computed date is > 6 months in past, bump year
-        open_date_obj = datetime.strptime(open_d, "%Y-%m-%d").date()
-        if (today - open_date_obj).days > 180:
-            # Likely next year
-            open_d = date(yr + 1, mon, d1).strftime("%Y-%m-%d")
-            close_d = date(yr + 1, mon, d2).strftime("%Y-%m-%d")
-
-        return open_d, close_d
-    except Exception:
-        return "", ""
+            od = date(yr, mon, d1).strftime("%Y-%m-%d"); cd = date(yr, mon, d2).strftime("%Y-%m-%d")
+        if (today - datetime.strptime(od, "%Y-%m-%d").date()).days > 180:
+            od = date(yr+1, mon, d1).strftime("%Y-%m-%d"); cd = date(yr+1, mon, d2).strftime("%Y-%m-%d")
+        return od, cd
+    except: return "", ""
 
 
-def determine_status(open_date: str, close_date: str) -> str:
-    """Return 'Open', 'Upcoming', or 'Closed' based on today's date."""
+def determine_status(open_date, close_date):
     try:
         today = date.today()
         od = datetime.strptime(open_date, "%Y-%m-%d").date()
         cd = datetime.strptime(close_date, "%Y-%m-%d").date()
-        if od <= today <= cd:
-            return "Open"
-        elif today < od:
-            return "Upcoming"
-        else:
-            return "Closed"
-    except Exception:
-        return "Upcoming"
+        if od <= today <= cd: return "Open"
+        elif today < od: return "Upcoming"
+        else: return "Closed"
+    except: return "Upcoming"
 
 
-def slug_from_name(company: str) -> str:
-    """Convert 'Accord Transformer' → 'accord-transformer'"""
+def slug_from_name(company):
     slug = company.lower().strip()
     slug = re.sub(r"[^a-z0-9\s-]", "", slug)
     slug = re.sub(r"\s+", "-", slug)
     return slug
 
 
-# ── SCRAPER 1: IPO LIST ───────────────────────────────────────────────────────
-def scrape_sme_ipo_list() -> list[dict]:
-    """
-    Scrape the SME IPO list from ipowatch.in.
-    The page shows one table with open + upcoming + recent closed IPOs.
-    We filter by date to keep only Open and Upcoming.
-    """
-    print("📋 Scraping SME IPO list from ipowatch.in...")
-    soup = fetch(f"{BASE_URL}/upcoming-sme-ipo-list/")
-    if not soup:
-        return []
+def classify_ipo_type(company, exchange, issue_size_cr):
+    """Classify IPO as Mainboard or SME based on exchange and issue size."""
+    ex = (exchange or "").upper()
+    if "BSE SME" in ex or "NSE EMERGE" in ex or "NSE SME" in ex:
+        return "SME"
+    # Mainboard threshold: typically >₹25Cr and on BSE/NSE mainboard
+    if issue_size_cr and float(issue_size_cr) >= 25:
+        return "Mainboard"
+    return "SME"
 
+
+# ── SCRAPER 1A: SME IPO LIST ──────────────────────────────────────────────────
+def scrape_sme_ipo_list():
+    print("📋 Scraping SME IPO list...")
+    soup = fetch(f"{BASE_URL}/upcoming-sme-ipo-list/")
+    if not soup: return []
+    return _parse_ipo_table(soup, default_type="SME")
+
+
+# ── SCRAPER 1B: MAINBOARD IPO LIST ───────────────────────────────────────────
+def scrape_mainboard_ipo_list():
+    print("📋 Scraping Mainboard IPO list...")
+    soup = fetch(f"{BASE_URL}/upcoming-ipo-list/")
+    if not soup: return []
+    return _parse_ipo_table(soup, default_type="Mainboard")
+
+
+def _parse_ipo_table(soup, default_type="SME"):
+    """Parse IPO table rows — shared logic for SME and Mainboard."""
     ipos = []
+    ipo_id_counter = len(ipos)
     tables = soup.find_all("table")
     for table in tables:
         rows = table.find_all("tr")
-        for row in rows[1:]:  # skip header row
+        for row in rows[1:]:
             cols = row.find_all("td")
-            if len(cols) < 4:
-                continue
+            if len(cols) < 4: continue
             try:
-                # Col 0: Company name + detail link
                 name_cell = cols[0]
-                link_tag = name_cell.find("a")
-                if not link_tag:
-                    continue
+                link_tag  = name_cell.find("a")
+                if not link_tag: continue
                 company = link_tag.get_text(strip=True)
-                if not company or len(company) < 3:
-                    continue
+                if not company or len(company) < 3: continue
                 detail_url = link_tag.get("href", "")
                 if detail_url and not detail_url.startswith("http"):
                     detail_url = BASE_URL + detail_url
 
-                # Col 1: Date range e.g. "23-25 Feb" or "20-24 Feb"
-                date_text = cols[1].get_text(strip=True)
+                date_text = cols[1].get_text(strip=True) if len(cols) > 1 else ""
+                price_text = cols[2].get_text(strip=True) if len(cols) > 2 else ""
+                size_text  = cols[3].get_text(strip=True) if len(cols) > 3 else ""
 
-                # Handle "TBA" / "To be announced" dates — still show as upcoming
-                if any(x in date_text.upper() for x in ["TBA", "TO BE", "ANNOUNCED", "-"]):
-                    if date_text.strip() in ["-", "TBA", "—"]:
-                        open_date = (date.today()).strftime("%Y-%m-%d")
-                        close_date = open_date
-                        status = "Upcoming"
-                    else:
-                        open_date, close_date = parse_date_range(date_text)
-                        if not open_date:
-                            continue
-                        status = determine_status(open_date, close_date)
-                else:
-                    open_date, close_date = parse_date_range(date_text)
-                    if not open_date:
-                        continue
-                    status = determine_status(open_date, close_date)
+                open_date, close_date = parse_date_range(date_text)
+                if not open_date: continue
 
-                # Skip IPOs that have already closed
-                if status == "Closed":
-                    continue
+                status = determine_status(open_date, close_date)
+                if status == "Closed": continue
 
-                # Col 2: Issue size
-                size_text = cols[2].get_text(strip=True)
-                issue_size = parse_size_cr(size_text)
+                issue_price   = parse_price(price_text)
+                issue_size_cr = parse_size_cr(size_text)
 
-                # Col 3: Price band — take upper end of range
-                price_text = cols[3].get_text(strip=True)
-                issue_price = parse_price(price_text)
-
-                # Col 4: Exchange platform
-                platform = cols[4].get_text(strip=True) if len(cols) > 4 else "BSE SME"
-                if "NSE" in platform.upper():
+                # Detect exchange from text hints
+                row_text = row.get_text(" ").upper()
+                if "NSE EMERGE" in row_text or "NSE SME" in row_text:
                     exchange = "NSE Emerge"
+                elif "BSE SME" in row_text:
+                    exchange = "BSE SME"
+                elif default_type == "Mainboard":
+                    exchange = "BSE / NSE"
                 else:
                     exchange = "BSE SME"
 
-                ipo_id = f"ipo_{slug_from_name(company)}"
+                ipo_type = "Mainboard" if default_type == "Mainboard" else "SME"
 
+                ipo_id_counter += 1
                 ipos.append({
-                    "id": ipo_id,
+                    "id": f"ipo_{ipo_id_counter:03d}",
                     "company": company,
                     "exchange": exchange,
+                    "ipo_type": ipo_type,          # NEW: "SME" or "Mainboard"
+                    "sector": "—",
                     "open_date": open_date,
                     "close_date": close_date,
                     "issue_price": issue_price,
-                    "issue_size_cr": issue_size,
-                    "subscription_status": status,
-                    "detail_url": detail_url,
-                    # Fields enriched later
-                    "sector": "—",
+                    "issue_size_cr": issue_size_cr,
                     "lot_size": 0,
+                    "subscription_status": status,
                     "subscription_times": 0.0,
                     "gmp": 0,
                     "gmp_percent": 0.0,
-                    "lead_manager": "—",
-                    "registrar": "—",
-                    "objects": "—",
+                    "lead_manager": "",
+                    "registrar": "",
+                    "objects": "",
                     "revenue_cr": [],
                     "profit_cr": [],
                     "years": [],
@@ -245,197 +194,133 @@ def scrape_sme_ipo_list() -> list[dict]:
                     "industry_pe": 0.0,
                     "promoter_holding": 0.0,
                     "listing_date": "",
-                    "recommendation": "—",
+                    "recommendation": "NEUTRAL",
                     "risk": "Medium",
-                    "summary": f"{company} SME IPO opening {open_date} on {exchange}.",
-                    "risks_text": "See DRHP for detailed risk factors.",
-                    "drhp_highlights": "Scraping detail page...",
+                    "summary": "",
+                    "risks_text": "",
+                    "drhp_highlights": "",
+                    "detail_url": detail_url,
                 })
-
-                status_icon = "🟢" if status == "Open" else "🔵"
-                print(f"  {status_icon} {company} ({status}) | ₹{issue_price} | {exchange} | {open_date} to {close_date}")
-
             except Exception as e:
                 print(f"  ⚠ Row parse error: {e}")
                 continue
-
-    print(f"\n  → {sum(1 for i in ipos if i['subscription_status'] == 'Open')} Open, "
-          f"{sum(1 for i in ipos if i['subscription_status'] == 'Upcoming')} Upcoming\n")
     return ipos
 
 
 # ── SCRAPER 2: GMP DATA ───────────────────────────────────────────────────────
-def scrape_gmp_data() -> dict[str, dict]:
-    """Scrape GMP from ipowatch.in GMP page. Returns {company_slug: {gmp, gmp_pct}}"""
-    print("📊 Scraping GMP data from ipowatch.in...")
+def scrape_gmp_data():
+    print("📊 Scraping GMP data...")
     soup = fetch(f"{BASE_URL}/ipo-grey-market-premium-latest-ipo-gmp/")
-    if not soup:
-        return {}
-
+    if not soup: return {}
     gmp_map = {}
     tables = soup.find_all("table")
     for table in tables:
         rows = table.find_all("tr")
         for row in rows[1:]:
             cols = row.find_all("td")
-            if len(cols) < 3:
-                continue
+            if len(cols) < 3: continue
             try:
-                name_cell = cols[0]
-                company_name = name_cell.get_text(strip=True)
-                slug = slug_from_name(company_name)
-
-                # Find GMP column — usually col 2 or 3
-                gmp_text = ""
-                for col in cols[1:4]:
-                    txt = col.get_text(strip=True)
-                    if "₹" in txt or re.search(r"-?\d+", txt):
-                        gmp_text = txt
-                        break
-
-                # Parse GMP value
-                gmp_nums = re.findall(r"-?\d+\.?\d*", gmp_text)
-                gmp_val = int(float(gmp_nums[0])) if gmp_nums else 0
-
-                # Find issue price to compute %
-                price_text = ""
-                for col in cols:
-                    txt = col.get_text(strip=True)
-                    if "₹" in txt and re.search(r"\d{2,}", txt):
-                        price_text = txt
-                        break
-                price = parse_price(price_text) or 100  # fallback
-
-                gmp_pct = round((gmp_val / price) * 100, 2) if price else 0.0
-
-                gmp_map[slug] = {"gmp": gmp_val, "gmp_percent": gmp_pct}
-                if gmp_val != 0:
-                    print(f"  ✓ GMP {company_name}: ₹{gmp_val} ({gmp_pct}%)")
-
-            except Exception:
-                continue
-
-    print(f"  → Found GMP data for {len(gmp_map)} IPOs\n")
+                company = cols[0].get_text(strip=True)
+                if not company: continue
+                gmp_text = cols[2].get_text(strip=True) if len(cols) > 2 else ""
+                price_text = cols[1].get_text(strip=True) if len(cols) > 1 else ""
+                gmp_val   = parse_price(gmp_text)
+                issue_p   = parse_price(price_text)
+                gmp_pct   = round(gmp_val / issue_p * 100, 1) if issue_p > 0 else 0.0
+                gmp_map[slug_from_name(company)] = {
+                    "company": company,
+                    "gmp": gmp_val,
+                    "gmp_percent": gmp_pct,
+                    "issue_price": issue_p,
+                }
+            except: continue
+    print(f"  → {len(gmp_map)} GMP entries found")
     return gmp_map
 
 
 # ── SCRAPER 3: IPO DETAIL PAGE ────────────────────────────────────────────────
-def scrape_ipo_detail(ipo: dict) -> dict:
-    """Scrape individual IPO detail page for lot size, sector, financials etc."""
+def scrape_ipo_detail(ipo):
     url = ipo.get("detail_url", "")
     if not url:
-        return ipo
-
-    print(f"  🔍 Detail: {ipo['company']}...")
+        url = f"{BASE_URL}/{slug_from_name(ipo['company'])}-ipo-date-review-price-allotment-details/"
     soup = fetch(url)
-    if not soup:
-        return ipo
+    if not soup: return ipo
 
-    full_text = soup.get_text(separator=" ", strip=True)
+    text = soup.get_text(" ", strip=True)
 
-    # ── Lot size
-    lot_match = re.search(r"(?:lot size|market lot)[^\d]*(\d[\d,]*)", full_text, re.IGNORECASE)
-    if lot_match:
-        ipo["lot_size"] = int(lot_match.group(1).replace(",", ""))
+    # Issue price
+    price_match = re.search(r"(?:issue price|price band)[:\s]*₹?([\d,]+(?:\s*(?:to|-)\s*[\d,]+)?)", text, re.I)
+    if price_match and not ipo["issue_price"]:
+        ipo["issue_price"] = parse_price(price_match.group(1))
 
-    # ── Sector — look for common keywords
-    sector_keywords = [
-        "Technology", "Pharma", "Chemical", "FMCG", "Finance", "Banking",
-        "Real Estate", "Manufacturing", "Retail", "Logistics", "Healthcare",
-        "Education", "Agriculture", "Textile", "Metal", "Engineering",
-        "Food", "IT", "Media", "Infrastructure", "Energy", "Auto",
-    ]
-    for kw in sector_keywords:
-        if kw.lower() in full_text.lower():
-            ipo["sector"] = kw
-            break
+    # Lot size
+    lot_match = re.search(r"lot size[:\s]*([\d,]+)\s*(?:shares?|equity)", text, re.I)
+    if lot_match: ipo["lot_size"] = int(lot_match.group(1).replace(",", ""))
 
-    # ── Lead manager
-    lm_match = re.search(
-        r"(?:lead manager|book running|merchant banker)[^\n:]*[:\s]+([A-Z][^\n,\.]{5,50})",
-        full_text, re.IGNORECASE
-    )
-    if lm_match:
-        ipo["lead_manager"] = lm_match.group(1).strip()
+    # Lead manager
+    lm_match = re.search(r"(?:lead manager|book running)[:\s]+([A-Z][^\n\.]{5,60}?)(?:\n|\.|\band\b)", text, re.I)
+    if lm_match: ipo["lead_manager"] = lm_match.group(1).strip()
 
-    # ── Registrar
-    reg_match = re.search(
-        r"registrar[^\n:]*[:\s]+([A-Z][^\n,\.]{5,50})",
-        full_text, re.IGNORECASE
-    )
-    if reg_match:
-        ipo["registrar"] = reg_match.group(1).strip()
+    # Registrar
+    reg_match = re.search(r"registrar[:\s]+([A-Z][^\n\.]{5,60}?)(?:\n|\.)", text, re.I)
+    if reg_match: ipo["registrar"] = reg_match.group(1).strip()
 
-    # ── Summary — grab first meaningful paragraph after h1
-    paras = soup.find_all("p")
-    for p in paras:
-        txt = p.get_text(strip=True)
-        if len(txt) > 100 and ipo["company"].split()[0].lower() in txt.lower():
-            ipo["summary"] = txt[:400]
-            break
+    # Summary — first substantive paragraph
+    paras = [p.get_text(strip=True) for p in soup.find_all("p") if len(p.get_text(strip=True)) > 80]
+    if paras: ipo["summary"] = paras[0][:400]
 
-    # ── Objects of issue
-    obj_match = re.search(
-        r"objects? of (?:the )?issue[^\n]*\n([^\n]{30,300})",
-        full_text, re.IGNORECASE
-    )
-    if obj_match:
-        ipo["objects"] = obj_match.group(1).strip()
+    # Sector from page title or content
+    sector_match = re.search(r"(?:industry|sector)[:\s]+([A-Z][a-zA-Z &]{3,40})", text, re.I)
+    if sector_match: ipo["sector"] = sector_match.group(1).strip()
 
-    # ── Subscription times (if open)
-    sub_match = re.search(
-        r"(?:subscribed|subscription)[^\d]*(\d+\.?\d*)\s*(?:times|x)",
-        full_text, re.IGNORECASE
-    )
-    if sub_match:
-        ipo["subscription_times"] = float(sub_match.group(1))
+    # Detect exchange from page text
+    if ipo["exchange"] == "BSE SME" or ipo["exchange"] == "—":
+        if "nse emerge" in text.lower(): ipo["exchange"] = "NSE Emerge"
+        elif "bse sme" in text.lower(): ipo["exchange"] = "BSE SME"
+        elif "nse" in text.lower() and "bse" in text.lower() and ipo.get("ipo_type") == "Mainboard":
+            ipo["exchange"] = "BSE / NSE"
 
-    # ── Listing date
-    listing_match = re.search(
-        r"listing (?:date|on)[^\d]*(\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|\w+ \d{1,2},? \d{4})",
-        full_text, re.IGNORECASE
-    )
-    if listing_match:
-        ipo["listing_date"] = listing_match.group(1)
+    # Promoter holding
+    promo_match = re.search(r"promoter[^%]*?([\d.]+)\s*%", text, re.I)
+    if promo_match: ipo["promoter_holding"] = float(promo_match.group(1))
+
+    # Risk level
+    t_lower = text.lower()
+    if "high risk" in t_lower: ipo["risk"] = "High"
+    elif "low risk" in t_lower: ipo["risk"] = "Low"
+    else: ipo["risk"] = "Medium"
 
     return ipo
 
 
-# ── SCRAPER 4: HISTORICAL IPO DATA ───────────────────────────────────────────
-def scrape_historical_ipos() -> list[dict]:
-    """Scrape recent listed SME IPOs and their listing performance."""
+# ── SCRAPER 4: HISTORICAL IPOS ────────────────────────────────────────────────
+def scrape_historical_ipos():
     print("📜 Scraping historical IPO performance...")
     soup = fetch(f"{BASE_URL}/ipo-performance-tracker/")
-    if not soup:
-        return []
-
+    if not soup: return []
     historical = []
     tables = soup.find_all("table")
     for table in tables:
         rows = table.find_all("tr")
-        for row in rows[1:21]:  # top 20 historical
+        for row in rows[1:30]:  # top 30
             cols = row.find_all("td")
-            if len(cols) < 4:
-                continue
+            if len(cols) < 4: continue
             try:
-                name_cell = cols[0]
-                company = name_cell.get_text(strip=True)
-                if not company or len(company) < 3:
-                    continue
-
-                # Try to extract issue price, listing price, current price
+                company = cols[0].get_text(strip=True)
+                if not company or len(company) < 3: continue
                 nums = []
                 for col in cols[1:]:
                     txt = col.get_text(strip=True)
                     found = re.findall(r"[\d,]+\.?\d*", txt.replace(",", ""))
-                    if found:
-                        nums.append(float(found[0]))
-
+                    if found: nums.append(float(found[0]))
                 if len(nums) >= 2:
-                    issue_price = nums[0]
+                    issue_price   = nums[0]
                     listing_price = nums[1]
                     current_price = nums[2] if len(nums) > 2 else listing_price
-                    listing_gain = round(((listing_price - issue_price) / issue_price) * 100, 1) if issue_price else 0
+                    listing_gain  = round(((listing_price - issue_price) / issue_price) * 100, 1) if issue_price else 0
+
+                    # Try to detect if mainboard from issue size (usually large)
+                    ipo_type = "Mainboard" if issue_price > 500 else "SME"
 
                     historical.append({
                         "company": company,
@@ -449,80 +334,92 @@ def scrape_historical_ipos() -> list[dict]:
                         "gmp_accurate": None,
                         "sector": "—",
                         "exchange": "BSE SME",
+                        "ipo_type": ipo_type,
                     })
-
-            except Exception:
-                continue
-
-    print(f"  → Found {len(historical)} historical IPOs\n")
+            except: continue
+    print(f"  → {len(historical)} historical IPOs")
     return historical
 
 
-# ── MAIN RUNNER ───────────────────────────────────────────────────────────────
+# ── MAIN ──────────────────────────────────────────────────────────────────────
 def run_scraper():
     print("=" * 60)
-    print(f"🚀 SME IPO Scraper — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"🚀 TradeSage IPO Scraper — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("   Covering: Mainboard + SME (BSE SME + NSE Emerge)")
     print("=" * 60)
 
-    # Step 1: Get IPO list
-    all_ipos = scrape_sme_ipo_list()
+    # Step 1: Scrape both SME and Mainboard lists
+    sme_ipos = scrape_sme_ipo_list()
+    time.sleep(DELAY)
+    mainboard_ipos = scrape_mainboard_ipo_list()
+    all_ipos = sme_ipos + mainboard_ipos
+
+    # Deduplicate by company name
+    seen = set()
+    deduped = []
+    for ipo in all_ipos:
+        key = slug_from_name(ipo["company"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(ipo)
+    all_ipos = deduped
+    print(f"  → {len(sme_ipos)} SME + {len(mainboard_ipos)} Mainboard = {len(all_ipos)} unique IPOs")
 
     if not all_ipos:
-        print("❌ No IPOs scraped — check network or site structure changed.")
-        return
+        print("❌ No IPOs scraped."); return
 
-    # Step 2: Get GMP data
+    # Step 2: GMP data
     time.sleep(DELAY)
     gmp_map = scrape_gmp_data()
 
-    # Step 3: Match GMP to IPOs
+    # Step 3: Match GMP
     for ipo in all_ipos:
         slug = slug_from_name(ipo["company"])
-        # Try exact match first, then partial
         gmp_data = gmp_map.get(slug)
         if not gmp_data:
-            for gmp_slug, gmp_vals in gmp_map.items():
-                # Match on first significant word
-                if slug.split("-")[0] in gmp_slug or gmp_slug.split("-")[0] in slug:
-                    gmp_data = gmp_vals
-                    break
+            for gs, gv in gmp_map.items():
+                if slug.split("-")[0] in gs or gs.split("-")[0] in slug:
+                    gmp_data = gv; break
         if gmp_data:
             ipo["gmp"] = gmp_data["gmp"]
             ipo["gmp_percent"] = gmp_data["gmp_percent"]
+            if not ipo["issue_price"] and gmp_data["issue_price"]:
+                ipo["issue_price"] = gmp_data["issue_price"]
 
-    # Step 4: Enrich with detail pages (throttled)
-    print("🔍 Fetching IPO detail pages...")
+    # Step 4: Detail pages
+    print("🔍 Enriching with detail pages...")
     for i, ipo in enumerate(all_ipos):
         time.sleep(DELAY)
         all_ipos[i] = scrape_ipo_detail(ipo)
+        print(f"  [{i+1}/{len(all_ipos)}] {ipo['company']} ({ipo.get('ipo_type','?')})")
 
     # Step 5: Separate active vs upcoming
-    active = [i for i in all_ipos if i["subscription_status"] == "Open"]
+    active   = [i for i in all_ipos if i["subscription_status"] == "Open"]
     upcoming = [i for i in all_ipos if i["subscription_status"] == "Upcoming"]
 
-    # Step 6: Get historical data
+    # Step 6: Historical
     time.sleep(DELAY)
     historical = scrape_historical_ipos()
 
-    # Step 7: Save to JSON
+    # Step 7: Save
     output = {
         "scraped_at": datetime.now().isoformat(),
+        "source": "live",
         "active_ipos": active,
         "upcoming_ipos": upcoming,
         "historical_ipos": historical,
-        "gmp_history": {},  # GMP trend history — requires daily tracking over time
+        "gmp_history": {},
     }
-
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
     print("\n" + "=" * 60)
-    print(f"✅ Done! Saved to {OUTPUT_FILE}")
-    print(f"   Active IPOs:   {len(active)}")
-    print(f"   Upcoming IPOs: {len(upcoming)}")
-    print(f"   Historical:    {len(historical)}")
-    print(f"   GMP matched:   {sum(1 for i in all_ipos if i['gmp'] != 0)}")
+    print(f"✅ Done! → {OUTPUT_FILE}")
+    print(f"   Active:    {len(active)} ({sum(1 for i in active if i.get('ipo_type')=='Mainboard')} mainboard, {sum(1 for i in active if i.get('ipo_type')=='SME')} SME)")
+    print(f"   Upcoming:  {len(upcoming)} ({sum(1 for i in upcoming if i.get('ipo_type')=='Mainboard')} mainboard, {sum(1 for i in upcoming if i.get('ipo_type')=='SME')} SME)")
+    print(f"   Historical:{len(historical)}")
+    print(f"   GMP matched: {sum(1 for i in all_ipos if i['gmp'] != 0)}/{len(all_ipos)}")
     print("=" * 60)
 
 

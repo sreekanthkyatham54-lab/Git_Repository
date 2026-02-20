@@ -10,6 +10,7 @@ ACTIVE_IPOS = [
         "id": "ipo_001",
         "company": "Anya Polytech & Fertilizers Ltd",
         "exchange": "BSE SME",
+        "ipo_type": "SME",
         "sector": "Chemicals & Fertilizers",
         "open_date": "2025-02-10",
         "close_date": "2025-02-13",
@@ -41,6 +42,7 @@ ACTIVE_IPOS = [
         "id": "ipo_002",
         "company": "Shreenath Paper Products Ltd",
         "exchange": "NSE Emerge",
+        "ipo_type": "SME",
         "sector": "Paper & Packaging",
         "open_date": "2025-02-12",
         "close_date": "2025-02-14",
@@ -72,6 +74,7 @@ ACTIVE_IPOS = [
         "id": "ipo_003",
         "company": "TechnoSys Embedded Systems Ltd",
         "exchange": "BSE SME",
+        "ipo_type": "SME",
         "sector": "Electronics & Technology",
         "open_date": "2025-02-14",
         "close_date": "2025-02-18",
@@ -106,6 +109,7 @@ UPCOMING_IPOS = [
         "id": "ipo_004",
         "company": "Rajhans Metals Ltd",
         "exchange": "BSE SME",
+        "ipo_type": "SME",
         "sector": "Metals & Mining",
         "open_date": "2025-02-20",
         "close_date": "2025-02-24",
@@ -137,6 +141,7 @@ UPCOMING_IPOS = [
         "id": "ipo_005",
         "company": "Primus Pharma Ingredients Ltd",
         "exchange": "NSE Emerge",
+        "ipo_type": "SME",
         "sector": "Pharmaceuticals",
         "open_date": "2025-02-24",
         "close_date": "2025-02-26",
@@ -179,6 +184,7 @@ HISTORICAL_IPOS = [
         "gmp_accurate": True,
         "sector": "Education Services",
         "exchange": "BSE SME",
+        "ipo_type": "SME",
     },
     {
         "company": "Resourceful Automobile Ltd",
@@ -192,6 +198,7 @@ HISTORICAL_IPOS = [
         "gmp_accurate": True,
         "sector": "Auto Ancillary",
         "exchange": "NSE Emerge",
+        "ipo_type": "SME",
     },
     {
         "company": "Veritaas Advertising Ltd",
@@ -205,6 +212,7 @@ HISTORICAL_IPOS = [
         "gmp_accurate": True,
         "sector": "Media & Advertising",
         "exchange": "BSE SME",
+        "ipo_type": "SME",
     },
     {
         "company": "Mangal Compusolution Ltd",
@@ -218,6 +226,7 @@ HISTORICAL_IPOS = [
         "gmp_accurate": False,
         "sector": "IT Services",
         "exchange": "NSE Emerge",
+        "ipo_type": "SME",
     },
     {
         "company": "Namo eWaste Management Ltd",
@@ -231,6 +240,7 @@ HISTORICAL_IPOS = [
         "gmp_accurate": False,
         "sector": "Waste Management",
         "exchange": "BSE SME",
+        "ipo_type": "SME",
     },
     {
         "company": "ABS Marine Services Ltd",
@@ -244,6 +254,7 @@ HISTORICAL_IPOS = [
         "gmp_accurate": True,
         "sector": "Shipping & Logistics",
         "exchange": "BSE SME",
+        "ipo_type": "SME",
     },
     {
         "company": "Indobell Insulation Ltd",
@@ -257,6 +268,7 @@ HISTORICAL_IPOS = [
         "gmp_accurate": False,
         "sector": "Electrical Equipment",
         "exchange": "NSE Emerge",
+        "ipo_type": "SME",
     },
     {
         "company": "Maxposure Ltd",
@@ -270,6 +282,7 @@ HISTORICAL_IPOS = [
         "gmp_accurate": True,
         "sector": "Media & Content",
         "exchange": "BSE SME",
+        "ipo_type": "SME",
     },
 ]
 
