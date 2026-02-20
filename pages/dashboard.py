@@ -1,4 +1,4 @@
-# v3.0 - top nav, coming soon teaser cards
+# v3.1 - F&O Q1, MF+Crypto Q2
 """Dashboard page — Active & Upcoming IPOs + Coming Soon teaser"""
 import streamlit as st
 from datetime import datetime as dt
@@ -77,6 +77,22 @@ def render(active_ipos, upcoming_ipos):
 
     with cs_col1:
         st.markdown("""
+        <div class="cs-card cs-card-fo">
+            <div class="cs-icon">📈</div>
+            <div class="cs-name">F&O Copilot</div>
+            <div class="cs-desc">Real-time options chain analysis, strategy builder, and AI-generated trade setups for futures & options traders.</div>
+            <ul class="cs-features">
+                <li>Options chain heatmap</li>
+                <li>Strategy P&L simulator</li>
+                <li>IV percentile alerts</li>
+                <li>Max pain calculator</li>
+            </ul>
+            <span class="cs-pill">Coming Q1 2026</span>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with cs_col2:
+        st.markdown("""
         <div class="cs-card cs-card-mf">
             <div class="cs-icon">📊</div>
             <div class="cs-name">MF Screener</div>
@@ -88,22 +104,6 @@ def render(active_ipos, upcoming_ipos):
                 <li>Tax efficiency scoring</li>
             </ul>
             <span class="cs-pill">Coming Q2 2026</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with cs_col2:
-        st.markdown("""
-        <div class="cs-card cs-card-fo">
-            <div class="cs-icon">📈</div>
-            <div class="cs-name">F&O Copilot</div>
-            <div class="cs-desc">Real-time options chain analysis, strategy builder, and AI-generated trade setups for futures & options traders.</div>
-            <ul class="cs-features">
-                <li>Options chain heatmap</li>
-                <li>Strategy P&L simulator</li>
-                <li>IV percentile alerts</li>
-                <li>Max pain calculator</li>
-            </ul>
-            <span class="cs-pill">Coming Q3 2026</span>
         </div>
         """, unsafe_allow_html=True)
 
@@ -119,7 +119,7 @@ def render(active_ipos, upcoming_ipos):
                 <li>On-chain analytics</li>
                 <li>Portfolio tracker</li>
             </ul>
-            <span class="cs-pill">Coming Q4 2026</span>
+            <span class="cs-pill">Coming Q2 2026</span>
         </div>
         """, unsafe_allow_html=True)
 

@@ -1,4 +1,4 @@
-# v3.0 - top nav, no sidebar
+# v3.1 - single top nav, button-triggered AI tabs
 """IPO Detail page — AI Q&A, Scorecard, Industry Analysis, Financials, News"""
 import streamlit as st
 import plotly.graph_objects as go
