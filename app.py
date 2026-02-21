@@ -1,6 +1,7 @@
 # v3.6 - pure HTML nav using query_params, no duplicate button row
 """TradeSage — SME IPO Research Platform"""
 import streamlit as st
+import streamlit.components.v1 as components
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from data_loader import load_ipo_data
@@ -268,47 +269,51 @@ st.markdown(f"""
 </div>
 <div style="height:16px"></div>
 
+""", unsafe_allow_html=True)
+
+# ── HAMBURGER MENU JS ─────────────────────────────────────────────────────────
+# st.components.v1.html() renders in a sandboxed iframe but can reach the
+# parent Streamlit document via window.parent — the only reliable JS method.
+components.html("""
 <script>
-(function() {{
-    // Walk up from current script to find the Streamlit root, then query globally
-    function ready(fn) {{
-        if (document.readyState !== 'loading') fn();
-        else document.addEventListener('DOMContentLoaded', fn);
-    }}
-    ready(function() {{
-        // Retry until elements exist (Streamlit renders asynchronously)
-        var attempts = 0;
-        var timer = setInterval(function() {{
-            var hamburger = document.getElementById('ts-hamburger');
-            var drawer    = document.getElementById('ts-drawer');
-            var overlay   = document.getElementById('ts-overlay');
-            var closeBtn  = document.getElementById('ts-drawer-close');
+(function() {
+    var attempts = 0;
+    var timer = setInterval(function() {
+        try {
+            var doc       = window.parent.document;
+            var hamburger = doc.getElementById('ts-hamburger');
+            var drawer    = doc.getElementById('ts-drawer');
+            var overlay   = doc.getElementById('ts-overlay');
+            var closeBtn  = doc.getElementById('ts-drawer-close');
             attempts++;
-            if (!hamburger || !drawer || !overlay) {{
-                if (attempts > 40) clearInterval(timer); // give up after 4s
+            if (!hamburger || !drawer || !overlay) {
+                if (attempts > 60) clearInterval(timer);
                 return;
-            }}
+            }
             clearInterval(timer);
 
-            function openDrawer() {{
-                drawer.classList.add('open');
-                overlay.classList.add('open');
-                document.body.style.overflow = 'hidden';
-            }}
-            function closeDrawer() {{
-                drawer.classList.remove('open');
-                overlay.classList.remove('open');
-                document.body.style.overflow = '';
-            }}
+            // Prevent double-binding on Streamlit re-renders
+            if (hamburger.dataset.bound) return;
+            hamburger.dataset.bound = '1';
 
+            function openDrawer() {
+                drawer.style.right   = '0';
+                overlay.style.display = 'block';
+                doc.body.style.overflow = 'hidden';
+            }
+            function closeDrawer() {
+                drawer.style.right    = '-100%';
+                overlay.style.display = 'none';
+                doc.body.style.overflow = '';
+            }
             hamburger.addEventListener('click', openDrawer);
-            overlay.addEventListener('click', closeDrawer);
+            overlay.addEventListener('click',   closeDrawer);
             if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-        }}, 100);
-    }});
-}})();
+        } catch(e) {}
+    }, 100);
+})();
 </script>
-""", unsafe_allow_html=True)
+""", height=0)
 
 # ── PAGE CONTENT ──────────────────────────────────────────────────────────────
 if   "Dashboard"  in cur:
