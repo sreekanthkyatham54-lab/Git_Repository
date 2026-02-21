@@ -127,11 +127,30 @@ def init_db():
 
 
 def already_scraped(conn, ipo_id):
+    """Only skip if we actually have meaningful content — not just an empty row."""
     row = conn.execute(
-        "SELECT ipo_id FROM drhp WHERE ipo_id=? AND (risk_factors IS NOT NULL OR financials IS NOT NULL)",
+        """SELECT ipo_id FROM drhp WHERE ipo_id=?
+           AND (
+               (risk_factors IS NOT NULL AND length(risk_factors) > 100) OR
+               (financials   IS NOT NULL AND length(financials)   > 100) OR
+               (overview     IS NOT NULL AND length(overview)     > 100)
+           )""",
         (ipo_id,)
     ).fetchone()
     return row is not None
+
+
+def reset_failed_entries(conn):
+    """Delete DB rows that have no meaningful content (from failed previous runs)."""
+    cur = conn.execute(
+        """DELETE FROM drhp WHERE
+           (risk_factors IS NULL OR length(risk_factors) < 100) AND
+           (financials   IS NULL OR length(financials)   < 100) AND
+           (overview     IS NULL OR length(overview)     < 100)"""
+    )
+    conn.commit()
+    if cur.rowcount > 0:
+        print(f"  🧹 Cleared {cur.rowcount} empty/failed DB entries — will re-scrape them")
 
 
 # ── DETAIL PAGE SCRAPER ───────────────────────────────────────────────────────
@@ -384,8 +403,11 @@ def run_drhp_pipeline(ipos):
     print("\n" + "="*60)
     print(f"DRHP Pipeline (Option A) — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print(f"  {len(ipos)} IPOs | Section-based extraction")
+    print(f"  DB location: {DB_PATH}")
+    print(f"  PDF folder:  {PDF_DIR}")
     print("="*60)
     conn    = init_db()
+    reset_failed_entries(conn)   # clear empty rows from previous failed runs
     results = {"full_drhp":0,"partial":0,"limited":0,"failed":0}
     for i, ipo in enumerate(ipos):
         print(f"\n[{i+1}/{len(ipos)}] {ipo['company']}")
@@ -402,6 +424,17 @@ def run_drhp_pipeline(ipos):
 if __name__ == "__main__":
     import sys
     sys.path.insert(0, os.path.dirname(__file__))
+
+    # Show where files will be stored — no more confusion about location
+    print(f"\n📁 Files will be stored at:")
+    print(f"   DB:   {os.path.abspath(DB_PATH)}")
+    print(f"   PDFs: {os.path.abspath(PDF_DIR)}")
+
     from data_loader import load_ipo_data
     data = load_ipo_data()
-    run_drhp_pipeline(data["active_ipos"] + data["upcoming_ipos"])
+    ipos = data["active_ipos"] + data["upcoming_ipos"]
+
+    if not ipos:
+        print("\n⚠  No IPOs found — run scraper.py first to get IPO list.")
+    else:
+        run_drhp_pipeline(ipos)

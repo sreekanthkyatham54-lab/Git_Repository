@@ -36,9 +36,31 @@ def fetch(url):
 
 
 def parse_price(text):
+    """Extract price — returns upper bound for ranges like '79 to 82'."""
     if not text: return 0.0
+    # Remove anything in parentheses first (e.g. '79 (100%)' → '79')
+    text = re.sub(r'\([^)]*\)', '', text)
     nums = re.findall(r"[\d,]+\.?\d*", text.replace(",", ""))
     return float(nums[-1]) if nums else 0.0
+
+
+def parse_gmp(text):
+    """
+    Parse GMP value specifically — strips percentage annotations.
+    Handles: '23', '₹23', '+23', '-5', '23 (12.5%)', 'Nil', '--'
+    Returns float (can be negative).
+    """
+    if not text: return 0.0
+    # Remove content in parentheses — often '(12.5%)' which we don't want
+    clean = re.sub(r'\([^)]*\)', '', text).strip()
+    clean = clean.replace('₹','').replace('+','').strip()
+    if clean.lower() in ('nil','--','-','na','n/a','','0'):
+        return 0.0
+    neg = clean.startswith('-')
+    if neg: clean = clean[1:].strip()
+    nums = re.findall(r'[\d,]+\.?\d*', clean.replace(',',''))
+    if not nums: return 0.0
+    return float(nums[0]) * (-1 if neg else 1)
 
 
 def parse_size_cr(text):
@@ -257,22 +279,43 @@ def scrape_gmp_data():
     tables = soup.find_all("table")
     for table in tables:
         rows = table.find_all("tr")
+        # Print headers once for debugging
+        if rows:
+            hdrs = [th.get_text(strip=True) for th in rows[0].find_all(["th","td"])]
+            print(f"  GMP table headers: {hdrs}")
         for row in rows[1:]:
             cols = row.find_all("td")
             if len(cols) < 3: continue
             try:
-                company    = cols[0].get_text(strip=True)
-                if not company: continue
-                price_text = cols[1].get_text(strip=True)
-                gmp_text   = cols[2].get_text(strip=True)
-                gmp_val    = parse_price(gmp_text)
-                issue_p    = parse_price(price_text)
-                gmp_pct    = round(gmp_val / issue_p * 100, 1) if issue_p > 0 else 0.0
-                
-                # Also detect exchange from GMP row for better classification
+                company = cols[0].get_text(strip=True)
+                if not company or len(company) < 3: continue
+
+                # ipowatch GMP table columns vary — scan all cols for GMP value
+                # GMP col usually contains "₹X" or just a number (can be negative)
+                # Issue price col contains larger number (the IPO price)
+                # Strategy: find the col with smallest absolute number = GMP
+                issue_p = 0.0
+                gmp_val = 0.0
+
+                # Col 1 is usually issue price, col 2 is GMP
+                # But GMP page format: Company | Price | GMP | Est Listing | ...
+                price_text = cols[1].get_text(strip=True) if len(cols) > 1 else ""
+                gmp_text   = cols[2].get_text(strip=True) if len(cols) > 2 else ""
+
+                issue_p = parse_price(price_text)
+
+                # Use dedicated parse_gmp to correctly strip (xx%) annotations
+                gmp_val = parse_gmp(gmp_text)
+
+                # Sanity check: GMP should not equal issue price (= parsing error)
+                if issue_p > 0 and abs(gmp_val - issue_p) < 0.01:
+                    gmp_val = 0.0
+
+                gmp_pct = round(gmp_val / issue_p * 100, 1) if issue_p > 0 else 0.0
+
                 row_text = row.get_text(" ")
                 exchange, ipo_type = detect_exchange_and_type(row_text, company, issue_p)
-                
+
                 gmp_map[slug_from_name(company)] = {
                     "company": company,
                     "gmp": gmp_val,
