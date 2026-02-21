@@ -1,0 +1,40 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── Environment ───────────────────────────────────────────────────────────────
+.env
+.env.local
+.venv/
+venv/
+env/
+
+# ── Streamlit secrets (never commit API keys) ─────────────────────────────────
+.streamlit/secrets.toml
+
+# ── DRHP PDF files (large binaries — stored locally only) ────────────────────
+data/drhp_pdfs/
+
+# ── OS files ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor ────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FILES THAT MUST BE COMMITTED (do NOT add these above):
+#   data/live_ipo_data.json   <- live scraped IPO data
+#   data/drhp.db              <- DRHP sections database (precious!)
+#   data/ai_cache.json        <- pre-generated AI scorecards
+#   data/ipo_data.py          <- seed/fallback data
+# ─────────────────────────────────────────────────────────────────────────────

@@ -2,13 +2,14 @@ name: Refresh IPO Data
 
 on:
   schedule:
-    - cron: '30 2 * * *'   # 8:00 AM IST
-    - cron: '30 8 * * *'   # 2:00 PM IST
-  workflow_dispatch:
+    - cron: '30 2 * * *'   # 8:00 AM IST — morning refresh
+    - cron: '30 8 * * *'   # 2:00 PM IST — afternoon refresh
+  workflow_dispatch:        # Manual trigger from GitHub UI anytime
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -19,20 +20,34 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4 lxml anthropic
+        run: |
+          pip install requests beautifulsoup4 lxml anthropic pdfplumber
 
+      # ── STEP 1: Scrape live IPO list (runs every time) ───────────────────────
       - name: Run IPO scraper
         run: python scraper.py
 
+      # ── STEP 2: DRHP pipeline (only runs for NEW IPOs not already in DB) ────
+      # drhp_scraper.py internally checks already_scraped() and skips existing ones
+      # So this is safe to run daily — it only does work when new IPOs appear
+      - name: Run DRHP pipeline for new IPOs
+        run: python drhp_scraper.py
+        continue-on-error: true   # Don't fail the whole workflow if one PDF fails
+
+      # ── STEP 3: Regenerate AI cache with enriched DRHP data ─────────────────
       - name: Run AI cache generator
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python ai_cache.py
+        continue-on-error: true
 
+      # ── STEP 4: Commit all updated data files ────────────────────────────────
       - name: Commit and push fresh data
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/live_ipo_data.json data/ai_cache.json
-          git diff --cached --quiet || git commit -m "Auto-refresh: IPO data + AI cache $(date +'%Y-%m-%d %H:%M IST')"
+          git add data/live_ipo_data.json
+          git add data/ai_cache.json
+          git add data/drhp.db
+          git diff --cached --quiet || git commit -m "Auto-refresh: IPO + DRHP data $(date +'%Y-%m-%d %H:%M IST')"
           git push
