@@ -272,6 +272,12 @@ def scrape_all_ipos():
 
 # ── SCRAPER 2: GMP DATA ───────────────────────────────────────────────────────
 def scrape_gmp_data():
+    """
+    Scrape GMP values only — store raw GMP number per company.
+    gmp_percent is NOT calculated here because issue_price parsing from the
+    GMP table is unreliable (column format varies). Percentage is calculated
+    later in run_scraper() using each IPO's own confirmed issue_price.
+    """
     print("📊 Scraping GMP data...")
     soup = fetch(f"{BASE_URL}/ipo-grey-market-premium-latest-ipo-gmp/")
     if not soup: return {}
@@ -279,10 +285,9 @@ def scrape_gmp_data():
     tables = soup.find_all("table")
     for table in tables:
         rows = table.find_all("tr")
-        # Print headers once for debugging
         if rows:
             hdrs = [th.get_text(strip=True) for th in rows[0].find_all(["th","td"])]
-            print(f"  GMP table headers: {hdrs}")
+            print(f"  GMP table columns: {hdrs}")
         for row in rows[1:]:
             cols = row.find_all("td")
             if len(cols) < 3: continue
@@ -290,41 +295,41 @@ def scrape_gmp_data():
                 company = cols[0].get_text(strip=True)
                 if not company or len(company) < 3: continue
 
-                # ipowatch GMP table columns vary — scan all cols for GMP value
-                # GMP col usually contains "₹X" or just a number (can be negative)
-                # Issue price col contains larger number (the IPO price)
-                # Strategy: find the col with smallest absolute number = GMP
-                issue_p = 0.0
-                gmp_val = 0.0
+                # Scan ALL columns after col[0] — find the GMP value
+                # GMP is typically a small number (0–200), col[1] is issue price (30–2000)
+                # We collect all numeric values from each col and pick the GMP col
+                # by finding the col whose value is SMALLEST and not zero
+                all_col_vals = []
+                for c in cols[1:]:
+                    txt = c.get_text(strip=True)
+                    val = parse_gmp(txt)   # parse_gmp strips (xx%) annotations
+                    all_col_vals.append((val, txt))
 
-                # Col 1 is usually issue price, col 2 is GMP
-                # But GMP page format: Company | Price | GMP | Est Listing | ...
-                price_text = cols[1].get_text(strip=True) if len(cols) > 1 else ""
-                gmp_text   = cols[2].get_text(strip=True) if len(cols) > 2 else ""
+                if not all_col_vals: continue
 
-                issue_p = parse_price(price_text)
+                # ipowatch GMP table column order (confirmed from live page):
+                # col[0]=IPO name | col[1]=GMP | col[2]=Price Band | col[3]=Listing Gain | col[4]=Date
+                # all_col_vals maps cols[1:] so index 0 = GMP, index 1 = Price Band
+                gmp_val     = all_col_vals[0][0] if len(all_col_vals) > 0 else 0.0
+                issue_p_ref = all_col_vals[1][0] if len(all_col_vals) > 1 else 0.0
 
-                # Use dedicated parse_gmp to correctly strip (xx%) annotations
-                gmp_val = parse_gmp(gmp_text)
-
-                # Sanity check: GMP should not equal issue price (= parsing error)
-                if issue_p > 0 and abs(gmp_val - issue_p) < 0.01:
+                # Hard cap: GMP should never exceed ₹500 for normal IPOs
+                # If it does, we've read the wrong column
+                if abs(gmp_val) > 500:
                     gmp_val = 0.0
 
-                gmp_pct = round(gmp_val / issue_p * 100, 1) if issue_p > 0 else 0.0
-
                 row_text = row.get_text(" ")
-                exchange, ipo_type = detect_exchange_and_type(row_text, company, issue_p)
+                exchange, ipo_type = detect_exchange_and_type(row_text, company, issue_p_ref)
 
                 gmp_map[slug_from_name(company)] = {
-                    "company": company,
-                    "gmp": gmp_val,
-                    "gmp_percent": gmp_pct,
-                    "issue_price": issue_p,
-                    "exchange": exchange,
-                    "ipo_type": ipo_type,
+                    "company":   company,
+                    "gmp":       gmp_val,
+                    # gmp_percent intentionally left out — calculated later with correct issue_price
+                    "exchange":  exchange,
+                    "ipo_type":  ipo_type,
                 }
-            except: continue
+            except:
+                continue
     print(f"  → {len(gmp_map)} GMP entries found")
     return gmp_map
 
@@ -456,20 +461,23 @@ def run_scraper():
     time.sleep(DELAY)
     gmp_map = scrape_gmp_data()
 
-    # Step 3: Match GMP + use GMP data to improve exchange/type classification
+    # Step 3: Match GMP, calculate percent using IPO's own confirmed issue_price
     for ipo in all_ipos:
-        slug = slug_from_name(ipo["company"])
+        slug     = slug_from_name(ipo["company"])
         gmp_data = gmp_map.get(slug)
         if not gmp_data:
+            first = slug.split("-")[0]
             for gs, gv in gmp_map.items():
-                if slug.split("-")[0] in gs or gs.split("-")[0] in slug:
+                if first in gs or gs.split("-")[0] in slug:
                     gmp_data = gv; break
         if gmp_data:
-            ipo["gmp"] = gmp_data["gmp"]
-            ipo["gmp_percent"] = gmp_data["gmp_percent"]
-            if not ipo["issue_price"] and gmp_data["issue_price"]:
-                ipo["issue_price"] = gmp_data["issue_price"]
-            # GMP page often has exchange info — use it to improve classification
+            gmp_val = gmp_data["gmp"]
+            issue_p = ipo.get("issue_price") or 0.0
+            # Calculate percent using IPO's OWN issue_price — not GMP table's
+            gmp_pct = round(gmp_val / issue_p * 100, 1) if issue_p > 0 else 0.0
+            ipo["gmp"]         = gmp_val
+            ipo["gmp_percent"] = gmp_pct
+            print(f"  GMP: {ipo['company']} -> gmp=Rs{gmp_val} price=Rs{issue_p} = {gmp_pct}%")
             if gmp_data.get("exchange") and ipo["exchange"] in ("BSE SME", "BSE / NSE"):
                 ipo["exchange"] = gmp_data["exchange"]
                 ipo["ipo_type"] = gmp_data["ipo_type"]
