@@ -126,88 +126,74 @@ hr{{border-color:var(--border)!important;}}
 .cs-pill{{display:inline-block;padding:3px 10px;border-radius:20px;font-size:0.65rem;font-weight:700;background:rgba(26,127,55,0.1);color:var(--green)!important;border:1px solid var(--green);}}
 @media(max-width:768px){{.cs-grid{{grid-template-columns:1fr;}}}}
 
-/* ── MOBILE RESPONSIVE ── */
-/* Hamburger button - hidden on desktop */
-.ts-hamburger {{
+/* ── MOBILE ── */
+/* Hamburger button — hidden on desktop, shown on mobile */
+.ts-hamburger-btn {{
     display:none;
     flex-direction:column;justify-content:center;align-items:center;
-    width:36px;height:36px;cursor:pointer;gap:5px;margin-left:auto;flex-shrink:0;
-    background:transparent;border:none;padding:4px;
+    width:38px;height:38px;cursor:pointer;gap:5px;flex-shrink:0;margin-left:auto;
+    background:none;border:none;border-radius:8px;padding:6px;
+    transition:background 0.15s;
 }}
-.ts-hamburger span {{
+.ts-hamburger-btn:hover {{ background:{card2}; }}
+.ts-hamburger-btn span {{
     display:block;width:22px;height:2px;background:{text};
-    border-radius:2px;transition:all 0.25s;
+    border-radius:2px;transition:transform 0.25s,opacity 0.25s;
 }}
-/* Mobile nav drawer */
-.ts-mobile-nav {{
-    display:none;
-    position:fixed;top:0;right:-100%;width:75%;max-width:280px;height:100vh;
-    background:{card};border-left:1px solid {border};
-    z-index:99999;transition:right 0.3s ease;
-    flex-direction:column;padding:20px;box-shadow:-4px 0 20px rgba(0,0,0,0.15);
+
+/* Slide-in drawer */
+.ts-drawer {{
+    position:fixed;top:0;right:-100%;width:78%;max-width:290px;height:100vh;
+    background:{card};border-left:2px solid {border};
+    z-index:99999;transition:right 0.28s cubic-bezier(.4,0,.2,1);
+    display:flex;flex-direction:column;
+    box-shadow:-6px 0 24px rgba(0,0,0,0.18);overflow-y:auto;
 }}
-.ts-mobile-nav.open {{ right:0; }}
-.ts-mobile-overlay {{
-    display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);
-    z-index:99998;
+.ts-drawer.open {{ right:0!important; }}
+
+/* Dark overlay behind drawer */
+.ts-overlay {{
+    display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);
+    z-index:99998;cursor:pointer;
 }}
-.ts-mobile-overlay.open {{ display:block; }}
-.ts-mobile-nav-header {{
+.ts-overlay.open {{ display:block!important; }}
+
+.ts-drawer-header {{
     display:flex;align-items:center;justify-content:space-between;
-    margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid {border};
+    padding:18px 20px 16px;border-bottom:1px solid {border};flex-shrink:0;
 }}
-.ts-mobile-nav-close {{
-    font-size:1.4rem;cursor:pointer;color:{muted};background:none;border:none;
-    line-height:1;padding:4px;
+.ts-drawer-close {{
+    font-size:1.5rem;cursor:pointer;color:{muted};line-height:1;
+    background:none;border:none;border-radius:6px;padding:2px 8px;
+    transition:background 0.15s;
 }}
-.ts-mobile-nav-link {{
-    display:flex;align-items:center;gap:12px;padding:14px 8px;
+.ts-drawer-close:hover {{ background:{card2}; }}
+.ts-drawer-body {{
+    display:flex;flex-direction:column;padding:12px;flex:1;
+}}
+.ts-drawer-link {{
+    display:flex;align-items:center;gap:12px;padding:14px 12px;
     font-size:1rem;font-weight:600;color:{muted}!important;
-    text-decoration:none!important;border-radius:8px;
-    border-left:3px solid transparent;margin-bottom:4px;
-    transition:all 0.15s;
+    text-decoration:none!important;border-radius:10px;
+    border-left:3px solid transparent;margin-bottom:4px;transition:all 0.15s;
 }}
-.ts-mobile-nav-link:hover {{ background:{card2};color:{text}!important; }}
-.ts-mobile-nav-link.active {{
-    color:{green}!important;border-left:3px solid {green};
-    background:rgba(26,127,55,0.08);
+.ts-drawer-link:hover {{ background:{card2};color:{text}!important; }}
+.ts-drawer-link.active {{
+    color:{green}!important;border-left-color:{green};
+    background:rgba(26,127,55,0.09);
 }}
-.ts-mobile-pills {{
-    margin-top:auto;padding-top:20px;border-top:1px solid {border};
+.ts-drawer-pills {{
+    margin-top:auto;padding:16px 20px;border-top:1px solid {border};
     display:flex;flex-wrap:wrap;gap:6px;
 }}
 
 @media (max-width:768px) {{
-    /* Show hamburger, hide desktop nav links and pills */
-    .ts-hamburger {{ display:flex!important; }}
+    .ts-hamburger-btn {{ display:flex!important; }}
     .ts-nav-links {{ display:none!important; }}
     .ts-pills {{ display:none!important; }}
-    .ts-mobile-nav {{ display:flex!important; }}
-    
-    /* Nav bar height on mobile */
     .ts-nav {{ height:54px!important; }}
-    .ts-logo {{ padding-right:12px!important; }}
-    .ts-logo-name {{ font-size:1rem!important; }}
-    
-    /* 2x2 grid for metric cards on mobile */
-    [data-testid="stMetric"] {{
-        min-width:0!important;
-    }}
-    /* Force the 4-col metric row to wrap 2x2 */
-    div[data-testid="stHorizontalBlock"]:has([data-testid="stMetric"]) {{
-        flex-wrap:wrap!important;gap:10px!important;
-    }}
-    div[data-testid="stHorizontalBlock"]:has([data-testid="stMetric"]) > div {{
-        flex:1 1 calc(50% - 5px)!important;min-width:calc(50% - 5px)!important;max-width:calc(50% - 5px)!important;
-    }}
-    
-    /* IPO card full width on mobile */
-    .block-container {{ padding:0 1rem 1.5rem!important; }}
-    
-    /* Analyze button col - stack on mobile */
-    div[data-testid="stHorizontalBlock"]:has(>.stButton) {{
-        flex-wrap:wrap!important;
-    }}
+    .ts-logo-name {{ font-size:0.95rem!important; }}
+    .block-container {{ padding:0 0.8rem 1.5rem!important; }}
 }}
 
 </style>
@@ -231,23 +217,25 @@ def nav_link(page):
     return f'<a class="ts-nav-link {active}" href="?page={page}" target="_self">{icons[page]} {page}</a>'
 
 st.markdown(f"""
-<!-- Overlay for closing drawer -->
-<div class="ts-mobile-overlay" id="ts-overlay" onclick="closeMenu()"></div>
+<!-- Dark overlay — clicking closes drawer -->
+<div class="ts-overlay" id="ts-overlay"></div>
 
-<!-- Mobile slide-in nav drawer -->
-<div class="ts-mobile-nav" id="ts-mobile-nav">
-    <div class="ts-mobile-nav-header">
-        <div class="ts-logo" style="border:none;padding:0;">
+<!-- Slide-in mobile nav drawer -->
+<div class="ts-drawer" id="ts-drawer">
+    <div class="ts-drawer-header">
+        <div style="display:flex;align-items:center;gap:8px;">
             <div class="ts-logo-icon" style="width:28px;height:28px;font-size:0.85rem;">📈</div>
             <div class="ts-logo-name" style="font-size:1rem;">Trade<b>Sage</b></div>
         </div>
-        <button class="ts-mobile-nav-close" onclick="closeMenu()">✕</button>
+        <button class="ts-drawer-close" id="ts-drawer-close">✕</button>
     </div>
-    <a class="ts-mobile-nav-link {"active" if cur=="Dashboard" else ""}" href="?page=Dashboard" target="_self">🏠 Dashboard</a>
-    <a class="ts-mobile-nav-link {"active" if cur=="IPO Detail" else ""}" href="?page=IPO Detail" target="_self">🔍 IPO Detail</a>
-    <a class="ts-mobile-nav-link {"active" if cur=="GMP Tracker" else ""}" href="?page=GMP Tracker" target="_self">📊 GMP Tracker</a>
-    <a class="ts-mobile-nav-link {"active" if cur=="Historical Data" else ""}" href="?page=Historical Data" target="_self">📜 Historical Data</a>
-    <div class="ts-mobile-pills">
+    <div class="ts-drawer-body">
+        <a class="ts-drawer-link {"active" if cur=="Dashboard" else ""}" href="?page=Dashboard" target="_self">🏠 Dashboard</a>
+        <a class="ts-drawer-link {"active" if cur=="IPO Detail" else ""}" href="?page=IPO Detail" target="_self">🔍 IPO Detail</a>
+        <a class="ts-drawer-link {"active" if cur=="GMP Tracker" else ""}" href="?page=GMP Tracker" target="_self">📊 GMP Tracker</a>
+        <a class="ts-drawer-link {"active" if cur=="Historical Data" else ""}" href="?page=Historical Data" target="_self">📜 Historical Data</a>
+    </div>
+    <div class="ts-drawer-pills">
         <span class="ts-pill np-blue">Mainboard</span>
         <span class="ts-pill np-blue">BSE SME</span>
         <span class="ts-pill np-blue">NSE Emerge</span>
@@ -273,24 +261,52 @@ st.markdown(f"""
         <span class="ts-pill np-blue">NSE Emerge</span>
         <span class="ts-pill {live_cls}">{live_txt}</span>
     </div>
-    <!-- Hamburger: only visible on mobile via CSS -->
-    <button class="ts-hamburger" onclick="openMenu()" aria-label="Open menu">
+    <!-- Hamburger — visible only on mobile via CSS -->
+    <button class="ts-hamburger-btn" id="ts-hamburger">
         <span></span><span></span><span></span>
     </button>
 </div>
 <div style="height:16px"></div>
 
 <script>
-function openMenu() {{
-    document.getElementById('ts-mobile-nav').classList.add('open');
-    document.getElementById('ts-overlay').classList.add('open');
-    document.body.style.overflow = 'hidden';
-}}
-function closeMenu() {{
-    document.getElementById('ts-mobile-nav').classList.remove('open');
-    document.getElementById('ts-overlay').classList.remove('open');
-    document.body.style.overflow = '';
-}}
+(function() {{
+    // Walk up from current script to find the Streamlit root, then query globally
+    function ready(fn) {{
+        if (document.readyState !== 'loading') fn();
+        else document.addEventListener('DOMContentLoaded', fn);
+    }}
+    ready(function() {{
+        // Retry until elements exist (Streamlit renders asynchronously)
+        var attempts = 0;
+        var timer = setInterval(function() {{
+            var hamburger = document.getElementById('ts-hamburger');
+            var drawer    = document.getElementById('ts-drawer');
+            var overlay   = document.getElementById('ts-overlay');
+            var closeBtn  = document.getElementById('ts-drawer-close');
+            attempts++;
+            if (!hamburger || !drawer || !overlay) {{
+                if (attempts > 40) clearInterval(timer); // give up after 4s
+                return;
+            }}
+            clearInterval(timer);
+
+            function openDrawer() {{
+                drawer.classList.add('open');
+                overlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }}
+            function closeDrawer() {{
+                drawer.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }}
+
+            hamburger.addEventListener('click', openDrawer);
+            overlay.addEventListener('click', closeDrawer);
+            if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+        }}, 100);
+    }});
+}})();
 </script>
 """, unsafe_allow_html=True)
 
