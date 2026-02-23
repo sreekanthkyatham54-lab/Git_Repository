@@ -38,9 +38,10 @@ def build_rag_context(ipo_id: str, question: str, for_scorecard: bool = False) -
 
     passages = []
     for chunk in chunks:
-        section_label = chunk["section"].replace("_", " ").title()
+        topic = chunk.get("topic") or chunk.get("section") or "DRHP"
+        topic_label = topic.replace("_", " ").title()
         passage = (
-            f"[Source: {section_label} section, Page {chunk['page_number']}]\n"
+            f"[Source: {topic_label}, Page {chunk['page_number']}]\n"
             f"{chunk['text']}"
         )
         passages.append(passage)
