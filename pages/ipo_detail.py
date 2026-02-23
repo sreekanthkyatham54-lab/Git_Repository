@@ -130,7 +130,7 @@ def render(all_ipos):
 
         ci_col1, ci_col2 = st.columns([5, 1])
         with ci_col1:
-            typed = st.text_input("", placeholder="Ask about this IPO...", key=f"chat_input_{ipo_id}", label_visibility="collapsed")
+            typed = st.text_input("Question", placeholder="Ask about this IPO...", key=f"chat_input_{ipo_id}", label_visibility="collapsed")
         with ci_col2:
             send_clicked = st.button("Ask →", key=f"send_{ipo_id}")
         user_input = typed if send_clicked and typed else None
@@ -165,12 +165,13 @@ def render(all_ipos):
         if scorecard_key not in st.session_state and cached.get("scorecard"):
             st.session_state[scorecard_key] = cached["scorecard"]
 
-        # Always show static scorecard first
-        _render_static_scorecard(ipo)
+        # Always show static scorecard first — pass AI result if available
+        ai_result = st.session_state.get(scorecard_key)
+        _render_static_scorecard(ipo, ai_result)
 
-        if st.session_state.get(scorecard_key):
+        if ai_result:
             st.markdown("---")
-            _render_ai_scorecard(st.session_state[scorecard_key], ipo)
+            _render_ai_scorecard(ai_result, ipo)
             cached_at = cached.get("scorecard_at", "")[:16].replace("T", " ")
             if cached_at:
                 st.caption(f"🕐 AI analysis cached: {cached_at} · Auto-refreshes twice daily")
@@ -338,27 +339,39 @@ def render(all_ipos):
                             st.error(f"Error: {e}")
 
 
-def _render_static_scorecard(ipo):
-    rec   = ipo.get("recommendation", "NEUTRAL")
+def _render_static_scorecard(ipo, ai_result=None):
+    # Use AI verdict if available, else fall back to scraper recommendation
+    rec   = (ai_result or {}).get("verdict") or ipo.get("recommendation", "NEUTRAL")
     color = {"SUBSCRIBE": "#00d4aa", "AVOID": "#ff4757", "NEUTRAL": "#ffd32a"}.get(rec, "#8892a4")
+    one_liner = (ai_result or {}).get("one_liner") or ipo.get("summary", "No summary available.")
     st.markdown(f"""
     <div style='text-align:center;padding:24px;background:var(--bg-card);border-radius:12px;margin-bottom:20px;'>
         <div style='font-size:3rem;font-weight:700;color:{color};'>{rec}</div>
         <div style='font-size:1rem;color:var(--text-muted);margin-top:8px;'>Risk Level: {ipo.get('risk','—')}</div>
-        <div style='margin-top:16px;font-size:0.9rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.6;'>
-            {ipo.get('summary','No summary available.')}
+        <div style='margin-top:16px;font-size:0.9rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.6;font-style:italic;'>
+            "{one_liner}"
         </div>
     </div>
     """, unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("<div style='font-size:0.85rem;color:var(--green);font-weight:600;margin-bottom:8px;'>✓ Key Positives</div>", unsafe_allow_html=True)
-        highlights = (ipo.get('drhp_highlights') or '')[:300]
-        st.markdown(f"<div class='alert-green' style='font-size:0.85rem;'>{highlights or 'Generate AI scorecard for detailed analysis.'}</div>", unsafe_allow_html=True)
+        if ai_result and ai_result.get("positives"):
+            # Use first 2 AI-generated positives
+            highlights = " · ".join(ai_result["positives"][:2])
+            st.markdown(f"<div class='alert-green' style='font-size:0.85rem;'>{highlights}</div>", unsafe_allow_html=True)
+        else:
+            highlights = (ipo.get('drhp_highlights') or '')[:300]
+            st.markdown(f"<div class='alert-green' style='font-size:0.85rem;'>{highlights or 'Generate AI scorecard for detailed analysis.'}</div>", unsafe_allow_html=True)
     with col2:
         st.markdown("<div style='font-size:0.85rem;color:var(--red);font-weight:600;margin-bottom:8px;'>⚠ Key Risks</div>", unsafe_allow_html=True)
-        risks = (ipo.get('risks_text') or '')[:300]
-        st.markdown(f"<div class='alert-red' style='font-size:0.85rem;'>{risks or 'Generate AI scorecard for risk factors.'}</div>", unsafe_allow_html=True)
+        if ai_result and ai_result.get("red_flags"):
+            # Use first 2 AI-generated red flags
+            risks = " · ".join(ai_result["red_flags"][:2])
+            st.markdown(f"<div class='alert-red' style='font-size:0.85rem;'>{risks}</div>", unsafe_allow_html=True)
+        else:
+            risks = (ipo.get('risks_text') or '')[:300]
+            st.markdown(f"<div class='alert-red' style='font-size:0.85rem;'>{risks or 'Generate AI scorecard for risk factors.'}</div>", unsafe_allow_html=True)
 
 
 def _render_ai_scorecard(r, ipo):
