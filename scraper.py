@@ -441,6 +441,87 @@ def scrape_historical_ipos():
     return historical
 
 
+# ── SCRAPER 5: SUBSCRIPTION DATA ─────────────────────────────────────────────
+def scrape_subscription_data():
+    """
+    Scrape live subscription data from ipowatch.in subscription status page.
+    Returns dict: {slug -> {qib, nii, retail, total}}
+    Table columns: IPO | Type | Opening Date | Closing Date | QIB(x) | NII(x) | Retail(x) | Total(x)
+    """
+    print("📊 Scraping subscription data...")
+    soup = fetch(f"{BASE_URL}/ipo-subscription-status-today/")
+    if not soup:
+        print("  ⚠ Could not fetch subscription page — tried all known URLs")
+        return {}
+
+    sub_map = {}
+    tables  = soup.find_all("table")
+    for table in tables:
+        rows = table.find_all("tr")
+        if not rows: continue
+
+        # Detect column positions from header
+        hdrs = [th.get_text(strip=True).lower() for th in rows[0].find_all(["th","td"])]
+        if not any("qib" in h or "subscri" in h or "total" in h for h in hdrs):
+            continue
+
+        col_name   = next((i for i,h in enumerate(hdrs) if "ipo" in h or "company" in h or "name" in h), 0)
+        col_qib    = next((i for i,h in enumerate(hdrs) if "qib" in h), -1)
+        col_nii    = next((i for i,h in enumerate(hdrs) if "nii" in h or "hni" in h), -1)
+        col_retail = next((i for i,h in enumerate(hdrs) if "retail" in h), -1)
+        col_total  = next((i for i,h in enumerate(hdrs) if "total" in h), -1)
+
+        for row in rows[1:]:
+            cols = row.find_all("td")
+            if len(cols) < 4: continue
+            try:
+                company = cols[col_name].get_text(strip=True)
+                if not company or len(company) < 3: continue
+
+                def parse_sub(col_idx):
+                    if col_idx < 0 or col_idx >= len(cols): return 0.0
+                    txt = cols[col_idx].get_text(strip=True).replace(",","")
+                    nums = re.findall(r"[\d]+\.?\d*", txt)
+                    return float(nums[0]) if nums else 0.0
+
+                qib    = parse_sub(col_qib)
+                nii    = parse_sub(col_nii)
+                retail = parse_sub(col_retail)
+                total  = parse_sub(col_total)
+
+                if total == 0 and qib == 0 and nii == 0 and retail == 0:
+                    continue  # skip rows with no data yet
+
+                slug = slug_from_name(company)
+                sub_map[slug] = {
+                    "qib": qib, "nii": nii,
+                    "retail": retail, "total": total,
+                }
+                print(f"  Sub: {company} → QIB:{qib}x NII:{nii}x Retail:{retail}x Total:{total}x")
+            except Exception:
+                continue
+
+    print(f"  → {len(sub_map)} subscription entries found")
+    return sub_map
+
+
+def match_subscription(ipo, sub_map):
+    """Match subscription data to IPO using slug fuzzy matching."""
+    slug = slug_from_name(ipo["company"])
+
+    # Direct match
+    if slug in sub_map:
+        return sub_map[slug]
+
+    # Partial match — first significant word
+    first = slug.split("-")[0]
+    for s, v in sub_map.items():
+        if first in s or s.split("-")[0] in slug:
+            return v
+
+    return None
+
+
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 def run_scraper():
     print("=" * 60)
@@ -488,6 +569,17 @@ def run_scraper():
         time.sleep(DELAY)
         all_ipos[i] = scrape_ipo_detail(ipo)
         print(f"  [{i+1}/{len(all_ipos)}] {ipo['company']} → {ipo.get('ipo_type','?')} | {ipo.get('exchange','?')}")
+
+    # Step 4b: Subscription data
+    time.sleep(DELAY)
+    sub_map = scrape_subscription_data()
+    for ipo in all_ipos:
+        sub = match_subscription(ipo, sub_map)
+        if sub:
+            ipo["subscription_times"]  = sub["total"]
+            ipo["subscription_qib"]    = sub["qib"]
+            ipo["subscription_nii"]    = sub["nii"]
+            ipo["subscription_retail"] = sub["retail"]
 
     # Step 5: Separate active vs upcoming
     active   = [i for i in all_ipos if i["subscription_status"] == "Open"]

@@ -1,417 +1,358 @@
 """
-rag_indexer.py — RAG Pipeline: Chunk PDFs and store embeddings in SQLite
-=========================================================================
-Reads every PDF from data/drhp_pdfs/, splits into overlapping chunks,
-generates embeddings using sentence-transformers (free, runs locally),
-and stores everything in data/drhp.db (new 'chunks' table).
+rag_indexer.py — Semantic Chunking + Embedding Pipeline
+========================================================
+Splits PDF text at MEANING BOUNDARIES not fixed token counts.
 
-Run ONCE after drhp_scraper.py has downloaded PDFs:
-    python rag_indexer.py
+How semantic chunking works:
+  1. Extract text page by page (preserving page numbers)
+  2. Split into sentences
+  3. Embed each sentence
+  4. Measure similarity between consecutive sentences
+  5. When similarity drops sharply → topic changed → split here
+  6. Merge small chunks, cap large ones
 
-Re-run whenever new IPO PDFs are added — already-indexed IPOs are skipped.
+Result: chunks follow actual content structure.
+"Basis for Offer Price" stays together as one chunk.
+Financial tables don't get cut mid-row.
 
-Architecture:
-    PDF on disk
-        → pdfplumber extracts text page by page (with page numbers)
-        → split into 800-token chunks with 100-token overlap
-        → sentence-transformers generates embedding per chunk (free, local)
-        → stored in SQLite chunks table
-        → ready for retrieval at query time
+No section labels stored — retrieval uses pure cosine similarity.
+
+Run: python rag_indexer.py
+Re-run safely — already-indexed IPOs are skipped.
 """
 
 import os, json, re, sqlite3, time
+import numpy as np
 import pdfplumber
 from datetime import datetime
 
-# ── CONFIGURATION ─────────────────────────────────────────────────────────────
-DB_PATH  = os.path.join(os.path.dirname(__file__), "data", "drhp.db")
-PDF_DIR  = os.path.join(os.path.dirname(__file__), "data", "drhp_pdfs")
+DB_PATH = os.path.join(os.path.dirname(__file__), "data", "drhp.db")
+PDF_DIR = os.path.join(os.path.dirname(__file__), "data", "drhp_pdfs")
 
-CHUNK_SIZE    = 800   # tokens per chunk (~3200 chars)
-CHUNK_OVERLAP = 100   # tokens overlap between consecutive chunks (~400 chars)
-CHARS_PER_TOK = 4     # approximate
-
-CHUNK_SIZE_CHARS    = CHUNK_SIZE    * CHARS_PER_TOK   # 3200
-CHUNK_OVERLAP_CHARS = CHUNK_OVERLAP * CHARS_PER_TOK   # 400
-
-# SEBI section header patterns — used to label each chunk's section
-SECTION_LABELS = [
-    ("risk_factors", [
-        r"SECTION\s+II[\s\-–]+RISK\s+FACTORS",
-        r"CHAPTER\s+II[\s\-–]+RISK\s+FACTORS",
-        r"^\s*RISK\s+FACTORS\s*$",
-        r"RISK\s+FACTORS\s+AND\s+MATERIAL",
-    ]),
-    ("objects", [
-        r"OBJECTS?\s+OF\s+THE\s+(?:OFFER|ISSUE)",
-        r"USE\s+OF\s+(?:IPO\s+)?PROCEEDS",
-    ]),
-    ("financials", [
-        r"FINANCIAL\s+STATEMENTS?",
-        r"RESTATED\s+(?:CONSOLIDATED\s+)?FINANCIAL",
-        r"AUDITED\s+FINANCIAL",
-        r"FINANCIAL\s+INFORMATION",
-    ]),
-    ("promoters", [
-        r"(?:OUR\s+)?PROMOTERS?\s+AND\s+PROMOTER\s+GROUP",
-        r"PROMOTER\s+BACKGROUND",
-        r"ABOUT\s+THE\s+PROMOTER",
-    ]),
-    ("litigation", [
-        r"LEGAL?\s+(?:AND\s+OTHER\s+)?PROCEEDINGS?",
-        r"OUTSTANDING\s+LITIGATION",
-        r"PENDING\s+LITIGATION",
-    ]),
-    ("overview", [
-        r"(?:OUR\s+)?BUSINESS\s+OVERVIEW",
-        r"INDUSTRY\s+OVERVIEW",
-        r"ABOUT\s+(?:US|OUR\s+COMPANY|THE\s+COMPANY)",
-        r"BUSINESS\s+DESCRIPTION",
-    ]),
-]
+# Semantic chunking config
+SIMILARITY_THRESHOLD  = 0.45   # below this → topic changed → split
+MIN_CHUNK_CHARS       = 300    # merge chunks smaller than this
+MAX_CHUNK_CHARS       = 4000   # split chunks larger than this
+CHARS_PER_TOK         = 4
 
 
 # ── DATABASE ──────────────────────────────────────────────────────────────────
 def init_chunks_table(conn):
-    """Add chunks table to existing drhp.db."""
     conn.execute("""
         CREATE TABLE IF NOT EXISTS chunks (
             chunk_id     TEXT PRIMARY KEY,
             ipo_id       TEXT NOT NULL,
             company      TEXT NOT NULL,
             page_number  INTEGER,
-            section      TEXT,
             chunk_index  INTEGER,
             text         TEXT NOT NULL,
             token_count  INTEGER,
             embedding    TEXT,
-            indexed_at   TEXT,
-            FOREIGN KEY (ipo_id) REFERENCES drhp(ipo_id)
+            indexed_at   TEXT
         )
     """)
+    # Remove section column if it exists from old schema — no longer needed
+    try:
+        conn.execute("ALTER TABLE chunks DROP COLUMN section")
+    except Exception:
+        pass
     conn.execute("CREATE INDEX IF NOT EXISTS idx_chunks_ipo ON chunks(ipo_id)")
     conn.commit()
 
 
 def already_indexed(conn, ipo_id):
-    """Return True if this IPO already has chunks in the DB."""
     row = conn.execute(
         "SELECT COUNT(*) FROM chunks WHERE ipo_id = ?", (ipo_id,)
     ).fetchone()
     return row[0] > 0
 
 
-def get_ipo_id_from_filename(filename, conn):
-    """
-    Map PDF filename to ipo_id and company name.
-    Filenames are: ipo_001.pdf, ipo_002.pdf, ipo-gaudium-ivf.pdf etc.
-    Match against drhp table records.
-    """
-    base = os.path.splitext(filename)[0]  # e.g. "ipo_005"
+def force_reindex(conn, ipo_id):
+    conn.execute("DELETE FROM chunks WHERE ipo_id = ?", (ipo_id,))
+    conn.commit()
 
-    # Direct match first
+
+def get_ipo_id_from_filename(filename, conn):
+    base = os.path.splitext(filename)[0]
     row = conn.execute(
         "SELECT ipo_id, company FROM drhp WHERE ipo_id = ?", (base,)
     ).fetchone()
-    if row:
-        return row[0], row[1]
+    if row: return row[0], row[1]
 
-    # Try slug match — ipo-gaudium-ivf → match company containing "gaudium"
-    slug = base.replace("ipo-", "").replace("ipo_", "").replace("-", " ").replace("_", " ")
+    slug = base.replace("ipo-","").replace("ipo_","").replace("-"," ").replace("_"," ")
     rows = conn.execute("SELECT ipo_id, company FROM drhp").fetchall()
     for ipo_id, company in rows:
-        if slug.lower() in company.lower() or company.lower().replace(" ", "") in slug.lower().replace(" ", ""):
+        if slug.lower() in company.lower() or \
+           company.lower().replace(" ","") in slug.lower().replace(" ",""):
             return ipo_id, company
 
-    # Return base as ipo_id with unknown company — still index it
     return base, "Unknown"
 
 
 # ── PDF EXTRACTION ────────────────────────────────────────────────────────────
 def extract_pages(pdf_path):
-    """
-    Extract text from PDF page by page.
-    Returns list of (page_number, text) tuples.
-    Preserves page boundaries for accurate citations.
-    """
     pages = []
     try:
         with pdfplumber.open(pdf_path) as pdf:
             total = len(pdf.pages)
-            print(f"    Extracting {total} pages...")
+            print(f"    {total} pages...")
             for i, page in enumerate(pdf.pages):
                 try:
                     text = page.extract_text(x_tolerance=3, y_tolerance=3) or ""
-                    # Clean up common PDF extraction artifacts
-                    text = re.sub(r'\x00', '', text)           # null bytes
-                    text = re.sub(r'[ \t]+', ' ', text)        # multiple spaces
-                    text = re.sub(r'\n{3,}', '\n\n', text)     # excessive newlines
+                    text = re.sub(r'\x00', '', text)
+                    text = re.sub(r'[ \t]+', ' ', text)
+                    text = re.sub(r'\n{3,}', '\n\n', text)
                     text = text.strip()
-                    if text:
+                    if text and len(text) > 50:
                         pages.append((i + 1, text))
                 except Exception:
                     continue
-            print(f"    Extracted text from {len(pages)}/{total} pages")
+            print(f"    Text extracted from {len(pages)}/{total} pages")
     except Exception as e:
         print(f"    PDF read error: {e}")
     return pages
 
 
-def detect_section(text):
-    """
-    Detect which DRHP section this text belongs to.
-    Returns section label string or 'general'.
-    """
-    text_upper = text[:500].upper()  # check start of chunk
-    for section_name, patterns in SECTION_LABELS:
-        for pat in patterns:
-            if re.search(pat, text_upper):
-                return section_name
-    return "general"
+# ── SEMANTIC CHUNKING ─────────────────────────────────────────────────────────
+def split_into_sentences(text):
+    """Split text into sentences for semantic analysis."""
+    # Split on sentence boundaries
+    parts = re.split(r'(?<=[.!?])\s+(?=[A-Z])|(?<=\n)\n', text)
+    sentences = []
+    for part in parts:
+        part = part.strip()
+        if part and len(part) > 20:
+            sentences.append(part)
+    return sentences if sentences else [text]
 
 
-# ── CHUNKING ──────────────────────────────────────────────────────────────────
-def chunk_pages(pages):
+def semantic_chunk_pages(pages, model):
     """
-    Split page texts into overlapping chunks.
-    Respects: section headers > paragraph breaks > sentence ends > character limit.
-    Returns list of dicts: {text, page_number, section, chunk_index}
+    Semantic chunking across all pages.
+    Groups sentences by topic similarity, respects page boundaries.
     """
-    chunks = []
-    chunk_index = 0
-    current_section = "general"
+    if not pages:
+        return []
 
-    # Build one long text with page markers embedded
-    # Format: [PAGE:47] ...text...
-    full_text_parts = []
+    # Build flat list of (page_num, sentence) pairs
+    all_sentences = []
     for page_num, text in pages:
-        full_text_parts.append(f"[PAGE:{page_num}]\n{text}")
-    full_text = "\n\n".join(full_text_parts)
+        sentences = split_into_sentences(text)
+        for sent in sentences:
+            all_sentences.append((page_num, sent))
 
-    # Split into paragraphs first
-    paragraphs = re.split(r'\n\n+', full_text)
+    if not all_sentences:
+        return []
 
-    current_chunk_text = ""
-    current_chunk_page = pages[0][0] if pages else 1
+    print(f"    Embedding {len(all_sentences)} sentences for semantic chunking...")
 
-    for para in paragraphs:
-        para = para.strip()
-        if not para:
+    # Embed all sentences in one batch
+    texts = [s for _, s in all_sentences]
+
+    # Batch to avoid memory issues on large PDFs
+    batch_size = 128
+    all_embeddings = []
+    for i in range(0, len(texts), batch_size):
+        batch = texts[i:i+batch_size]
+        embs = model.encode(batch, show_progress_bar=False)
+        all_embeddings.extend(embs)
+
+    # Calculate similarity between consecutive sentences
+    similarities = []
+    for i in range(len(all_embeddings) - 1):
+        a = np.array(all_embeddings[i], dtype=np.float32)
+        b = np.array(all_embeddings[i+1], dtype=np.float32)
+        na, nb = np.linalg.norm(a), np.linalg.norm(b)
+        sim = float(np.dot(a, b) / (na * nb)) if na > 0 and nb > 0 else 0.0
+        similarities.append(sim)
+
+    # Find split points where similarity drops (topic change)
+    split_indices = {0}  # always start a new chunk at beginning
+    for i, sim in enumerate(similarities):
+        page_curr = all_sentences[i][0]
+        page_next = all_sentences[i+1][0]
+        # Split on topic change OR page boundary (major section breaks)
+        if sim < SIMILARITY_THRESHOLD or (page_next > page_curr + 2):
+            split_indices.add(i + 1)
+
+    # Build chunks from split points
+    split_list = sorted(split_indices)
+    raw_chunks = []
+    for k, start in enumerate(split_list):
+        end = split_list[k+1] if k+1 < len(split_list) else len(all_sentences)
+        chunk_sentences = all_sentences[start:end]
+        if not chunk_sentences:
             continue
-
-        # Extract page number if this paragraph starts with a page marker
-        page_match = re.match(r'\[PAGE:(\d+)\]\n?', para)
-        if page_match:
-            current_chunk_page = int(page_match.group(1))
-            para = para[page_match.end():].strip()
-            if not para:
-                continue
-
-        # Detect section from paragraph content
-        detected = detect_section(para)
-        if detected != "general":
-            current_section = detected
-
-        # If adding this paragraph exceeds chunk size, save current and start new
-        combined = current_chunk_text + "\n\n" + para if current_chunk_text else para
-
-        if len(combined) > CHUNK_SIZE_CHARS and current_chunk_text:
-            # Save current chunk
-            if len(current_chunk_text.strip()) > 100:  # min meaningful length
-                chunks.append({
-                    "text":        current_chunk_text.strip(),
-                    "page_number": current_chunk_page,
-                    "section":     current_section,
-                    "chunk_index": chunk_index,
-                    "token_count": len(current_chunk_text) // CHARS_PER_TOK,
-                })
-                chunk_index += 1
-
-            # Start new chunk with overlap — take last CHUNK_OVERLAP_CHARS
-            overlap = current_chunk_text[-CHUNK_OVERLAP_CHARS:] if len(current_chunk_text) > CHUNK_OVERLAP_CHARS else current_chunk_text
-            current_chunk_text = overlap + "\n\n" + para
-        else:
-            current_chunk_text = combined
-
-    # Don't forget the last chunk
-    if current_chunk_text.strip() and len(current_chunk_text.strip()) > 100:
-        chunks.append({
-            "text":        current_chunk_text.strip(),
-            "page_number": current_chunk_page,
-            "section":     current_section,
-            "chunk_index": chunk_index,
-            "token_count": len(current_chunk_text) // CHARS_PER_TOK,
+        chunk_text = " ".join(s for _, s in chunk_sentences)
+        chunk_page = chunk_sentences[0][0]  # page of first sentence
+        # Store mean embedding of all sentences in chunk
+        chunk_embs = all_embeddings[start:end]
+        mean_emb   = np.mean(chunk_embs, axis=0).tolist()
+        raw_chunks.append({
+            "text":      chunk_text,
+            "page":      chunk_page,
+            "embedding": mean_emb,
         })
 
-    # Remove [PAGE:N] markers from stored text — we have page_number field
-    for chunk in chunks:
-        chunk["text"] = re.sub(r'\[PAGE:\d+\]\n?', '', chunk["text"]).strip()
+    # Merge tiny chunks with the next chunk
+    merged = []
+    i = 0
+    while i < len(raw_chunks):
+        chunk = raw_chunks[i]
+        if len(chunk["text"]) < MIN_CHUNK_CHARS and i + 1 < len(raw_chunks):
+            # Merge into next
+            next_chunk = raw_chunks[i+1]
+            merged_text = chunk["text"] + " " + next_chunk["text"]
+            # Recompute mean embedding
+            embs = [chunk["embedding"], next_chunk["embedding"]]
+            mean_emb = np.mean(embs, axis=0).tolist()
+            raw_chunks[i+1] = {
+                "text":      merged_text,
+                "page":      chunk["page"],
+                "embedding": mean_emb,
+            }
+            i += 1
+            continue
+        merged.append(chunk)
+        i += 1
 
-    return chunks
+    # Split oversized chunks at paragraph boundaries
+    final_chunks = []
+    for chunk in merged:
+        if len(chunk["text"]) <= MAX_CHUNK_CHARS:
+            final_chunks.append(chunk)
+            continue
+        # Split at paragraph breaks
+        paragraphs = re.split(r'\n\n+', chunk["text"])
+        current_text = ""
+        current_page = chunk["page"]
+        for para in paragraphs:
+            if len(current_text) + len(para) > MAX_CHUNK_CHARS and current_text:
+                # Embed this sub-chunk
+                emb = model.encode([current_text])[0].tolist()
+                final_chunks.append({
+                    "text":      current_text.strip(),
+                    "page":      current_page,
+                    "embedding": emb,
+                })
+                current_text = para
+            else:
+                current_text = (current_text + " " + para).strip() if current_text else para
+        if current_text.strip():
+            emb = model.encode([current_text])[0].tolist()
+            final_chunks.append({
+                "text":      current_text.strip(),
+                "page":      current_page,
+                "embedding": emb,
+            })
+
+    return final_chunks
 
 
-# ── EMBEDDINGS ────────────────────────────────────────────────────────────────
+# ── EMBEDDING MODEL ───────────────────────────────────────────────────────────
 _model = None
 
-def get_embedding_model():
-    """Load sentence-transformers model once and reuse."""
+def get_model():
     global _model
     if _model is None:
-        try:
-            from sentence_transformers import SentenceTransformer
-            print("  Loading embedding model (first time takes ~30 seconds)...")
-            _model = SentenceTransformer("all-MiniLM-L6-v2")
-            print("  Embedding model loaded.")
-        except ImportError:
-            print("  ❌ sentence-transformers not installed.")
-            print("     Run: pip install sentence-transformers")
-            raise
+        from sentence_transformers import SentenceTransformer
+        print("  Loading embedding model...")
+        _model = SentenceTransformer("all-MiniLM-L6-v2")
+        print("  Model ready.")
     return _model
-
-
-def embed_texts(texts):
-    """
-    Generate embeddings for a list of texts.
-    Returns list of embedding vectors (as Python lists).
-    all-MiniLM-L6-v2 produces 384-dimensional vectors.
-    """
-    model = get_embedding_model()
-    embeddings = model.encode(texts, batch_size=32, show_progress_bar=False)
-    return [emb.tolist() for emb in embeddings]
 
 
 # ── MAIN INDEXER ──────────────────────────────────────────────────────────────
 def index_pdf(pdf_path, ipo_id, company, conn):
-    """
-    Full pipeline for one PDF:
-    1. Extract text by page
-    2. Chunk with overlap
-    3. Embed each chunk
-    4. Store in DB
-    """
     print(f"  Indexing: {company} ({ipo_id})")
-    print(f"  File: {os.path.basename(pdf_path)}")
 
-    # Step 1: Extract
     pages = extract_pages(pdf_path)
     if not pages:
-        print("  ❌ No text extracted from PDF")
-        return 0
+        print("  ❌ No text extracted"); return 0
 
-    # Step 2: Chunk
-    chunks = chunk_pages(pages)
-    print(f"  Chunked into {len(chunks)} pieces")
+    model  = get_model()
+    chunks = semantic_chunk_pages(pages, model)
+    print(f"  → {len(chunks)} semantic chunks")
+
     if not chunks:
-        print("  ❌ No chunks produced")
-        return 0
+        print("  ❌ No chunks produced"); return 0
 
-    # Step 3: Embed all chunks in one batch (faster than one-by-one)
-    print(f"  Generating embeddings for {len(chunks)} chunks...")
-    texts = [c["text"] for c in chunks]
-    embeddings = embed_texts(texts)
-    print(f"  Embeddings generated ({len(embeddings[0])} dimensions each)")
-
-    # Step 4: Store
-    now = datetime.now().isoformat()
+    now  = datetime.now().isoformat()
     rows = []
-    for i, (chunk, embedding) in enumerate(zip(chunks, embeddings)):
-        chunk_id = f"{ipo_id}_chunk_{chunk['chunk_index']:04d}"
+    for idx, chunk in enumerate(chunks):
+        chunk_id = f"{ipo_id}_chunk_{idx:04d}"
         rows.append((
-            chunk_id,
-            ipo_id,
-            company,
-            chunk["page_number"],
-            chunk["section"],
-            chunk["chunk_index"],
+            chunk_id, ipo_id, company,
+            chunk["page"], idx,
             chunk["text"],
-            chunk["token_count"],
-            json.dumps(embedding),
+            len(chunk["text"]) // CHARS_PER_TOK,
+            json.dumps(chunk["embedding"]),
             now,
         ))
 
     conn.executemany("""
         INSERT OR REPLACE INTO chunks
-        (chunk_id, ipo_id, company, page_number, section, chunk_index,
+        (chunk_id, ipo_id, company, page_number, chunk_index,
          text, token_count, embedding, indexed_at)
-        VALUES (?,?,?,?,?,?,?,?,?,?)
+        VALUES (?,?,?,?,?,?,?,?,?)
     """, rows)
     conn.commit()
-
-    print(f"  ✅ {len(rows)} chunks stored in DB")
-
-    # Show section distribution
-    from collections import Counter
-    section_counts = Counter(c["section"] for c in chunks)
-    for section, count in sorted(section_counts.items()):
-        print(f"    {section}: {count} chunks")
-
+    print(f"  ✅ {len(rows)} chunks stored")
     return len(rows)
 
 
-def run_indexer():
-    """Index all PDFs that haven't been indexed yet."""
-    print("\n" + "=" * 60)
-    print(f"RAG Indexer — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
-    print(f"  PDF folder: {PDF_DIR}")
-    print(f"  DB:         {DB_PATH}")
-    print("=" * 60)
+def run_indexer(force=False):
+    print("\n" + "="*60)
+    print(f"RAG Semantic Indexer — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    print(f"  Similarity threshold: {SIMILARITY_THRESHOLD}")
+    print(f"  Min/Max chunk: {MIN_CHUNK_CHARS}/{MAX_CHUNK_CHARS} chars")
+    print("="*60)
 
     if not os.path.exists(PDF_DIR):
-        print(f"❌ PDF folder not found: {PDF_DIR}")
-        print("   Run drhp_scraper.py first to download PDFs")
-        return
-
+        print(f"❌ PDF folder not found: {PDF_DIR}"); return
     if not os.path.exists(DB_PATH):
-        print(f"❌ DB not found: {DB_PATH}")
-        print("   Run drhp_scraper.py first")
-        return
+        print(f"❌ DB not found: {DB_PATH}"); return
 
     conn = sqlite3.connect(DB_PATH)
     init_chunks_table(conn)
 
     pdf_files = sorted(f for f in os.listdir(PDF_DIR) if f.endswith(".pdf"))
     if not pdf_files:
-        print("❌ No PDF files found in drhp_pdfs/")
-        return
+        print("❌ No PDFs found"); return
 
     print(f"\n  Found {len(pdf_files)} PDFs\n")
-
-    total_chunks = 0
-    skipped      = 0
-    failed       = 0
+    total_chunks, skipped, failed = 0, 0, 0
 
     for pdf_file in pdf_files:
         ipo_id, company = get_ipo_id_from_filename(pdf_file, conn)
-
-        if already_indexed(conn, ipo_id):
+        if not force and already_indexed(conn, ipo_id):
             count = conn.execute(
-                "SELECT COUNT(*) FROM chunks WHERE ipo_id = ?", (ipo_id,)
+                "SELECT COUNT(*) FROM chunks WHERE ipo_id=?", (ipo_id,)
             ).fetchone()[0]
-            print(f"  ⏭  Skipping {company} ({ipo_id}) — already indexed ({count} chunks)")
+            print(f"  ⏭  Skipping {company} — already indexed ({count} chunks)")
             skipped += 1
             continue
 
         print(f"\n{'─'*60}")
-        pdf_path = os.path.join(PDF_DIR, pdf_file)
+        if force:
+            force_reindex(conn, ipo_id)
         try:
-            n = index_pdf(pdf_path, ipo_id, company, conn)
+            n = index_pdf(os.path.join(PDF_DIR, pdf_file), ipo_id, company, conn)
             total_chunks += n
         except Exception as e:
-            print(f"  ❌ Failed: {e}")
-            failed += 1
+            print(f"  ❌ Failed: {e}"); failed += 1
 
     print(f"\n{'='*60}")
-    print(f"  Done.")
-    print(f"  Indexed:  {len(pdf_files) - skipped - failed} PDFs → {total_chunks} new chunks")
-    print(f"  Skipped:  {skipped} (already done)")
-    print(f"  Failed:   {failed}")
-
-    # Summary of what's in DB
+    print(f"  Done. New chunks: {total_chunks} | Skipped: {skipped} | Failed: {failed}")
     total = conn.execute("SELECT COUNT(*) FROM chunks").fetchone()[0]
     ipos  = conn.execute("SELECT COUNT(DISTINCT ipo_id) FROM chunks").fetchone()[0]
-    print(f"\n  Total in DB: {total} chunks across {ipos} IPOs")
+    print(f"  Total in DB: {total} chunks across {ipos} IPOs")
     conn.close()
 
 
 if __name__ == "__main__":
-    run_indexer()
+    import sys
+    force = "--force" in sys.argv
+    if force:
+        print("  ⚠ Force mode — re-indexing ALL IPOs")
+    run_indexer(force=force)

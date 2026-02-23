@@ -1,29 +1,40 @@
 """
-rag_retriever.py — RAG Retrieval: Find relevant chunks for a user question
-==========================================================================
-At query time:
-  1. Embed the user's question (same model as indexer)
-  2. Load all chunk embeddings for that IPO from SQLite
-  3. Calculate cosine similarity between question and every chunk
-  4. Return top-k most relevant chunks with page citations
+rag_retriever.py — RAG Retrieval via Pinecone (cloud) or SQLite (local fallback)
+=================================================================================
+Priority:
+  1. Pinecone  — used on Streamlit Cloud (no local DB needed)
+  2. SQLite    — used locally if Pinecone not configured
 
-No external vector DB needed — SQLite handles storage,
-Python handles similarity math. Fast enough for <500 chunks per IPO.
+Both backends expose the same interface:
+  retrieve_chunks(ipo_id, question, top_k)
+  retrieve_for_scorecard(ipo_id)
+  has_rag_index(ipo_id)
+
+No section labels — pure cosine similarity on all chunks.
 """
 
-import json, os, sqlite3
+import os, json
 import numpy as np
+from dotenv import load_dotenv
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "data", "drhp.db")
+load_dotenv()
 
-# How many chunks to return to Claude
-TOP_K = 6
-
-# Minimum similarity score to include a chunk (0-1 scale)
+# ── CONFIG ────────────────────────────────────────────────────────────────────
+DB_PATH        = os.path.join(os.path.dirname(__file__), "data", "drhp.db")
+PINECONE_INDEX = "tradesage-drhp"
+TOP_K          = 8
 MIN_SIMILARITY = 0.25
 
+SCORECARD_QUERIES = {
+    "risks":      "investment risks red flags material risks threats to business operations",
+    "financials": "revenue profit PAT EBITDA earnings per share EPS net worth financial performance growth",
+    "valuation":  "basis of offer price P/E ratio peer comparison valuation issue price justification EPS weighted average",
+    "promoters":  "promoter background experience management team directors qualifications",
+    "litigation": "outstanding litigation legal proceedings court cases tax disputes regulatory",
+    "objects":    "use of IPO proceeds objects of issue capital expenditure working capital expansion",
+}
 
-# ── EMBEDDING ─────────────────────────────────────────────────────────────────
+# ── EMBEDDING MODEL ───────────────────────────────────────────────────────────
 _model = None
 
 def get_embedding_model():
@@ -33,176 +44,143 @@ def get_embedding_model():
         _model = SentenceTransformer("all-MiniLM-L6-v2")
     return _model
 
-
 def embed_question(question: str) -> list:
-    """Embed a single question string. Returns embedding vector as list."""
-    model = get_embedding_model()
-    return model.encode([question])[0].tolist()
+    return get_embedding_model().encode([question])[0].tolist()
 
+# ── BACKEND DETECTION ─────────────────────────────────────────────────────────
+_pinecone_index   = None
+_pinecone_checked = False
 
-# ── SIMILARITY ────────────────────────────────────────────────────────────────
-def cosine_similarity(vec_a: list, vec_b: list) -> float:
-    """
-    Cosine similarity between two vectors.
-    Returns float between -1 and 1 (higher = more similar).
-    For normalized embeddings this is equivalent to dot product.
-    """
-    a = np.array(vec_a, dtype=np.float32)
-    b = np.array(vec_b, dtype=np.float32)
-    norm_a = np.linalg.norm(a)
-    norm_b = np.linalg.norm(b)
-    if norm_a == 0 or norm_b == 0:
-        return 0.0
-    return float(np.dot(a, b) / (norm_a * norm_b))
+def get_pinecone_index():
+    global _pinecone_index, _pinecone_checked
+    if _pinecone_checked:
+        return _pinecone_index
+    _pinecone_checked = True
+    api_key = os.environ.get("PINECONE_API_KEY")
+    if not api_key:
+        return None
+    try:
+        from pinecone import Pinecone
+        pc       = Pinecone(api_key=api_key)
+        existing = [idx.name for idx in pc.list_indexes()]
+        if PINECONE_INDEX not in existing:
+            print(f"  Pinecone index '{PINECONE_INDEX}' not found — using SQLite")
+            return None
+        _pinecone_index = pc.Index(PINECONE_INDEX)
+        print("  Using Pinecone for RAG retrieval")
+        return _pinecone_index
+    except Exception as e:
+        print(f"  Pinecone connection failed: {e} — using SQLite")
+        return None
 
+def use_pinecone() -> bool:
+    return get_pinecone_index() is not None
 
-# ── RETRIEVAL ─────────────────────────────────────────────────────────────────
-def retrieve_chunks(ipo_id: str, question: str, top_k: int = TOP_K) -> list[dict]:
-    """
-    Main retrieval function.
-    
-    Args:
-        ipo_id:   e.g. "ipo_005"
-        question: user's question in natural language
-        top_k:    number of chunks to return
-        
-    Returns:
-        List of dicts sorted by relevance:
-        [
-          {
-            "text":        "Revenue from Operations for FY2024...",
-            "page_number": 47,
-            "section":     "financials",
-            "similarity":  0.89,
-            "chunk_id":    "ipo_005_chunk_0047",
-          },
-          ...
-        ]
-    """
+# ── PINECONE RETRIEVAL ────────────────────────────────────────────────────────
+def _pinecone_query(ipo_id: str, embedding: list, top_k: int) -> list:
+    index = get_pinecone_index()
+    if not index: return []
+    try:
+        results = index.query(
+            vector=embedding,
+            top_k=top_k,
+            filter={"ipo_id": {"$eq": ipo_id}},
+            include_metadata=True,
+        )
+        chunks = []
+        for match in results.matches:
+            if match.score < MIN_SIMILARITY: continue
+            meta = match.metadata
+            chunks.append({
+                "chunk_id":    match.id,
+                "page_number": int(meta.get("page_number", 0)),
+                "text":        meta.get("text", ""),
+                "similarity":  round(float(match.score), 4),
+            })
+        return chunks
+    except Exception as e:
+        print(f"  Pinecone query error: {e}")
+        return []
+
+# ── SQLITE RETRIEVAL ──────────────────────────────────────────────────────────
+def _sqlite_query(ipo_id: str, embedding: list, top_k: int) -> list:
+    import sqlite3
+    if not os.path.exists(DB_PATH): return []
     conn = sqlite3.connect(DB_PATH)
     try:
-        # Load all chunks for this IPO
         rows = conn.execute("""
-            SELECT chunk_id, page_number, section, text, embedding
-            FROM chunks
-            WHERE ipo_id = ?
+            SELECT chunk_id, page_number, text, embedding
+            FROM chunks WHERE ipo_id = ?
             ORDER BY chunk_index
         """, (ipo_id,)).fetchall()
-
-        if not rows:
-            return []
-
-        # Embed the question
-        q_embedding = embed_question(question)
-
-        # Calculate similarity for every chunk
-        scored = []
-        for chunk_id, page_number, section, text, embedding_json in rows:
-            if not embedding_json:
-                continue
-            try:
-                chunk_embedding = json.loads(embedding_json)
-                score = cosine_similarity(q_embedding, chunk_embedding)
-                if score >= MIN_SIMILARITY:
-                    scored.append({
-                        "chunk_id":    chunk_id,
-                        "page_number": page_number,
-                        "section":     section or "general",
-                        "text":        text,
-                        "similarity":  round(score, 4),
-                    })
-            except Exception:
-                continue
-
-        # Sort by similarity descending
-        scored.sort(key=lambda x: x["similarity"], reverse=True)
-
-        # Take top_k
-        top = scored[:top_k]
-
-        # Re-sort by page number so context flows naturally for Claude
-        top.sort(key=lambda x: (x["page_number"], x["similarity"]))
-
-        return top
-
     finally:
         conn.close()
+    a  = np.array(embedding, dtype=np.float32)
+    na = np.linalg.norm(a)
+    scored = []
+    for chunk_id, page_number, text, embedding_json in rows:
+        if not embedding_json: continue
+        try:
+            b  = np.array(json.loads(embedding_json), dtype=np.float32)
+            nb = np.linalg.norm(b)
+            if na == 0 or nb == 0: continue
+            score = float(np.dot(a, b) / (na * nb))
+            if score >= MIN_SIMILARITY:
+                scored.append({
+                    "chunk_id":    chunk_id,
+                    "page_number": page_number,
+                    "text":        text,
+                    "similarity":  round(score, 4),
+                })
+        except Exception:
+            continue
+    scored.sort(key=lambda x: x["similarity"], reverse=True)
+    return scored[:top_k]
 
+def _query(ipo_id: str, embedding: list, top_k: int) -> list:
+    if use_pinecone():
+        return _pinecone_query(ipo_id, embedding, top_k)
+    return _sqlite_query(ipo_id, embedding, top_k)
 
-def retrieve_for_scorecard(ipo_id: str) -> list[dict]:
-    """
-    For AI Scorecard — retrieve representative chunks from each section.
-    Gets best chunk from each of the 6 key sections.
-    """
-    SCORECARD_QUESTIONS = {
-        "risk_factors": "what are the main risks and red flags investors should know",
-        "financials":   "revenue profit financial performance growth trends",
-        "objects":      "how will IPO proceeds be used capital expenditure",
-        "promoters":    "who are the promoters background experience management",
-        "litigation":   "outstanding litigation legal cases court proceedings",
-        "overview":     "business overview what does the company do products services",
-    }
+# ── PUBLIC API ────────────────────────────────────────────────────────────────
+def retrieve_chunks(ipo_id: str, question: str, top_k: int = TOP_K) -> list:
+    embedding = embed_question(question)
+    chunks    = _query(ipo_id, embedding, top_k)
+    chunks.sort(key=lambda x: x["page_number"])
+    return chunks
 
-    conn = sqlite3.connect(DB_PATH)
+def retrieve_for_scorecard(ipo_id: str) -> list:
+    seen_ids   = set()
     all_chunks = []
-
-    try:
-        for section, question in SCORECARD_QUESTIONS.items():
-            q_embedding = embed_question(question)
-
-            rows = conn.execute("""
-                SELECT chunk_id, page_number, section, text, embedding
-                FROM chunks
-                WHERE ipo_id = ? AND section = ?
-                ORDER BY chunk_index
-            """, (ipo_id, section)).fetchall()
-
-            if not rows:
-                # Fall back to general chunks if section not labeled
-                rows = conn.execute("""
-                    SELECT chunk_id, page_number, section, text, embedding
-                    FROM chunks
-                    WHERE ipo_id = ?
-                    ORDER BY chunk_index
-                    LIMIT 50
-                """, (ipo_id,)).fetchall()
-
-            best_score  = -1
-            best_chunk  = None
-
-            for chunk_id, page_number, sec, text, embedding_json in rows:
-                if not embedding_json:
-                    continue
-                try:
-                    chunk_embedding = json.loads(embedding_json)
-                    score = cosine_similarity(q_embedding, chunk_embedding)
-                    if score > best_score:
-                        best_score = score
-                        best_chunk = {
-                            "chunk_id":    chunk_id,
-                            "page_number": page_number,
-                            "section":     section,
-                            "text":        text,
-                            "similarity":  round(score, 4),
-                        }
-                except Exception:
-                    continue
-
-            if best_chunk and best_score >= MIN_SIMILARITY:
-                all_chunks.append(best_chunk)
-
-    finally:
-        conn.close()
-
-    # Sort by page number for natural reading order
+    for topic, query in SCORECARD_QUERIES.items():
+        embedding = embed_question(query)
+        results   = _query(ipo_id, embedding, top_k=10)
+        count = 0
+        for chunk in results:
+            if chunk["chunk_id"] in seen_ids: continue
+            seen_ids.add(chunk["chunk_id"])
+            chunk["topic"] = topic
+            all_chunks.append(chunk)
+            count += 1
+            if count >= 2: break
     all_chunks.sort(key=lambda x: x["page_number"])
     return all_chunks
 
-
 def has_rag_index(ipo_id: str) -> bool:
-    """Check if this IPO has been indexed for RAG."""
+    if use_pinecone():
+        try:
+            index   = get_pinecone_index()
+            results = index.query(
+                vector=[0.0] * 384, top_k=1,
+                filter={"ipo_id": {"$eq": ipo_id}},
+                include_metadata=False,
+            )
+            return len(results.matches) > 0
+        except Exception:
+            return False
     try:
-        conn = sqlite3.connect(DB_PATH)
+        import sqlite3
+        conn  = sqlite3.connect(DB_PATH)
         count = conn.execute(
             "SELECT COUNT(*) FROM chunks WHERE ipo_id = ?", (ipo_id,)
         ).fetchone()[0]
@@ -211,31 +189,38 @@ def has_rag_index(ipo_id: str) -> bool:
     except Exception:
         return False
 
-
 def get_index_stats(ipo_id: str) -> dict:
-    """Return indexing stats for an IPO — shown in UI."""
+    if use_pinecone():
+        try:
+            index   = get_pinecone_index()
+            results = index.query(
+                vector=[0.0] * 384, top_k=10000,
+                filter={"ipo_id": {"$eq": ipo_id}},
+                include_metadata=True,
+            )
+            pages = [int(m.metadata.get("page_number", 0)) for m in results.matches]
+            return {
+                "total_chunks": len(results.matches),
+                "page_range":   f"{min(pages)}-{max(pages)}" if pages else "-",
+                "backend":      "Pinecone",
+            }
+        except Exception:
+            return {"total_chunks": 0, "page_range": "-", "backend": "Pinecone"}
     try:
-        conn = sqlite3.connect(DB_PATH)
+        import sqlite3
+        conn  = sqlite3.connect(DB_PATH)
         total = conn.execute(
             "SELECT COUNT(*) FROM chunks WHERE ipo_id = ?", (ipo_id,)
         ).fetchone()[0]
-
-        sections = conn.execute("""
-            SELECT section, COUNT(*) as n
-            FROM chunks WHERE ipo_id = ?
-            GROUP BY section ORDER BY n DESC
-        """, (ipo_id,)).fetchall()
-
-        pages = conn.execute("""
-            SELECT MIN(page_number), MAX(page_number)
-            FROM chunks WHERE ipo_id = ?
-        """, (ipo_id,)).fetchone()
-
+        pages = conn.execute(
+            "SELECT MIN(page_number), MAX(page_number) FROM chunks WHERE ipo_id = ?",
+            (ipo_id,)
+        ).fetchone()
         conn.close()
         return {
-            "total_chunks":  total,
-            "sections":      {s: n for s, n in sections},
-            "page_range":    f"{pages[0]}–{pages[1]}" if pages[0] else "—",
+            "total_chunks": total,
+            "page_range":   f"{pages[0]}-{pages[1]}" if pages[0] else "-",
+            "backend":      "SQLite",
         }
     except Exception:
-        return {"total_chunks": 0, "sections": {}, "page_range": "—"}
+        return {"total_chunks": 0, "page_range": "-", "backend": "SQLite"}
