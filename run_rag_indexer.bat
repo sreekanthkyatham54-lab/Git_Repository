@@ -1,42 +1,36 @@
 @echo off
-REM run_rag_indexer.bat — Index DRHP PDFs for RAG-powered Q&A
+REM run_rag_indexer.bat — Semantic chunking + embedding pipeline
+REM Usage:
+REM   run_rag_indexer.bat          → index only new IPOs (skips already done)
+REM   run_rag_indexer.bat --force  → re-index ALL IPOs (use after code changes)
 
 echo.
 echo ============================================================
-echo   TradeSage RAG Indexer
+echo   TradeSage RAG Semantic Indexer
 echo ============================================================
 echo.
 
 cd /d "%~dp0"
 
-REM Your Python location (confirmed from 'where python')
 SET PYTHON=C:\Users\sreek\AppData\Local\Python\bin\python.exe
 
 echo   Using Python: %PYTHON%
 echo.
+echo   Installing dependencies...
+%PYTHON% -m pip install sentence-transformers numpy pdfplumber --quiet
 
-REM Install dependencies
-echo   Installing dependencies (sentence-transformers, numpy)...
-echo   First time may take 2-3 minutes to download...
 echo.
-%PYTHON% -m pip install sentence-transformers numpy --quiet
-if %ERRORLEVEL% NEQ 0 (
-    echo ⚠ pip install had issues — trying to continue anyway...
-    echo   If indexer fails, run manually:
-    echo   %PYTHON% -m pip install sentence-transformers numpy
-    echo.
+if "%1"=="--force" (
+    echo   FORCE MODE — re-indexing all IPOs
+    %PYTHON% rag_indexer.py --force
+) else (
+    echo   Indexing new IPOs only (pass --force to re-index all)
+    %PYTHON% rag_indexer.py
 )
-
-echo   Running RAG indexer...
-echo   First run downloads embedding model (~90MB, one time only)
-echo   Then ~2-3 minutes per IPO PDF
-echo.
-%PYTHON% rag_indexer.py
 
 echo.
 echo ============================================================
-echo   Done. RAG Q&A is now active for indexed IPOs.
-echo   Users will see page citations in every AI answer.
+echo   Done.
 echo ============================================================
 echo.
 pause

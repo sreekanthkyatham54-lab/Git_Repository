@@ -4,7 +4,37 @@ import streamlit as st
 from datetime import datetime as dt
 
 
+def _load_ai_cache():
+    try:
+        import json, os
+        cache_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "ai_cache.json")
+        if os.path.exists(cache_file):
+            return json.load(open(cache_file))
+    except Exception:
+        pass
+    return {}
+
+
+def _get_ai_verdict(ipo_id, ai_cache):
+    """Get AI verdict from cache, fall back to ipowatch recommendation."""
+    cached = ai_cache.get(ipo_id, {})
+    scorecard = cached.get("scorecard", {})
+    return scorecard.get("verdict", None)
+
+
 def render(active_ipos, upcoming_ipos):
+    # Load AI cache once for the whole dashboard
+    ai_cache = _load_ai_cache()
+
+    # Inject AI verdicts into IPO dicts
+    for ipo in active_ipos + upcoming_ipos:
+        ai_verdict = _get_ai_verdict(ipo["id"], ai_cache)
+        if ai_verdict:
+            ipo["recommendation"] = ai_verdict
+            ipo["rec_source"]     = "AI"
+        else:
+            ipo["rec_source"]     = "ipowatch"
+
     # ── STATS BAR ─────────────────────────────────────────────────────────────
     total = len(active_ipos) + len(upcoming_ipos)
     avg_gmp = sum(round(float(i["gmp"] or 0) / float(i["issue_price"] or 1) * 100, 1) for i in active_ipos) / len(active_ipos) if active_ipos else 0
@@ -137,16 +167,28 @@ def _render_ipo_card(ipo, is_active):
     exchange_badge = f"<span class='badge badge-bse'>{ipo['exchange']}</span>" if "BSE" in ipo["exchange"] else f"<span class='badge badge-nse'>{ipo['exchange']}</span>"
     status_badge   = "<span class='badge badge-open'>● OPEN</span>" if is_active else "<span class='badge badge-upcoming'>◎ UPCOMING</span>"
     type_badge = "<span style='display:inline-block;padding:3px 8px;border-radius:20px;font-size:0.65rem;font-weight:700;background:rgba(139,92,246,0.1);color:#7c3aed;border:1px solid #7c3aed;'>MAINBOARD</span>" if ipo.get("ipo_type") == "Mainboard" else ""
-    rec = ipo["recommendation"]
-    rec_html = {"SUBSCRIBE": "<span class='rec-subscribe'>✓ SUBSCRIBE</span>",
-                "AVOID":     "<span class='rec-avoid'>✗ AVOID</span>"}.get(rec, "<span class='rec-neutral'>~ NEUTRAL</span>")
+    rec        = ipo.get("recommendation", "NEUTRAL")
+    rec_source = ipo.get("rec_source", "ipowatch")
+    ai_badge   = " <span style='font-size:0.55rem;background:rgba(99,102,241,0.15);color:#6366f1;padding:1px 5px;border-radius:4px;font-weight:700;'>AI</span>" if rec_source == "AI" else ""
+    rec_html   = {"SUBSCRIBE": f"<span class='rec-subscribe'>✓ SUBSCRIBE{ai_badge}</span>",
+                  "AVOID":     f"<span class='rec-avoid'>✗ AVOID{ai_badge}</span>"}.get(rec, f"<span class='rec-neutral'>~ NEUTRAL{ai_badge}</span>")
     gmp_color   = "positive" if ipo["gmp"] > 0 else ("negative" if ipo["gmp"] < 0 else "neutral")
     gmp_sign    = "+" if ipo["gmp"] > 0 else ""
     issue_price = float(ipo.get("issue_price") or 0)
     gmp_val     = float(ipo.get("gmp") or 0)
     gmp_pct     = round((gmp_val / issue_price * 100), 1) if issue_price > 0 else 0
-    sub_color   = "positive" if ipo["subscription_times"] > 5 else ("neutral" if ipo["subscription_times"] > 1 else "negative")
-    sub_display = f"{ipo['subscription_times']}x" if ipo["subscription_times"] > 0 else "—"
+    sub_times   = float(ipo.get("subscription_times") or 0)
+    sub_color   = "positive" if sub_times > 5 else ("neutral" if sub_times > 1 else "negative")
+    if sub_times > 0:
+        qib    = ipo.get("subscription_qib", 0) or 0
+        nii    = ipo.get("subscription_nii", 0) or 0
+        retail = ipo.get("subscription_retail", 0) or 0
+        if qib or nii or retail:
+            sub_display = f"{sub_times}x <span style='font-size:0.65rem;color:var(--muted);'>(Q:{qib}x N:{nii}x R:{retail}x)</span>"
+        else:
+            sub_display = f"{sub_times}x"
+    else:
+        sub_display = "—"
     try:
         open_date_fmt = dt.strptime(str(ipo["open_date"]), "%Y-%m-%d").strftime("%d/%m/%y")
     except:
