@@ -22,16 +22,17 @@ load_dotenv()
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 DB_PATH        = os.path.join(os.path.dirname(__file__), "data", "drhp.db")
 PINECONE_INDEX = "tradesage-drhp"
-TOP_K          = 8
+TOP_K          = 12   # Cast wider net — filter by similarity threshold
 MIN_SIMILARITY = 0.25
 
 SCORECARD_QUERIES = {
-    "risks":      "investment risks red flags material risks threats to business operations",
-    "financials": "revenue profit PAT EBITDA earnings per share EPS net worth financial performance growth",
-    "valuation":  "basis of offer price P/E ratio peer comparison valuation issue price justification EPS weighted average",
-    "promoters":  "promoter background experience management team directors qualifications",
-    "litigation": "outstanding litigation legal proceedings court cases tax disputes regulatory",
-    "objects":    "use of IPO proceeds objects of issue capital expenditure working capital expansion",
+    "risks":      "risk factors investment risks red flags material risks threats to business",
+    "financials": "revenue from operations profit after tax PAT EBITDA net worth financial performance restated financial statements",
+    "valuation":  "basis of offer price quantitative factors EPS earnings per share P/E ratio price earnings weighted average NAV net asset value RoNW return on net worth",
+    "peers":      "peer comparison listed industry peers comparable companies Indira IVF fertility sector competition",
+    "promoters":  "promoter background experience qualifications managing director board of directors",
+    "litigation": "outstanding litigation legal proceedings court cases tax proceedings regulatory actions",
+    "objects":    "objects of the offer use of IPO proceeds capital expenditure working capital expansion",
 }
 
 # ── EMBEDDING MODEL ───────────────────────────────────────────────────────────
