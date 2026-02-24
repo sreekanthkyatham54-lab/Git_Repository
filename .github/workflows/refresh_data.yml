@@ -2,12 +2,20 @@ name: Refresh IPO Data
 
 on:
   schedule:
-    - cron: '30 2 * * *'   # 8:00 AM IST — morning refresh
-    - cron: '30 8 * * *'   # 2:00 PM IST — afternoon refresh
+    - cron: '0 1 * * *'    # 6:30 AM IST
+    - cron: '0 7 * * *'    # 12:30 PM IST
+    - cron: '0 13 * * *'   # 6:30 PM IST
   workflow_dispatch:        # Manual trigger from GitHub UI anytime
 
 jobs:
-  scrape:
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # JOB 1 — FAST REFRESH (runs every time, ~1 min)
+  # Scrapes live IPO data: GMP, subscription, open/upcoming status
+  # Commits live_ipo_data.json to main so Streamlit shows latest data
+  # ════════════════════════════════════════════════════════════════════════════
+  scrape_live_data:
+    name: "1 · Scrape live IPO data"
     runs-on: ubuntu-latest
 
     steps:
@@ -18,36 +26,103 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
-      - name: Install dependencies
-        run: |
-          pip install requests beautifulsoup4 lxml anthropic pdfplumber
+      - name: Install scraper dependencies
+        run: pip install requests beautifulsoup4 lxml
 
-      # ── STEP 1: Scrape live IPO list (runs every time) ───────────────────────
       - name: Run IPO scraper
         run: python scraper.py
 
-      # ── STEP 2: DRHP pipeline (only runs for NEW IPOs not already in DB) ────
-      # drhp_scraper.py internally checks already_scraped() and skips existing ones
-      # So this is safe to run daily — it only does work when new IPOs appear
-      - name: Run DRHP pipeline for new IPOs
-        run: python drhp_scraper.py
-        continue-on-error: true   # Don't fail the whole workflow if one PDF fails
-
-      # ── STEP 3: Regenerate AI cache with enriched DRHP data ─────────────────
-      - name: Run AI cache generator
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python ai_cache.py
-        continue-on-error: true
-
-      # ── STEP 4: Commit all updated data files ────────────────────────────────
-      - name: Commit and push fresh data
+      - name: Commit and push live IPO data
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add data/live_ipo_data.json
+          git diff --cached --quiet && echo "No changes to commit" || \
+            git commit -m "Live data refresh: $(date +'%Y-%m-%d %H:%M IST')"
+          git push
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # JOB 2 — DRHP PIPELINE (runs after Job 1, only acts on NEW IPOs)
+  # Downloads PDFs → semantic chunking → embeds → pushes to Pinecone
+  # Skips IPOs already in Pinecone — safe to run every time
+  # ════════════════════════════════════════════════════════════════════════════
+  drhp_pipeline:
+    name: "2 · DRHP download + chunk + Pinecone"
+    runs-on: ubuntu-latest
+    needs: scrape_live_data   # Wait for fresh IPO list first
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install all dependencies
+        run: |
+          pip install requests beautifulsoup4 lxml pdfplumber \
+                      sentence-transformers numpy pinecone python-dotenv
+
+      - name: Download DRHPs for new IPOs
+        run: python drhp_scraper.py
+        continue-on-error: true   # Don't block if one PDF fails
+
+      - name: Semantic chunk + embed new IPOs into SQLite
+        run: python rag_indexer.py
+        # No --force flag — skips already-indexed IPOs automatically
+        continue-on-error: true
+
+      - name: Push new chunks to Pinecone
+        env:
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+        run: python pinecone_push_new.py
+        # pinecone_push_new.py only uploads chunks NOT already in Pinecone
+        continue-on-error: true
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # JOB 3 — AI CACHE (runs after DRHP pipeline, only for new/uncached IPOs)
+  # Generates AI scorecards for IPOs that don't have one yet
+  # Commits ai_cache.json to main
+  # ════════════════════════════════════════════════════════════════════════════
+  ai_cache:
+    name: "3 · Generate AI scorecards"
+    runs-on: ubuntu-latest
+    needs: drhp_pipeline      # Wait for Pinecone to be updated first
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install requests anthropic sentence-transformers \
+                      numpy pinecone python-dotenv
+
+      - name: Generate AI scorecards for new IPOs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PINECONE_API_KEY:  ${{ secrets.PINECONE_API_KEY }}
+        run: python ai_cache.py
+        continue-on-error: true
+
+      - name: Commit and push AI cache
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add data/ai_cache.json
-          git add data/drhp.db
-          git diff --cached --quiet || git commit -m "Auto-refresh: IPO + DRHP data $(date +'%Y-%m-%d %H:%M IST')"
+          git diff --cached --quiet && echo "No changes to commit" || \
+            git commit -m "AI cache update: $(date +'%Y-%m-%d %H:%M IST')"
           git push
