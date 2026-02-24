@@ -119,10 +119,19 @@ jobs:
 
       - name: Commit and push AI cache
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
+
+          # Pull latest changes safely
+          git pull --rebase origin main || true
+
+          # Force add ignored file
           git add -f data/ai_cache.json
-          git diff --cached --quiet && echo "No changes to commit" || \
+
+          # Only commit if there are actual changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
             git commit -m "AI cache update: $(date +'%Y-%m-%d %H:%M IST')"
-          git push
+            git push
+          fi
