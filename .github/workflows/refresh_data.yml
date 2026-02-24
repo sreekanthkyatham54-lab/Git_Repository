@@ -39,7 +39,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
-          git add data/live_ipo_data.json
+          git add -f data/live_ipo_data.json
           git diff --cached --quiet && echo "No changes to commit" || \
             git commit -m "Live data refresh: $(date +'%Y-%m-%d %H:%M IST')"
           git push
@@ -122,7 +122,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
-          git add data/ai_cache.json
+          git add -f data/ai_cache.json
           git diff --cached --quiet && echo "No changes to commit" || \
             git commit -m "AI cache update: $(date +'%Y-%m-%d %H:%M IST')"
           git push
