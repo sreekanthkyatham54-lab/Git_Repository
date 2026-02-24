@@ -32,9 +32,9 @@ desktop.ini
 *.swp
 
 # ─────────────────────────────────────────────────────────────────────────────
-# FILES THAT MUST BE COMMITTED (do NOT add these above):
-#   data/live_ipo_data.json   <- live scraped IPO data
-#   data/drhp.db              <- DRHP sections database (precious!)
-#   data/ai_cache.json        <- pre-generated AI scorecards
-#   data/ipo_data.py          <- seed/fallback data
+# Runtime-generated / large files — do NOT commit
+# data/live_ipo_data.json
+data/drhp.db
+data/ai_cache.json
+#   data/ipo_data.py          <- seed/fallback data — KEEP committed
 # ─────────────────────────────────────────────────────────────────────────────
