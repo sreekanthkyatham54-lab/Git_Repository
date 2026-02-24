@@ -33,7 +33,7 @@ desktop.ini
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Runtime-generated / large files — do NOT commit
-# data/live_ipo_data.json
+data/live_ipo_data.json
 data/drhp.db
 data/ai_cache.json
 #   data/ipo_data.py          <- seed/fallback data — KEEP committed
