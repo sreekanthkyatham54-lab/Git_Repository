@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-02-25T09:39:50.328427",
+  "scraped_at": "2026-02-25T10:23:49.950970",
   "source": "live",
   "active_ipos": [
     {
@@ -36,7 +36,7 @@
       "detail_url": "https://ipowatch.in/omnitech-engineering-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.09,
       "subscription_nii": 0.02,
-      "subscription_retail": 0.05
+      "subscription_retail": 0.06
     },
     {
       "id": "ipo_002",
@@ -50,7 +50,7 @@
       "issue_size_cr": 380.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.74,
+      "subscription_times": 0.78,
       "gmp": 2.0,
       "gmp_percent": 0.5,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/pngs-reva-diamond-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.96,
-      "subscription_nii": 0.35,
-      "subscription_retail": 0.62
+      "subscription_nii": 0.46,
+      "subscription_retail": 0.66
     },
     {
       "id": "ipo_003",
@@ -86,7 +86,7 @@
       "issue_size_cr": 3100.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.78,
+      "subscription_times": 0.97,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -106,8 +106,8 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/clean-max-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 2.25,
-      "subscription_nii": 0.55,
+      "subscription_qib": 94.09,
+      "subscription_nii": 0.57,
       "subscription_retail": 0.06
     },
     {
@@ -122,7 +122,7 @@
       "issue_size_cr": 110.2,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 23.39,
+      "subscription_times": 42.54,
       "gmp": 13.5,
       "gmp_percent": 13.0,
       "lead_manager": "",
@@ -142,9 +142,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/shree-ram-twistex-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.57,
-      "subscription_nii": 116.71,
-      "subscription_retail": 47.08
+      "subscription_qib": 3.29,
+      "subscription_nii": 217.81,
+      "subscription_retail": 74.05
     },
     {
       "id": "ipo_007",
@@ -158,7 +158,7 @@
       "issue_size_cr": 80.11,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.01,
+      "subscription_times": 1.17,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -179,8 +179,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/yaap-digital-ipo-date-review-price-allotment-details/",
       "subscription_qib": 3.5,
-      "subscription_nii": 0.0,
-      "subscription_retail": 0.02
+      "subscription_nii": 0.7,
+      "subscription_retail": 0.03
     },
     {
       "id": "ipo_008",
@@ -194,7 +194,7 @@
       "issue_size_cr": 69.72,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.69,
+      "subscription_times": 1.97,
       "gmp": 26.0,
       "gmp_percent": 20.5,
       "lead_manager": "",
@@ -214,9 +214,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/kiaasa-retail-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 2.88,
-      "subscription_nii": 1.07,
-      "subscription_retail": 2.09
+      "subscription_qib": 14.98,
+      "subscription_nii": 1.14,
+      "subscription_retail": 2.31
     },
     {
       "id": "ipo_009",
@@ -230,7 +230,7 @@
       "issue_size_cr": 26.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 184.08,
+      "subscription_times": 333.5,
       "gmp": 8.0,
       "gmp_percent": 17.4,
       "lead_manager": "",
@@ -250,9 +250,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/accord-transformer-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 47.55,
-      "subscription_nii": 298.08,
-      "subscription_retail": 213.25
+      "subscription_qib": 148.6,
+      "subscription_nii": 582.31,
+      "subscription_retail": 332.52
     },
     {
       "id": "ipo_010",
@@ -266,7 +266,7 @@
       "issue_size_cr": 20.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 48.03,
+      "subscription_times": 94.09,
       "gmp": 8.0,
       "gmp_percent": 10.0,
       "lead_manager": "",
@@ -286,9 +286,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/mobilise-app-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 12.16,
-      "subscription_nii": 86.32,
-      "subscription_retail": 52.0
+      "subscription_qib": 41.81,
+      "subscription_nii": 172.1,
+      "subscription_retail": 90.31
     }
   ],
   "upcoming_ipos": [
