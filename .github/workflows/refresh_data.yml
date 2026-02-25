@@ -119,24 +119,10 @@ jobs:
 
       - name: Commit and push AI cache
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com]"
-
-          git pull --rebase origin main || true
-
-          # Check if file exists first
-          if [ -f data/ai_cache.json ]; then
-            echo "AI cache file exists. Proceeding..."
-
-            git add -f data/ai_cache.json
-
-            if git diff --cached --quiet; then
-              echo "No changes to commit"
-            else
-              git commit -m "AI cache update: $(date +'%Y-%m-%d %H:%M IST')"
-              git push
-            fi
-
-          else
-            echo "ai_cache.json not found. Skipping commit."
-          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add -f data/ai_cache.json
+          git diff --cached --quiet && echo "No changes to commit" || \
+            git commit -m "AI cache update: $(date +'%Y-%m-%d %H:%M IST')"
+          git push
