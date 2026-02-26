@@ -4,124 +4,126 @@
       "verdict": "NEUTRAL",
       "conviction": "Low",
       "score": 4,
-      "one_liner": "Insufficient data to form conviction; extremely weak subscription and high promoter concentration raise concerns.",
-      "bull_case": "Mainboard listing on BSE/NSE provides regulatory credibility. Modest GMP of 1.8% suggests realistic pricing without excessive euphoria.",
-      "bear_case": "Critically low 0.09x subscription indicates severe investor disinterest and demand concerns. High promoter holding of 94.08% limits free float and raises governance questions. Zero financial metrics available for analysis.",
+      "one_liner": "Omnitech Engineering IPO lacks sufficient data for informed decision; minimal GMP and weak subscription signal caution.",
+      "bull_case": "Mainboard listing on BSE/NSE indicates regulatory approval for public markets. Issue size of \u20b9583Cr suggests material capital raising capacity. No immediate disqualifying factors visible from IPO Facts.",
+      "bear_case": "Subscription at 0.1x is critically weak, indicating minimal investor demand relative to offer size. Promoter holding at 94.08% post-IPO suggests very limited public float and liquidity concerns. GMP of only \u20b94 (1.8%) reflects lukewarm market sentiment.",
       "red_flags": [
-        "Subscription at only 0.09x \u2014 well below healthy IPO standards (typically 2-3x minimum)",
-        "Promoter holding at 94.08% \u2014 extremely high, limits public float and shareholder representation",
-        "Lot size listed as 0 shares \u2014 unusual and suggests incomplete or erroneous data",
-        "No sector or industry peers defined",
-        "P/E ratio at 0.0x \u2014 no meaningful financial data available for valuation",
-        "DRHP not indexed \u2014 impossible to validate financials, business model, or risk disclosures"
+        "Subscription of 0.1x \u2014 severe undersubscription signal",
+        "Promoter holding 94.08% \u2014 minimal free float post-listing",
+        "Sector classification missing \u2014 lack of transparency on business category",
+        "Lead Manager and Registrar details absent \u2014 incomplete IPO infrastructure data",
+        "Zero P/E ratio \u2014 inability to assess profitability or earnings quality",
+        "DRHP not indexed \u2014 critical financial statements unavailable for analysis"
       ],
       "positives": [
-        "Modest GMP of \u20b94 (1.8%) suggests realistic expectations without froth",
-        "Mainboard listing indicates regulatory scrutiny and compliance standards met"
+        "Neutral recommendation suggests balanced institutional view",
+        "Mainboard listing (not SME) indicates scale and compliance standards",
+        "\u20b9583Cr capital raise size demonstrates investor confidence in fundraising"
       ],
-      "valuation_view": "Valuation cannot be assessed; P/E of 0.0x and unavailable DRHP financials prevent meaningful analysis.",
-      "gmp_view": "Weak 1.8% GMP reflects lack of investor enthusiasm and potential demand weakness.",
-      "suitable_for": "Not recommended for any investor profile until DRHP is available and subscription improves significantly.",
-      "data_source": "Summary data only \u2014 DRHP not indexed; analysis severely limited by missing financial statements, business details, and risk factors"
+      "valuation_view": "Valuation assessment impossible \u2014 zero P/E and missing DRHP financials prevent any meaningful comparison to industry peers or historical multiples.",
+      "gmp_view": "GMP of \u20b94 (1.8% premium) reflects weak post-issue pricing expectations; combined with 0.1x subscription, suggests limited demand momentum.",
+      "suitable_for": "Risk-averse investors should AVOID until DRHP details and financials are published. Only speculative traders with high risk tolerance and deep sector knowledge should consider.",
+      "data_source": "Summary data only \u2014 DRHP not indexed; comprehensive financial analysis deferred pending document availability"
     },
-    "scorecard_at": "2026-02-26T06:32:08.171031",
-    "industry": "# Omnitech Engineering IPO Analysis\n\n## \u26a0\ufe0f Critical Data Limitation\n\nI cannot provide the detailed financial analysis you've requested because **no DRHP passages have been provided** in your query. The template shows placeholders (\u2014, 0.0x, 0 shares) rather than actual company data.\n\nTo write a meaningful analysis with specific figures and page number citations, I need:\n\n### Required Documents:\n1. **DRHP (Draft Red Herring Prospectus)** \u2014 full text or key sections\n2. **Financial statements** \u2014 revenue, profit, assets for past 3-5 years\n3. **Peer company data** \u2014 for sector comparison\n4. **Business description** \u2014 to assess competitive positioning\n\n## What I Can Flag from Available Info:\n\n| Risk Factor | Observation |\n|---|---|\n| **Sector Unknown** | Listed as \"\u2014\" \u2014 unclear business category |\n| **Lot Size = 0** | Data anomaly; minimum investment amount unclear |\n| **Weak Subscription** | 0.09x implies only 9% subscribed \u2014 very low demand |\n| **GMP Minimal** | \u20b94 premium (1.8%) suggests lukewarm investor interest |\n| **High Promoter Hold** | 94.08% leaves only ~6% for public \u2014 limited liquidity concerns |\n| **No P/E Available** | Cannot assess valuation relative to peers |\n\n## Recommendation:\n\n**WAIT** \u2014 Request the complete DRHP document and clarify sector/peer data before making any investment decision. The weak subscription signal combined with missing fundamentals makes this unsuitable to recommend without proper due diligence.\n\nWould you like to share the DRHP passages for a detailed analysis?",
-    "industry_at": "2026-02-26T06:32:14.859129",
-    "news": "# Omnitech Engineering IPO \u2014 Public Summary\n\n## Key Facts\n- **Mainboard IPO** | BSE/NSE\n- **Issue Price:** \u20b9227 | **Size:** \u20b9583 Cr | **Lot size:** Not specified\n- **Dates:** Opens 25 Feb 2026, closes 27 Feb 2026\n\n## Market Signals \u2014 WEAK\n| Metric | Status |\n|--------|--------|\n| **GMP** | \u20b94 (+1.8%) |\n| **Subscription** | 0.09x (severely undersubscribed) |\n| **Recommendation** | NEUTRAL |\n\n---\n\n## What This Tells Us\n\n**The IPO is showing poor market reception:**\n- GMP of only \u20b94 suggests minimal investor enthusiasm\n- **0.09x subscription is a major red flag** \u2014 only 9% of the offering is subscribed at this stage\n- No visible analyst views or significant news flow reported\n\n---\n\n## Data Limitations \u26a0\ufe0f\n\nThe DRHP has **not yet been indexed**, so I cannot provide:\n- Sector classification or business details\n- Financial performance (revenue, EBITDA, PAT)\n- Risk factors or litigations\n- Lead manager / registrar details\n- Peer comparison\n\n---\n\n## Next Steps\n\n**For comprehensive analysis including financials, risks, and business model:**\n```\nRun: rag_indexer.py\n```\nThis will enable full DRHP Q&A for this IPO.\n\n**For live subscription updates & GMP tracking:** Check BSE/NSE official portal or IPO tracking websites.",
-    "news_at": "2026-02-26T06:32:20.982768"
+    "scorecard_at": "2026-02-26T10:14:47.704451",
+    "industry": "# Omnitech Engineering IPO Analysis\n\n## \u26a0\ufe0f CRITICAL DATA LIMITATION\n\nI cannot provide the requested analysis because **no DRHP (Draft Red Herring Prospectus) passages have been provided** in your document. The IPO Facts section shows:\n\n- **Sector:** Blank (\u2014)\n- **Peers:** Not available (\u2014)\n- **P/E Ratios:** All showing 0.0x (indicates missing data)\n- **Financials section:** States \"Read ONLY from the DRHP passages below\" \u2014 but no passages follow\n\n## What's Missing to Conduct Proper Analysis\n\nTo write the 4-focused paragraphs you've requested, I would need:\n\n1. **Revenue & Profit figures** from the DRHP with specific page references\n2. **Sector classification** to identify comparable companies\n3. **Listed peer data** (names, P/E multiples, growth rates)\n4. **Balance sheet extracts** showing asset quality, debt levels, cash flows\n5. **Management background & track record**\n\n## Current Red Flags for Retail Investors\n\n- **0.1x subscription** = severe demand weakness (healthy IPOs typically see 2-3x+)\n- **\u20b94 GMP only** = minimal upside (1.8% premium suggests market skepticism)\n- **94.08% promoter holding** = limited float, illiquid post-IPO\n- **NEUTRAL recommendation** = not a strong conviction call\n\n## My Recommendation\n\n**Wait for complete DRHP data or skip this IPO.** The weak subscription and low GMP suggest institutional investors aren't convinced. Without financial fundamentals to analyze, this appears to be a **wait-and-watch** rather than a buy opportunity.\n\nPlease share the DRHP document pages for detailed analysis.",
+    "industry_at": "2026-02-26T10:14:54.907691",
+    "news": "# Omnitech Engineering IPO \u2013 Public Summary\n\n## Key Facts\n- **Issue Details:** \u20b9583 Cr mainboard IPO on BSE/NSE\n- **Issue Price:** \u20b9227 per share\n- **Timeline:** Opens 25 Feb 2026, closes 27 Feb 2026\n- **Promoter Holding:** 94.08% (highly concentrated ownership)\n\n## Market Sentiment \u2013 CAUTION \u26a0\ufe0f\n\n| Signal | Status |\n|--------|--------|\n| **GMP** | \u20b94 (+1.8%) \u2014 very modest premium |\n| **Subscription** | 0.1x \u2014 **significantly undersubscribed** |\n| **Recommendation** | **NEUTRAL** |\n| **Valuation** | P/E unavailable; fundamentals unclear from summary data |\n\n## What This Means\n- **Weak demand:** A 0.1x subscription indicates the IPO is struggling to attract retail/institutional interest\n- **Minimal listing gain expected:** The GMP of only \u20b94 suggests market expects modest upside (~\u20b9231 listing price)\n- **High concentration risk:** 94% promoter holding means limited free float \u2014 liquidity and governance concerns\n\n## Data Limitations\n\u270b **This analysis uses summary data only.** The DRHP has not been indexed yet.\n\nFor detailed understanding of:\n- Financial performance & growth trajectory\n- Business model & competitive position\n- Risk factors & litigation\n- Use of proceeds\n\n**Run `rag_indexer.py` to enable full DRHP Q&A.**\n\n---\n\n**Bottom Line:** Based on public signals, this IPO shows weak market traction. Proceed with caution and conduct deeper due diligence before investing.",
+    "news_at": "2026-02-26T10:15:01.326028"
   },
   "ipo_002": {
     "scorecard": {
       "verdict": "NEUTRAL",
       "conviction": "Low",
       "score": 4,
-      "one_liner": "Weak subscription and minimal GMP signal warrant caution; insufficient financial data limits conviction.",
-      "bull_case": "Mainboard listing on BSE/NSE provides liquidity access. High promoter holding (87.45%) suggests long-term commitment to business continuity.",
-      "bear_case": "Subscription at 0.87x indicates lukewarm investor demand below full subscription threshold. Minimal GMP of \u20b92 (0.5% premium) suggests weak market confidence in the issue.",
+      "one_liner": "Weak subscription and zero GMP signal caution; insufficient data for conviction.",
+      "bull_case": "Large issue size of \u20b9380 Cr indicates significant capital raise; mainboard listing on BSE/NSE provides liquidity access; high promoter holding (87.45%) suggests confidence in business.",
+      "bear_case": "Subscription at only 0.9x indicates weak investor demand; zero GMP (0% premium) shows market pessimism; lack of indexed DRHP financials prevents fundamental valuation assessment.",
       "red_flags": [
-        "Subscription below 1.0x at 0.87x \u2014 indicates weak investor demand",
-        "GMP only \u20b92 (0.5%) \u2014 minimal upside expectation from market participants",
-        "Zero P/E ratio \u2014 suggests either no recent profitability or insufficient earnings visibility",
-        "DRHP not yet indexed \u2014 financial fundamentals unavailable for analysis",
-        "Sector not specified \u2014 unclear business classification and peer comparison"
+        "Subscription below 1.0x (0.9x) \u2014 weak demand signal",
+        "GMP at \u20b90.0 \u2014 no market premium expectation",
+        "DRHP not indexed \u2014 critical financial & business details unavailable",
+        "Sector not disclosed \u2014 adds opacity"
       ],
       "positives": [
-        "Mainboard listing ensures regulatory oversight and liquidity",
-        "High promoter stake (87.45%) reduces insider selling risk",
-        "\u20b9380 Cr fundraise size indicates meaningful capital deployment"
+        "High promoter ownership (87.45%) \u2014 aligned interests",
+        "NSE/BSE listing \u2014 regulatory credibility and liquidity",
+        "Substantial capital raise (\u20b9380 Cr) \u2014 growth potential"
       ],
-      "valuation_view": "Valuation assessment impossible; zero P/E ratio and missing DRHP financial data prevent meaningful price justification analysis.",
-      "gmp_view": "GMP of just \u20b92 (0.5%) signals muted market enthusiasm and suggests listing may open flat or slightly up with minimal gains.",
-      "suitable_for": "Risk-averse investors should AVOID. Only suitable for high-risk, long-term investors who can conduct independent financial due diligence post-DRHP publication.",
-      "data_source": "Summary data only \u2014 DRHP not indexed; critical financial metrics (revenue, profit, growth, debt) unavailable for substantive analysis"
+      "valuation_view": "Cannot assess \u2014 P/E ratios are 0.0x and DRHP financials unavailable; valuation remains opaque.",
+      "gmp_view": "Zero GMP is a major bearish indicator; market shows no enthusiasm for listing-day premium.",
+      "suitable_for": "Risk-averse investors should AVOID; only suitable for those comfortable with high uncertainty and weak market signals.",
+      "data_source": "Summary data only \u2014 DRHP not indexed. Analysis severely limited by missing financial statements, business model details, and competitive positioning."
     },
-    "scorecard_at": "2026-02-26T06:32:28.104629",
-    "industry": "# PNGS Reva Diamond IPO Analysis\n\n## \u26a0\ufe0f Critical Data Limitation\n\n**I cannot provide the detailed financial analysis you've requested.** While you've asked me to read \"ONLY from the DRHP passages below,\" no DRHP (Draft Red Herring Prospectus) passages have been provided in your message. The IPO facts sheet shows placeholder values:\n- **P/E: 0.0x** (no valuation available)\n- **Industry P/E: 0.0x** (no benchmark available)\n- **Peers: \u2014** (none listed)\n- **Sector: \u2014** (unspecified)\n\n## What I Cannot Do\n\nWithout actual DRHP passages, I cannot:\n1. **Extract revenue and profit figures** with page number citations\n2. **Compare valuations** against industry standards\n3. **Analyze competitive positioning** vs peers\n4. **Provide a credible verdict** on entry timing\n\n## What You Should Do\n\nTo get a proper analysis, please:\n- **Share the relevant DRHP passages** covering financials (revenue, EBITDA, net profit, growth rates)\n- **Provide peer company comparables** if available\n- **Clarify the sector** (jewelry, diamonds, retail, manufacturing?)\n\nThe **0.87x subscription and 0.5% GMP suggest lukewarm demand**, which warrants caution\u2014but this alone isn't enough for a buy/skip decision.\n\n**Would you like to provide the DRHP excerpts so I can give you a detailed, cited analysis?**",
-    "industry_at": "2026-02-26T06:32:34.555827",
-    "news": "# PNGS Reva Diamond IPO \u2014 Public Summary\n\n## IPO Snapshot\n- **Company:** PNGS Reva Diamond\n- **Issue Size:** \u20b9380 crore | **Price:** \u20b9386/share\n- **Exchange:** BSE / NSE (Mainboard)\n- **Dates:** 24\u201326 Feb 2026\n- **Registrar:** Bigshare Services Pvt Ltd\n\n---\n\n## Market Signals (Weak)\n\n| Metric | Status |\n|--------|--------|\n| **GMP** | \u20b92 (+0.5%) \u2014 Minimal premium |\n| **Subscription** | 0.87x \u2014 **Undersubscribed** |\n| **Recommendation** | NEUTRAL |\n| **Promoter Holding** | 87.45% (high concentration) |\n\n---\n\n## What This Means\n\n\u2717 **Weak investor demand:** Subscription below 1x signals lukewarm confidence  \n\u2717 **Minimal listing upside:** GMP of just \u20b92 suggests muted market enthusiasm  \n\u2717 **High promoter stake:** 87.45% ownership may limit float and liquidity post-IPO  \n\n---\n\n## Data Limitations\n\n\u26a0\ufe0f **DRHP not indexed.** This summary uses only **publicly available metrics** (GMP, subscription, basic offer details).\n\n**Missing from summary:**\n- Business model & sector focus\n- Financial performance & growth trajectory\n- Risk factors & litigation\n- Detailed use of proceeds\n- Peer comparison\n- Analyst reports\n\n---\n\n## Next Steps\n\nFor **detailed, credible analysis**, run:\n```\nrag_indexer.py\n```\nThis will unlock full DRHP access for:\n- Company operations & strategy\n- 3-year financials\n- Management quality\n- Real valuation context\n\n**Without it, any deeper recommendation would be speculation.**",
-    "news_at": "2026-02-26T06:32:41.500266"
+    "scorecard_at": "2026-02-26T10:15:08.136898",
+    "industry": "# PNGS Reva Diamond IPO Analysis\n\nI appreciate your request, but I must be transparent: **I cannot provide the detailed analysis you've requested because the DRHP (Draft Red Herring Prospectus) passages are not included in your submission.**\n\nYou've provided the IPO summary box, but not the actual financial data from the DRHP document. Without access to the specific passages containing:\n- Revenue and profit figures with dates\n- Balance sheet details\n- Cash flow statements\n- Management discussion & analysis sections\n\nI cannot ethically cite page numbers or quote exact figures as you've correctly instructed (\"Read ONLY from the DRHP passages\").\n\n## What I Can Note From Available Data:\n\n**Red Flags to Consider:**\n1. **Zero GMP (\u20b90)** \u2014 Market shows no enthusiasm pre-listing; typically indicates weak demand\n2. **0.9x subscription** \u2014 IPO is **undersubscribed** (less than 1x means it didn't attract strong interest)\n3. **Missing P/E data** \u2014 Both company and industry P/E are \"0.0x,\" suggesting either pre-profit status or data unavailability\n4. **87.45% promoter holding** \u2014 Very high; retail investors get minimal stake\n5. **No peer comparison available** \u2014 Hampers relative valuation assessment\n\n## My Recommendation:\n\n**Please provide the DRHP document or relevant financial pages**, and I'll deliver the specific 3-4 paragraph analysis with exact figures and page citations as requested.\n\n**For now: WAIT** \u2014 Undersubscription + zero GMP + high promoter holding suggests limited retail opportunity at \u20b9386 issue price.",
+    "industry_at": "2026-02-26T10:15:15.679966",
+    "news": "# PNGS Reva Diamond IPO \u2014 Public Summary\n\n## Core Facts\n- **Company:** PNGS Reva Diamond\n- **Exchange:** BSE / NSE (Mainboard)\n- **Issue Price:** \u20b9386\n- **Issue Size:** \u20b9380 crore\n- **Dates:** 24\u201326 February 2026\n\n## Market Sentiment & Signals\n\n| Metric | Reading |\n|--------|---------|\n| **GMP** | \u20b90 (0.0% premium) |\n| **Subscription** | 0.9x (undersubscribed) |\n| **Recommendation** | NEUTRAL |\n| **Promoter Holding** | 87.45% |\n\n---\n\n## What This Means\n\n**Weak Reception:**\n- GMP at zero suggests **no investor enthusiasm** in grey market trading\n- Subscription below 1x indicates the issue is **undersubscribed** \u2014 demand does not cover supply\n- Market sentiment is clearly **cautious to negative**\n\n**High Promoter Stake:**\n- Promoters retaining 87.45% post-IPO is very high, limiting public float and liquidity\n\n---\n\n## Data Limitations\n\n\u26a0\ufe0f **DRHP not yet indexed.** This summary is based on **issue parameters and market signals only**.\n\nFor complete due diligence on:\n- Business model & revenues\n- Risk factors & litigation\n- Peer comparisons & sector outlook\n- Detailed financials\n\n**Run `rag_indexer.py`** to enable full DRHP Q&A for this IPO.\n\n---\n\n**Bottom line:** Market shows weak demand. Proceed with detailed DRHP analysis before investing.",
+    "news_at": "2026-02-26T10:15:21.685657"
   },
   "ipo_003": {
     "scorecard": {
       "verdict": "NEUTRAL",
       "conviction": "Low",
-      "score": 5,
-      "one_liner": "Weak momentum signals and subscription demand warrant caution despite large scale offering.",
-      "bull_case": "Large IPO size of \u20b93,100 Cr indicates substantial capital raise for environmental sector growth. Mainboard listing on BSE/NSE provides high liquidity post-listing. Strong promoter commitment at 74.89% holding signals confidence.",
-      "bear_case": "Zero GMP and undersubscribed issue (0.99x) suggest weak investor demand and market skepticism. Neutral recommendation from lead manager reflects absent enthusiasm. Sector sentiment volatility adds execution risk.",
+      "score": 4,
+      "one_liner": "Insufficient data to form conviction; DRHP not indexed limits fundamental analysis.",
+      "bull_case": "SME listing on NSE Emerge provides growth opportunity in e-commerce sector. High promoter holding (87.81%) suggests founder commitment and long-term vision.",
+      "bear_case": "Zero GMP signals weak market enthusiasm pre-listing. Complete absence of financial metrics (P/E, subscription data, sector comparables) prevents valuation assessment. DRHP not indexed eliminates ability to verify business fundamentals.",
       "red_flags": [
-        "Subscription at 0.99x \u2014 below 1.0x indicates weak retail participation",
-        "GMP of \u20b90.0 (0% premium) \u2014 no post-issue upside expectation priced in",
-        "Recommendation: NEUTRAL \u2014 absence of bullish conviction from lead manager",
-        "DRHP not indexed \u2014 inability to verify operational metrics, growth drivers, and financial health"
+        "GMP at \u20b90.0 indicates no market premium \u2014 weak investor demand signal",
+        "Lot size listed as '0 shares' \u2014 data integrity issue requiring clarification",
+        "DRHP not indexed \u2014 cannot verify financials, business model, or risk factors",
+        "No lead manager disclosed \u2014 raises process transparency concerns",
+        "Subscription and P/E metrics unavailable \u2014 critical valuation inputs missing"
       ],
       "positives": [
-        "\u20b93,100 Cr capital raise supports large-scale environmental infrastructure",
-        "Mainboard listing ensures regulatory oversight and institutional accessibility",
-        "74.89% promoter holding shows long-term commitment and skin-in-the-game"
+        "\u20b949 Cr issue size is reasonable for SME segment",
+        "NSE Emerge listing provides regulatory oversight and liquidity pathway",
+        "High promoter holding (87.81%) aligns founder interests with shareholders"
       ],
-      "valuation_view": "Unable to assess valuation \u2014 P/E at 0.0x and industry comparables absent; DRHP financials required for peer benchmarking.",
-      "gmp_view": "Zero GMP is a cautionary signal indicating market participants see no margin of safety above \u20b91,053 issue price.",
-      "suitable_for": "Conservative investors with environmental sector conviction and 3+ year horizon; unsuitable for momentum/short-term traders.",
-      "data_source": "Summary data only \u2014 DRHP not indexed. Analysis limited to IPO facts sheet; financial health, competitive moat, growth prospects unverified."
+      "valuation_view": "Cannot assess valuation without DRHP financials, peer multiples, or P/E data.",
+      "gmp_view": "Zero GMP pre-listing indicates lukewarm institutional interest; suggests market-neutral to cautious reception expected.",
+      "suitable_for": "Risk-averse investors should WAIT for DRHP publication and subscription feedback. Only growth-focused, high-risk-tolerance investors comfortable with limited transparency should consider.",
+      "data_source": "Summary data only \u2014 DRHP not indexed; analysis severely constrained by missing fundamental information"
     },
-    "scorecard_at": "2026-02-26T06:32:49.147631",
-    "industry": "# Clean Max Enviro IPO Analysis\n\n## Revenue & Profit Growth\nI cannot provide a meaningful analysis of Clean Max Enviro's revenue and profit growth as **no DRHP passages have been provided** in your submission. To evaluate financial performance, I would need specific figures from the DRHP (Draft Red Herring Prospectus) including:\n- Revenue trends (FY2024, FY2025, etc.)\n- Net profit figures\n- Growth rates year-over-year\n- Operating margins\n\nWithout these exact citations with page numbers, any growth assessment would be speculation rather than analysis.\n\n## Valuation Analysis\nThe valuation metrics present a **red flag for analysis**:\n- **P/E Ratio: 0.0x** (indicates either no reported profits or data unavailability)\n- **Industry P/E: 0.0x** (no comparable benchmark available)\n\nThis makes it **impossible to determine if the issue price of \u20b91,053 is attractive or expensive**. Typically, a 0.0x P/E suggests either the company is loss-making or profitability data isn't disclosed pre-IPO. This is a significant concern for valuation-conscious investors.\n\n## Competitive Positioning\n**No peer comparison is available**\u2014the prospectus lists \"\u2014\" for peers. Combined with the environmental sector's note that \"sentiment may fluctuate,\" this limits your ability to assess competitive advantages, market share, or technological differentiation against rivals.\n\n## Verdict: WAIT-AND-WATCH \u26a0\ufe0f\n**Do not rush into subscription.** Multiple warning signals suggest caution:\n- Weak subscription (0.99x = undersubscribed)\n- Zero GMP (no investor enthusiasm)\n- **NEUTRAL recommendation** from analysts\n- Missing financial and peer data\n- High promoter holding (74.89%) limits liquidity\n\n**Recommendation:** Await detailed DRHP disclosure and analyst reports before deciding.",
-    "industry_at": "2026-02-26T06:32:56.504679",
-    "news": "# Clean Max Enviro IPO \u2014 Public Summary\n\n## Basic Facts\n- **Company:** Clean Max Enviro (Mainboard IPO)\n- **Issue Size:** \u20b93,100 Cr | **Issue Price:** \u20b91,053/share\n- **Listing Exchanges:** BSE / NSE\n- **Subscription Period:** 23\u201325 Feb 2026\n- **Registrar:** MUFG Intime India Pvt\n\n---\n\n## Market Signals\n\n| Metric | Status |\n|--------|--------|\n| **GMP** | \u20b90 (0% premium) |\n| **Subscription** | 0.99x (undersubscribed) |\n| **Recommendation** | NEUTRAL |\n\n---\n\n## Key Observations\n\n1. **Weak Demand Indicators**\n   - GMP at zero suggests no grey market enthusiasm\n   - Subscription below 1x indicates lukewarm investor interest as of close\n   - Sentiment rating: **NEUTRAL** (not bullish)\n\n2. **Promoter Structure**\n   - Promoters hold 74.89%, indicating strong insider control post-listing\n\n3. **Valuation Metrics Unavailable**\n   - P/E ratios show as 0.0x (insufficient public data)\n   - No peer comparison data available in summary\n\n---\n\n## Data Limitation\n\n\u26a0\ufe0f **This summary is based on real-time market signals only.** For deeper insights on:\n- Financial performance & profitability\n- Business model & growth drivers\n- Risk factors & litigation history\n- Management quality & promoter track record\n\n**Run `rag_indexer.py` to index the DRHP and unlock full Q&A analysis.**\n\n---\n\n**Bottom Line:** Public sentiment appears cautious. Proceed with DRHP review before subscribing.",
-    "news_at": "2026-02-26T06:33:02.854758"
+    "scorecard_at": "2026-02-26T10:16:11.836193",
+    "industry": "# Acetech E-Commerce IPO Analysis\n\n## \u26a0\ufe0f CRITICAL DATA LIMITATION\n\nI cannot provide the analysis you've requested because **no DRHP passages have been provided** in your query. To deliver the specific, credible analysis you need, I require:\n\n1. **Financial statements** from the DRHP (Revenue, PAT, EBITDA figures with dates)\n2. **Growth rates** (YoY figures for FY2024, FY2025, etc.)\n3. **Peer comparison data** (once peers are identified)\n4. **Business description** (currently listed as \"\u2014\")\n\n## What I Can Confirm from Available Data\n\n- **Issue Price:** \u20b9112 | **Size:** \u20b949 Cr\n- **GMP:** \u20b90 (no premium; market shows lukewarm sentiment)\n- **Subscription:** 0.0x (not yet opened or severely undersubscribed)\n- **High promoter holding:** 87.81% (limited float for retail investors)\n- **Valuation multiples:** Currently uncomputable (0.0x reported)\n\n## Recommendation for You\n\n**Do not invest based on incomplete information.** Before subscribing:\n\n1. **Request the full DRHP document** from the registrar or NSE Emerge\n2. **Verify actual subscription status** (the 0.0x seems like missing data)\n3. **Analyze 3-5 years of financials** from pages 1-50 of the DRHP\n4. **Compare margins, growth rates** with similar e-commerce SMEs\n\n**Status: INSUFFICIENT DATA \u2014 Please share the DRHP document for a proper verdict.**",
+    "industry_at": "2026-02-26T10:16:18.407014",
+    "news": "# Acetech E-Commerce IPO \u2014 Summary of Public Information\n\n## IPO Basics\n- **Company:** Acetech E-Commerce (SME IPO, NSE Emerge)\n- **Issue Size:** \u20b949 Cr | **Issue Price:** \u20b9112/share\n- **Timeline:** Opens 27 Feb 2026 | Closes 4 Mar 2026\n- **Registrar:** Skyline Financial Services Pvt\n\n## Current Market Signals\n\n| Metric | Status |\n|--------|--------|\n| **GMP** | \u20b90 (0% premium) |\n| **Subscription** | 0.0x (no data yet) |\n| **Recommendation** | NEUTRAL |\n\n## Key Observations\n\n\u26a0\ufe0f **Data Limitations:**\n- No DRHP has been indexed yet \u2014 all analysis is from summary data only\n- Valuation multiples (P/E, industry benchmarks) showing as 0.0x \u2014 **insufficient data**\n- No analyst reports, news flow, or detailed subscription tracking available at this time\n- Promoter holding is substantial at **87.81%**\n\n## What's Missing\nTo provide substantive analysis on:\n- Business fundamentals & risks\n- Financial performance\n- Industry positioning\n- Litigation/compliance issues\n\n**Run `rag_indexer.py` to index the DRHP** \u2014 this will unlock full Q&A capability on the IPO filing.\n\n---\n\n**Bottom line:** This is an early-stage SME listing. Market sentiment is neutral with zero GMP premium, but meaningful analysis requires the actual DRHP filing.",
+    "news_at": "2026-02-26T10:16:24.531874"
   },
   "ipo_004": {
     "scorecard": {
       "verdict": "NEUTRAL",
       "conviction": "Low",
-      "score": 5,
-      "one_liner": "Strong subscription and GMP signal offset by missing financials and valuation opacity.",
-      "bull_case": "Exceptional 43.66x subscription indicates strong retail demand and investor confidence. GMP of \u20b916 (15.4% premium) suggests potential listing gains and market optimism for the mainboard IPO.",
-      "bear_case": "Complete absence of P/E, industry comparables, and financial data prevents meaningful valuation assessment. DRHP not indexed limits risk analysis; sector classification missing raises transparency concerns.",
+      "score": 4,
+      "one_liner": "Insufficient data to form conviction; extreme caution warranted until DRHP review completed.",
+      "bull_case": "SME listing on NSE Emerge provides lower listing barriers and potential for smaller-cap growth. \u20b936 Cr issue size suggests a focused business model. Early-stage companies can deliver outsized returns if fundamentals strengthen.",
+      "bear_case": "Zero GMP and zero subscription indicate minimal market enthusiasm or delayed market information. Extremely high promoter holding (95.49%) leaves negligible public float, creating illiquidity and governance concerns. Critical financials, sector details, and business fundamentals remain unrevealed.",
       "red_flags": [
-        "P/E ratio listed as 0.0x \u2014 indicates either pre-profit status or data unavailability",
-        "Sector information not disclosed",
-        "No peer comparison data available",
-        "DRHP document not indexed for detailed due diligence",
-        "Lot size shown as 0 shares (data anomaly)"
+        "GMP of \u20b90.0 (0%) signals zero premium expectation",
+        "Subscription data unavailable (0.0x)",
+        "Sector not disclosed in IPO facts",
+        "95.49% promoter holding indicates poor public shareholding structure",
+        "Lead Manager not listed",
+        "DRHP not yet indexed \u2014 full disclosure unavailable",
+        "Issue lot size reported as 0 shares (data anomaly)"
       ],
       "positives": [
-        "Massive 43.66x subscription demonstrates strong market appetite",
-        "GMP premium of 15.4% suggests positive investor sentiment for listing day",
-        "Mainboard listing on BSE/NSE provides regulatory oversight",
-        "Promoter holding at 47.07% shows founder commitment"
+        "SME segment offers lower entry valuation benchmarks",
+        "NSE Emerge provides regulatory framework for emerging businesses",
+        "MUFG Intime India as registrar adds credibility"
       ],
-      "valuation_view": "Valuation cannot be assessed; zero P/E and missing financial metrics prevent meaningful comparison against peers.",
-      "gmp_view": "GMP of \u20b916 signals strong listing gains likely, but premium may be unsustainable given information vacuum.",
-      "suitable_for": "Short-term traders seeking listing-day arbitrage only; fundamentals-focused investors should await DRHP indexing and detailed financials.",
-      "data_source": "Summary data only \u2014 DRHP not indexed. Analysis severely limited by missing sector, financials, and detailed risk disclosures."
+      "valuation_view": "P/E, industry multiples, and peer comparisons all at 0.0x \u2014 valuation cannot be assessed without DRHP financials and sector context.",
+      "gmp_view": "Zero GMP indicates zero market premium; suggests either weak demand or immature market signaling at IPO launch.",
+      "suitable_for": "NOT SUITABLE for retail investors until DRHP is fully reviewed. High-risk, illiquid structure. Only sophisticated investors with deep sector knowledge and high risk tolerance should consider.",
+      "data_source": "Summary data only \u2014 DRHP not indexed. Analysis severely limited. Do NOT subscribe without full DRHP disclosure review including financials, business model, risk factors, and use of proceeds."
     },
-    "scorecard_at": "2026-02-26T06:33:10.381723",
-    "industry": "# Shree Ram Twistex IPO Analysis\n\n## \u26a0\ufe0f CRITICAL DATA GAP\n\nI cannot provide the analysis you've requested because **no DRHP passages have been provided** for me to extract financial figures from. The template shows:\n- **P/E: 0.0x** (indicating no data available)\n- **Industry P/E: 0.0x** (no comparable data)\n- **Sector: \u2014** (blank)\n- **Peers: \u2014** (none listed)\n\n## What's Missing for Proper Analysis\n\nTo write the focused 3-4 paragraph analysis you need, I would require:\n\n1. **DRHP Revenue & Profit figures** \u2014 FY2024, FY2025 actual/projected numbers with page references\n2. **Balance sheet metrics** \u2014 Assets, debt, cash flows\n3. **Sector classification** \u2014 Currently listed as \"\u2014\", need textile/manufacturing category\n4. **Comparable peers** \u2014 Listed companies in same segment for relative valuation\n5. **Business details** \u2014 What does Shree Ram Twistex actually manufacture/do?\n\n## Current Signals Only\n\nWhat I **can** observe:\n- **43.66x subscription** suggests strong retail demand (bullish signal)\n- **\u20b916 GMP (+15.4%)** implies likely listing gains, but doesn't validate long-term value\n- **47.07% promoter holding** = decent skin-in-the-game\n- **NEUTRAL recommendation** = proceed with caution\n\n## Next Steps\n\n**Please share the DRHP document excerpts** covering financial statements, and I'll provide the detailed comparative analysis with exact page citations.",
-    "industry_at": "2026-02-26T06:33:17.537377",
-    "news": "# Shree Ram Twistex IPO \u2014 Public Summary\n\n## IPO Snapshot\n- **Company:** Shree Ram Twistex (Mainboard)\n- **Issue Price:** \u20b9104\n- **Size:** \u20b9110.2 Cr\n- **Timeline:** Opens 23 Feb 2026 | Closes 25 Feb 2026\n- **Lead Manager:** Not disclosed in available data\n- **Registrar:** Bigshare Services Pvt\n\n---\n\n## Market Signals\n\n### Subscription & Demand\n- **Subscription:** **43.66x** \u2014 Exceptionally strong demand, indicating retail/institutional appetite\n- **GMP:** **\u20b916 (+15.4%)** \u2014 Grey Market Premium suggests market expects 15-16% listing gain\n\n### Recommendation\n- **Rating:** **NEUTRAL** \u26a0\ufe0f  \n  Despite strong subscription, analyst consensus remains cautious\u2014likely flagging valuation or sector concerns\n\n---\n\n## Key Caveats\n\n\u26a0\ufe0f **Data Limitation:** This summary is based on *publicly available snapshot data only*. The **DRHP has NOT been indexed** in our system.\n\n**Critical information missing:**\n- Company sector & business model\n- Financial performance (revenue, profitability)\n- Risk factors & litigation history\n- Detailed peer comparison\n- Promoter background\n\n---\n\n## Next Steps\nFor **full DRHP analysis** (financials, risks, business details):\n```\nRun: rag_indexer.py\n```\n\nThis will enable Q&A directly from the SEBI filing and provide a complete due-diligence picture.",
-    "news_at": "2026-02-26T06:33:23.697339"
+    "scorecard_at": "2026-02-26T10:15:29.416344",
+    "industry": "# Striders Impex IPO Analysis\n\nI appreciate your request, but I must be transparent: **I cannot provide the detailed analysis you've requested** because the critical financial data is missing.\n\n## What's Missing\n\nYou've asked me to \"Read ONLY from the DRHP passages below,\" but **no DRHP passages have been provided**. Without access to the company's Draft Red Herring Prospectus, I cannot cite:\n\n- Exact revenue figures with page numbers\n- Profit growth rates and margins\n- Balance sheet metrics\n- Historical financial performance\n- Management commentary on business operations\n\n## What the Available Data Shows (Limitations)\n\nFrom the IPO Facts alone, I can only observe:\n\n1. **Valuation Concerns**: P/E ratios are showing as 0.0x\u2014likely because the company is pre-profitability or data hasn't been calculated yet. This is a **red flag** that requires examination of actual financials.\n\n2. **High Promoter Holding (95.49%)**: Very limited public float post-IPO, which typically indicates lower liquidity and retail shareholder influence.\n\n3. **Neutral Rating**: The recommendation suggests caution\u2014neither bullish nor bearish.\n\n4. **Zero GMP**: No gray market premium suggests weak investor enthusiasm.\n\n## Recommendation\n\n**Before investing, you must:**\n- Download the complete DRHP from NSE Emerge or the registrar's website\n- Review 3-5 years of audited financials\n- Understand the business model and competitive positioning\n- Assess management quality\n\nWould you like to share the DRHP passages? I can then provide the detailed, cited analysis you need.",
+    "industry_at": "2026-02-26T10:15:35.769751",
+    "news": "# Striders Impex IPO \u2014 Public Summary\n\n## IPO Details\n- **Company:** Striders Impex (SME listing on NSE Emerge)\n- **Issue Size:** \u20b936 crore\n- **Issue Price:** \u20b972 per share\n- **Timeline:** Opens 26 Feb 2026 | Closes 2 Mar 2026\n- **Registrar:** MUFG Intime India Pvt\n\n## Market Signals \u2014 Neutral to Weak\n- **GMP:** \u20b90 (0% premium)\n- **Subscription:** 0.0x reported\n- **Analyst Recommendation:** NEUTRAL\n- **Promoter Holding:** 95.49% (post-IPO ownership structure shows very high promoter concentration)\n\n## What This Means\nThe **zero GMP and flat subscription data** suggest limited retail excitement or grey market demand ahead of the IPO. This is not uncommon for SME offerings, which typically attract fewer institutional and retail participants than main board IPOs.\n\n---\n\n## Data Limitation \u26a0\ufe0f\n\n**The DRHP for this IPO has not been indexed yet.** The summary above reflects only publicly available information.\n\nFor deeper analysis \u2014 including:\n- Business model & sector classification\n- Financials (revenue, profitability, growth)\n- Risk factors & litigation history\n- Peer comparison\n- Management/promoter background\n\n**Run `rag_indexer.py`** to index the DRHP and unlock full Q&A capability.\n\n---\n\n**Have you seen any recent news articles or analyst reports on this IPO?** If you share them, I can help contextualize them against the available data.",
+    "news_at": "2026-02-26T10:15:42.052513"
   },
   "ipo_007": {
     "scorecard": {
@@ -254,32 +256,32 @@
     "scorecard": {
       "verdict": "NEUTRAL",
       "conviction": "Low",
-      "score": 4,
-      "one_liner": "Insufficient data to assess; zero GMP and missing DRHP financials warrant caution.",
-      "bull_case": "SME listing on NSE Emerge provides growth potential with lower entry barriers. \u20b949 Cr issue size suggests operational scale in e-commerce sector.",
-      "bear_case": "Zero GMP indicates market disinterest or pricing concerns. High promoter holding (87.81%) limits minority shareholder upside and raises governance questions.",
+      "score": 5,
+      "one_liner": "Yaap Digital IPO shows modest momentum but lacks financial visibility for confident assessment.",
+      "bull_case": "Positive GMP of \u20b94.0 (2.8% premium) indicates modest investor interest. Subscription of 1.28x suggests adequate demand for the \u20b980.11 Cr issue. NSE Emerge listing provides growth platform exposure.",
+      "bear_case": "DRHP not indexed\u2014critical financial metrics (profitability, revenue growth, margins) unavailable for valuation assessment. P/E and industry P/E both at 0.0x suggest either pre-profitability or data quality concerns. High promoter holding (80.19%) limits public float and liquidity.",
       "red_flags": [
-        "GMP at \u20b90.0 \u2014 zero market premium suggests weak demand",
-        "Promoter holding 87.81% \u2014 minimal free float limits liquidity and price discovery",
-        "Lot size 0 shares \u2014 data error; cannot assess investment quantum",
-        "DRHP not indexed \u2014 financial metrics, profitability, and growth drivers unavailable",
-        "Zero subscription data \u2014 IPO reception unknown"
+        "DRHP not indexed\u2014financials unverifiable",
+        "P/E ratio 0.0x\u2014company may be unprofitable or pre-revenue",
+        "Sector classification missing\u2014business model unclear",
+        "Lot size listed as 0 shares\u2014IPO structuring details questionable",
+        "High promoter stake (80.19%)\u2014limited free float and exit liquidity"
       ],
       "positives": [
-        "NSE Emerge listing provides regulated exchange access",
-        "E-commerce sector exposure in growing digital economy",
-        "Skyline Financial Services as reputable registrar"
+        "Modest GMP premium (2.8%) suggests realistic pricing without froth",
+        "Subscribed 1.28x\u2014adequate but not oversubscribed demand",
+        "MUFG Intime India as registrar\u2014reputable intermediary"
       ],
-      "valuation_view": "No P/E or comparable peer data available; cannot assess relative or absolute valuation.",
-      "gmp_view": "Zero GMP signals weak pre-IPO demand and potential overpricing at \u20b9112; lack of market confidence.",
-      "suitable_for": "Not recommended for conservative investors; extremely high risk given data gaps and market signals.",
-      "data_source": "Summary data only \u2014 DRHP not indexed; critical financial and operational details missing"
+      "valuation_view": "Valuation cannot be assessed\u2014P/E unavailable and DRHP financials unindexed; price discovery at listing will be primary reference point.",
+      "gmp_view": "2.8% GMP indicates lukewarm enthusiasm; suggests market has priced in modest upside with caution regarding fundamentals.",
+      "suitable_for": "High-risk/speculative investors with long-term horizon willing to participate in unlisted SME growth, with full acceptance of execution and liquidity risks.",
+      "data_source": "Summary data only \u2014 DRHP not indexed; analysis severely constrained by missing financial & operational disclosures"
     },
-    "scorecard_at": "2026-02-26T06:34:57.741782",
-    "industry": "# Acetech E-Commerce IPO Analysis\n\nI appreciate your request, but I must be transparent: **I cannot provide the detailed analysis you've requested** because the critical information is missing.\n\n## What's Missing\n\n1. **No DRHP passages provided** \u2014 You've asked me to cite \"exact figures with page numbers from DRHP passages,\" but no financial document excerpts have been shared. Without the Draft Red Herring Prospectus, I cannot extract:\n   - Revenue and profit figures\n   - Historical growth rates\n   - Balance sheet details\n   - Page-specific citations\n\n2. **No peer comparison available** \u2014 The IPO facts themselves state \"Peers: \u2014\" (not available), making sector comparison impossible.\n\n3. **Incomplete valuation data** \u2014 P/E ratios show as \"0.0x,\" suggesting either:\n   - The company is loss-making\n   - Valuation data hasn't been calculated yet\n   - The prospectus hasn't been fully processed\n\n## What I Can Note\n\n- **Very high promoter holding (87.81%)** suggests limited public float \u2014 less liquidity for retail investors\n- **0.0x GMP and 0.0x subscription** indicates weak pre-listing demand\n- **NSE Emerge listing** = smaller, less-liquid exchange with higher risk\n- **NEUTRAL recommendation** = institutional investors see no compelling case\n\n## Recommendation\n\n**Please share:**\n- The DRHP document or relevant financial passages\n- Company's revenue, profit, and cash flow data\n- Any available peer companies for comparison\n\nOnce you provide these details, I can deliver the specific, page-cited analysis you need to make an informed decision.",
-    "industry_at": "2026-02-26T06:35:04.959245",
-    "news": "# Acetech E-Commerce IPO \u2014 Public Summary\n\n## IPO Basics\n- **Company:** Acetech E-Commerce (SME IPO, NSE Emerge)\n- **Issue Size:** \u20b949.0 Cr | **Issue Price:** \u20b9112.0/share\n- **Timeline:** Open 27 Feb 2026 \u2192 Close 4 Mar 2026\n- **Registrar:** Skyline Financial Services Pvt\n\n---\n\n## Market Signals (Current Data)\n\n| Metric | Status |\n|--------|--------|\n| **GMP** | \u20b90.0 (0% premium) |\n| **Subscription** | 0.0x (no subscription data yet) |\n| **Recommendation** | NEUTRAL |\n| **Promoter Holding** | 87.81% (high concentration) |\n\n---\n\n## Key Observations\n\n\u26a0\ufe0f **Limited Public Information:**\n- No analyst reports or news coverage identified in available summary data\n- GMP at zero suggests **weak market anticipation** pre-launch\n- Subscription data not yet available (IPO opens 27 Feb 2026)\n- High promoter stake (87.81%) may indicate limited public float post-IPO\n\n---\n\n## \u26a0\ufe0f Data Limitation\n\n**This summary is based on pre-filing summary data only.** For:\n- Business model & operations\n- Financial performance & risks\n- Detailed use of IPO proceeds\n- Regulatory compliance & litigation\n- Peer comparison\n\n**Run `rag_indexer.py` to index the DRHP and unlock full Q&A.**\n\nWould you like me to analyze valuation, risks, or subscription patterns once the DRHP is indexed?",
-    "news_at": "2026-02-26T06:35:10.892828"
+    "scorecard_at": "2026-02-26T10:15:49.869448",
+    "industry": "# Yaap Digital IPO Analysis: A Cautious Assessment\n\n## \u26a0\ufe0f Critical Data Limitation\n\nI cannot provide the detailed analysis you've requested because **no DRHP passages have been supplied** in your query. The instruction explicitly states: \"Read ONLY from the DRHP passages below\" \u2014 but the financials section is empty.\n\n## What I Can Observe from Available Info\n\n**Revenue & Profit Growth:**\nWithout DRHP data, I cannot cite specific figures, page numbers, or growth rates. This is essential for any valuation assessment.\n\n**Valuation Concerns:**\nThe P/E ratio shows as 0.0x, which typically indicates either:\n- A loss-making company (negative earnings)\n- Minimal profits relative to market cap\n- Data unavailability\n\nThis is a **red flag** for profitability analysis and makes P/E comparison meaningless.\n\n**Sector & Peer Analysis:**\nWith sector listed as \"\u2014\" (undefined) and no peer data available, competitive positioning cannot be assessed.\n\n## Verdict for Retail Investors\n\n**WAIT.** Before investing, obtain the complete DRHP document and verify:\n1. Last 3 years of revenue, net profit, and growth rates\n2. Whether the company is profitable\n3. Cash burn rate and runway\n4. Sector classification and comparable companies\n5. Risk factors section\n\nThe modest **1.28x subscription** and **2.8% GMP** suggest lukewarm market enthusiasm. This isn't a red-hot IPO \u2014 giving you time to conduct proper due diligence.\n\n**Please share the actual DRHP passages for a comprehensive analysis.**",
+    "industry_at": "2026-02-26T10:15:56.431423",
+    "news": "# Yaap Digital IPO \u2014 Summary of Public Information\n\n## **IPO Details**\n- **Company:** Yaap Digital (SME listing on NSE Emerge)\n- **Issue Price:** \u20b9145 per share\n- **Issue Size:** \u20b980.11 crore\n- **Timeline:** Open 25 Feb 2026 | Close 27 Feb 2026\n- **Registrar:** MUFG Intime India Pvt Ltd\n\n---\n\n## **Market Signals**\n\n| Metric | Status |\n|--------|--------|\n| **GMP** | \u20b94.0 (+2.8% premium) |\n| **Subscription** | 1.28x |\n| **Recommendation** | NEUTRAL |\n| **Promoter Holding** | 80.19% |\n\n---\n\n## **What We Know (Limited Data)**\n\n\u2705 **Publicly Available:**\n- Modest GMP suggesting lukewarm market interest\n- Subscription at 1.28x indicates basic demand (not oversubscribed)\n- SME listing keeps institutional participation typically lower\n\n\u26a0\ufe0f **Not Available Without DRHP:**\n- Business model & revenue\n- Financial performance & profitability\n- Industry peers & competitive positioning\n- Risk factors & litigation\n- Use of issue proceeds\n- Management background\n\n---\n\n## **Data Limitation**\n\nThe DRHP (draft red herring prospectus) has **not been indexed** in our system. For detailed analysis of financials, business operations, risks, and management quality, you'll need to:\n\n**\u2192 Run `rag_indexer.py` to enable full DRHP Q&A for this IPO**\n\n**Current recommendation remains NEUTRAL** due to limited information and modest subscription metrics.",
+    "news_at": "2026-02-26T10:16:03.023552"
   },
   "ipo_006": {
     "scorecard": {
