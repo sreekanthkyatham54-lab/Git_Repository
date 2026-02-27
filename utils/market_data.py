@@ -196,6 +196,48 @@ def _mock_market_pulse():
     }
 
 
+def _fetch_google_news(company_name, symbol, max_items=5):
+    """
+    Fetch recent news via Google News RSS feed.
+    Returns list of {title, date, source} dicts. Never raises.
+    """
+    import requests
+    from xml.etree import ElementTree as ET
+    from datetime import datetime
+    from urllib.parse import quote_plus
+
+    # Search for company name + NSE to get Indian financial news
+    query = f"{company_name} {symbol} NSE"
+    url   = (f"https://news.google.com/rss/search"
+             f"?q={quote_plus(query)}&hl=en-IN&gl=IN&ceid=IN:en")
+    try:
+        r = requests.get(url, timeout=8,
+                         headers={"User-Agent": "Mozilla/5.0"})
+        r.raise_for_status()
+        root  = ET.fromstring(r.content)
+        items = root.findall(".//item")[:max_items]
+        news  = []
+        for item in items:
+            title = item.findtext("title", "").strip()
+            # Google News titles often have "- Source" suffix — strip it
+            if " - " in title:
+                title, source = title.rsplit(" - ", 1)
+            else:
+                source = item.findtext("source", "")
+            pub = item.findtext("pubDate", "")
+            try:
+                dt       = datetime.strptime(pub, "%a, %d %b %Y %H:%M:%S %Z")
+                date_str = dt.strftime("%d %b")
+            except Exception:
+                date_str = ""
+            if title:
+                news.append({"title": title.strip(), "date": date_str,
+                             "source": source.strip()})
+        return news
+    except Exception:
+        return []
+
+
 def get_stock_analysis(symbol):
     """
     Full technical + fundamental analysis for a single NSE symbol.
@@ -264,7 +306,7 @@ def get_stock_analysis(symbol):
             if cr >= 1e5: return f"₹{cr/1e5:.2f}L Cr"
             return f"₹{cr/1e3:.1f}K Cr"
 
-        # News
+        # News — try yfinance first, fall back to Google News RSS
         news_items = []
         try:
             raw_news = ticker.news or []
@@ -277,6 +319,9 @@ def get_stock_analysis(symbol):
                     news_items.append({"title": title, "date": date_str})
         except Exception:
             pass
+
+        if not news_items:
+            news_items = _fetch_google_news(name, symbol.upper())
 
         return {
             "symbol":       symbol.upper(),

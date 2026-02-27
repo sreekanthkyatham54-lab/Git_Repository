@@ -82,7 +82,7 @@ def render():
         agents = [
             ("📊", "Technical Agent",     "RSI · MACD · 50 DMA · 200 DMA · Volume analysis"),
             ("🌊", "Trend Agent",         "Sector momentum · 52-week range · Relative performance"),
-            ("📰", "News Agent",          "Latest headlines from Yahoo Finance news feed"),
+            ("📰", "News Agent",          "Latest headlines from Google News · ET · Moneycontrol"),
             ("📋", "Fundamentals Agent",  "Revenue · Profit · PE ratio · Market cap from filings"),
         ]
         c1, c2 = st.columns(2)
@@ -246,9 +246,10 @@ def render():
     news = d.get("news", [])
     if news:
         news_items_html = "".join(
-            f'<div style="padding:6px 0;border-bottom:1px solid {BORDER};'
-            f'font-size:0.8rem;line-height:1.4;">'
-            f'<span style="color:{MUTED};font-size:0.7rem;">{n["date"]} · </span>{n["title"]}</div>'
+            f'<div style="padding:6px 0;border-bottom:1px solid {BORDER};font-size:0.8rem;line-height:1.4;">'
+            f'<span style="color:{MUTED};font-size:0.7rem;">'
+            f'{n["date"]}{"  ·  " + n["source"] if n.get("source") else ""} · </span>'
+            f'{n["title"]}</div>'
             for n in news[:3]
         )
     else:
