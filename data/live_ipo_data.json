@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-02-27T05:19:24.349980",
+  "scraped_at": "2026-02-27T09:06:54.311426",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 583.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.14,
+      "subscription_times": 0.92,
       "gmp": 4.0,
       "gmp_percent": 1.8,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/omnitech-engineering-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.14,
-      "subscription_nii": 0.12,
-      "subscription_retail": 0.14
+      "subscription_qib": 2.45,
+      "subscription_nii": 0.41,
+      "subscription_retail": 0.25
     },
     {
       "id": "ipo_003",
@@ -50,7 +50,7 @@
       "issue_size_cr": 49.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.08,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -69,7 +69,10 @@
       "summary": "Acetech E-Commerce IPO open date is February 27, 2026 and the IPO will close on March 4, 2026. Acetech E-Commerce IPO is a Book build Issue. The company to raise around ₹48.95 crores via IPO that comprises fresh issue of ₹48.95 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/acetech-e-commerce-ipo-date-review-price-allotment-details/"
+      "detail_url": "https://ipowatch.in/acetech-e-commerce-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.04,
+      "subscription_retail": 0.21
     },
     {
       "id": "ipo_004",
@@ -83,7 +86,7 @@
       "issue_size_cr": 36.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.71,
+      "subscription_times": 0.8,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -104,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/striders-impex-ipo-date-review-price-allotment-details/",
       "subscription_qib": 2.03,
-      "subscription_nii": 0.0,
-      "subscription_retail": 0.26
+      "subscription_nii": 0.15,
+      "subscription_retail": 0.38
     },
     {
       "id": "ipo_005",
@@ -119,7 +122,7 @@
       "issue_size_cr": 80.11,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.48,
+      "subscription_times": 2.56,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -139,9 +142,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/yaap-digital-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 3.74,
-      "subscription_nii": 1.22,
-      "subscription_retail": 0.31
+      "subscription_qib": 3.98,
+      "subscription_nii": 4.15,
+      "subscription_retail": 1.07
     }
   ],
   "upcoming_ipos": [
