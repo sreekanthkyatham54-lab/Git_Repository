@@ -2,7 +2,35 @@
 data_loader.py — loads IPO data and enriches with DRHP DB
 """
 import json, os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+
+_IST = timezone(timedelta(hours=5, minutes=30))
+
+def _today_ist():
+    return datetime.now(_IST).date()
+
+def _recompute_status(active_ipos, upcoming_ipos):
+    """
+    Re-evaluate subscription_status using the current IST date.
+    Scraper status can be stale between the last daily run and midnight IST,
+    causing closed IPOs to linger as 'Open' until the next scrape.
+    """
+    today = _today_ist()
+    active, upcoming = [], []
+    for ipo in active_ipos + upcoming_ipos:
+        try:
+            od = datetime.strptime(ipo["open_date"], "%Y-%m-%d").date()
+            cd = datetime.strptime(ipo["close_date"], "%Y-%m-%d").date()
+            if od <= today <= cd:
+                ipo["subscription_status"] = "Open"
+                active.append(ipo)
+            elif today < od:
+                ipo["subscription_status"] = "Upcoming"
+                upcoming.append(ipo)
+            # today > cd → IPO closed, drop it silently
+        except Exception:
+            active.append(ipo)  # keep if dates are unparseable
+    return active, upcoming
 
 LIVE_DATA_FILE = os.path.join(os.path.dirname(__file__), "data", "live_ipo_data.json")
 MAX_AGE_HOURS  = 12
@@ -27,6 +55,11 @@ def load_ipo_data():
             print(f"⚠ Live data failed: {e}"); data = _load_seed(); data["source"] = "seed"
     else:
         data = _load_seed(); data["source"] = "seed"
+
+    # Re-evaluate open/upcoming status using current IST time — scraper status can be stale
+    data["active_ipos"], data["upcoming_ipos"] = _recompute_status(
+        data.get("active_ipos", []), data.get("upcoming_ipos", [])
+    )
 
     # Fix historical IPOs: compute gmp_before_listing from issue_price + gmp_predicted_gain if zero/missing
     for ipo in data.get("historical_ipos", []):

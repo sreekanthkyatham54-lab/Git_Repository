@@ -13,7 +13,13 @@ Classification logic:
 import requests
 from bs4 import BeautifulSoup
 import json, os, re, time
-from datetime import datetime, date
+from datetime import datetime, date, timezone, timedelta
+
+# All date comparisons use IST (UTC+5:30) — ipowatch dates are Indian calendar dates
+_IST = timezone(timedelta(hours=5, minutes=30))
+
+def _today_ist():
+    return datetime.now(_IST).date()
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -69,7 +75,7 @@ def parse_size_cr(text):
 
 
 def parse_date_range(text):
-    today = date.today()
+    today = _today_ist()
     month_map = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,
                  "jul":7,"aug":8,"sep":9,"oct":10,"nov":11,"dec":12}
     text = text.strip().lower()
@@ -99,7 +105,7 @@ def parse_date_range(text):
 
 def determine_status(open_date, close_date):
     try:
-        today = date.today()
+        today = _today_ist()
         od = datetime.strptime(open_date, "%Y-%m-%d").date()
         cd = datetime.strptime(close_date, "%Y-%m-%d").date()
         if od <= today <= cd: return "Open"
