@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-02-27T09:06:54.311426",
+  "scraped_at": "2026-02-27T15:09:41.118536",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 583.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.92,
+      "subscription_times": 1.2,
       "gmp": 4.0,
       "gmp_percent": 1.8,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/omnitech-engineering-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 2.45,
-      "subscription_nii": 0.41,
-      "subscription_retail": 0.25
+      "subscription_qib": 3.0,
+      "subscription_nii": 0.77,
+      "subscription_retail": 0.35
     },
     {
       "id": "ipo_003",
@@ -50,7 +50,7 @@
       "issue_size_cr": 49.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.08,
+      "subscription_times": 0.26,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/acetech-e-commerce-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.0,
+      "subscription_qib": 0.22,
       "subscription_nii": 0.04,
-      "subscription_retail": 0.21
+      "subscription_retail": 0.42
     },
     {
       "id": "ipo_004",
@@ -86,7 +86,7 @@
       "issue_size_cr": 36.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.8,
+      "subscription_times": 0.96,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/striders-impex-ipo-date-review-price-allotment-details/",
       "subscription_qib": 2.03,
-      "subscription_nii": 0.15,
-      "subscription_retail": 0.38
+      "subscription_nii": 0.75,
+      "subscription_retail": 0.44
     },
     {
       "id": "ipo_005",
@@ -122,7 +122,7 @@
       "issue_size_cr": 80.11,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.56,
+      "subscription_times": 4.26,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -142,9 +142,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/yaap-digital-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 3.98,
-      "subscription_nii": 4.15,
-      "subscription_retail": 1.07
+      "subscription_qib": 8.29,
+      "subscription_nii": 5.05,
+      "subscription_retail": 1.61
     }
   ],
   "upcoming_ipos": [
@@ -161,8 +161,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 130.0,
-      "gmp_percent": 9.6,
+      "gmp": 58.0,
+      "gmp_percent": 4.3,
       "lead_manager": "",
       "registrar": "MUFG Intime India Pvt",
       "objects": "",
