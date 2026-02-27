@@ -31,37 +31,48 @@ os.makedirs(PDF_DIR, exist_ok=True)
 os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 
 # ── SEBI SECTION HEADER PATTERNS ─────────────────────────────────────────────
+# SEP matches hyphen, en-dash, em-dash, or whitespace separating section labels
+_SEP = r"[\s\-–—]+"
+
 SECTION_PATTERNS = [
     ("risk_factors", [
-        r"SECTION\s+II[\s\-]+RISK\s+FACTORS",
-        r"CHAPTER\s+II[\s\-]+RISK\s+FACTORS",
+        r"SECTION\s+[IVX]+" + _SEP + r"RISK\s+FACTORS",   # any roman-numeral section
+        r"CHAPTER\s+[IVX]+" + _SEP + r"RISK\s+FACTORS",   # any roman-numeral chapter
         r"^RISK\s+FACTORS$",
         r"RISK\s+FACTORS\s+AND\s+MATERIAL",
     ]),
     ("objects", [
         r"OBJECTS?\s+OF\s+THE\s+(?:OFFER|ISSUE)",
         r"USE\s+OF\s+(?:IPO\s+)?PROCEEDS",
-        r"SECTION\s+IV[\s\-]+OBJECTS",
+        r"UTILI[SZ]ATION\s+OF\s+(?:NET\s+)?PROCEEDS",      # utilisation/utilization variant
+        r"STATEMENT\s+OF\s+OBJECTS",                        # SEBI-standard alternative
+        r"SECTION\s+[IVX]+" + _SEP + r"OBJECTS?",
     ]),
     ("financials", [
         r"FINANCIAL\s+STATEMENTS?",
         r"RESTATED\s+(?:CONSOLIDATED\s+)?FINANCIAL",
         r"AUDITED\s+FINANCIAL",
-        r"SECTION\s+(?:V|VI)[\s\-]+FINANCIAL",
+        r"FINANCIAL\s+INFORMATION",                         # shorter form used in many DRHPs
+        r"SUMMARY\s+(?:OF\s+)?FINANCIAL",                   # summary financial data
+        r"SECTION\s+[IVX]+" + _SEP + r"FINANCIAL",
     ]),
     ("promoters", [
         r"(?:OUR\s+)?PROMOTERS?\s+AND\s+PROMOTER\s+GROUP",
+        r"^OUR\s+PROMOTERS?$",                              # standalone "OUR PROMOTERS"
         r"PROMOTER\s+BACKGROUND",
-        r"SECTION\s+(?:VI|VII)[\s\-]+PROMOTER",
+        r"SECTION\s+[IVX]+" + _SEP + r"PROMOTER",
     ]),
     ("litigation", [
         r"LEGAL?\s+(?:AND\s+OTHER\s+)?PROCEEDINGS?",
-        r"OUTSTANDING\s+LITIGATION",
-        r"SECTION\s+(?:VII|VIII)[\s\-]+(?:LEGAL|OUTSTANDING)",
+        r"OUTSTANDING\s+LITIGATIONS?\s+(?:AND\s+(?:DEFAULTS?|MATERIAL))?",  # with/without suffix
+        r"PENDING\s+LITIGATIONS?",                          # pending variant
+        r"SECTION\s+[IVX]+" + _SEP + r"(?:LEGAL|OUTSTANDING)",
     ]),
     ("overview", [
         r"(?:OUR\s+)?BUSINESS\s+OVERVIEW",
-        r"SECTION\s+(?:III|IV)[\s\-]+(?:BUSINESS|COMPANY)",
+        r"^OUR\s+BUSINESS$",                                # most common standalone heading
+        r"ABOUT\s+(?:US|THE\s+COMPANY|OUR\s+COMPANY)",      # about us variants
+        r"SECTION\s+[IVX]+" + _SEP + r"(?:OUR\s+)?(?:BUSINESS|COMPANY)",
         r"INDUSTRY\s+OVERVIEW",
     ]),
 ]
