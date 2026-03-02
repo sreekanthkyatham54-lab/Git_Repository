@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-02T09:08:14.359906",
+  "scraped_at": "2026-03-02T15:07:05.558691",
   "source": "live",
   "active_ipos": [
     {
@@ -84,8 +84,8 @@
       "sector": "—",
       "open_date": "2026-03-09",
       "close_date": "2026-03-11",
-      "issue_price": 0.0,
-      "issue_size_cr": 0.0,
+      "issue_price": 122.0,
+      "issue_size_cr": 255.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
@@ -104,7 +104,7 @@
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "Rajputana Stainless IPO open date is March 9, 2026 and the IPO will close on March 11, 2026. Rajputana Stainless IPO is a Book build Issue. The company to raise around ₹[.] crores via IPO that comprises fresh issue of ₹[.] crores and offer for sale up to 62,50,000 equity shares with face value of ₹10 each.",
+      "summary": "Rajputana Stainless IPO open date is March 9, 2026 and the IPO will close on March 11, 2026. Rajputana Stainless IPO is a Book build Issue. The company to raise around ₹255 crores via IPO that comprises fresh issue of ₹178.73 crores and offer for sale up to 62,50,000 equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rajputana-stainless-ipo-date-review-price-allotment-details/"
@@ -122,8 +122,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 12.0,
-      "gmp_percent": 0.9,
+      "gmp": 6.0,
+      "gmp_percent": 0.4,
       "lead_manager": "",
       "registrar": "MUFG Intime India Pvt",
       "objects": "",
