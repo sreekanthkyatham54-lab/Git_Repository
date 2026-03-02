@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-02T05:19:50.277376",
+  "scraped_at": "2026-03-02T09:08:14.359906",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 49.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.26,
+      "subscription_times": 0.34,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/acetech-e-commerce-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.22,
-      "subscription_nii": 0.04,
-      "subscription_retail": 0.42
+      "subscription_qib": 0.33,
+      "subscription_nii": 0.05,
+      "subscription_retail": 0.48
     },
     {
       "id": "ipo_007",
@@ -50,7 +50,7 @@
       "issue_size_cr": 36.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.96,
+      "subscription_times": 1.24,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/striders-impex-ipo-date-review-price-allotment-details/",
       "subscription_qib": 2.03,
-      "subscription_nii": 0.75,
-      "subscription_retail": 0.44
+      "subscription_nii": 1.58,
+      "subscription_retail": 0.63
     }
   ],
   "upcoming_ipos": [
