@@ -1,9 +1,9 @@
 {
-  "scraped_at": "2026-03-02T15:07:05.558691",
+  "scraped_at": "2026-03-03T05:18:59.966909",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_006",
+      "id": "ipo_007",
       "company": "Acetech E-Commerce",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -14,7 +14,7 @@
       "issue_size_cr": 49.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.34,
+      "subscription_times": 0.85,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -34,27 +34,29 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/acetech-e-commerce-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.33,
-      "subscription_nii": 0.05,
-      "subscription_retail": 0.48
-    },
+      "subscription_qib": 1.0,
+      "subscription_nii": 1.14,
+      "subscription_retail": 0.52
+    }
+  ],
+  "upcoming_ipos": [
     {
-      "id": "ipo_007",
-      "company": "Striders Impex",
-      "exchange": "NSE Emerge",
-      "ipo_type": "SME",
+      "id": "ipo_001",
+      "company": "Raajmarg Infra InvIT",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard",
       "sector": "—",
-      "open_date": "2026-02-26",
-      "close_date": "2026-03-02",
-      "issue_price": 72.0,
-      "issue_size_cr": 36.0,
+      "open_date": "2026-03-11",
+      "close_date": "2026-03-13",
+      "issue_price": 0.0,
+      "issue_size_cr": 5700.0,
       "lot_size": 0,
-      "subscription_status": "Open",
-      "subscription_times": 1.24,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
-      "registrar": "MUFG Intime India Pvt",
+      "registrar": "Kfin Technologies Ltd",
       "objects": "",
       "revenue_cr": [],
       "profit_cr": [],
@@ -62,22 +64,17 @@
       "peers": [],
       "pe_ratio": 0.0,
       "industry_pe": 0.0,
-      "promoter_holding": 95.49,
+      "promoter_holding": 0.0,
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "Striders Impex IPO open date is February 26, 2026 and the IPO will close on March 2, 2026. Striders Impex IPO is a Book build Issue. The company to raise around ₹36 crores via IPO that comprises fresh issue of ₹31 crores and offer for sale up to 5,08,800 equity shares with face value of ₹10 each.",
+      "summary": "Raajmarg Infra InvIT IPO open date is March 11, 2026 and the IPO will close on March 13, 2026. Raajmarg Infra InvIT IPO is a Book build Issue. The company to raise around ₹5,700 crores via IPO that comprises fresh issue of ₹5,700 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/striders-impex-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 2.03,
-      "subscription_nii": 1.58,
-      "subscription_retail": 0.63
-    }
-  ],
-  "upcoming_ipos": [
+      "detail_url": "https://ipowatch.in/raajmarg-infra-investment-trust-ipo-date-review-price-allotment-details/"
+    },
     {
-      "id": "ipo_001",
+      "id": "ipo_002",
       "company": "Rajputana Stainless",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -110,7 +107,7 @@
       "detail_url": "https://ipowatch.in/rajputana-stainless-ipo-date-review-price-allotment-details/"
     },
     {
-      "id": "ipo_002",
+      "id": "ipo_003",
       "company": "SEDEMAC Mechatronics",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -122,8 +119,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 6.0,
-      "gmp_percent": 0.4,
+      "gmp": 9.0,
+      "gmp_percent": 0.7,
       "lead_manager": "",
       "registrar": "MUFG Intime India Pvt",
       "objects": "",
@@ -143,7 +140,7 @@
       "detail_url": "https://ipowatch.in/sedemac-mechatronics-ipo-date-review-price-allotment-details/"
     },
     {
-      "id": "ipo_003",
+      "id": "ipo_004",
       "company": "XED Executive",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -176,7 +173,7 @@
       "detail_url": "https://ipowatch.in/xed-executive-ipo-date-review-price-allotment-details/"
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_005",
       "company": "Srinibas Pradhan",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -209,7 +206,7 @@
       "detail_url": "https://ipowatch.in/srinibas-pradhan-ipo-date-review-price-allotment-details/"
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_006",
       "company": "Elfin Agro",
       "exchange": "BSE SME",
       "ipo_type": "SME",
