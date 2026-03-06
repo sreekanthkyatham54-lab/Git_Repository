@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-06T08:02:30.651677",
+  "scraped_at": "2026-03-06T15:04:10.832882",
   "source": "live",
   "active_ipos": [
     {
@@ -14,11 +14,11 @@
       "issue_size_cr": 1087.45,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.89,
+      "subscription_times": 2.68,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
-      "registrar": "MUFG Intime India Pvt",
+      "registrar": "",
       "objects": "",
       "revenue_cr": [],
       "profit_cr": [],
@@ -26,17 +26,17 @@
       "peers": [],
       "pe_ratio": 0.0,
       "industry_pe": 0.0,
-      "promoter_holding": 26.43,
+      "promoter_holding": 0.0,
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "SEDEMAC Mechatronics IPO open date is March 4, 2026 and the IPO will close on March 6, 2026. SEDEMAC Mechatronics IPO is a Book building IPO Issue. The company to raise around ₹1087.45 crores via IPO that comprises fresh issue of [.] crores and offer for sale up to ₹80,43,300 equity shares with face value of ₹10 each.",
+      "summary": "",
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sedemac-mechatronics-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 2.6,
-      "subscription_nii": 0.36,
-      "subscription_retail": 0.14
+      "subscription_qib": 8.46,
+      "subscription_nii": 0.77,
+      "subscription_retail": 0.2
     },
     {
       "id": "ipo_007",
@@ -50,7 +50,7 @@
       "issue_size_cr": 20.32,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.02,
+      "subscription_times": 0.09,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/srinibas-pradhan-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.01,
-      "subscription_retail": 0.02
+      "subscription_nii": 0.03,
+      "subscription_retail": 0.14
     },
     {
       "id": "ipo_008",
@@ -86,7 +86,7 @@
       "issue_size_cr": 25.03,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.66,
+      "subscription_times": 1.03,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/elfin-agro-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.0,
-      "subscription_nii": 1.15,
-      "subscription_retail": 0.18
+      "subscription_nii": 1.81,
+      "subscription_retail": 0.25
     }
   ],
   "upcoming_ipos": [
