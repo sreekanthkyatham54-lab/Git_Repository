@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-07T07:50:48.241682",
+  "scraped_at": "2026-03-07T13:59:18.273151",
   "source": "live",
   "active_ipos": [
     {
@@ -221,8 +221,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 1.5,
+      "gmp_percent": 1.2,
       "lead_manager": "",
       "registrar": "Kfin Technologies Ltd",
       "objects": "",
