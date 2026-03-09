@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-09T09:08:33.818467",
+  "scraped_at": "2026-03-09T16:16:41.600130",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 255.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.03,
+      "subscription_times": 0.3,
       "gmp": 2.0,
       "gmp_percent": 1.6,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rajputana-stainless-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.14,
-      "subscription_retail": 0.01
+      "subscription_qib": 0.99,
+      "subscription_nii": 0.65,
+      "subscription_retail": 0.04
     },
     {
       "id": "ipo_007",
@@ -50,7 +50,7 @@
       "issue_size_cr": 20.32,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.1,
+      "subscription_times": 1.0,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/srinibas-pradhan-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.05,
-      "subscription_retail": 0.16
+      "subscription_qib": 1.13,
+      "subscription_nii": 1.54,
+      "subscription_retail": 0.46
     },
     {
       "id": "ipo_008",
@@ -86,7 +86,7 @@
       "issue_size_cr": 25.03,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.06,
+      "subscription_times": 1.35,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/elfin-agro-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.0,
-      "subscription_nii": 1.82,
-      "subscription_retail": 0.31
+      "subscription_nii": 2.12,
+      "subscription_retail": 0.59
     }
   ],
   "upcoming_ipos": [
