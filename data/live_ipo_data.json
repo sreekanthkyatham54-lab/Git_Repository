@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-10T08:05:25.607744",
+  "scraped_at": "2026-03-10T16:35:47.547394",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 323.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.02,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/innovision-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.0,
+      "subscription_qib": 1.0,
       "subscription_nii": 0.0,
-      "subscription_retail": 0.01
+      "subscription_retail": 0.02
     },
     {
       "id": "ipo_005",
@@ -50,7 +50,7 @@
       "issue_size_cr": 255.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.33,
+      "subscription_times": 0.42,
       "gmp": 2.0,
       "gmp_percent": 1.6,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rajputana-stainless-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.99,
-      "subscription_nii": 0.68,
-      "subscription_retail": 0.07
+      "subscription_nii": 0.94,
+      "subscription_retail": 0.11
     },
     {
       "id": "ipo_007",
@@ -86,7 +86,7 @@
       "issue_size_cr": 20.32,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.06,
+      "subscription_times": 1.13,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/srinibas-pradhan-ipo-date-review-price-allotment-details/",
       "subscription_qib": 1.13,
-      "subscription_nii": 1.55,
-      "subscription_retail": 0.57
+      "subscription_nii": 1.57,
+      "subscription_retail": 0.69
     }
   ],
   "upcoming_ipos": [
