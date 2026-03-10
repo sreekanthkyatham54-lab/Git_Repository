@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-10T05:14:27.698418",
+  "scraped_at": "2026-03-10T08:05:25.607744",
   "source": "live",
   "active_ipos": [
     {
@@ -33,7 +33,10 @@
       "summary": "Innovision IPO open date is March 10, 2026 and the IPO will close on March 12, 2026. Innovision IPO is a Book build Issue. The company to raise around ₹323 crores via IPO that comprises fresh issue of ₹255 crores and offer for sale up to 12,38,000 equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/innovision-ipo-date-review-price-allotment-details/"
+      "detail_url": "https://ipowatch.in/innovision-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.0,
+      "subscription_retail": 0.01
     },
     {
       "id": "ipo_005",
@@ -47,7 +50,7 @@
       "issue_size_cr": 255.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.3,
+      "subscription_times": 0.33,
       "gmp": 2.0,
       "gmp_percent": 1.6,
       "lead_manager": "",
@@ -68,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rajputana-stainless-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.99,
-      "subscription_nii": 0.65,
-      "subscription_retail": 0.04
+      "subscription_nii": 0.68,
+      "subscription_retail": 0.07
     },
     {
       "id": "ipo_007",
@@ -83,7 +86,7 @@
       "issue_size_cr": 20.32,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.0,
+      "subscription_times": 1.06,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -104,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/srinibas-pradhan-ipo-date-review-price-allotment-details/",
       "subscription_qib": 1.13,
-      "subscription_nii": 1.54,
-      "subscription_retail": 0.46
+      "subscription_nii": 1.55,
+      "subscription_retail": 0.57
     }
   ],
   "upcoming_ipos": [
