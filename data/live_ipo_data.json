@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-11T05:16:29.075856",
+  "scraped_at": "2026-03-11T08:05:49.285459",
   "source": "live",
   "active_ipos": [
     {
@@ -47,7 +47,7 @@
       "issue_size_cr": 323.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.02,
+      "subscription_times": 0.05,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -68,8 +68,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/innovision-ipo-date-review-price-allotment-details/",
       "subscription_qib": 1.0,
-      "subscription_nii": 0.0,
-      "subscription_retail": 0.02
+      "subscription_nii": 0.08,
+      "subscription_retail": 0.03
     },
     {
       "id": "ipo_005",
@@ -83,7 +83,7 @@
       "issue_size_cr": 255.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.42,
+      "subscription_times": 0.46,
       "gmp": 1.0,
       "gmp_percent": 0.8,
       "lead_manager": "",
@@ -104,11 +104,11 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rajputana-stainless-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.99,
-      "subscription_nii": 0.94,
-      "subscription_retail": 0.11
+      "subscription_nii": 1.0,
+      "subscription_retail": 0.15
     },
     {
-      "id": "ipo_006",
+      "id": "ipo_007",
       "company": "Apsis Aerocom",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -119,7 +119,7 @@
       "issue_size_cr": 36.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.35,
       "gmp": 9.0,
       "gmp_percent": 8.2,
       "lead_manager": "",
@@ -138,7 +138,10 @@
       "summary": "Apsis Aerocom IPO open date is March 11, 2026 and the IPO will close on March 13, 2026. Apsis Aerocom IPO is a Book build Issue. The company to raise around ₹35.77 crores via IPO that comprises fresh issue of ₹35.77 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/apsis-aerocom-ipo-date-review-price-allotment-details/"
+      "detail_url": "https://ipowatch.in/apsis-aerocom-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.56,
+      "subscription_retail": 0.47
     }
   ],
   "upcoming_ipos": [
@@ -207,6 +210,39 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/kissht-ipo-date-review-price-allotment-details/"
+    },
+    {
+      "id": "ipo_006",
+      "company": "Novus Loyalty",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "—",
+      "open_date": "2026-03-17",
+      "close_date": "2026-03-20",
+      "issue_price": 146.0,
+      "issue_size_cr": 60.15,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "Kfin Technologies Ltd",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 95.62,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Novus Loyalty IPO open date is March 17, 2026 and the IPO will close on March 20, 2026. Novus Loyalty IPO is a Book build Issue. The company to raise around ₹60.15 crores via IPO that comprises fresh issue of ₹48.18 crores and offer for sale up to 8,20,000 equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/novus-loyalty-ipo-date-review-price-allotment-details/"
     }
   ],
   "historical_ipos": [
