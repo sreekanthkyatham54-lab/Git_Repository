@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-12T05:20:27.753296",
+  "scraped_at": "2026-03-12T09:10:45.318057",
   "source": "live",
   "active_ipos": [
     {
@@ -50,7 +50,7 @@
       "issue_size_cr": 323.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.18,
+      "subscription_times": 0.29,
       "gmp": 71.0,
       "gmp_percent": 13.0,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/innovision-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 0.25,
-      "subscription_retail": 0.12
+      "subscription_qib": 1.02,
+      "subscription_nii": 0.34,
+      "subscription_retail": 0.25
     },
     {
       "id": "ipo_007",
@@ -86,7 +86,7 @@
       "issue_size_cr": 36.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 5.28,
+      "subscription_times": 10.53,
       "gmp": 25.0,
       "gmp_percent": 22.7,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/apsis-aerocom-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.01,
-      "subscription_nii": 10.53,
-      "subscription_retail": 6.08
+      "subscription_nii": 19.94,
+      "subscription_retail": 12.57
     }
   ],
   "upcoming_ipos": [
