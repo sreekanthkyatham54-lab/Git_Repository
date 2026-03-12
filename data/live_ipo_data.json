@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-12T09:10:45.318057",
+  "scraped_at": "2026-03-12T16:40:08.950096",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 6000.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.16,
+      "subscription_times": 0.36,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,7 +35,7 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/raajmarg-infra-investment-trust-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.2,
-      "subscription_nii": 0.11,
+      "subscription_nii": 0.55,
       "subscription_retail": 0.0
     },
     {
@@ -50,7 +50,7 @@
       "issue_size_cr": 323.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.29,
+      "subscription_times": 0.33,
       "gmp": 71.0,
       "gmp_percent": 13.0,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/innovision-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.02,
-      "subscription_nii": 0.34,
-      "subscription_retail": 0.25
+      "subscription_qib": 1.03,
+      "subscription_nii": 0.38,
+      "subscription_retail": 0.29
     },
     {
       "id": "ipo_007",
@@ -86,7 +86,7 @@
       "issue_size_cr": 36.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 10.53,
+      "subscription_times": 15.55,
       "gmp": 25.0,
       "gmp_percent": 22.7,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/apsis-aerocom-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.01,
-      "subscription_nii": 19.94,
-      "subscription_retail": 12.57
+      "subscription_nii": 30.37,
+      "subscription_retail": 18.16
     }
   ],
   "upcoming_ipos": [
