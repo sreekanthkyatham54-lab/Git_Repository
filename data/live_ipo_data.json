@@ -1,9 +1,9 @@
 {
-  "scraped_at": "2026-03-13T09:04:42.426329",
+  "scraped_at": "2026-03-13T15:29:32.872155",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_003",
+      "id": "ipo_004",
       "company": "Raajmarg Infra InvIT",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -14,7 +14,7 @@
       "issue_size_cr": 6000.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.96,
+      "subscription_times": 13.74,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -34,12 +34,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/raajmarg-infra-investment-trust-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.21,
-      "subscription_nii": 2.87,
+      "subscription_qib": 19.14,
+      "subscription_nii": 7.26,
       "subscription_retail": 0.0
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_005",
       "company": "Innovision",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -75,7 +75,7 @@
       "subscription_retail": 0.27
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_008",
       "company": "Apsis Aerocom",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -86,7 +86,7 @@
       "issue_size_cr": 36.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 73.58,
+      "subscription_times": 129.33,
       "gmp": 18.0,
       "gmp_percent": 16.4,
       "lead_manager": "",
@@ -106,14 +106,47 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/apsis-aerocom-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 38.87,
-      "subscription_nii": 147.71,
-      "subscription_retail": 61.78
+      "subscription_qib": 99.96,
+      "subscription_nii": 236.61,
+      "subscription_retail": 100.24
     }
   ],
   "upcoming_ipos": [
     {
       "id": "ipo_001",
+      "company": "Amir Chand",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard",
+      "sector": "—",
+      "open_date": "2026-03-24",
+      "close_date": "2026-03-27",
+      "issue_price": 0.0,
+      "issue_size_cr": 440.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "Kfin Technologies Ltd",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 3.71,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Amir Chand IPO open date is March 24, 2026 and the IPO will close on March 27, 2026. Amir Chand Jagdish Kumar IPO is a Bookbuilding IPO Issue. The company to raise around ₹440 crores via IPO that comprises fresh issue of ₹440 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/amir-chand-ipo-date-review-price-allotment-details/"
+    },
+    {
+      "id": "ipo_002",
       "company": "Central Mine Planning",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -146,7 +179,7 @@
       "detail_url": "https://ipowatch.in/central-mine-planning-ipo-date-review-price-allotment-details/"
     },
     {
-      "id": "ipo_002",
+      "id": "ipo_003",
       "company": "GSP Crop Science",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -179,7 +212,7 @@
       "detail_url": "https://ipowatch.in/gsp-crop-science-ipo-date-review-price-allotment-details/"
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_006",
       "company": "Tipco Engineering",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -212,7 +245,7 @@
       "detail_url": "https://ipowatch.in/tipco-engineering-ipo-date-review-price-allotment-details/"
     },
     {
-      "id": "ipo_006",
+      "id": "ipo_007",
       "company": "Novus Loyalty",
       "exchange": "BSE SME",
       "ipo_type": "SME",
