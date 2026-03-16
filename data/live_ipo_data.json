@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-16T10:38:03.135555",
+  "scraped_at": "2026-03-16T16:42:41.069196",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 400.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.46,
+      "subscription_times": 0.48,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/gsp-crop-science-ipo-date-review-price-allotment-details/",
       "subscription_qib": 1.28,
-      "subscription_nii": 0.22,
-      "subscription_retail": 0.08
+      "subscription_nii": 0.29,
+      "subscription_retail": 0.11
     },
     {
       "id": "ipo_004",
@@ -50,7 +50,7 @@
       "issue_size_cr": 306.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.11,
+      "subscription_times": 1.25,
       "gmp": 19.0,
       "gmp_percent": 3.7,
       "lead_manager": "",
@@ -70,8 +70,8 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/innovision-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 12.77,
-      "subscription_nii": 2.34,
+      "subscription_qib": 13.09,
+      "subscription_nii": 2.73,
       "subscription_retail": 0.29
     }
   ],
