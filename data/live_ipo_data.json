@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-17T09:41:50.836618",
+  "scraped_at": "2026-03-17T16:45:27.275646",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 400.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.79,
+      "subscription_times": 0.98,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/gsp-crop-science-ipo-date-review-price-allotment-details/",
       "subscription_qib": 1.28,
-      "subscription_nii": 1.59,
-      "subscription_retail": 0.17
+      "subscription_nii": 2.4,
+      "subscription_retail": 0.21
     },
     {
       "id": "ipo_005",
@@ -50,9 +50,9 @@
       "issue_size_cr": 306.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.75,
-      "gmp": 26.0,
-      "gmp_percent": 5.0,
+      "subscription_times": 3.46,
+      "gmp": -3.0,
+      "gmp_percent": -0.6,
       "lead_manager": "",
       "registrar": "Kfin Technologies Ltd",
       "objects": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/innovision-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 13.35,
-      "subscription_nii": 6.82,
-      "subscription_retail": 0.47
+      "subscription_qib": 14.3,
+      "subscription_nii": 8.6,
+      "subscription_retail": 0.6
     },
     {
       "id": "ipo_008",
@@ -86,7 +86,7 @@
       "issue_size_cr": 60.15,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.21,
+      "subscription_times": 0.83,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/novus-loyalty-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.06,
-      "subscription_retail": 0.4
+      "subscription_qib": 0.76,
+      "subscription_nii": 0.45,
+      "subscription_retail": 1.04
     }
   ],
   "upcoming_ipos": [
