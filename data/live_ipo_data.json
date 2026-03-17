@@ -1,9 +1,9 @@
 {
-  "scraped_at": "2026-03-17T05:39:44.419057",
+  "scraped_at": "2026-03-17T09:41:50.836618",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_003",
+      "id": "ipo_004",
       "company": "GSP Crop Science",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -14,7 +14,7 @@
       "issue_size_cr": 400.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.63,
+      "subscription_times": 0.79,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,11 +35,11 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/gsp-crop-science-ipo-date-review-price-allotment-details/",
       "subscription_qib": 1.28,
-      "subscription_nii": 0.88,
-      "subscription_retail": 0.14
+      "subscription_nii": 1.59,
+      "subscription_retail": 0.17
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_005",
       "company": "Innovision",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -50,7 +50,7 @@
       "issue_size_cr": 306.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.51,
+      "subscription_times": 2.75,
       "gmp": 26.0,
       "gmp_percent": 5.0,
       "lead_manager": "",
@@ -70,12 +70,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/innovision-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 13.18,
-      "subscription_nii": 3.41,
-      "subscription_retail": 0.34
+      "subscription_qib": 13.35,
+      "subscription_nii": 6.82,
+      "subscription_retail": 0.47
     },
     {
-      "id": "ipo_006",
+      "id": "ipo_008",
       "company": "Novus Loyalty",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -86,7 +86,7 @@
       "issue_size_cr": 60.15,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.04,
+      "subscription_times": 0.21,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -107,13 +107,46 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/novus-loyalty-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.02,
-      "subscription_retail": 0.07
+      "subscription_nii": 0.06,
+      "subscription_retail": 0.4
     }
   ],
   "upcoming_ipos": [
     {
       "id": "ipo_001",
+      "company": "Sai Parenteral’s",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard",
+      "sector": "Average",
+      "open_date": "2026-03-24",
+      "close_date": "2026-03-27",
+      "issue_price": 0.0,
+      "issue_size_cr": 0.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "Bigshare Services Pvt",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 61.23,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Sai Parenteral's IPO open date is March 24, 2026 and the IPO will close on March 27, 2026. Sai Parenteral's IPO is a Book build Issue. The company to raise around ₹[.] crores via IPO that comprises fresh issue of ₹285.00 crores and offer for sale up to 35,00,000 equity shares with face value of ₹5 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/sai-parenterals-ipo-date-review-price-allotment-details/"
+    },
+    {
+      "id": "ipo_002",
       "company": "Amir Chand",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -146,7 +179,7 @@
       "detail_url": "https://ipowatch.in/amir-chand-ipo-date-review-price-allotment-details/"
     },
     {
-      "id": "ipo_002",
+      "id": "ipo_003",
       "company": "Central Mine Planning",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -179,7 +212,7 @@
       "detail_url": "https://ipowatch.in/central-mine-planning-ipo-date-review-price-allotment-details/"
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_006",
       "company": "Tipco Engineering",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -210,6 +243,39 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/tipco-engineering-ipo-date-review-price-allotment-details/"
+    },
+    {
+      "id": "ipo_007",
+      "company": "Speciality Medicines",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "—",
+      "open_date": "2026-03-20",
+      "close_date": "2026-03-24",
+      "issue_price": 124.0,
+      "issue_size_cr": 29.14,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "Skyline Financial Services Pvt",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 59.28,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Speciality Medicines IPO open date is March 20, 2026 and the IPO will close on March 24, 2026. Speciality Medicines IPO is a Book build Issue. The company to raise around ₹29.14 crores via IPO that comprises fresh issue of ₹29.14 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/speciality-medicines-ipo-date-review-price-allotment-details/"
     }
   ],
   "historical_ipos": [
