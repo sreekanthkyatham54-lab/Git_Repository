@@ -1,4 +1,4 @@
-# v3.6 - pure HTML nav using query_params, no duplicate button row
+# v3.7 - added F&O Signals tab
 """TradeSage — SME IPO Research Platform"""
 import streamlit as st
 import streamlit.components.v1 as components
@@ -27,9 +27,15 @@ if qp and qp != st.session_state.current_page:
     st.session_state.current_page = qp
     st.query_params.clear()
 
-cur = st.session_state.current_page
-pages = ["Dashboard", "IPO Detail", "GMP Tracker", "Historical Data"]
-icons = {"Dashboard":"🏠","IPO Detail":"🔍","GMP Tracker":"📊","Historical Data":"📜"}
+cur   = st.session_state.current_page
+pages = ["Dashboard", "IPO Detail", "GMP Tracker", "Historical Data", "F&O Signals"]
+icons = {
+    "Dashboard":     "🏠",
+    "IPO Detail":    "🔍",
+    "GMP Tracker":   "📊",
+    "Historical Data":"📜",
+    "F&O Signals":   "⚡",        # ← NEW
+}
 
 # ── THEME (light only — dark toggle removed per user request) ──────────────────
 bg="#f6f8fa"; card="#ffffff"; card2="#eef1f5"; text="#1a1a2e"
@@ -235,6 +241,7 @@ st.markdown(f"""
         <a class="ts-drawer-link {"active" if cur=="IPO Detail" else ""}" href="?page=IPO Detail" target="_self">🔍 IPO Detail</a>
         <a class="ts-drawer-link {"active" if cur=="GMP Tracker" else ""}" href="?page=GMP Tracker" target="_self">📊 GMP Tracker</a>
         <a class="ts-drawer-link {"active" if cur=="Historical Data" else ""}" href="?page=Historical Data" target="_self">📜 Historical Data</a>
+        <a class="ts-drawer-link {"active" if cur=="F&O Signals" else ""}" href="?page=F&O Signals" target="_self">⚡ F&O Signals</a>
     </div>
     <div class="ts-drawer-pills">
         <span class="ts-pill np-blue">Mainboard</span>
@@ -255,6 +262,7 @@ st.markdown(f"""
         {nav_link("IPO Detail")}
         {nav_link("GMP Tracker")}
         {nav_link("Historical Data")}
+        {nav_link("F&O Signals")}
     </div>
     <div class="ts-pills">
         <span class="ts-pill np-blue">Mainboard</span>
@@ -272,8 +280,6 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ── HAMBURGER MENU JS ─────────────────────────────────────────────────────────
-# st.components.v1.html() renders in a sandboxed iframe but can reach the
-# parent Streamlit document via window.parent — the only reliable JS method.
 components.html("""
 <script>
 (function() {
@@ -324,3 +330,5 @@ elif "GMP"        in cur:
     from pages.gmp_tracker import render; render(ACTIVE_IPOS + UPCOMING_IPOS, GMP_HISTORY)
 elif "Historical" in cur:
     from pages.historical  import render; render(HISTORICAL_IPOS)
+elif "F&O"        in cur:                               # ← NEW
+    from pages.fo_signals  import render; render()      # ← NEW
