@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-18T05:46:16.457886",
+  "scraped_at": "2026-03-18T09:39:34.701788",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 400.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.02,
+      "subscription_times": 1.55,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/gsp-crop-science-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.28,
-      "subscription_nii": 2.48,
-      "subscription_retail": 0.24
+      "subscription_qib": 2.66,
+      "subscription_nii": 2.87,
+      "subscription_retail": 0.35
     },
     {
       "id": "ipo_008",
@@ -50,7 +50,7 @@
       "issue_size_cr": 60.15,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.79,
+      "subscription_times": 0.86,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/novus-loyalty-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.76,
-      "subscription_nii": 0.06,
-      "subscription_retail": 1.12
+      "subscription_qib": 0.89,
+      "subscription_nii": 0.08,
+      "subscription_retail": 1.18
     }
   ],
   "upcoming_ipos": [
