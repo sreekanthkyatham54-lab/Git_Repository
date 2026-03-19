@@ -1,9 +1,9 @@
 {
-  "scraped_at": "2026-03-19T05:40:47.310370",
+  "scraped_at": "2026-03-19T09:11:23.441260",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_007",
+      "id": "ipo_008",
       "company": "Novus Loyalty",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -14,7 +14,7 @@
       "issue_size_cr": 60.15,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.88,
+      "subscription_times": 1.02,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/novus-loyalty-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.89,
-      "subscription_nii": 0.09,
-      "subscription_retail": 1.22
+      "subscription_nii": 0.58,
+      "subscription_retail": 1.29
     }
   ],
   "upcoming_ipos": [
@@ -174,6 +174,39 @@
     },
     {
       "id": "ipo_005",
+      "company": "Highness Microelectronics",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "—",
+      "open_date": "2026-03-24",
+      "close_date": "2026-03-27",
+      "issue_price": 120.0,
+      "issue_size_cr": 22.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 288.0,
+      "gmp_percent": 240.0,
+      "lead_manager": "",
+      "registrar": "Skyline Financial Services Pvt",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 99.9,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Highness Microelectronics IPO open date is March 24, 2026 and the IPO will close on March 27, 2026. Highness Microelectronics IPO is a Book build Issue. The company to raise around ₹21.67 crores via IPO that comprises fresh issue of ₹19.84 crores and offer for sale up to 1,52,400 equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/highness-microelectronics-ipo-date-review-price-allotment-details/"
+    },
+    {
+      "id": "ipo_006",
       "company": "Tipco Engineering",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -206,7 +239,7 @@
       "detail_url": "https://ipowatch.in/tipco-engineering-ipo-date-review-price-allotment-details/"
     },
     {
-      "id": "ipo_006",
+      "id": "ipo_007",
       "company": "Speciality Medicines",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -240,6 +273,34 @@
     }
   ],
   "historical_ipos": [
+    {
+      "company": "Rajputana Stainless",
+      "listing_date": "",
+      "issue_price": 122.0,
+      "listing_price": 123.95,
+      "current_price": 1.6,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 1.6,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "SEDEMAC Mechatronics",
+      "listing_date": "",
+      "issue_price": 1352.0,
+      "listing_price": 1535.0,
+      "current_price": 13.54,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 13.5,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
     {
       "company": "Omnitech Engineering",
       "listing_date": "",
@@ -893,34 +954,6 @@
       "gmp_before_listing": null,
       "gmp_predicted_gain": null,
       "actual_listing_gain": -9.9,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "BMW Ventures",
-      "listing_date": "",
-      "issue_price": 99.0,
-      "listing_price": 78.0,
-      "current_price": 21.21,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": -21.2,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE SME",
-      "ipo_type": "SME"
-    },
-    {
-      "company": "Seshaasai Technologies",
-      "listing_date": "",
-      "issue_price": 423.0,
-      "listing_price": 432.0,
-      "current_price": 2.13,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 2.1,
       "gmp_accurate": null,
       "sector": "—",
       "exchange": "BSE / NSE",
