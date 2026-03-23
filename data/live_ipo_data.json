@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-23T03:41:57.790726",
+  "scraped_at": "2026-03-23T07:54:34.625927",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 1842.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.07,
+      "subscription_times": 0.09,
       "gmp": 1.5,
       "gmp_percent": 0.9,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/central-mine-planning-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.05,
-      "subscription_retail": 0.1
+      "subscription_nii": 0.07,
+      "subscription_retail": 0.14
     },
     {
       "id": "ipo_008",
@@ -83,7 +83,7 @@
       "issue_size_cr": 29.14,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.84,
+      "subscription_times": 0.82,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -104,8 +104,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/speciality-medicines-ipo-date-review-price-allotment-details/",
       "subscription_qib": 1.0,
-      "subscription_nii": 1.6,
-      "subscription_retail": 0.07
+      "subscription_nii": 1.53,
+      "subscription_retail": 0.11
     }
   ],
   "upcoming_ipos": [
@@ -216,8 +216,8 @@
       "sector": "—",
       "open_date": "2026-03-27",
       "close_date": "2026-04-08",
-      "issue_price": 0.0,
-      "issue_size_cr": 0.0,
+      "issue_price": 98.0,
+      "issue_size_cr": 32.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
@@ -236,7 +236,7 @@
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "Emiac Technologies IPO open date is March 27, 2026 and the IPO will close on April 8, 2026. Emiac Technologies IPO is a Book build Issue. The company to raise around ₹[.] crores via IPO that comprises fresh issue of ₹[.] crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
+      "summary": "Emiac Technologies IPO open date is March 27, 2026 and the IPO will close on April 8, 2026. Emiac Technologies IPO is a Book build Issue. The company to raise around ₹31.75 crores via IPO that comprises fresh issue of ₹31.75 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/emiac-technologies-ipo-date-review-price-allotment-details/"
