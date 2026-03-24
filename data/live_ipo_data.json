@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-24T03:32:55.931108",
+  "scraped_at": "2026-03-24T07:45:39.688304",
   "source": "live",
   "active_ipos": [
     {
@@ -33,7 +33,10 @@
       "summary": "Powerica IPO open date is March 24, 2026 and the IPO will close on March 27, 2026. Powerica IPO is a Book build Issue. The company to raise around ₹1,100 crores via IPO that comprises fresh issue of ₹700 crores and offer for sale up to 1,01,26,582 equity shares with face value of ₹5 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/powerica-ipo-date-review-price-allotment-details/"
+      "detail_url": "https://ipowatch.in/powerica-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.0,
+      "subscription_retail": 0.01
     },
     {
       "id": "ipo_002",
@@ -47,7 +50,7 @@
       "issue_size_cr": 409.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.01,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -66,7 +69,10 @@
       "summary": "Sai Parenteral's IPO open date is March 24, 2026 and the IPO will close on March 27, 2026. Sai Parenteral's IPO is a Book build Issue. The company to raise around ₹409 crores via IPO that comprises fresh issue of ₹285.00 crores and offer for sale up to 35,00,000 equity shares with face value of ₹5 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/sai-parenterals-ipo-date-review-price-allotment-details/"
+      "detail_url": "https://ipowatch.in/sai-parenterals-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.02,
+      "subscription_retail": 0.01
     },
     {
       "id": "ipo_003",
@@ -80,7 +86,7 @@
       "issue_size_cr": 440.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.15,
       "gmp": 7.0,
       "gmp_percent": 3.3,
       "lead_manager": "",
@@ -99,7 +105,10 @@
       "summary": "Amir Chand IPO open date is March 24, 2026 and the IPO will close on March 27, 2026. Amir Chand Jagdish Kumar IPO is a Bookbuilding IPO Issue. The company to raise around ₹440 crores via IPO that comprises fresh issue of ₹440 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/amir-chand-ipo-date-review-price-allotment-details/"
+      "detail_url": "https://ipowatch.in/amir-chand-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.71,
+      "subscription_retail": 0.06
     },
     {
       "id": "ipo_004",
@@ -113,7 +122,7 @@
       "issue_size_cr": 1842.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.26,
+      "subscription_times": 0.28,
       "gmp": 1.0,
       "gmp_percent": 0.6,
       "lead_manager": "",
@@ -134,8 +143,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/central-mine-planning-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.62,
-      "subscription_nii": 0.08,
-      "subscription_retail": 0.17
+      "subscription_nii": 0.1,
+      "subscription_retail": 0.2
     },
     {
       "id": "ipo_007",
@@ -149,7 +158,7 @@
       "issue_size_cr": 22.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.02,
       "gmp": 20.0,
       "gmp_percent": 16.7,
       "lead_manager": "",
@@ -168,7 +177,10 @@
       "summary": "Highness Microelectronics IPO open date is March 24, 2026 and the IPO will close on March 27, 2026. Highness Microelectronics IPO is a Book build Issue. The company to raise around ₹21.67 crores via IPO that comprises fresh issue of ₹19.84 crores and offer for sale up to 1,52,400 equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/highness-microelectronics-ipo-date-review-price-allotment-details/"
+      "detail_url": "https://ipowatch.in/highness-microelectronics-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.5,
+      "subscription_retail": 0.27
     },
     {
       "id": "ipo_008",
@@ -182,7 +194,7 @@
       "issue_size_cr": 61.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.29,
+      "subscription_times": 0.3,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -204,7 +216,7 @@
       "detail_url": "https://ipowatch.in/tipco-engineering-ipo-date-review-price-allotment-details/",
       "subscription_qib": 1.0,
       "subscription_nii": 0.01,
-      "subscription_retail": 0.01
+      "subscription_retail": 0.02
     },
     {
       "id": "ipo_009",
@@ -218,7 +230,7 @@
       "issue_size_cr": 29.14,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.94,
+      "subscription_times": 0.98,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -239,8 +251,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/speciality-medicines-ipo-date-review-price-allotment-details/",
       "subscription_qib": 1.0,
-      "subscription_nii": 1.68,
-      "subscription_retail": 0.19
+      "subscription_nii": 1.7,
+      "subscription_retail": 0.26
     }
   ],
   "upcoming_ipos": [
