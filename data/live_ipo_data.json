@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-25T07:44:44.820182",
+  "scraped_at": "2026-03-25T14:20:29.665904",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 1100.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.02,
+      "subscription_times": 0.03,
       "gmp": 4.0,
       "gmp_percent": 1.0,
       "lead_manager": "",
@@ -36,7 +36,7 @@
       "detail_url": "https://ipowatch.in/powerica-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.0,
       "subscription_nii": 0.01,
-      "subscription_retail": 0.03
+      "subscription_retail": 0.05
     },
     {
       "id": "ipo_002",
@@ -50,7 +50,7 @@
       "issue_size_cr": 409.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.06,
+      "subscription_times": 0.42,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sai-parenterals-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.02,
-      "subscription_nii": 0.17,
-      "subscription_retail": 0.04
+      "subscription_qib": 0.6,
+      "subscription_nii": 1.05,
+      "subscription_retail": 0.05
     },
     {
       "id": "ipo_003",
@@ -86,7 +86,7 @@
       "issue_size_cr": 440.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.3,
+      "subscription_times": 1.55,
       "gmp": 7.0,
       "gmp_percent": 3.3,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/amir-chand-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.61,
-      "subscription_nii": 4.99,
-      "subscription_retail": 0.44
+      "subscription_qib": 0.82,
+      "subscription_nii": 5.52,
+      "subscription_retail": 0.59
     },
     {
       "id": "ipo_005",
@@ -122,7 +122,7 @@
       "issue_size_cr": 131.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.29,
+      "subscription_times": 0.5,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -142,8 +142,8 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vivid-electromech-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 0.0,
+      "subscription_qib": 1.2,
+      "subscription_nii": 0.71,
       "subscription_retail": 0.01
     },
     {
@@ -158,7 +158,7 @@
       "issue_size_cr": 22.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.24,
+      "subscription_times": 8.67,
       "gmp": 30.0,
       "gmp_percent": 25.0,
       "lead_manager": "",
@@ -178,9 +178,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/highness-microelectronics-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.01,
-      "subscription_nii": 3.41,
-      "subscription_retail": 3.01
+      "subscription_qib": 0.04,
+      "subscription_nii": 11.77,
+      "subscription_retail": 12.25
     },
     {
       "id": "ipo_007",
@@ -194,7 +194,7 @@
       "issue_size_cr": 61.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.39,
+      "subscription_times": 1.7,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -214,9 +214,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/tipco-engineering-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.26,
-      "subscription_nii": 0.01,
-      "subscription_retail": 0.06
+      "subscription_qib": 3.2,
+      "subscription_nii": 2.12,
+      "subscription_retail": 0.66
     }
   ],
   "upcoming_ipos": [
