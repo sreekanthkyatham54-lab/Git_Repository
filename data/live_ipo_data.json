@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-26T03:45:45.653314",
+  "scraped_at": "2026-03-26T07:53:21.652492",
   "source": "live",
   "active_ipos": [
     {
@@ -219,6 +219,48 @@
     }
   ],
   "historical_ipos": [
+    {
+      "company": "GSP Crop Science",
+      "listing_date": "",
+      "issue_price": 320.0,
+      "listing_price": 332.3,
+      "current_price": 2.5,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 3.8,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Raajmarg Infra InvIT",
+      "listing_date": "",
+      "issue_price": 100.0,
+      "listing_price": 107.0,
+      "current_price": 7.0,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 7.0,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Innovision",
+      "listing_date": "",
+      "issue_price": 519.0,
+      "listing_price": 467.7,
+      "current_price": 9.88,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": -9.9,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
     {
       "company": "Rajputana Stainless",
       "listing_date": "",
@@ -858,48 +900,6 @@
       "gmp_before_listing": null,
       "gmp_predicted_gain": null,
       "actual_listing_gain": 10.0,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Jinkushal Industries",
-      "listing_date": "",
-      "issue_price": 121.0,
-      "listing_price": 125.0,
-      "current_price": 3.31,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 3.3,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Jain Resource Recycling",
-      "listing_date": "",
-      "issue_price": 232.0,
-      "listing_price": 265.05,
-      "current_price": 14.25,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 14.2,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Epack Prefab",
-      "listing_date": "",
-      "issue_price": 204.0,
-      "listing_price": 183.85,
-      "current_price": 9.88,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": -9.9,
       "gmp_accurate": null,
       "sector": "—",
       "exchange": "BSE / NSE",
