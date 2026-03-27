@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-27T03:47:56.084762",
+  "scraped_at": "2026-03-27T07:51:47.886448",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 1100.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.03,
+      "subscription_times": 0.12,
       "gmp": 1.0,
       "gmp_percent": 0.3,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/powerica-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.01,
-      "subscription_retail": 0.05
+      "subscription_qib": 0.25,
+      "subscription_nii": 0.07,
+      "subscription_retail": 0.07
     },
     {
       "id": "ipo_002",
@@ -50,7 +50,7 @@
       "issue_size_cr": 409.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.42,
+      "subscription_times": 0.52,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sai-parenterals-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.6,
-      "subscription_nii": 1.05,
-      "subscription_retail": 0.05
+      "subscription_nii": 1.42,
+      "subscription_retail": 0.09
     },
     {
       "id": "ipo_003",
@@ -86,7 +86,7 @@
       "issue_size_cr": 440.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.55,
+      "subscription_times": 2.43,
       "gmp": 8.0,
       "gmp_percent": 3.8,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/amir-chand-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.82,
-      "subscription_nii": 5.52,
-      "subscription_retail": 0.59
+      "subscription_qib": 0.98,
+      "subscription_nii": 9.28,
+      "subscription_retail": 1.01
     },
     {
       "id": "ipo_004",
@@ -122,7 +122,7 @@
       "issue_size_cr": 32.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.04,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -141,7 +141,10 @@
       "summary": "Emiac Technologies IPO open date is March 27, 2026 and the IPO will close on April 8, 2026. Emiac Technologies IPO is a Book build Issue. The company to raise around ₹31.75 crores via IPO that comprises fresh issue of ₹31.75 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/emiac-technologies-ipo-date-review-price-allotment-details/"
+      "detail_url": "https://ipowatch.in/emiac-technologies-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.09,
+      "subscription_retail": 0.05
     },
     {
       "id": "ipo_005",
@@ -175,9 +178,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vivid-electromech-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.2,
-      "subscription_nii": 0.71,
-      "subscription_retail": 0.01
+      "subscription_qib": 1.26,
+      "subscription_nii": 0.46,
+      "subscription_retail": 0.09
     },
     {
       "id": "ipo_006",
@@ -191,7 +194,7 @@
       "issue_size_cr": 22.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 8.67,
+      "subscription_times": 61.52,
       "gmp": 30.0,
       "gmp_percent": 25.0,
       "lead_manager": "",
@@ -211,9 +214,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/highness-microelectronics-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.04,
-      "subscription_nii": 11.77,
-      "subscription_retail": 12.25
+      "subscription_qib": 11.17,
+      "subscription_nii": 112.44,
+      "subscription_retail": 68.2
     }
   ],
   "upcoming_ipos": [],
