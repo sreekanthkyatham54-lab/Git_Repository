@@ -1,9 +1,9 @@
 {
-  "scraped_at": "2026-03-28T03:33:35.259917",
+  "scraped_at": "2026-03-28T07:37:37.269259",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_001",
+      "id": "ipo_002",
       "company": "Emiac Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -39,7 +39,7 @@
       "subscription_retail": 0.09
     },
     {
-      "id": "ipo_002",
+      "id": "ipo_003",
       "company": "Vivid Electromech",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -75,7 +75,41 @@
       "subscription_retail": 0.14
     }
   ],
-  "upcoming_ipos": [],
+  "upcoming_ipos": [
+    {
+      "id": "ipo_001",
+      "company": "Safety Controls",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "—",
+      "open_date": "2026-04-06",
+      "close_date": "2026-04-08",
+      "issue_price": 80.0,
+      "issue_size_cr": 48.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "Maashitla Securities Pvt",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 66.53,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Safety Controls IPO open date is April 6, 2026 and the IPO will close on April 8, 2026. Safety Controls IPO is a Book build Issue. The company to raise around ₹48 crores via IPO that comprises fresh issue of ₹48 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/safety-controls-ipo-date-review-price-allotment-details/"
+    }
+  ],
   "historical_ipos": [
     {
       "company": "GSP Crop Science",
