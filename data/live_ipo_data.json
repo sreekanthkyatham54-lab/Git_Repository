@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-03-30T08:14:57.617737",
+  "scraped_at": "2026-03-30T14:42:32.980626",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 32.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.13,
+      "subscription_times": 0.14,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/emiac-technologies-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.31,
-      "subscription_retail": 0.13
+      "subscription_nii": 0.29,
+      "subscription_retail": 0.15
     },
     {
       "id": "ipo_004",
@@ -50,7 +50,7 @@
       "issue_size_cr": 131.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.71,
+      "subscription_times": 1.06,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vivid-electromech-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.26,
-      "subscription_nii": 1.11,
-      "subscription_retail": 0.23
+      "subscription_qib": 1.95,
+      "subscription_nii": 1.5,
+      "subscription_retail": 0.36
     }
   ],
   "upcoming_ipos": [
