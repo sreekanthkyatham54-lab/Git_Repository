@@ -1,9 +1,9 @@
 {
-  "scraped_at": "2026-03-30T03:57:07.270622",
+  "scraped_at": "2026-03-30T08:14:57.617737",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_002",
+      "id": "ipo_003",
       "company": "Emiac Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -14,7 +14,7 @@
       "issue_size_cr": 32.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.11,
+      "subscription_times": 0.13,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -36,10 +36,10 @@
       "detail_url": "https://ipowatch.in/emiac-technologies-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.0,
       "subscription_nii": 0.31,
-      "subscription_retail": 0.09
+      "subscription_retail": 0.13
     },
     {
-      "id": "ipo_003",
+      "id": "ipo_004",
       "company": "Vivid Electromech",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -50,7 +50,7 @@
       "issue_size_cr": 131.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.61,
+      "subscription_times": 0.71,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -71,13 +71,46 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vivid-electromech-ipo-date-review-price-allotment-details/",
       "subscription_qib": 1.26,
-      "subscription_nii": 0.82,
-      "subscription_retail": 0.14
+      "subscription_nii": 1.11,
+      "subscription_retail": 0.23
     }
   ],
   "upcoming_ipos": [
     {
       "id": "ipo_001",
+      "company": "Propshare Celestia",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard",
+      "sector": "—",
+      "open_date": "2026-04-10",
+      "close_date": "2026-04-16",
+      "issue_price": 1050000.0,
+      "issue_size_cr": 245.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "Kfin Technologies Ltd",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 0.0,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Propshare Celestia IPO open date is April 10, 2026 and the IPO will close on April 16, 2026. Propshare Celestia IPO is a Book build Issue. The company to raise around ₹245 crores via IPO that comprises fresh issue of ₹245 crores and offer for sale up to [.] equity shares with face value of ₹[.] each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/propshare-celestia-ipo-date-review-price-allotment-details/"
+    },
+    {
+      "id": "ipo_002",
       "company": "Safety Controls",
       "exchange": "BSE SME",
       "ipo_type": "SME",
