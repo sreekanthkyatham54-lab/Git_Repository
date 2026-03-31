@@ -28,13 +28,14 @@ if qp and qp != st.session_state.current_page:
     st.query_params.clear()
 
 cur   = st.session_state.current_page
-pages = ["Dashboard", "IPO Detail", "GMP Tracker", "Historical Data", "F&O Signals"]
+pages = ["Dashboard", "IPO Detail", "GMP Tracker", "Historical Data", "F&O Signals", "Early Access"]
 icons = {
     "Dashboard":     "🏠",
     "IPO Detail":    "🔍",
     "GMP Tracker":   "📊",
     "Historical Data":"📜",
-    "F&O Signals":   "⚡",        # ← NEW
+    "F&O Signals":   "⚡",
+    "Early Access":  "🎯",
 }
 
 # ── THEME (light only — dark toggle removed per user request) ──────────────────
@@ -242,6 +243,7 @@ st.markdown(f"""
         <a class="ts-drawer-link {"active" if cur=="GMP Tracker" else ""}" href="?page=GMP Tracker" target="_self">📊 GMP Tracker</a>
         <a class="ts-drawer-link {"active" if cur=="Historical Data" else ""}" href="?page=Historical Data" target="_self">📜 Historical Data</a>
         <a class="ts-drawer-link {"active" if cur=="F&O Signals" else ""}" href="?page=F&O Signals" target="_self">⚡ F&O Signals</a>
+        <a class="ts-drawer-link {"active" if cur=="Early Access" else ""}" href="?page=Early Access" target="_self">🎯 Early Access</a>
     </div>
     <div class="ts-drawer-pills">
         <span class="ts-pill np-blue">Mainboard</span>
@@ -263,6 +265,7 @@ st.markdown(f"""
         {nav_link("GMP Tracker")}
         {nav_link("Historical Data")}
         {nav_link("F&O Signals")}
+        {nav_link("Early Access")}
     </div>
     <div class="ts-pills">
         <span class="ts-pill np-blue">Mainboard</span>
@@ -330,5 +333,7 @@ elif "GMP"        in cur:
     from pages.gmp_tracker import render; render(ACTIVE_IPOS + UPCOMING_IPOS, GMP_HISTORY)
 elif "Historical" in cur:
     from pages.historical  import render; render(HISTORICAL_IPOS)
-elif "F&O"        in cur:                               # ← NEW
-    from pages.fo_signals  import render; render()      # ← NEW
+elif "F&O"        in cur:
+    from pages.fo_signals    import render; render()
+elif "Early Access" in cur:
+    from pages.early_access  import render; render()

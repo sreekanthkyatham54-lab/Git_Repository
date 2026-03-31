@@ -1,0 +1,68 @@
+name: Export Waitlist to CSV
+
+on:
+  schedule:
+    - cron: '30 12 * * *'   # 6:00 PM IST (UTC+5:30 → 12:30 UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    name: "Convert waitlist.json → waitlist.csv"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Convert JSON to CSV
+        run: |
+          python - <<'EOF'
+          import json, csv, os
+
+          src = "data/waitlist.json"
+          dst = "data/waitlist.csv"
+
+          if not os.path.exists(src):
+              print("waitlist.json not found — skipping")
+              exit(0)
+
+          with open(src) as f:
+              entries = json.load(f)
+
+          if not entries:
+              print("Waitlist is empty — skipping CSV export")
+              exit(0)
+
+          fields = ["name", "email", "whatsapp", "experience", "via", "signed_up"]
+          with open(dst, "w", newline="", encoding="utf-8") as f:
+              writer = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
+              writer.writeheader()
+              writer.writerows(entries)
+
+          print(f"Exported {len(entries)} entries to {dst}")
+          EOF
+
+      - name: Commit and push CSV
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/waitlist.json data/waitlist.csv 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Waitlist export: $(date +'%Y-%m-%d %H:%M IST')"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
