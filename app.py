@@ -16,7 +16,7 @@ st.set_page_config(
 # ── SESSION STATE ──────────────────────────────────────────────────────────────
 if "selected_ipo_id" not in st.session_state: st.session_state.selected_ipo_id = None
 if "chat_histories"  not in st.session_state: st.session_state.chat_histories  = {}
-if "current_page"    not in st.session_state: st.session_state.current_page    = "Dashboard"
+if "current_page"    not in st.session_state: st.session_state.current_page    = "Early Access"
 if "api_key"         not in st.session_state:
     try:    st.session_state.api_key = st.secrets["ANTHROPIC_API_KEY"]
     except: st.session_state.api_key = os.environ.get("ANTHROPIC_API_KEY", "")
@@ -28,14 +28,13 @@ if qp and qp != st.session_state.current_page:
     st.query_params.clear()
 
 cur   = st.session_state.current_page
-pages = ["Dashboard", "IPO Detail", "GMP Tracker", "Historical Data", "F&O Signals", "Early Access"]
+pages = ["Early Access", "Dashboard", "IPO Detail", "GMP Tracker", "Historical Data"]
 icons = {
+    "Early Access":  "🎯",
     "Dashboard":     "🏠",
     "IPO Detail":    "🔍",
     "GMP Tracker":   "📊",
     "Historical Data":"📜",
-    "F&O Signals":   "⚡",
-    "Early Access":  "🎯",
 }
 
 # ── THEME (light only — dark toggle removed per user request) ──────────────────
@@ -238,12 +237,11 @@ st.markdown(f"""
         <button class="ts-drawer-close" id="ts-drawer-close">✕</button>
     </div>
     <div class="ts-drawer-body">
+        <a class="ts-drawer-link {"active" if cur=="Early Access" else ""}" href="?page=Early Access" target="_self">🎯 Early Access</a>
         <a class="ts-drawer-link {"active" if cur=="Dashboard" else ""}" href="?page=Dashboard" target="_self">🏠 Dashboard</a>
         <a class="ts-drawer-link {"active" if cur=="IPO Detail" else ""}" href="?page=IPO Detail" target="_self">🔍 IPO Detail</a>
         <a class="ts-drawer-link {"active" if cur=="GMP Tracker" else ""}" href="?page=GMP Tracker" target="_self">📊 GMP Tracker</a>
         <a class="ts-drawer-link {"active" if cur=="Historical Data" else ""}" href="?page=Historical Data" target="_self">📜 Historical Data</a>
-        <a class="ts-drawer-link {"active" if cur=="F&O Signals" else ""}" href="?page=F&O Signals" target="_self">⚡ F&O Signals</a>
-        <a class="ts-drawer-link {"active" if cur=="Early Access" else ""}" href="?page=Early Access" target="_self">🎯 Early Access</a>
     </div>
     <div class="ts-drawer-pills">
         <span class="ts-pill np-blue">Mainboard</span>
@@ -260,12 +258,11 @@ st.markdown(f"""
         <div class="ts-logo-name">Trade<b>Sage</b></div>
     </a>
     <div class="ts-nav-links">
+        {nav_link("Early Access")}
         {nav_link("Dashboard")}
         {nav_link("IPO Detail")}
         {nav_link("GMP Tracker")}
         {nav_link("Historical Data")}
-        {nav_link("F&O Signals")}
-        {nav_link("Early Access")}
     </div>
     <div class="ts-pills">
         <span class="ts-pill np-blue">Mainboard</span>
@@ -325,15 +322,13 @@ components.html("""
 """, height=0)
 
 # ── PAGE CONTENT ──────────────────────────────────────────────────────────────
-if   "Dashboard"  in cur:
-    from pages.dashboard   import render; render(ACTIVE_IPOS, UPCOMING_IPOS)
-elif "IPO Detail" in cur:
-    from pages.ipo_detail  import render; render(ACTIVE_IPOS + UPCOMING_IPOS)
-elif "GMP"        in cur:
-    from pages.gmp_tracker import render; render(ACTIVE_IPOS + UPCOMING_IPOS, GMP_HISTORY)
-elif "Historical" in cur:
-    from pages.historical  import render; render(HISTORICAL_IPOS)
-elif "F&O"        in cur:
-    from pages.fo_signals    import render; render()
-elif "Early Access" in cur:
+if   "Early Access" in cur:
     from pages.early_access  import render; render()
+elif "Dashboard"  in cur:
+    from pages.dashboard     import render; render(ACTIVE_IPOS, UPCOMING_IPOS)
+elif "IPO Detail" in cur:
+    from pages.ipo_detail    import render; render(ACTIVE_IPOS + UPCOMING_IPOS)
+elif "GMP"        in cur:
+    from pages.gmp_tracker   import render; render(ACTIVE_IPOS + UPCOMING_IPOS, GMP_HISTORY)
+elif "Historical" in cur:
+    from pages.historical    import render; render(HISTORICAL_IPOS)
