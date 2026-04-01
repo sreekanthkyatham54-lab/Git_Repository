@@ -1,8 +1,7 @@
-# v3.0 - JS Google logo, GitHub API persistence
+# v4.0 - removed Google OAuth, fixed waitlist persistence
 """Early Access signup page — F&O Trading Signals product"""
 import streamlit as st
-import streamlit.components.v1 as components
-import json, os, base64, urllib.request, urllib.error
+import json, os, base64, urllib.request
 from datetime import datetime
 
 WAITLIST_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "waitlist.json")
@@ -33,24 +32,22 @@ EXPERIENCE_OPTIONS = [
 
 # ── GitHub API persistence ────────────────────────────────────────────────────
 
-def _github_headers():
-    token = ""
+def _github_token():
     try:
-        token = st.secrets["GITHUB_TOKEN"]
+        return st.secrets["GITHUB_TOKEN"]
     except Exception:
-        pass
-    h = {"Accept": "application/vnd.github.v3+json", "Content-Type": "application/json"}
-    if token:
-        h["Authorization"] = f"token {token}"
-    return h, bool(token)
+        return ""
 
 
 def _load_from_github() -> list:
     try:
-        headers, _ = _github_headers()
+        headers = {"Accept": "application/vnd.github.v3+json"}
+        tok = _github_token()
+        if tok:
+            headers["Authorization"] = f"token {tok}"
         url = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/contents/{GITHUB_PATH}"
         req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=5) as resp:
+        with urllib.request.urlopen(req, timeout=6) as resp:
             data = json.loads(resp.read())
         return json.loads(base64.b64decode(data["content"]).decode())
     except Exception:
@@ -58,18 +55,19 @@ def _load_from_github() -> list:
 
 
 def _commit_to_github(entries: list, email: str) -> bool:
+    tok = _github_token()
+    if not tok:
+        return False
     try:
-        headers, has_token = _github_headers()
-        if not has_token:
-            return False
+        headers = {
+            "Authorization": f"token {tok}",
+            "Accept":        "application/vnd.github.v3+json",
+            "Content-Type":  "application/json",
+        }
         url = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/contents/{GITHUB_PATH}"
-
-        # Get current SHA
         req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=5) as resp:
+        with urllib.request.urlopen(req, timeout=6) as resp:
             sha = json.loads(resp.read())["sha"]
-
-        # PUT updated file
         body = json.dumps({
             "message": f"Waitlist signup: {email}",
             "content": base64.b64encode(json.dumps(entries, indent=2).encode()).decode(),
@@ -77,51 +75,47 @@ def _commit_to_github(entries: list, email: str) -> bool:
             "branch":  GITHUB_BRANCH,
         }).encode()
         put = urllib.request.Request(url, data=body, headers=headers, method="PUT")
-        with urllib.request.urlopen(put, timeout=8) as resp:
+        with urllib.request.urlopen(put, timeout=10) as resp:
             return resp.status in (200, 201)
     except Exception:
         return False
 
 
-# ── Local + GitHub waitlist helpers ──────────────────────────────────────────
+# ── Waitlist helpers ──────────────────────────────────────────────────────────
 
 def _load_waitlist() -> list:
-    # Try local file first
     try:
         if os.path.exists(WAITLIST_PATH):
             with open(WAITLIST_PATH) as f:
                 data = json.load(f)
-            if data:                     # non-empty → use it
+            if data:
                 return data
     except Exception:
         pass
-    # Fallback: fetch from GitHub (Streamlit Cloud ephemeral fs starts as [])
     return _load_from_github()
 
 
 def _save_entry(entry: dict):
-    """Append entry, persist locally + GitHub. Returns (total_count, is_new)."""
+    """Returns (count, is_new, github_ok)."""
     entries = _load_waitlist()
     email = (entry.get("email") or "").strip().lower()
     if email and any((e.get("email") or "").lower() == email for e in entries):
-        return len(entries), False
+        return len(entries), False, False
     entries.append(entry)
-    # Write local
     try:
         with open(WAITLIST_PATH, "w") as f:
             json.dump(entries, f, indent=2)
     except Exception:
         pass
-    # Commit to GitHub for persistence across restarts
-    _commit_to_github(entries, email)
-    return len(entries), True
+    github_ok = _commit_to_github(entries, email)
+    return len(entries), True, github_ok
 
 
 def _waitlist_count() -> int:
     return len(_load_waitlist())
 
 
-# ── Main render ───────────────────────────────────────────────────────────────
+# ── Page render ───────────────────────────────────────────────────────────────
 
 def render():
     green  = "#1a7f37"
@@ -137,9 +131,9 @@ def render():
     st.markdown(f"""
     <style>
     .ea-hero {{
-        background: linear-gradient(135deg, #0d1117 0%, #161b22 55%, #0d2818 100%);
-        border-radius: 16px; padding: 40px 40px 36px; margin-bottom: 20px;
-        position: relative; overflow: hidden; border: 1px solid #30363d;
+        background:linear-gradient(135deg,#0d1117 0%,#161b22 55%,#0d2818 100%);
+        border-radius:16px; padding:40px 40px 36px; margin-bottom:20px;
+        position:relative; overflow:hidden; border:1px solid #30363d;
     }}
     .ea-hero::after {{
         content:''; position:absolute; bottom:-80px; right:-80px;
@@ -147,31 +141,23 @@ def render():
         background:radial-gradient(circle,rgba(26,127,55,0.14) 0%,transparent 70%);
         pointer-events:none;
     }}
-    .ea-hero-pill {{
-        display:inline-block; border:1px solid {green}; color:{green}!important;
-        font-size:0.68rem; font-weight:700; letter-spacing:2px; text-transform:uppercase;
-        padding:5px 14px; border-radius:20px; margin-bottom:16px;
-        background:rgba(26,127,55,0.1);
-    }}
+    .ea-hero-pill     {{ display:inline-block; border:1px solid {green}; color:{green}!important; font-size:0.68rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:5px 14px; border-radius:20px; margin-bottom:16px; background:rgba(26,127,55,0.1); }}
     .ea-hero-h1       {{ font-size:clamp(1.7rem,4vw,2.5rem); font-weight:800; letter-spacing:-0.8px; line-height:1.12; color:#e6edf3!important; margin-bottom:2px; }}
     .ea-hero-h1-green {{ font-size:clamp(1.7rem,4vw,2.5rem); font-weight:800; letter-spacing:-0.8px; line-height:1.2;  color:{green}!important; margin-bottom:16px; }}
     .ea-hero-sub      {{ font-size:0.92rem; color:#8b949e!important; line-height:1.65; max-width:560px; margin-bottom:28px; }}
-    .ea-stats         {{ display:flex; gap:36px; align-items:flex-start; flex-wrap:wrap; }}
+    .ea-stats         {{ display:flex; gap:36px; flex-wrap:wrap; }}
     .ea-stat-val      {{ font-size:1.6rem; font-weight:800; color:{green}!important; font-family:'JetBrains Mono',monospace; line-height:1; }}
     .ea-stat-label    {{ font-size:0.63rem; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:#6e7681!important; margin-top:4px; }}
 
-    .ea-news          {{ background:rgba(154,103,0,0.06); border:1px solid rgba(154,103,0,0.4); border-left:4px solid {amber}; border-radius:0 10px 10px 0; padding:16px 20px; margin-bottom:28px; font-size:0.85rem; line-height:1.65; color:{text}!important; }}
-    .ea-news-label    {{ font-size:0.65rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:{amber}!important; margin-bottom:8px; }}
-    .ea-news-amber    {{ color:{amber}!important; font-weight:700; }}
-    .ea-news-green    {{ color:{green}!important; font-weight:700; }}
+    .ea-news       {{ background:rgba(154,103,0,0.06); border:1px solid rgba(154,103,0,0.4); border-left:4px solid {amber}; border-radius:0 10px 10px 0; padding:16px 20px; margin-bottom:28px; font-size:0.85rem; line-height:1.65; color:{text}!important; }}
+    .ea-news-label {{ font-size:0.65rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:{amber}!important; margin-bottom:8px; }}
+    .ea-news-amber {{ color:{amber}!important; font-weight:700; }}
+    .ea-news-green {{ color:{green}!important; font-weight:700; }}
 
-    .ea-form-title    {{ font-size:1.1rem; font-weight:700; margin-bottom:6px; color:{text}!important; }}
-    .ea-form-sub      {{ font-size:0.82rem; color:{muted}!important; margin-bottom:14px; line-height:1.55; }}
-    .ea-limit-badge   {{ display:inline-block; background:rgba(207,34,46,0.08); border:1px solid rgba(207,34,46,0.3); color:{red}!important; font-size:0.72rem; font-weight:600; padding:3px 12px; border-radius:20px; margin-bottom:18px; }}
-    .ea-divider       {{ display:flex; align-items:center; gap:10px; margin:16px 0; }}
-    .ea-divider-line  {{ flex:1; height:1px; background:{border}; }}
-    .ea-divider-text  {{ font-size:0.72rem; color:{muted}!important; font-weight:600; white-space:nowrap; }}
-    .ea-privacy       {{ font-size:0.75rem; color:{muted}!important; text-align:center; margin-top:12px; line-height:1.5; }}
+    .ea-form-title  {{ font-size:1.1rem; font-weight:700; margin-bottom:6px; color:{text}!important; }}
+    .ea-form-sub    {{ font-size:0.82rem; color:{muted}!important; margin-bottom:14px; line-height:1.55; }}
+    .ea-limit-badge {{ display:inline-block; background:rgba(207,34,46,0.08); border:1px solid rgba(207,34,46,0.3); color:{red}!important; font-size:0.72rem; font-weight:600; padding:3px 12px; border-radius:20px; margin-bottom:18px; }}
+    .ea-privacy     {{ font-size:0.75rem; color:{muted}!important; text-align:center; margin-top:12px; line-height:1.5; }}
 
     .ea-signals-card  {{ background:{card}; border:1.5px solid {border}; border-radius:14px; padding:24px; }}
     .ea-signals-title {{ font-size:0.95rem; font-weight:700; color:{text}!important; margin-bottom:16px; padding-bottom:12px; border-bottom:1.5px solid {border}; }}
@@ -182,7 +168,7 @@ def render():
     .ea-dot-red       {{ background:{red}; }}
     .ea-signal-name   {{ font-size:0.85rem; font-weight:700; color:{text}!important; margin-bottom:1px; }}
     .ea-signal-desc   {{ font-size:0.75rem; color:{muted}!important; line-height:1.4; }}
-    .ea-waitlist-count{{ text-align:center; padding:20px 0 4px; }}
+    .ea-waitlist-count {{ text-align:center; padding:20px 0 4px; }}
     .ea-count-num     {{ font-size:2.2rem; font-weight:800; color:{green}!important; font-family:'JetBrains Mono',monospace; line-height:1; }}
     .ea-count-label   {{ font-size:0.65rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:{muted}!important; margin-top:4px; }}
     .ea-already-box   {{ background:rgba(26,127,55,0.05); border:1px solid rgba(26,127,55,0.2); border-radius:10px; padding:14px 16px; margin-top:16px; }}
@@ -195,7 +181,6 @@ def render():
     .ea-success-sub   {{ font-size:0.85rem; color:{muted}!important; line-height:1.6; }}
     .ea-success-badge {{ display:inline-block; background:rgba(26,127,55,0.1); border:1px solid {green}; color:{green}!important; border-radius:20px; padding:4px 16px; font-size:0.8rem; font-weight:700; margin-top:14px; }}
 
-    /* Green for all buttons except Google — overridden inline by JS for Google btn */
     div[data-testid="stButton"] button {{
         width:100%!important; background:{green}!important; color:white!important;
         border:none!important; border-radius:8px!important; font-weight:700!important;
@@ -264,83 +249,13 @@ def render():
     with left_col:
         _render_form(count)
 
-    # ── JS: inject Google G logo into the Continue with Google button ─────────
-    components.html("""
-<script>
-(function() {
-    var GOOGLE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="18" height="18" style="flex-shrink:0;display:block;">'
-        + '<path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>'
-        + '<path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>'
-        + '<path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>'
-        + '<path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>'
-        + '</svg>';
 
-    var attempts = 0;
-    var timer = setInterval(function() {
-        try {
-            var doc = window.parent.document;
-            var buttons = doc.querySelectorAll('button');
-            var btn = null;
-            for (var i = 0; i < buttons.length; i++) {
-                if (buttons[i].textContent.trim() === 'Continue with Google') {
-                    btn = buttons[i]; break;
-                }
-            }
-            attempts++;
-            if (!btn) { if (attempts > 60) clearInterval(timer); return; }
-            clearInterval(timer);
-            if (btn.dataset.googleStyled) return;
-            btn.dataset.googleStyled = '1';
-
-            // Override the global green button style
-            btn.style.setProperty('background', 'white', 'important');
-            btn.style.setProperty('color', '#3c4043', 'important');
-            btn.style.setProperty('border', '1.5px solid #dadce0', 'important');
-            btn.style.setProperty('font-weight', '500', 'important');
-            btn.style.setProperty('box-shadow', '0 1px 3px rgba(0,0,0,0.08)', 'important');
-            btn.style.setProperty('display', 'flex', 'important');
-            btn.style.setProperty('align-items', 'center', 'important');
-            btn.style.setProperty('justify-content', 'center', 'important');
-            btn.style.setProperty('gap', '10px', 'important');
-            btn.style.setProperty('padding', '10px 16px', 'important');
-
-            // Inject Google G SVG before the text
-            var wrapper = doc.createElement('span');
-            wrapper.style.cssText = 'display:flex;align-items:center;gap:10px;justify-content:center;';
-            var iconSpan = doc.createElement('span');
-            iconSpan.innerHTML = GOOGLE_SVG;
-            var textSpan = doc.createElement('span');
-            textSpan.textContent = 'Continue with Google';
-            wrapper.appendChild(iconSpan);
-            wrapper.appendChild(textSpan);
-            btn.innerHTML = '';
-            btn.appendChild(wrapper);
-
-            // Hover effect
-            btn.addEventListener('mouseenter', function() {
-                btn.style.setProperty('box-shadow', '0 2px 8px rgba(0,0,0,0.15)', 'important');
-                btn.style.setProperty('border-color', '#aaa', 'important');
-            });
-            btn.addEventListener('mouseleave', function() {
-                btn.style.setProperty('box-shadow', '0 1px 3px rgba(0,0,0,0.08)', 'important');
-                btn.style.setProperty('border-color', '#dadce0', 'important');
-            });
-        } catch(e) {}
-    }, 100);
-})();
-</script>
-""", height=0)
-
-
-# ── Form logic ────────────────────────────────────────────────────────────────
+# ── Form ──────────────────────────────────────────────────────────────────────
 
 def _render_form(count):
-    green = "#1a7f37"
-    muted = "#57606a"
-    text  = "#1a1a2e"
-
     if st.session_state.get("ea_signup_done"):
         final_count = st.session_state.get("ea_waitlist_count", count)
+        github_ok   = st.session_state.get("ea_github_ok", False)
         st.markdown(f"""
         <div class="ea-success">
             <div class="ea-success-icon">🎉</div>
@@ -352,25 +267,13 @@ def _render_form(count):
             <div class="ea-success-badge">#{final_count} on the waitlist</div>
         </div>
         """, unsafe_allow_html=True)
+        if not github_ok:
+            st.warning("Entry saved this session but not yet committed to GitHub. Add `GITHUB_TOKEN` to Streamlit Cloud secrets to persist data permanently.")
         st.markdown("<div style='height:12px'></div>", unsafe_allow_html=True)
         if st.button("← Back to Dashboard", key="ea_back"):
             st.session_state.current_page = "Dashboard"
             st.rerun()
         return
-
-    google_available = _check_google_auth_configured()
-
-    logged_in    = False
-    google_name  = ""
-    google_email = ""
-    if google_available:
-        try:
-            user         = st.experimental_user
-            logged_in    = getattr(user, "is_logged_in", False)
-            google_name  = getattr(user, "name",  "") or ""
-            google_email = getattr(user, "email", "") or ""
-        except Exception:
-            pass
 
     st.markdown("""
     <div class="ea-form-title">Request early access</div>
@@ -381,81 +284,40 @@ def _render_form(count):
     <div class="ea-limit-badge">Limited to first 500 traders</div>
     """, unsafe_allow_html=True)
 
-    if logged_in:
-        st.markdown(f"""
-        <div style='background:rgba(26,127,55,0.06);border:1px solid rgba(26,127,55,0.25);
-                    border-radius:10px;padding:11px 16px;margin-bottom:14px;
-                    display:flex;align-items:center;gap:10px;'>
-            <span style='font-size:1.2rem;'>✅</span>
-            <div>
-                <div style='font-size:0.85rem;font-weight:700;color:{text};'>Signed in as {google_name}</div>
-                <div style='font-size:0.75rem;color:{muted};'>{google_email}</div>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-        whatsapp   = st.text_input("WhatsApp number", placeholder="9876543210", key="ea_wa_g")
-        experience = st.selectbox("Trading experience", EXPERIENCE_OPTIONS, key="ea_exp_g")
-        col_sub, col_out = st.columns([3, 1])
-        with col_sub:
-            if st.button("Join waitlist", key="ea_submit_g", use_container_width=True):
-                if experience == "Select...":
-                    st.error("Please select your trading experience.")
-                else:
-                    _do_save(google_name, google_email, whatsapp, experience, "google")
-        with col_out:
-            if st.button("Sign out", key="ea_logout"):
-                st.logout()
-    else:
-        if google_available:
-            if st.button("Continue with Google", key="ea_google_login", use_container_width=True):
-                st.login("google")
-            st.markdown("""
-            <div class="ea-divider">
-                <div class="ea-divider-line"></div>
-                <div class="ea-divider-text">or fill in manually</div>
-                <div class="ea-divider-line"></div>
-            </div>
-            """, unsafe_allow_html=True)
-        _manual_form()
-
-    st.markdown("""
-    <div class="ea-privacy">
-        Your details are never shared. One WhatsApp message when early access opens.
-    </div>
-    """, unsafe_allow_html=True)
-
-
-def _manual_form():
     name       = st.text_input("Full name",       placeholder="Rajesh Kumar",     key="ea_name")
     email      = st.text_input("Email address",   placeholder="rajesh@gmail.com", key="ea_email")
     whatsapp   = st.text_input("WhatsApp number", placeholder="9876543210",        key="ea_wa")
     experience = st.selectbox("Trading experience", EXPERIENCE_OPTIONS,            key="ea_exp")
+
     st.markdown("<div style='height:4px'></div>", unsafe_allow_html=True)
-    if st.button("Join waitlist", key="ea_submit_manual", use_container_width=True):
+
+    if st.button("Join waitlist", key="ea_submit", use_container_width=True):
         if not name.strip():
             st.error("Please enter your name."); return
         if not email.strip() or "@" not in email:
             st.error("Please enter a valid email address."); return
         if experience == "Select...":
             st.error("Please select your trading experience."); return
-        _do_save(name.strip(), email.strip(), whatsapp.strip(), experience, "manual")
 
+        entry = {
+            "name":       name.strip(),
+            "email":      email.strip(),
+            "whatsapp":   whatsapp.strip(),
+            "experience": experience,
+            "signed_up":  datetime.utcnow().isoformat() + "Z",
+        }
+        count, is_new, github_ok = _save_entry(entry)
+        if not is_new:
+            st.info("This email is already on the waitlist.")
+            return
 
-def _do_save(name, email, whatsapp, experience, via):
-    entry = {
-        "name": name, "email": email, "whatsapp": whatsapp,
-        "experience": experience, "via": via,
-        "signed_up": datetime.utcnow().isoformat() + "Z",
-    }
-    count, _ = _save_entry(entry)
-    st.session_state["ea_signup_done"]    = True
-    st.session_state["ea_waitlist_count"] = count
-    st.rerun()
+        st.session_state["ea_signup_done"]    = True
+        st.session_state["ea_waitlist_count"] = count
+        st.session_state["ea_github_ok"]      = github_ok
+        st.rerun()
 
-
-def _check_google_auth_configured() -> bool:
-    try:
-        _ = st.secrets["auth"]["google"]["client_id"]
-        return True
-    except Exception:
-        return False
+    st.markdown("""
+    <div class="ea-privacy">
+        Your details are never shared. One WhatsApp message when early access opens.
+    </div>
+    """, unsafe_allow_html=True)
