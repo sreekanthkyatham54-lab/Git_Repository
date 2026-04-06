@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-06T08:15:54.814963",
+  "scraped_at": "2026-04-06T14:13:05.791689",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 48.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.07,
+      "subscription_times": 0.33,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/safety-controls-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.1,
-      "subscription_retail": 0.1
+      "subscription_qib": 0.21,
+      "subscription_nii": 0.18,
+      "subscription_retail": 0.46
     },
     {
       "id": "ipo_004",
@@ -50,7 +50,7 @@
       "issue_size_cr": 32.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.48,
+      "subscription_times": 0.96,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/emiac-technologies-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.63,
-      "subscription_retail": 0.7
+      "subscription_qib": 1.02,
+      "subscription_nii": 0.85,
+      "subscription_retail": 0.97
     }
   ],
   "upcoming_ipos": [
