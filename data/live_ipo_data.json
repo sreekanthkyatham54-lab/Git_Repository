@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-07T08:03:51.110365",
+  "scraped_at": "2026-04-07T14:47:28.937974",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 48.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.33,
+      "subscription_times": 0.82,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/safety-controls-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.21,
-      "subscription_nii": 0.18,
-      "subscription_retail": 0.46
+      "subscription_qib": 0.31,
+      "subscription_nii": 2.24,
+      "subscription_retail": 0.53
     },
     {
       "id": "ipo_004",
@@ -50,7 +50,7 @@
       "issue_size_cr": 32.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.96,
+      "subscription_times": 1.59,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/emiac-technologies-ipo-date-review-price-allotment-details/",
       "subscription_qib": 1.02,
-      "subscription_nii": 0.85,
-      "subscription_retail": 0.97
+      "subscription_nii": 2.08,
+      "subscription_retail": 1.71
     }
   ],
   "upcoming_ipos": [
@@ -147,6 +147,62 @@
     }
   ],
   "historical_ipos": [
+    {
+      "company": "Amir Chand",
+      "listing_date": "",
+      "issue_price": 212.0,
+      "listing_price": 200.0,
+      "current_price": 5.66,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": -5.7,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Sai Parenteral’s",
+      "listing_date": "",
+      "issue_price": 392.0,
+      "listing_price": 400.0,
+      "current_price": 3.0,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 2.0,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Powerica",
+      "listing_date": "",
+      "issue_price": 395.0,
+      "listing_price": 366.0,
+      "current_price": 7.34,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": -7.3,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Central Mine Planning",
+      "listing_date": "",
+      "issue_price": 320.0,
+      "listing_price": 160.0,
+      "current_price": 6.98,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": -50.0,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
     {
       "company": "GSP Crop Science",
       "listing_date": "",
@@ -772,62 +828,6 @@
       "gmp_before_listing": null,
       "gmp_predicted_gain": null,
       "actual_listing_gain": 14.0,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Glottis",
-      "listing_date": "",
-      "issue_price": 129.0,
-      "listing_price": 84.0,
-      "current_price": 34.88,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": -34.9,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Fabtech Technologies",
-      "listing_date": "",
-      "issue_price": 191.0,
-      "listing_price": 192.0,
-      "current_price": 0.52,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 0.5,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Pace Digitek",
-      "listing_date": "",
-      "issue_price": 219.0,
-      "listing_price": 255.0,
-      "current_price": 3.58,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 16.4,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "TruAlt Bioenergy",
-      "listing_date": "",
-      "issue_price": 496.0,
-      "listing_price": 545.4,
-      "current_price": 10.89,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 10.0,
       "gmp_accurate": null,
       "sector": "—",
       "exchange": "BSE / NSE",
