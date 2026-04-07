@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-06T14:13:05.791689",
+  "scraped_at": "2026-04-07T03:47:05.331796",
   "source": "live",
   "active_ipos": [
     {
@@ -122,8 +122,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.06,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 1.5,
+      "gmp_percent": 0.9,
       "lead_manager": "",
       "registrar": "MUFG Intime India Pvt",
       "objects": "",
