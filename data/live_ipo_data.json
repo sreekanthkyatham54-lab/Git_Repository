@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-09T08:09:03.292503",
+  "scraped_at": "2026-04-09T14:57:13.171626",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 150.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.06,
-      "gmp": 7.0,
-      "gmp_percent": 4.0,
+      "subscription_times": 0.4,
+      "gmp": 3.0,
+      "gmp_percent": 1.7,
       "lead_manager": "",
       "registrar": "MUFG Intime India Pvt",
       "objects": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/om-power-transmission-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.02,
-      "subscription_retail": 0.12
+      "subscription_qib": 0.78,
+      "subscription_nii": 0.12,
+      "subscription_retail": 0.3
     }
   ],
   "upcoming_ipos": [
