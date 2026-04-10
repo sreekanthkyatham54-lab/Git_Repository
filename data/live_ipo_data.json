@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-10T03:57:35.053597",
+  "scraped_at": "2026-04-10T08:13:59.373480",
   "source": "live",
   "active_ipos": [
     {
@@ -47,7 +47,7 @@
       "issue_size_cr": 150.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.4,
+      "subscription_times": 0.45,
       "gmp": 3.0,
       "gmp_percent": 1.7,
       "lead_manager": "",
@@ -68,8 +68,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/om-power-transmission-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.78,
-      "subscription_nii": 0.12,
-      "subscription_retail": 0.3
+      "subscription_nii": 0.15,
+      "subscription_retail": 0.4
     }
   ],
   "upcoming_ipos": [
