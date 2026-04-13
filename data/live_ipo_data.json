@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-13T08:57:23.423240",
+  "scraped_at": "2026-04-13T14:53:55.992129",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 245.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.47,
+      "subscription_times": 0.79,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/propshare-celestia-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 292.0,
-      "subscription_nii": 0.0,
-      "subscription_retail": 1.38
+      "subscription_qib": 0.17,
+      "subscription_nii": 2.66,
+      "subscription_retail": 0.0
     },
     {
       "id": "ipo_003",
@@ -50,9 +50,9 @@
       "issue_size_cr": 150.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.38,
-      "gmp": 2.0,
-      "gmp_percent": 1.1,
+      "subscription_times": 3.33,
+      "gmp": 1.3,
+      "gmp_percent": 0.7,
       "lead_manager": "",
       "registrar": "MUFG Intime India Pvt",
       "objects": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/om-power-transmission-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.52,
-      "subscription_nii": 2.06,
-      "subscription_retail": 1.0
+      "subscription_qib": 3.65,
+      "subscription_nii": 7.06,
+      "subscription_retail": 1.54
     }
   ],
   "upcoming_ipos": [
@@ -154,7 +154,7 @@
       "issue_size_cr": 28.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 1.38,
+      "subscription_times": 3.33,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -174,9 +174,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/mehul-telecom-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.52,
-      "subscription_nii": 2.06,
-      "subscription_retail": 1.0
+      "subscription_qib": 3.65,
+      "subscription_nii": 7.06,
+      "subscription_retail": 1.54
     }
   ],
   "historical_ipos": [
