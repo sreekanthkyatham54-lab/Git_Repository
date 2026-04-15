@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-15T08:20:22.581167",
+  "scraped_at": "2026-04-15T14:48:16.518635",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 245.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.8,
+      "subscription_times": 0.98,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,7 +35,7 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/propshare-celestia-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.17,
-      "subscription_nii": 2.7,
+      "subscription_nii": 3.4,
       "subscription_retail": 0.0
     }
   ],
