@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-17T04:10:05.497154",
+  "scraped_at": "2026-04-17T08:19:48.058092",
   "source": "live",
   "active_ipos": [
     {
@@ -47,7 +47,7 @@
       "issue_size_cr": 28.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 3.33,
+      "subscription_times": 0.22,
       "gmp": 4.5,
       "gmp_percent": 4.6,
       "lead_manager": "",
@@ -67,9 +67,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/mehul-telecom-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 3.65,
-      "subscription_nii": 7.06,
-      "subscription_retail": 1.54
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.6,
+      "subscription_retail": 0.18
     }
   ],
   "upcoming_ipos": [
