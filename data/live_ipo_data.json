@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-18T03:46:16.328652",
+  "scraped_at": "2026-04-18T07:51:50.434966",
   "source": "live",
   "active_ipos": [
     {
@@ -84,8 +84,8 @@
       "sector": "—",
       "open_date": "2026-04-23",
       "close_date": "2026-04-27",
-      "issue_price": 0.0,
-      "issue_size_cr": 0.0,
+      "issue_price": 23.0,
+      "issue_size_cr": 89.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
@@ -100,11 +100,11 @@
       "peers": [],
       "pe_ratio": 0.0,
       "industry_pe": 0.0,
-      "promoter_holding": 0.0,
+      "promoter_holding": 92.59,
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "Leapfrog Engineering IPO open date is April 23, 2026 and the IPO will close on April 27, 2026. Leapfrog Engineering IPO is a Book build Issue. The company to raise around ₹[.] crores via IPO that comprises fresh issue of ₹[.] crores and offer for sale up to 38,76,000 equity shares with face value of ₹1 each.",
+      "summary": "Leapfrog Engineering IPO open date is April 23, 2026 and the IPO will close on April 27, 2026. Leapfrog Engineering IPO is a Book build Issue. The company to raise around ₹89 crores via IPO that comprises fresh issue of ₹80 crores and offer for sale up to 38,76,000 equity shares with face value of ₹1 each.",
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/leapfrog-engineering-ipo-date-review-price-allotment-details/"
