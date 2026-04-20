@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-20T09:03:27.949042",
+  "scraped_at": "2026-04-20T14:55:32.601976",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 1105.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.19,
+      "subscription_times": 1.35,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,7 +35,7 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/citius-transnet-invit-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.63,
-      "subscription_nii": 1.85,
+      "subscription_nii": 2.22,
       "subscription_retail": 0.0
     },
     {
@@ -50,9 +50,9 @@
       "issue_size_cr": 28.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 6.93,
-      "gmp": 4.5,
-      "gmp_percent": 4.6,
+      "subscription_times": 9.91,
+      "gmp": 5.0,
+      "gmp_percent": 5.1,
       "lead_manager": "",
       "registrar": "Kfin Technologies Ltd",
       "objects": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/mehul-telecom-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.34,
-      "subscription_nii": 15.84,
-      "subscription_retail": 6.37
+      "subscription_qib": 1.38,
+      "subscription_nii": 22.82,
+      "subscription_retail": 9.36
     }
   ],
   "upcoming_ipos": [
