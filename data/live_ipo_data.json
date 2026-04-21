@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-21T08:25:14.963312",
+  "scraped_at": "2026-04-21T14:50:08.735657",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 1105.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.91,
+      "subscription_times": 20.43,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -34,8 +34,8 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/citius-transnet-invit-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.45,
-      "subscription_nii": 2.47,
+      "subscription_qib": 23.21,
+      "subscription_nii": 17.09,
       "subscription_retail": 0.0
     },
     {
@@ -50,7 +50,7 @@
       "issue_size_cr": 28.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 13.23,
+      "subscription_times": 44.91,
       "gmp": 5.0,
       "gmp_percent": 5.1,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/mehul-telecom-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.38,
-      "subscription_nii": 30.05,
-      "subscription_retail": 12.94
+      "subscription_qib": 32.5,
+      "subscription_nii": 79.38,
+      "subscription_retail": 37.41
     }
   ],
   "upcoming_ipos": [
