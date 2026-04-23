@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-23T04:11:06.347912",
+  "scraped_at": "2026-04-23T08:26:55.027367",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 74.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.08,
       "gmp": 10.0,
       "gmp_percent": 5.8,
       "lead_manager": "",
@@ -33,40 +33,10 @@
       "summary": "Adisoft Technologies IPO open date is April 23, 2026 and the IPO will close on April 27, 2026. Adisoft Technologies IPO is a Book build Issue. The company to raise around ₹74 crores via IPO that comprises fresh issue of ₹74 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/adisoft-technologies-ipo-date-review-price-allotment-details/"
-    },
-    {
-      "id": "ipo_003",
-      "company": "Leapfrog Engineering",
-      "exchange": "BSE SME",
-      "ipo_type": "SME",
-      "sector": "—",
-      "open_date": "2026-04-23",
-      "close_date": "2026-04-27",
-      "issue_price": 23.0,
-      "issue_size_cr": 89.0,
-      "lot_size": 0,
-      "subscription_status": "Open",
-      "subscription_times": 0.0,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
-      "lead_manager": "",
-      "registrar": "Integrated Registry Management Services Pvt",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 92.59,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "Leapfrog Engineering IPO open date is  2026 and the IPO will close on 2026. Leapfrog Engineering IPO is a Book build Issue. The company to raise around ₹89 crores via IPO that comprises fresh issue of ₹80 crores and offer for sale up to 38,76,000 equity shares with face value of ₹1 each.",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/leapfrog-engineering-ipo-date-review-price-allotment-details/"
+      "detail_url": "https://ipowatch.in/adisoft-technologies-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.19,
+      "subscription_retail": 0.08
     }
   ],
   "upcoming_ipos": [
