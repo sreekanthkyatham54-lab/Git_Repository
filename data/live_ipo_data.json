@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-24T08:54:31.827079",
+  "scraped_at": "2026-04-24T14:47:03.081348",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 74.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.21,
+      "subscription_times": 3.33,
       "gmp": 10.0,
       "gmp_percent": 5.8,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/adisoft-technologies-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 3.65,
-      "subscription_nii": 1.83,
-      "subscription_retail": 1.56
+      "subscription_qib": 3.67,
+      "subscription_nii": 3.89,
+      "subscription_retail": 2.9
     }
   ],
   "upcoming_ipos": [
