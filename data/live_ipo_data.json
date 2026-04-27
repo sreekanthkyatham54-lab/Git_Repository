@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-27T09:11:54.291791",
+  "scraped_at": "2026-04-27T15:10:32.382702",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 65.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.07,
+      "subscription_times": 0.15,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/amba-auto-sales-services-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.08,
-      "subscription_retail": 0.07
+      "subscription_nii": 0.21,
+      "subscription_retail": 0.11
     },
     {
       "id": "ipo_004",
@@ -50,7 +50,7 @@
       "issue_size_cr": 74.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 33.93,
+      "subscription_times": 77.45,
       "gmp": 16.5,
       "gmp_percent": 9.6,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/adisoft-technologies-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 33.94,
-      "subscription_nii": 60.41,
-      "subscription_retail": 22.57
+      "subscription_qib": 98.23,
+      "subscription_nii": 120.16,
+      "subscription_retail": 47.27
     }
   ],
   "upcoming_ipos": [
