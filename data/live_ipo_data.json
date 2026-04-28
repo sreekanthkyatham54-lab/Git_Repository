@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-28T04:32:00.487224",
+  "scraped_at": "2026-04-28T09:12:58.444164",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 65.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.15,
+      "subscription_times": 0.34,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/amba-auto-sales-services-ipo-date-review-price-allotment-details/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.21,
-      "subscription_retail": 0.11
+      "subscription_nii": 0.52,
+      "subscription_retail": 0.2
     }
   ],
   "upcoming_ipos": [
@@ -81,7 +81,7 @@
       "sector": "—",
       "open_date": "2026-05-04",
       "close_date": "2026-05-06",
-      "issue_price": 0.0,
+      "issue_price": 95.0,
       "issue_size_cr": 0.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
@@ -101,7 +101,7 @@
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "Value 360 Communications IPO open date is May 4, 2026 and the IPO will close on May 6, 2026. Value 360 Communications IPO is a Bookbuilding Issue. The company to raise around ₹[.] crores via IPO that comprises fresh issue of ₹[.] crores and offer for sale up to 4,24,800 equity shares with face value of ₹10 each.",
+      "summary": "Value 360 Communications IPO open date is May 4, 2026 and the IPO will close on May 6, 2026. Value 360 Communications IPO is a Bookbuilding Issue. The company to raise around ₹42 crores via IPO that comprises fresh issue of ₹35 crores and offer for sale up to 4,24,800 equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/value-360-communications-ipo/",
