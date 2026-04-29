@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-28T15:30:12.106008",
+  "scraped_at": "2026-04-29T04:27:19.369525",
   "source": "live",
   "active_ipos": [
     {
@@ -48,7 +48,7 @@
       "sector": "—",
       "open_date": "2026-05-05",
       "close_date": "2026-05-07",
-      "issue_price": 0.0,
+      "issue_price": 100.0,
       "issue_size_cr": 3405.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
@@ -86,8 +86,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 7.5,
-      "gmp_percent": 4.4,
+      "gmp": 4.0,
+      "gmp_percent": 2.3,
       "lead_manager": "",
       "registrar": "Kfin Technologies Ltd",
       "objects": "",
