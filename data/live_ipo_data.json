@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-30T09:06:40.407315",
+  "scraped_at": "2026-04-30T15:14:46.734924",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 926.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.21,
-      "gmp": 5.0,
-      "gmp_percent": 2.9,
+      "subscription_times": 0.25,
+      "gmp": 4.0,
+      "gmp_percent": 2.3,
       "lead_manager": "",
       "registrar": "Kfin Technologies Ltd",
       "objects": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/kissht-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.6,
-      "subscription_nii": 0.07,
-      "subscription_retail": 0.04
+      "subscription_qib": 0.69,
+      "subscription_nii": 0.11,
+      "subscription_retail": 0.06
     }
   ],
   "upcoming_ipos": [
@@ -86,8 +86,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 26.0,
-      "gmp_percent": 16.5,
+      "gmp": 52.0,
+      "gmp_percent": 32.9,
       "lead_manager": "",
       "registrar": "",
       "objects": "",
