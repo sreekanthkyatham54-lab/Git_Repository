@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-30T04:30:18.674653",
+  "scraped_at": "2026-04-30T09:06:40.407315",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 926.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
-      "gmp": 4.0,
-      "gmp_percent": 2.3,
+      "subscription_times": 0.21,
+      "gmp": 5.0,
+      "gmp_percent": 2.9,
       "lead_manager": "",
       "registrar": "Kfin Technologies Ltd",
       "objects": "",
@@ -33,7 +33,10 @@
       "summary": "OnEMI Technology (Kissht) IPO open date is April 30, 2026 and the IPO will close on May 5, 2026. Kissht IPO is a Book build Issue. The company to raise around ₹926 crores via IPO that comprises fresh issue of ₹850 crores and offer for sale up to 44,39,788 equity shares with face value of ₹1 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/kissht-ipo-date-review-price-allotment-details/"
+      "detail_url": "https://ipowatch.in/kissht-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 0.6,
+      "subscription_nii": 0.07,
+      "subscription_retail": 0.04
     }
   ],
   "upcoming_ipos": [
@@ -83,8 +86,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 11.0,
-      "gmp_percent": 7.0,
+      "gmp": 26.0,
+      "gmp_percent": 16.5,
       "lead_manager": "",
       "registrar": "",
       "objects": "",
