@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-06T09:14:16.564513",
+  "scraped_at": "2026-05-06T15:28:25.528690",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 3405.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.31,
+      "subscription_times": 22.72,
       "gmp": 4.5,
       "gmp_percent": 4.5,
       "lead_manager": "",
@@ -34,8 +34,8 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/bagmane-reit-ipo/",
-      "subscription_qib": 0.89,
-      "subscription_nii": 1.82,
+      "subscription_qib": 0.94,
+      "subscription_nii": 3.98,
       "subscription_retail": 0.0
     },
     {
@@ -50,9 +50,9 @@
       "issue_size_cr": 45.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 22.38,
-      "gmp": 42.0,
-      "gmp_percent": 26.6,
+      "subscription_times": 33.4,
+      "gmp": 44.0,
+      "gmp_percent": 27.8,
       "lead_manager": "",
       "registrar": "",
       "objects": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/recode-studios-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 3.53,
-      "subscription_nii": 34.9,
-      "subscription_retail": 27.75
+      "subscription_qib": 3.54,
+      "subscription_nii": 56.41,
+      "subscription_retail": 40.56
     },
     {
       "id": "ipo_004",
@@ -86,7 +86,7 @@
       "issue_size_cr": 42.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.94,
+      "subscription_times": 1.2,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/value-360-communications-ipo/",
       "subscription_qib": 17.0,
-      "subscription_nii": 0.97,
-      "subscription_retail": 0.51
+      "subscription_nii": 1.24,
+      "subscription_retail": 0.77
     }
   ],
   "upcoming_ipos": [
@@ -147,6 +147,48 @@
     }
   ],
   "historical_ipos": [
+    {
+      "company": "Citius Transnet InvIT",
+      "listing_date": "",
+      "issue_price": 100.0,
+      "listing_price": 104.6,
+      "current_price": 4.6,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 4.6,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Propshare Celestia",
+      "listing_date": "",
+      "issue_price": 1050000.0,
+      "listing_price": 999900.0,
+      "current_price": 4.77,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": -4.8,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Om Power Transmission",
+      "listing_date": "",
+      "issue_price": 175.0,
+      "listing_price": 186.0,
+      "current_price": 6.29,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 6.3,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
     {
       "company": "Amir Chand",
       "listing_date": "",
@@ -786,48 +828,6 @@
       "gmp_before_listing": null,
       "gmp_predicted_gain": null,
       "actual_listing_gain": 1.2,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "WeWork India",
-      "listing_date": "",
-      "issue_price": 648.0,
-      "listing_price": 650.0,
-      "current_price": 0.31,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 0.3,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Om Freight Forwarders",
-      "listing_date": "",
-      "issue_price": 135.0,
-      "listing_price": 81.5,
-      "current_price": 39.63,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": -39.6,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Advance Agrolife",
-      "listing_date": "",
-      "issue_price": 100.0,
-      "listing_price": 114.0,
-      "current_price": 14.0,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 14.0,
       "gmp_accurate": null,
       "sector": "—",
       "exchange": "BSE / NSE",
