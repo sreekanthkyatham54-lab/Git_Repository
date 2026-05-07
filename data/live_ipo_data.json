@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-07T09:24:01.451908",
+  "scraped_at": "2026-05-07T15:29:40.455252",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 3405.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 11.57,
+      "subscription_times": 24.96,
       "gmp": 4.5,
       "gmp_percent": 4.5,
       "lead_manager": "",
@@ -34,8 +34,8 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/bagmane-reit-ipo/",
-      "subscription_qib": 7.67,
-      "subscription_nii": 16.11,
+      "subscription_qib": 26.58,
+      "subscription_nii": 22.82,
       "subscription_retail": 0.0
     },
     {
@@ -50,9 +50,9 @@
       "issue_size_cr": 45.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 152.94,
-      "gmp": 48.0,
-      "gmp_percent": 30.4,
+      "subscription_times": 234.63,
+      "gmp": 44.0,
+      "gmp_percent": 27.8,
       "lead_manager": "",
       "registrar": "",
       "objects": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/recode-studios-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 53.14,
-      "subscription_nii": 286.63,
-      "subscription_retail": 152.42
+      "subscription_qib": 137.99,
+      "subscription_nii": 404.76,
+      "subscription_retail": 216.64
     }
   ],
   "upcoming_ipos": [
