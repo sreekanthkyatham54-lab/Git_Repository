@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-08T08:16:18.609834",
+  "scraped_at": "2026-05-08T14:56:43.847706",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 58.04,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.02,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "subscription_times": 0.65,
+      "gmp": 11.0,
+      "gmp_percent": 6.0,
       "lead_manager": "",
       "registrar": "MUFG Intime India Pvt",
       "objects": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/simca-advertising-ipo/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.02,
-      "subscription_retail": 0.04
+      "subscription_qib": 1.84,
+      "subscription_nii": 0.52,
+      "subscription_retail": 0.23
     }
   ],
   "upcoming_ipos": [
@@ -86,8 +86,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 7.0,
+      "gmp_percent": 16.3,
       "lead_manager": "",
       "registrar": "Bigshare Services Pvt",
       "objects": "",
