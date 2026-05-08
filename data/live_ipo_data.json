@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-08T04:14:07.970581",
+  "scraped_at": "2026-05-08T08:16:18.609834",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 58.04,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.02,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -33,7 +33,10 @@
       "summary": "Simca Advertising IPO open date is May 8, 2026 and the IPO will close on May 12, 2026. Simca Advertising IPO is a Book build Issue. The company to raise around ₹58.04 crores via IPO that comprises fresh issue of ₹58.04 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/simca-advertising-ipo/"
+      "detail_url": "https://ipowatch.in/simca-advertising-ipo/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.02,
+      "subscription_retail": 0.04
     }
   ],
   "upcoming_ipos": [
@@ -105,6 +108,20 @@
     }
   ],
   "historical_ipos": [
+    {
+      "company": "Kissht",
+      "listing_date": "",
+      "issue_price": 171.0,
+      "listing_price": 190.0,
+      "current_price": 11.11,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 11.1,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
     {
       "company": "Citius Transnet InvIT",
       "listing_date": "",
@@ -772,20 +789,6 @@
       "gmp_before_listing": null,
       "gmp_predicted_gain": null,
       "actual_listing_gain": 50.0,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Tata Capital",
-      "listing_date": "",
-      "issue_price": 326.0,
-      "listing_price": 330.0,
-      "current_price": 1.23,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 1.2,
       "gmp_accurate": null,
       "sector": "—",
       "exchange": "BSE / NSE",
