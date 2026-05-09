@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-08T14:56:43.847706",
+  "scraped_at": "2026-05-09T04:20:46.063285",
   "source": "live",
   "active_ipos": [
     {
@@ -86,8 +86,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 7.0,
-      "gmp_percent": 16.3,
+      "gmp": 8.0,
+      "gmp_percent": 18.6,
       "lead_manager": "",
       "registrar": "Bigshare Services Pvt",
       "objects": "",
