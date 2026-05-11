@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-11T10:26:40.842122",
+  "scraped_at": "2026-05-11T16:05:43.094139",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 58.04,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 3.29,
+      "subscription_times": 4.17,
       "gmp": 21.0,
       "gmp_percent": 11.5,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/simca-advertising-ipo/",
       "subscription_qib": 6.5,
-      "subscription_nii": 2.13,
-      "subscription_retail": 2.94
+      "subscription_nii": 3.04,
+      "subscription_retail": 4.19
     }
   ],
   "upcoming_ipos": [
