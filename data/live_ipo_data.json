@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-12T09:28:26.257599",
+  "scraped_at": "2026-05-12T15:42:06.119516",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 35.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.69,
+      "subscription_times": 1.24,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rfbl-flexi-pack-ipo/",
       "subscription_qib": 1.12,
-      "subscription_nii": 0.58,
-      "subscription_retail": 0.71
+      "subscription_nii": 1.59,
+      "subscription_retail": 1.07
     },
     {
       "id": "ipo_002",
@@ -50,7 +50,7 @@
       "issue_size_cr": 12.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 13.61,
+      "subscription_times": 22.35,
       "gmp": 17.0,
       "gmp_percent": 39.5,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/goldline-pharmaceutical-ipo/",
       "subscription_qib": 1.31,
-      "subscription_nii": 12.92,
-      "subscription_retail": 21.29
+      "subscription_nii": 24.46,
+      "subscription_retail": 34.07
     },
     {
       "id": "ipo_003",
@@ -86,9 +86,9 @@
       "issue_size_cr": 58.04,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 43.33,
-      "gmp": 30.0,
-      "gmp_percent": 16.4,
+      "subscription_times": 80.87,
+      "gmp": 35.0,
+      "gmp_percent": 19.1,
       "lead_manager": "",
       "registrar": "MUFG Intime India Pvt",
       "objects": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/simca-advertising-ipo/",
-      "subscription_qib": 52.56,
-      "subscription_nii": 42.8,
-      "subscription_retail": 39.58
+      "subscription_qib": 101.08,
+      "subscription_nii": 81.54,
+      "subscription_retail": 70.89
     }
   ],
   "upcoming_ipos": [],
