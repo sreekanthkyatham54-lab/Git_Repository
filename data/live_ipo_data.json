@@ -1,9 +1,9 @@
 {
-  "scraped_at": "2026-05-13T09:33:43.445023",
+  "scraped_at": "2026-05-13T15:46:29.230664",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_003",
+      "id": "ipo_004",
       "company": "RFBL Flexi Pack",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -14,7 +14,7 @@
       "issue_size_cr": 35.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.47,
+      "subscription_times": 1.52,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,11 +35,11 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rfbl-flexi-pack-ipo/",
       "subscription_qib": 1.12,
-      "subscription_nii": 1.67,
-      "subscription_retail": 1.4
+      "subscription_nii": 1.7,
+      "subscription_retail": 1.47
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_005",
       "company": "Goldline Pharmaceutical",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -50,7 +50,7 @@
       "issue_size_cr": 12.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 58.89,
+      "subscription_times": 98.8,
       "gmp": 18.0,
       "gmp_percent": 41.9,
       "lead_manager": "",
@@ -71,13 +71,46 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/goldline-pharmaceutical-ipo/",
       "subscription_qib": 1.31,
-      "subscription_nii": 74.15,
-      "subscription_retail": 86.83
+      "subscription_nii": 144.62,
+      "subscription_retail": 137.45
     }
   ],
   "upcoming_ipos": [
     {
       "id": "ipo_001",
+      "company": "Harikanta Overseas",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "—",
+      "open_date": "2026-05-20",
+      "close_date": "2026-05-22",
+      "issue_price": 96.0,
+      "issue_size_cr": 25.63,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "Bigshare Services Pvt",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 96.87,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Harikanta Overseas IPO open date is May 20, 2026 and the IPO will close on May 22, 2026. Harikanta Overseas IPO is a Book build Issue. The company to raise around ₹25.63 crores via IPO that comprises fresh issue of ₹25.63 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/harikanta-overseas-ipo/"
+    },
+    {
+      "id": "ipo_002",
       "company": "Teamtech Formwork",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -110,7 +143,7 @@
       "detail_url": "https://ipowatch.in/teamtech-formwork-solutions-ipo/"
     },
     {
-      "id": "ipo_002",
+      "id": "ipo_003",
       "company": "NFP Sampoorna Foods",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
