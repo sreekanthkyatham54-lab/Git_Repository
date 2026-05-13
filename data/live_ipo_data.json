@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-13T08:12:36.205723",
+  "scraped_at": "2026-05-13T09:33:43.445023",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 35.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.32,
+      "subscription_times": 1.47,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rfbl-flexi-pack-ipo/",
       "subscription_qib": 1.12,
-      "subscription_nii": 1.51,
-      "subscription_retail": 1.24
+      "subscription_nii": 1.67,
+      "subscription_retail": 1.4
     },
     {
       "id": "ipo_004",
@@ -50,7 +50,7 @@
       "issue_size_cr": 12.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 37.7,
+      "subscription_times": 58.89,
       "gmp": 18.0,
       "gmp_percent": 41.9,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/goldline-pharmaceutical-ipo/",
       "subscription_qib": 1.31,
-      "subscription_nii": 45.5,
-      "subscription_retail": 56.15
+      "subscription_nii": 74.15,
+      "subscription_retail": 86.83
     }
   ],
   "upcoming_ipos": [
@@ -104,7 +104,7 @@
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "Teamtech Formwork IPO open date is 2026 and the IPO will close on 2026. Teamtech Formwork Solutions IPO is a Bookbuilding Issue. The company to raise around ₹50.15 crores via IPO that comprises fresh issue of ₹50.15 crores and offer for sale up to [.] equity shares with face value of ₹5 each.",
+      "summary": "Teamtech Formwork IPO open date is May 19, 2026 and the IPO will close on May 21, 2026. Teamtech Formwork Solutions IPO is a Bookbuilding Issue. The company to raise around ₹50.15 crores via IPO that comprises fresh issue of ₹50.15 crores and offer for sale up to [.] equity shares with face value of ₹5 each.",
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/teamtech-formwork-solutions-ipo/"
