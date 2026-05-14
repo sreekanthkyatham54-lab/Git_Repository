@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-14T04:40:24.227377",
+  "scraped_at": "2026-05-14T09:25:09.147784",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 35.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.52,
+      "subscription_times": 8.16,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rfbl-flexi-pack-ipo/",
-      "subscription_qib": 1.12,
-      "subscription_nii": 1.7,
-      "subscription_retail": 1.47
+      "subscription_qib": 13.04,
+      "subscription_nii": 12.44,
+      "subscription_retail": 5.58
     },
     {
       "id": "ipo_005",
@@ -50,7 +50,7 @@
       "issue_size_cr": 12.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 98.8,
+      "subscription_times": 537.76,
       "gmp": 25.0,
       "gmp_percent": 58.1,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/goldline-pharmaceutical-ipo/",
-      "subscription_qib": 1.31,
-      "subscription_nii": 144.62,
-      "subscription_retail": 137.45
+      "subscription_qib": 79.04,
+      "subscription_nii": 1041.41,
+      "subscription_retail": 594.73
     }
   ],
   "upcoming_ipos": [
