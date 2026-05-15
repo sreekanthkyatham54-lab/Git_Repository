@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-15T04:45:59.433495",
+  "scraped_at": "2026-05-15T09:36:50.538156",
   "source": "live",
   "active_ipos": [],
   "upcoming_ipos": [
@@ -173,6 +173,20 @@
     }
   ],
   "historical_ipos": [
+    {
+      "company": "Bagmane REIT",
+      "listing_date": "",
+      "issue_price": 100.0,
+      "listing_price": 103.5,
+      "current_price": 3.5,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 3.5,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
     {
       "company": "Kissht",
       "listing_date": "",
@@ -840,20 +854,6 @@
       "gmp_before_listing": null,
       "gmp_predicted_gain": null,
       "actual_listing_gain": 27.8,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "LG Electronics",
-      "listing_date": "",
-      "issue_price": 1140.0,
-      "listing_price": 1710.1,
-      "current_price": 50.01,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 50.0,
       "gmp_accurate": null,
       "sector": "—",
       "exchange": "BSE / NSE",
