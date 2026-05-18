@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-18T05:04:07.741459",
+  "scraped_at": "2026-05-18T10:53:50.549256",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 25.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.37,
       "gmp": 6.0,
       "gmp_percent": 10.9,
       "lead_manager": "",
@@ -33,7 +33,10 @@
       "summary": "NFP Sampoorna Foods IPO open date is May 18, 2026 and the IPO will close on May 20, 2026. NFP Sampoorna Foods IPO is a Book Build Issue. The company to raise around ₹24.53 crores via IPO that comprises fresh issue of ₹24.53 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/nfp-sampoorna-foods-ipo-date-review-price-allotment-details/"
+      "detail_url": "https://ipowatch.in/nfp-sampoorna-foods-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 1.0,
+      "subscription_nii": 0.18,
+      "subscription_retail": 0.54
     }
   ],
   "upcoming_ipos": [
