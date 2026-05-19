@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-19T04:56:36.663351",
+  "scraped_at": "2026-05-19T10:29:32.822442",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 50.15,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.5,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -33,7 +33,10 @@
       "summary": "Teamtech Formwork IPO open date is May 19, 2026 and the IPO will close on May 21, 2026. Teamtech Formwork Solutions IPO is a Bookbuilding Issue. The company to raise around ₹50.15 crores via IPO that comprises fresh issue of ₹50.15 crores and offer for sale up to [.] equity shares with face value of ₹5 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/teamtech-formwork-solutions-ipo/"
+      "detail_url": "https://ipowatch.in/teamtech-formwork-solutions-ipo/",
+      "subscription_qib": 0.66,
+      "subscription_nii": 0.75,
+      "subscription_retail": 0.31
     },
     {
       "id": "ipo_008",
@@ -47,7 +50,7 @@
       "issue_size_cr": 25.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.46,
+      "subscription_times": 0.96,
       "gmp": 8.0,
       "gmp_percent": 14.5,
       "lead_manager": "",
@@ -68,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/nfp-sampoorna-foods-ipo-date-review-price-allotment-details/",
       "subscription_qib": 1.0,
-      "subscription_nii": 0.23,
-      "subscription_retail": 0.67
+      "subscription_nii": 0.25,
+      "subscription_retail": 1.67
     }
   ],
   "upcoming_ipos": [
@@ -85,7 +88,7 @@
       "issue_size_cr": 27.04,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 0.46,
+      "subscription_times": 0.5,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -105,9 +108,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/m-r-maniveni-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 0.23,
-      "subscription_retail": 0.67
+      "subscription_qib": 0.66,
+      "subscription_nii": 0.75,
+      "subscription_retail": 0.31
     },
     {
       "id": "ipo_002",
@@ -122,8 +125,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 166.72,
-      "gmp": 69.0,
-      "gmp_percent": 20.1,
+      "gmp": 87.0,
+      "gmp_percent": 25.4,
       "lead_manager": "",
       "registrar": "Purva Sharegistry (India) Pvt",
       "objects": "",
@@ -206,7 +209,7 @@
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "Bio Medica Laboratories IPO open date is May 21, 2026 and the IPO will close on May 25, 2026. Bio Medica Laboratories IPO is a Book build Issue. The company to raise around ₹[.] crores via IPO that comprises fresh issue of ₹[.] crores and offer for sale up to 3,76,800 equity shares with face value of ₹10 each.",
+      "summary": "Bio Medica Laboratories IPO open date is May 21, 2026 and the IPO will close on May 25, 2026. Bio Medica Laboratories IPO is a Book build Issue. The company to raise around ₹52.43 crores via IPO that comprises fresh issue of ₹47.19 crores and offer for sale up to 3,76,800 equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/bio-medica-laboratories-ipo/",
