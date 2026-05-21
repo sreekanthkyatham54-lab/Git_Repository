@@ -1,11 +1,11 @@
 {
-  "scraped_at": "2026-05-21T10:28:11.881643",
+  "scraped_at": "2026-05-21T16:19:35.935842",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_005",
+      "id": "ipo_006",
       "company": "Q-Line Biotech",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-05-21",
@@ -15,8 +15,8 @@
       "lot_size": 0,
       "subscription_status": "Open",
       "subscription_times": 3.51,
-      "gmp": 141.0,
-      "gmp_percent": 41.1,
+      "gmp": 125.0,
+      "gmp_percent": 36.4,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -39,7 +39,7 @@
       "subscription_retail": 2.93
     },
     {
-      "id": "ipo_006",
+      "id": "ipo_007",
       "company": "Autofurnish",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -75,9 +75,9 @@
       "subscription_retail": 0.38
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_008",
       "company": "Bio Medica Laboratories",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-05-21",
@@ -111,7 +111,7 @@
       "subscription_retail": 0.86
     },
     {
-      "id": "ipo_008",
+      "id": "ipo_009",
       "company": "Vegorama Punjabi Angithi",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -147,7 +147,7 @@
       "subscription_retail": 3.81
     },
     {
-      "id": "ipo_009",
+      "id": "ipo_010",
       "company": "Harikanta Overseas",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -183,9 +183,9 @@
       "subscription_retail": 0.09
     },
     {
-      "id": "ipo_010",
+      "id": "ipo_011",
       "company": "Teamtech Formwork",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-05-19",
@@ -233,8 +233,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 45.0,
-      "gmp_percent": 30.2,
+      "gmp": 75.0,
+      "gmp_percent": 50.3,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -255,6 +255,39 @@
     },
     {
       "id": "ipo_002",
+      "company": "Rajnandini Fashion",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-05-26",
+      "close_date": "2026-05-29",
+      "issue_price": 63.0,
+      "issue_size_cr": 18.21,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/rajnandini-fashion-ipo/"
+    },
+    {
+      "id": "ipo_003",
       "company": "SMR Jewels",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -287,7 +320,7 @@
       "detail_url": "https://ipowatch.in/smr-jewels-ipo/"
     },
     {
-      "id": "ipo_003",
+      "id": "ipo_004",
       "company": "Yaashvi Jewellers",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -320,7 +353,7 @@
       "detail_url": "https://ipowatch.in/yaashvi-jewellers-ipo/"
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_005",
       "company": "M R Maniveni Foods",
       "exchange": "BSE SME",
       "ipo_type": "SME",
