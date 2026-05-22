@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-22T10:14:00.887986",
+  "scraped_at": "2026-05-22T15:51:52.818782",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 27.04,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.49,
+      "subscription_times": 1.09,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/m-r-maniveni-ipo/",
-      "subscription_qib": 0.31,
-      "subscription_nii": 0.68,
-      "subscription_retail": 0.51
+      "subscription_qib": 1.0,
+      "subscription_nii": 1.66,
+      "subscription_retail": 0.89
     },
     {
       "id": "ipo_006",
@@ -50,7 +50,7 @@
       "issue_size_cr": 214.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 7.18,
+      "subscription_times": 9.83,
       "gmp": 120.0,
       "gmp_percent": 35.0,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/q-line-biotec-ipo/",
-      "subscription_qib": 5.11,
-      "subscription_nii": 10.14,
-      "subscription_retail": 7.1
+      "subscription_qib": 5.19,
+      "subscription_nii": 15.61,
+      "subscription_retail": 10.01
     },
     {
       "id": "ipo_007",
@@ -86,7 +86,7 @@
       "issue_size_cr": 15.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.38,
+      "subscription_times": 0.43,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/autofurnish-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.1,
-      "subscription_retail": 0.6
+      "subscription_nii": 0.13,
+      "subscription_retail": 0.66
     },
     {
       "id": "ipo_008",
@@ -122,7 +122,7 @@
       "issue_size_cr": 52.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.84,
+      "subscription_times": 1.01,
       "gmp": 2.0,
       "gmp_percent": 1.4,
       "lead_manager": "",
@@ -143,8 +143,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/bio-medica-laboratories-ipo/",
       "subscription_qib": 15.94,
-      "subscription_nii": 0.06,
-      "subscription_retail": 1.3
+      "subscription_nii": 0.28,
+      "subscription_retail": 1.42
     },
     {
       "id": "ipo_009",
@@ -158,7 +158,7 @@
       "issue_size_cr": 38.38,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 14.6,
+      "subscription_times": 35.15,
       "gmp": 5.0,
       "gmp_percent": 6.5,
       "lead_manager": "",
@@ -178,9 +178,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vegorama-punjabi-angithi-ipo/",
-      "subscription_qib": 11.75,
-      "subscription_nii": 25.38,
-      "subscription_retail": 11.61
+      "subscription_qib": 26.46,
+      "subscription_nii": 63.93,
+      "subscription_retail": 27.79
     },
     {
       "id": "ipo_010",
@@ -189,12 +189,12 @@
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-05-20",
-      "close_date": "2026-05-22",
-      "issue_price": 96.0,
-      "issue_size_cr": 25.63,
+      "close_date": "2026-05-27",
+      "issue_price": 91.0,
+      "issue_size_cr": 24.3,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.16,
+      "subscription_times": 0.27,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -215,8 +215,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/harikanta-overseas-ipo/",
       "subscription_qib": 1.0,
-      "subscription_nii": 0.07,
-      "subscription_retail": 0.22
+      "subscription_nii": 0.19,
+      "subscription_retail": 0.32
     }
   ],
   "upcoming_ipos": [
@@ -232,7 +232,7 @@
       "issue_size_cr": 70.03,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 0.49,
+      "subscription_times": 1.09,
       "gmp": 78.0,
       "gmp_percent": 52.3,
       "lead_manager": "",
@@ -252,9 +252,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/merritronix-ipo/",
-      "subscription_qib": 0.31,
-      "subscription_nii": 0.68,
-      "subscription_retail": 0.51
+      "subscription_qib": 1.0,
+      "subscription_nii": 1.66,
+      "subscription_retail": 0.89
     },
     {
       "id": "ipo_002",
@@ -301,7 +301,7 @@
       "issue_size_cr": 67.23,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 0.49,
+      "subscription_times": 1.09,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -321,9 +321,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/smr-jewels-ipo/",
-      "subscription_qib": 0.31,
-      "subscription_nii": 0.68,
-      "subscription_retail": 0.51
+      "subscription_qib": 1.0,
+      "subscription_nii": 1.66,
+      "subscription_retail": 0.89
     },
     {
       "id": "ipo_004",
