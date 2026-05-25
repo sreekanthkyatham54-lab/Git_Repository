@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-25T05:17:37.383730",
+  "scraped_at": "2026-05-25T11:02:29.011356",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 43.88,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.02,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -33,7 +33,10 @@
       "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/yaashvi-jewellers-ipo/"
+      "detail_url": "https://ipowatch.in/yaashvi-jewellers-ipo/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.01,
+      "subscription_retail": 0.04
     },
     {
       "id": "ipo_005",
@@ -47,7 +50,7 @@
       "issue_size_cr": 27.04,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.09,
+      "subscription_times": 1.29,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -68,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/m-r-maniveni-ipo/",
       "subscription_qib": 1.0,
-      "subscription_nii": 1.66,
-      "subscription_retail": 0.89
+      "subscription_nii": 1.55,
+      "subscription_retail": 1.33
     },
     {
       "id": "ipo_006",
@@ -83,7 +86,7 @@
       "issue_size_cr": 214.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 9.83,
+      "subscription_times": 95.69,
       "gmp": 125.0,
       "gmp_percent": 36.4,
       "lead_manager": "",
@@ -103,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/q-line-biotec-ipo/",
-      "subscription_qib": 5.19,
-      "subscription_nii": 15.61,
-      "subscription_retail": 10.01
+      "subscription_qib": 109.95,
+      "subscription_nii": 143.15,
+      "subscription_retail": 67.19
     },
     {
       "id": "ipo_007",
@@ -119,7 +122,7 @@
       "issue_size_cr": 15.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.43,
+      "subscription_times": 1.15,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -140,8 +143,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/autofurnish-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.13,
-      "subscription_retail": 0.66
+      "subscription_nii": 1.16,
+      "subscription_retail": 1.06
     },
     {
       "id": "ipo_008",
@@ -155,7 +158,7 @@
       "issue_size_cr": 52.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.01,
+      "subscription_times": 2.2,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -176,8 +179,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/bio-medica-laboratories-ipo/",
       "subscription_qib": 15.94,
-      "subscription_nii": 0.28,
-      "subscription_retail": 1.42
+      "subscription_nii": 1.3,
+      "subscription_retail": 2.82
     },
     {
       "id": "ipo_009",
@@ -191,7 +194,7 @@
       "issue_size_cr": 24.3,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.27,
+      "subscription_times": 0.5,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -211,9 +214,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/harikanta-overseas-ipo/",
-      "subscription_qib": 1.0,
+      "subscription_qib": 11.18,
       "subscription_nii": 0.19,
-      "subscription_retail": 0.32
+      "subscription_retail": 0.34
     }
   ],
   "upcoming_ipos": [
@@ -229,7 +232,7 @@
       "issue_size_cr": 70.03,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 1.09,
+      "subscription_times": 1.29,
       "gmp": 93.0,
       "gmp_percent": 62.4,
       "lead_manager": "",
@@ -250,8 +253,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/merritronix-ipo/",
       "subscription_qib": 1.0,
-      "subscription_nii": 1.66,
-      "subscription_retail": 0.89
+      "subscription_nii": 1.55,
+      "subscription_retail": 1.33
     },
     {
       "id": "ipo_002",
@@ -298,7 +301,7 @@
       "issue_size_cr": 67.23,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 1.09,
+      "subscription_times": 1.29,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -319,8 +322,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/smr-jewels-ipo/",
       "subscription_qib": 1.0,
-      "subscription_nii": 1.66,
-      "subscription_retail": 0.89
+      "subscription_nii": 1.55,
+      "subscription_retail": 1.33
     }
   ],
   "historical_ipos": [
