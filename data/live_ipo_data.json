@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-27T10:44:27.357404",
+  "scraped_at": "2026-05-27T16:40:46.230021",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 18.21,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 5.48,
+      "subscription_times": 6.97,
       "gmp": 6.0,
       "gmp_percent": 9.5,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rajnandini-fashion-ipo/",
       "subscription_qib": 3.51,
-      "subscription_nii": 7.69,
-      "subscription_retail": 5.65
+      "subscription_nii": 11.04,
+      "subscription_retail": 7.18
     },
     {
       "id": "ipo_006",
@@ -72,7 +72,7 @@
       "detail_url": "https://ipowatch.in/smr-jewels-ipo/",
       "subscription_qib": 2.35,
       "subscription_nii": 0.0,
-      "subscription_retail": 0.05
+      "subscription_retail": 0.06
     },
     {
       "id": "ipo_007",
@@ -86,7 +86,7 @@
       "issue_size_cr": 43.88,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 5.46,
+      "subscription_times": 5.64,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/yaashvi-jewellers-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 3.27,
-      "subscription_retail": 1.54
+      "subscription_nii": 3.4,
+      "subscription_retail": 1.76
     },
     {
       "id": "ipo_008",
@@ -122,7 +122,7 @@
       "issue_size_cr": 24.3,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.1,
+      "subscription_times": 1.12,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -143,8 +143,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/harikanta-overseas-ipo/",
       "subscription_qib": 21.33,
-      "subscription_nii": 0.69,
-      "subscription_retail": 0.63
+      "subscription_nii": 0.7,
+      "subscription_retail": 0.66
     }
   ],
   "upcoming_ipos": [
