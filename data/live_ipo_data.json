@@ -1,9 +1,9 @@
 {
-  "scraped_at": "2026-05-29T05:10:54.359526",
+  "scraped_at": "2026-05-29T10:37:41.765231",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_006",
+      "id": "ipo_007",
       "company": "Aureate Tradde",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -14,7 +14,7 @@
       "issue_size_cr": 27.29,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.14,
       "gmp": 9.0,
       "gmp_percent": 12.9,
       "lead_manager": "",
@@ -33,10 +33,13 @@
       "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/aureate-tradde-ipo/"
+      "detail_url": "https://ipowatch.in/aureate-tradde-ipo/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.05,
+      "subscription_retail": 0.22
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_008",
       "company": "Rajnandini Fashion",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -47,7 +50,7 @@
       "issue_size_cr": 18.21,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 6.97,
+      "subscription_times": 191.4,
       "gmp": 10.0,
       "gmp_percent": 15.9,
       "lead_manager": "",
@@ -67,12 +70,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rajnandini-fashion-ipo/",
-      "subscription_qib": 3.51,
-      "subscription_nii": 11.04,
-      "subscription_retail": 7.18
+      "subscription_qib": 107.98,
+      "subscription_nii": 389.22,
+      "subscription_retail": 153.87
     },
     {
-      "id": "ipo_008",
+      "id": "ipo_009",
       "company": "SMR Jewels",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -83,7 +86,7 @@
       "issue_size_cr": 67.23,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.26,
+      "subscription_times": 0.39,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -104,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/smr-jewels-ipo/",
       "subscription_qib": 2.35,
-      "subscription_nii": 0.0,
-      "subscription_retail": 0.06
+      "subscription_nii": 0.06,
+      "subscription_retail": 0.26
     }
   ],
   "upcoming_ipos": [
@@ -180,6 +183,39 @@
     },
     {
       "id": "ipo_003",
+      "company": "Genxai Analytics",
+      "exchange": "NSE Emerge",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-06-05",
+      "close_date": "2026-06-09",
+      "issue_price": 116.0,
+      "issue_size_cr": 55.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/genxai-analytics-ipo/"
+    },
+    {
+      "id": "ipo_004",
       "company": "Vahh Chemicals",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -215,7 +251,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_005",
       "company": "Liotech Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -248,7 +284,7 @@
       "detail_url": "https://ipowatch.in/liotech-industries-ipo/"
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_006",
       "company": "Merritronix",
       "exchange": "BSE SME",
       "ipo_type": "SME",
