@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-29T10:37:41.765231",
+  "scraped_at": "2026-05-29T16:47:45.560304",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 27.29,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.14,
+      "subscription_times": 0.16,
       "gmp": 9.0,
       "gmp_percent": 12.9,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/aureate-tradde-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.05,
-      "subscription_retail": 0.22
+      "subscription_nii": 0.06,
+      "subscription_retail": 0.26
     },
     {
       "id": "ipo_008",
@@ -50,7 +50,7 @@
       "issue_size_cr": 18.21,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 191.4,
+      "subscription_times": 203.74,
       "gmp": 10.0,
       "gmp_percent": 15.9,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rajnandini-fashion-ipo/",
-      "subscription_qib": 107.98,
-      "subscription_nii": 389.22,
-      "subscription_retail": 153.87
+      "subscription_qib": 122.04,
+      "subscription_nii": 393.63,
+      "subscription_retail": 168.63
     },
     {
       "id": "ipo_009",
@@ -158,8 +158,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 24.0,
-      "gmp_percent": 12.5,
+      "gmp": 30.0,
+      "gmp_percent": 15.6,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
