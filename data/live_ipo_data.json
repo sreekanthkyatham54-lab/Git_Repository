@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-01T12:27:05.120527",
+  "scraped_at": "2026-06-01T18:42:26.145986",
   "source": "live",
   "active_ipos": [
     {
@@ -115,7 +115,7 @@
     {
       "id": "ipo_001",
       "company": "Hexagon Nutrition",
-      "exchange": "NSE Emerge",
+      "exchange": "BSE SME",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-05",
@@ -148,7 +148,7 @@
     {
       "id": "ipo_002",
       "company": "CMR Green Technologies",
-      "exchange": "NSE Emerge",
+      "exchange": "BSE SME",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-03",
@@ -184,7 +184,7 @@
     {
       "id": "ipo_003",
       "company": "Genxai Analytics",
-      "exchange": "NSE Emerge",
+      "exchange": "BSE SME",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-05",
