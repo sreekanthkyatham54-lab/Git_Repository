@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-02T11:10:14.942647",
+  "scraped_at": "2026-06-02T17:28:04.191672",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 70.03,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 54.37,
+      "subscription_times": 68.52,
       "gmp": 90.0,
       "gmp_percent": 60.4,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/merritronix-ipo/",
-      "subscription_qib": 3.07,
-      "subscription_nii": 77.69,
-      "subscription_retail": 73.6
+      "subscription_qib": 3.09,
+      "subscription_nii": 107.11,
+      "subscription_retail": 89.25
     },
     {
       "id": "ipo_007",
@@ -50,7 +50,7 @@
       "issue_size_cr": 27.29,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.38,
+      "subscription_times": 1.43,
       "gmp": 7.0,
       "gmp_percent": 10.0,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/aureate-tradde-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.44,
-      "subscription_retail": 2.32
+      "subscription_nii": 0.45,
+      "subscription_retail": 2.42
     },
     {
       "id": "ipo_008",
@@ -86,7 +86,7 @@
       "issue_size_cr": 63.74,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.34,
+      "subscription_times": 0.35,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/smr-jewels-ipo/",
       "subscription_qib": 2.35,
-      "subscription_nii": 0.05,
-      "subscription_retail": 0.17
+      "subscription_nii": 0.06,
+      "subscription_retail": 0.18
     }
   ],
   "upcoming_ipos": [
@@ -158,8 +158,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 52.0,
-      "gmp_percent": 27.1,
+      "gmp": 64.0,
+      "gmp_percent": 33.3,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
