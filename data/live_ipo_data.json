@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-01T18:42:26.145986",
+  "scraped_at": "2026-06-02T05:27:40.314502",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 70.03,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 15.96,
-      "gmp": 88.0,
-      "gmp_percent": 59.1,
+      "subscription_times": 25.79,
+      "gmp": 90.0,
+      "gmp_percent": 60.4,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/merritronix-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 21.63,
-      "subscription_retail": 22.62
+      "subscription_nii": 36.69,
+      "subscription_retail": 35.82
     },
     {
       "id": "ipo_007",
@@ -50,9 +50,9 @@
       "issue_size_cr": 27.29,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.76,
-      "gmp": 13.0,
-      "gmp_percent": 18.6,
+      "subscription_times": 1.01,
+      "gmp": 7.0,
+      "gmp_percent": 10.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/aureate-tradde-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.16,
-      "subscription_retail": 1.36
+      "subscription_nii": 0.3,
+      "subscription_retail": 1.72
     },
     {
       "id": "ipo_008",
@@ -86,7 +86,7 @@
       "issue_size_cr": 63.74,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.33,
+      "subscription_times": 0.34,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -108,14 +108,14 @@
       "detail_url": "https://ipowatch.in/smr-jewels-ipo/",
       "subscription_qib": 2.35,
       "subscription_nii": 0.05,
-      "subscription_retail": 0.15
+      "subscription_retail": 0.16
     }
   ],
   "upcoming_ipos": [
     {
       "id": "ipo_001",
       "company": "Hexagon Nutrition",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-05",
@@ -148,7 +148,7 @@
     {
       "id": "ipo_002",
       "company": "CMR Green Technologies",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-03",
@@ -158,8 +158,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 42.0,
-      "gmp_percent": 21.9,
+      "gmp": 49.0,
+      "gmp_percent": 25.5,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -184,7 +184,7 @@
     {
       "id": "ipo_003",
       "company": "Genxai Analytics",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-05",
