@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-03T11:49:10.604550",
+  "scraped_at": "2026-06-03T18:02:16.821045",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 630.88,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.97,
-      "gmp": 64.0,
-      "gmp_percent": 33.3,
+      "subscription_times": 2.46,
+      "gmp": 67.0,
+      "gmp_percent": 34.9,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/cmr-green-technologies-ipo/",
-      "subscription_qib": 0.02,
-      "subscription_nii": 4.18,
-      "subscription_retail": 2.14
+      "subscription_qib": 0.03,
+      "subscription_nii": 5.68,
+      "subscription_retail": 2.47
     },
     {
       "id": "ipo_006",
@@ -50,7 +50,7 @@
       "issue_size_cr": 70.03,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 309.05,
+      "subscription_times": 315.36,
       "gmp": 85.0,
       "gmp_percent": 57.0,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/merritronix-ipo/",
-      "subscription_qib": 218.35,
-      "subscription_nii": 475.09,
-      "subscription_retail": 289.44
+      "subscription_qib": 224.91,
+      "subscription_nii": 476.59,
+      "subscription_retail": 297.67
     },
     {
       "id": "ipo_007",
@@ -86,7 +86,7 @@
       "issue_size_cr": 63.74,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.08,
+      "subscription_times": 1.09,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -108,7 +108,7 @@
       "detail_url": "https://ipowatch.in/smr-jewels-ipo/",
       "subscription_qib": 5.41,
       "subscription_nii": 1.0,
-      "subscription_retail": 0.29
+      "subscription_retail": 0.3
     }
   ],
   "upcoming_ipos": [
