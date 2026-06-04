@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-04T10:31:34.758028",
+  "scraped_at": "2026-06-04T16:23:16.970512",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 630.88,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 7.61,
-      "gmp": 67.0,
-      "gmp_percent": 34.9,
+      "subscription_times": 9.62,
+      "gmp": 69.0,
+      "gmp_percent": 35.9,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/cmr-green-technologies-ipo/",
-      "subscription_qib": 0.12,
-      "subscription_nii": 18.66,
-      "subscription_retail": 7.17
+      "subscription_qib": 3.45,
+      "subscription_nii": 21.81,
+      "subscription_retail": 7.95
     },
     {
       "id": "ipo_004",
@@ -50,7 +50,7 @@
       "issue_size_cr": 36.02,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.21,
+      "subscription_times": 0.23,
       "gmp": 34.0,
       "gmp_percent": 20.5,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/uhm-vacation-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.27,
-      "subscription_retail": 0.15
+      "subscription_nii": 0.29,
+      "subscription_retail": 0.18
     },
     {
       "id": "ipo_005",
@@ -86,7 +86,7 @@
       "issue_size_cr": 13.45,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.9,
+      "subscription_times": 1.32,
       "gmp": 13.0,
       "gmp_percent": 21.7,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vahh-chemicals-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.9,
-      "subscription_retail": 0.9
+      "subscription_nii": 1.33,
+      "subscription_retail": 1.3
     }
   ],
   "upcoming_ipos": [
@@ -125,8 +125,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 10.0,
-      "gmp_percent": 22.2,
+      "gmp": 13.0,
+      "gmp_percent": 28.9,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -158,8 +158,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 8.0,
-      "gmp_percent": 6.9,
+      "gmp": 10.0,
+      "gmp_percent": 8.6,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
