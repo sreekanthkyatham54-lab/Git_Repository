@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-05T10:38:52.421945",
+  "scraped_at": "2026-06-05T16:02:26.414280",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 138.87,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.35,
+      "subscription_times": 1.65,
       "gmp": 13.0,
       "gmp_percent": 28.9,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/hexagon-nutrition-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 1.61,
-      "subscription_retail": 2.01
+      "subscription_nii": 2.03,
+      "subscription_retail": 2.43
     },
     {
       "id": "ipo_002",
@@ -50,9 +50,9 @@
       "issue_size_cr": 630.88,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 123.03,
-      "gmp": 70.0,
-      "gmp_percent": 36.5,
+      "subscription_times": 127.07,
+      "gmp": 77.0,
+      "gmp_percent": 40.1,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/cmr-green-technologies-ipo/",
-      "subscription_qib": 262.15,
-      "subscription_nii": 169.48,
-      "subscription_retail": 24.96
+      "subscription_qib": 270.46,
+      "subscription_nii": 172.35,
+      "subscription_retail": 27.08
     },
     {
       "id": "ipo_003",
@@ -86,7 +86,7 @@
       "issue_size_cr": 55.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.45,
+      "subscription_times": 0.6,
       "gmp": 10.0,
       "gmp_percent": 8.6,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/genxai-analytics-ipo/",
       "subscription_qib": 0.5,
-      "subscription_nii": 0.71,
-      "subscription_retail": 0.35
+      "subscription_nii": 1.24,
+      "subscription_retail": 0.42
     },
     {
       "id": "ipo_004",
@@ -122,7 +122,7 @@
       "issue_size_cr": 36.02,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.58,
+      "subscription_times": 0.66,
       "gmp": 34.0,
       "gmp_percent": 20.5,
       "lead_manager": "",
@@ -143,8 +143,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/uhm-vacation-ipo/",
       "subscription_qib": 1.0,
-      "subscription_nii": 0.34,
-      "subscription_retail": 0.8
+      "subscription_nii": 0.36,
+      "subscription_retail": 0.93
     },
     {
       "id": "ipo_005",
@@ -158,7 +158,7 @@
       "issue_size_cr": 13.45,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 5.18,
+      "subscription_times": 6.48,
       "gmp": 15.0,
       "gmp_percent": 25.0,
       "lead_manager": "",
@@ -179,8 +179,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vahh-chemicals-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 3.54,
-      "subscription_retail": 6.82
+      "subscription_nii": 4.28,
+      "subscription_retail": 8.68
     }
   ],
   "upcoming_ipos": [],
