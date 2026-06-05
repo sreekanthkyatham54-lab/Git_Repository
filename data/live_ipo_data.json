@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-05T05:12:32.238372",
+  "scraped_at": "2026-06-05T10:38:52.421945",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 138.87,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 1.35,
       "gmp": 13.0,
       "gmp_percent": 28.9,
       "lead_manager": "",
@@ -33,7 +33,10 @@
       "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/hexagon-nutrition-ipo/"
+      "detail_url": "https://ipowatch.in/hexagon-nutrition-ipo/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 1.61,
+      "subscription_retail": 2.01
     },
     {
       "id": "ipo_002",
@@ -47,7 +50,7 @@
       "issue_size_cr": 630.88,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 9.62,
+      "subscription_times": 123.03,
       "gmp": 70.0,
       "gmp_percent": 36.5,
       "lead_manager": "",
@@ -67,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/cmr-green-technologies-ipo/",
-      "subscription_qib": 3.45,
-      "subscription_nii": 21.81,
-      "subscription_retail": 7.95
+      "subscription_qib": 262.15,
+      "subscription_nii": 169.48,
+      "subscription_retail": 24.96
     },
     {
       "id": "ipo_003",
@@ -83,7 +86,7 @@
       "issue_size_cr": 55.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.45,
       "gmp": 10.0,
       "gmp_percent": 8.6,
       "lead_manager": "",
@@ -102,7 +105,10 @@
       "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/genxai-analytics-ipo/"
+      "detail_url": "https://ipowatch.in/genxai-analytics-ipo/",
+      "subscription_qib": 0.5,
+      "subscription_nii": 0.71,
+      "subscription_retail": 0.35
     },
     {
       "id": "ipo_004",
@@ -116,7 +122,7 @@
       "issue_size_cr": 36.02,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.23,
+      "subscription_times": 0.58,
       "gmp": 34.0,
       "gmp_percent": 20.5,
       "lead_manager": "",
@@ -136,9 +142,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/uhm-vacation-ipo/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.29,
-      "subscription_retail": 0.18
+      "subscription_qib": 1.0,
+      "subscription_nii": 0.34,
+      "subscription_retail": 0.8
     },
     {
       "id": "ipo_005",
@@ -152,9 +158,9 @@
       "issue_size_cr": 13.45,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.32,
-      "gmp": 12.0,
-      "gmp_percent": 20.0,
+      "subscription_times": 5.18,
+      "gmp": 15.0,
+      "gmp_percent": 25.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -173,8 +179,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vahh-chemicals-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 1.33,
-      "subscription_retail": 1.3
+      "subscription_nii": 3.54,
+      "subscription_retail": 6.82
     }
   ],
   "upcoming_ipos": [],
