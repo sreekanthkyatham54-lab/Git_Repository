@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-06T09:15:34.308887",
+  "scraped_at": "2026-06-06T14:46:38.780686",
   "source": "live",
   "active_ipos": [
     {
@@ -39,7 +39,7 @@
       "subscription_retail": 2.43
     },
     {
-      "id": "ipo_003",
+      "id": "ipo_004",
       "company": "Genxai Analytics",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -75,7 +75,7 @@
       "subscription_retail": 0.42
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_005",
       "company": "UHM Vacation",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -111,7 +111,7 @@
       "subscription_retail": 0.93
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_006",
       "company": "Vahh Chemicals",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -183,6 +183,42 @@
       "subscription_qib": 1.0,
       "subscription_nii": 1.88,
       "subscription_retail": 2.09
+    },
+    {
+      "id": "ipo_003",
+      "company": "Utkal Speciality Industries",
+      "exchange": "NSE Emerge",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-06-10",
+      "close_date": "2026-06-12",
+      "issue_price": 0.0,
+      "issue_size_cr": 0.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 2.27,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/utkal-speciality-industries-ipo/",
+      "subscription_qib": 96.24,
+      "subscription_nii": 1.88,
+      "subscription_retail": 0.85
     }
   ],
   "historical_ipos": [
