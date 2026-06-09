@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-09T05:00:39.722405",
+  "scraped_at": "2026-06-09T10:25:34.691823",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 138.87,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 4.6,
+      "subscription_times": 49.2,
       "gmp": 7.0,
       "gmp_percent": 15.6,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/hexagon-nutrition-ipo/",
-      "subscription_qib": 0.17,
-      "subscription_nii": 6.7,
-      "subscription_retail": 6.22
+      "subscription_qib": 13.51,
+      "subscription_nii": 156.08,
+      "subscription_retail": 23.8
     },
     {
       "id": "ipo_005",
@@ -50,7 +50,7 @@
       "issue_size_cr": 55.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.01,
+      "subscription_times": 11.84,
       "gmp": 3.0,
       "gmp_percent": 2.6,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/genxai-analytics-ipo/",
-      "subscription_qib": 0.5,
-      "subscription_nii": 1.6,
-      "subscription_retail": 1.09
+      "subscription_qib": 2.46,
+      "subscription_nii": 30.04,
+      "subscription_retail": 10.69
     }
   ],
   "upcoming_ipos": [
@@ -125,8 +125,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 15.0,
-      "gmp_percent": 11.8,
+      "gmp": 18.0,
+      "gmp_percent": 14.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
