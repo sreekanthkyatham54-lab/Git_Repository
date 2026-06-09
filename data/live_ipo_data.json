@@ -1,11 +1,11 @@
 {
-  "scraped_at": "2026-06-09T10:25:34.691823",
+  "scraped_at": "2026-06-09T16:07:14.408711",
   "source": "live",
   "active_ipos": [
     {
       "id": "ipo_001",
       "company": "Hexagon Nutrition",
-      "exchange": "NSE Emerge",
+      "exchange": "BSE SME",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-05",
@@ -14,7 +14,7 @@
       "issue_size_cr": 138.87,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 49.2,
+      "subscription_times": 53.68,
       "gmp": 7.0,
       "gmp_percent": 15.6,
       "lead_manager": "",
@@ -34,14 +34,14 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/hexagon-nutrition-ipo/",
-      "subscription_qib": 13.51,
-      "subscription_nii": 156.08,
-      "subscription_retail": 23.8
+      "subscription_qib": 19.77,
+      "subscription_nii": 161.49,
+      "subscription_retail": 26.85
     },
     {
       "id": "ipo_005",
       "company": "Genxai Analytics",
-      "exchange": "NSE Emerge",
+      "exchange": "BSE SME",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-05",
@@ -50,7 +50,7 @@
       "issue_size_cr": 55.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 11.84,
+      "subscription_times": 16.99,
       "gmp": 3.0,
       "gmp_percent": 2.6,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/genxai-analytics-ipo/",
-      "subscription_qib": 2.46,
-      "subscription_nii": 30.04,
-      "subscription_retail": 10.69
+      "subscription_qib": 17.58,
+      "subscription_nii": 30.91,
+      "subscription_retail": 12.59
     }
   ],
   "upcoming_ipos": [
@@ -148,7 +148,7 @@
     {
       "id": "ipo_004",
       "company": "Utkal Speciality Industries",
-      "exchange": "NSE Emerge",
+      "exchange": "BSE SME",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-10",
