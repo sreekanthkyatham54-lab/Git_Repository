@@ -1,11 +1,11 @@
 {
-  "scraped_at": "2026-06-10T05:13:07.852215",
+  "scraped_at": "2026-06-10T10:46:19.034614",
   "source": "live",
   "active_ipos": [
     {
       "id": "ipo_003",
       "company": "Utkal Speciality Industries",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-10",
@@ -14,9 +14,9 @@
       "issue_size_cr": 35.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.17,
-      "gmp": 6.0,
-      "gmp_percent": 9.1,
+      "subscription_times": 0.28,
+      "gmp": 14.0,
+      "gmp_percent": 21.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/utkal-speciality-industries-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.39,
-      "subscription_retail": 0.01
+      "subscription_nii": 0.41,
+      "subscription_retail": 0.19
     }
   ],
   "upcoming_ipos": [
@@ -53,8 +53,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 25.0,
-      "gmp_percent": 24.3,
+      "gmp": 33.0,
+      "gmp_percent": 32.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
