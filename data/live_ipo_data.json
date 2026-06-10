@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-10T10:46:19.034614",
+  "scraped_at": "2026-06-10T16:39:00.927094",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 35.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.28,
+      "subscription_times": 0.34,
       "gmp": 14.0,
       "gmp_percent": 21.2,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/utkal-speciality-industries-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.41,
-      "subscription_retail": 0.19
+      "subscription_nii": 0.43,
+      "subscription_retail": 0.28
     }
   ],
   "upcoming_ipos": [
