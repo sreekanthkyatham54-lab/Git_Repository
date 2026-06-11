@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-11T11:16:00.792928",
+  "scraped_at": "2026-06-11T16:57:57.744546",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 70.38,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 4.94,
+      "subscription_times": 5.76,
       "gmp": 41.0,
       "gmp_percent": 32.3,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/susan-electricals-ipo/",
       "subscription_qib": 7.01,
-      "subscription_nii": 4.5,
-      "subscription_retail": 3.95
+      "subscription_nii": 6.34,
+      "subscription_retail": 4.79
     },
     {
       "id": "ipo_007",
@@ -50,7 +50,7 @@
       "issue_size_cr": 35.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.77,
+      "subscription_times": 0.83,
       "gmp": 14.0,
       "gmp_percent": 21.2,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/utkal-speciality-industries-ipo/",
       "subscription_qib": 1.12,
-      "subscription_nii": 0.44,
-      "subscription_retail": 0.99
+      "subscription_nii": 0.46,
+      "subscription_retail": 1.09
     }
   ],
   "upcoming_ipos": [
