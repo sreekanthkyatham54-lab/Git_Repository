@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-12T10:55:37.682923",
+  "scraped_at": "2026-06-12T16:23:29.294236",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 54.27,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 6.18,
+      "subscription_times": 8.39,
       "gmp": 50.0,
       "gmp_percent": 48.5,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/horizon-reclaim-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 9.17,
-      "subscription_retail": 8.42
+      "subscription_nii": 12.63,
+      "subscription_retail": 11.37
     },
     {
       "id": "ipo_008",
@@ -50,7 +50,7 @@
       "issue_size_cr": 70.38,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 13.13,
+      "subscription_times": 16.37,
       "gmp": 53.0,
       "gmp_percent": 41.7,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/susan-electricals-ipo/",
       "subscription_qib": 7.31,
-      "subscription_nii": 16.55,
-      "subscription_retail": 14.99
+      "subscription_nii": 21.91,
+      "subscription_retail": 19.16
     },
     {
       "id": "ipo_009",
@@ -86,7 +86,7 @@
       "issue_size_cr": 35.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.5,
+      "subscription_times": 1.6,
       "gmp": 12.0,
       "gmp_percent": 18.2,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/utkal-speciality-industries-ipo/",
       "subscription_qib": 1.12,
-      "subscription_nii": 0.83,
-      "subscription_retail": 1.97
+      "subscription_nii": 0.89,
+      "subscription_retail": 2.1
     }
   ],
   "upcoming_ipos": [
