@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-13T05:18:18.479825",
+  "scraped_at": "2026-06-13T09:48:39.519757",
   "source": "live",
   "active_ipos": [
     {
@@ -79,7 +79,7 @@
     {
       "id": "ipo_001",
       "company": "Advit Jewels",
-      "exchange": "NSE Emerge",
+      "exchange": "BSE SME",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-23",
@@ -112,7 +112,7 @@
     {
       "id": "ipo_002",
       "company": "Turtlemint Fintech",
-      "exchange": "NSE Emerge",
+      "exchange": "BSE SME",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-19",
@@ -148,7 +148,7 @@
     {
       "id": "ipo_003",
       "company": "Clay Craft",
-      "exchange": "NSE Emerge",
+      "exchange": "BSE SME",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-17",
