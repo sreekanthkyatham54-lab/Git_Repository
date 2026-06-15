@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-14T15:09:46.364605",
+  "scraped_at": "2026-06-15T06:19:56.703044",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 54.27,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 8.39,
-      "gmp": 53.0,
-      "gmp_percent": 51.5,
+      "subscription_times": 24.31,
+      "gmp": 57.0,
+      "gmp_percent": 55.3,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/horizon-reclaim-ipo/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 12.63,
-      "subscription_retail": 11.37
+      "subscription_qib": 0.01,
+      "subscription_nii": 45.14,
+      "subscription_retail": 29.26
     },
     {
       "id": "ipo_008",
@@ -50,7 +50,7 @@
       "issue_size_cr": 70.38,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 16.37,
+      "subscription_times": 42.67,
       "gmp": 64.0,
       "gmp_percent": 50.4,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/susan-electricals-ipo/",
-      "subscription_qib": 7.31,
-      "subscription_nii": 21.91,
-      "subscription_retail": 19.16
+      "subscription_qib": 7.33,
+      "subscription_nii": 76.12,
+      "subscription_retail": 48.48
     }
   ],
   "upcoming_ipos": [
@@ -84,12 +84,12 @@
       "sector": "include Clinical Chemistry",
       "open_date": "2026-06-23",
       "close_date": "2026-06-25",
-      "issue_price": 0.0,
+      "issue_price": 130.0,
       "issue_size_cr": 0.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 70.0,
+      "gmp": 91.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "to the issue",
@@ -158,8 +158,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 72.0,
+      "gmp_percent": 35.5,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
