@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-16T06:30:24.554367",
+  "scraped_at": "2026-06-16T12:00:03.095480",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 54.27,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 103.37,
+      "subscription_times": 294.78,
       "gmp": 63.0,
       "gmp_percent": 61.2,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/horizon-reclaim-ipo/",
-      "subscription_qib": 2.67,
-      "subscription_nii": 187.8,
-      "subscription_retail": 124.7
+      "subscription_qib": 182.19,
+      "subscription_nii": 446.5,
+      "subscription_retail": 294.03
     }
   ],
   "upcoming_ipos": [
@@ -86,8 +86,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 15.0,
+      "gmp_percent": 9.9,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
