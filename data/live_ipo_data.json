@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-17T11:25:39.391379",
+  "scraped_at": "2026-06-17T16:40:49.021103",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 110.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.08,
+      "subscription_times": 2.41,
       "gmp": 40.0,
       "gmp_percent": 19.7,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/clay-craft-ipo/",
       "subscription_qib": 4.32,
-      "subscription_nii": 1.01,
-      "subscription_retail": 1.26
+      "subscription_nii": 1.76,
+      "subscription_retail": 1.59
     },
     {
       "id": "ipo_009",
@@ -50,7 +50,7 @@
       "issue_size_cr": 18.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.93,
+      "subscription_times": 1.32,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/diksha-polymers-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 1.02,
-      "subscription_retail": 0.84
+      "subscription_nii": 1.37,
+      "subscription_retail": 1.27
     },
     {
       "id": "ipo_010",
@@ -86,7 +86,7 @@
       "issue_size_cr": 89.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.35,
+      "subscription_times": 1.28,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/leapfrog-engineering-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 2.03,
-      "subscription_retail": 0.19
+      "subscription_qib": 12.48,
+      "subscription_nii": 2.52,
+      "subscription_retail": 0.29
     },
     {
       "id": "ipo_011",
@@ -122,7 +122,7 @@
       "issue_size_cr": 36.02,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.12,
+      "subscription_times": 0.14,
       "gmp": 51.0,
       "gmp_percent": 15.9,
       "lead_manager": "",
@@ -143,8 +143,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/liotech-industries-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.03,
-      "subscription_retail": 0.2
+      "subscription_nii": 0.04,
+      "subscription_retail": 0.24
     }
   ],
   "upcoming_ipos": [
