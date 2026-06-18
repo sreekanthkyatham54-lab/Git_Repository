@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-18T11:03:28.899416",
+  "scraped_at": "2026-06-18T16:38:04.278898",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 31.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.11,
+      "subscription_times": 0.12,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -50,7 +50,7 @@
       "issue_size_cr": 30.24,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 8.23,
+      "subscription_times": 10.6,
       "gmp": 75.0,
       "gmp_percent": 36.1,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/avience-biomedicals-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 10.12,
-      "subscription_retail": 12.1
+      "subscription_nii": 13.48,
+      "subscription_retail": 15.39
     },
     {
       "id": "ipo_012",
@@ -86,7 +86,7 @@
       "issue_size_cr": 110.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 6.46,
+      "subscription_times": 8.41,
       "gmp": 32.0,
       "gmp_percent": 15.8,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/clay-craft-ipo/",
-      "subscription_qib": 4.94,
-      "subscription_nii": 8.93,
-      "subscription_retail": 6.25
+      "subscription_qib": 5.18,
+      "subscription_nii": 13.14,
+      "subscription_retail": 8.21
     },
     {
       "id": "ipo_013",
@@ -122,7 +122,7 @@
       "issue_size_cr": 18.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.63,
+      "subscription_times": 1.7,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -143,8 +143,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/diksha-polymers-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 1.69,
-      "subscription_retail": 1.57
+      "subscription_nii": 1.72,
+      "subscription_retail": 1.67
     },
     {
       "id": "ipo_014",
@@ -158,7 +158,7 @@
       "issue_size_cr": 89.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.62,
+      "subscription_times": 1.87,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -178,9 +178,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/leapfrog-engineering-ipo/",
-      "subscription_qib": 17.98,
-      "subscription_nii": 3.04,
-      "subscription_retail": 0.42
+      "subscription_qib": 20.32,
+      "subscription_nii": 3.57,
+      "subscription_retail": 0.45
     },
     {
       "id": "ipo_015",
@@ -194,7 +194,7 @@
       "issue_size_cr": 36.02,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.46,
+      "subscription_times": 0.6,
       "gmp": 51.0,
       "gmp_percent": 15.9,
       "lead_manager": "",
@@ -215,8 +215,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/liotech-industries-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.03,
-      "subscription_retail": 0.89
+      "subscription_nii": 0.08,
+      "subscription_retail": 1.12
     }
   ],
   "upcoming_ipos": [
@@ -269,8 +269,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 54.0,
+      "gmp_percent": 6.7,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -305,8 +305,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 57.0,
-      "gmp_percent": 41.3,
+      "gmp": 60.0,
+      "gmp_percent": 43.5,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -407,7 +407,7 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 288.0,
+      "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "to the issue",
@@ -440,7 +440,7 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 480.0,
+      "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "to the issue",
