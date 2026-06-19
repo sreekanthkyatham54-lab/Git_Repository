@@ -1,9 +1,9 @@
 {
-  "scraped_at": "2026-06-19T06:13:29.728172",
+  "scraped_at": "2026-06-19T11:11:04.645979",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_004",
+      "id": "ipo_005",
       "company": "Turtlemint Fintech",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -14,7 +14,7 @@
       "issue_size_cr": 883.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.01,
+      "subscription_times": 0.46,
       "gmp": 2.3,
       "gmp_percent": 1.5,
       "lead_manager": "",
@@ -34,12 +34,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/turtlemint-fintech-ipo/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.0,
-      "subscription_retail": 0.04
+      "subscription_qib": 0.75,
+      "subscription_nii": 0.01,
+      "subscription_retail": 0.27
     },
     {
-      "id": "ipo_008",
+      "id": "ipo_009",
       "company": "Anubhav Plast",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -50,7 +50,7 @@
       "issue_size_cr": 24.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.03,
+      "subscription_times": 1.15,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -70,12 +70,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/anubhav-plast-ipo/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.0,
-      "subscription_retail": 0.06
+      "subscription_qib": 1.01,
+      "subscription_nii": 1.5,
+      "subscription_retail": 1.07
     },
     {
-      "id": "ipo_009",
+      "id": "ipo_010",
       "company": "Riyaasat Lifestyle",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -86,7 +86,7 @@
       "issue_size_cr": 31.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.06,
+      "subscription_times": 0.07,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -108,10 +108,10 @@
       "detail_url": "https://ipowatch.in/riyaasat-lifestyle-ipo/",
       "subscription_qib": 1.01,
       "subscription_nii": 0.0,
-      "subscription_retail": 0.02
+      "subscription_retail": 0.04
     },
     {
-      "id": "ipo_010",
+      "id": "ipo_011",
       "company": "Avience Biomedicals",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -122,7 +122,7 @@
       "issue_size_cr": 30.24,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 16.58,
+      "subscription_times": 37.64,
       "gmp": 85.0,
       "gmp_percent": 40.9,
       "lead_manager": "",
@@ -142,12 +142,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/avience-biomedicals-ipo/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 23.99,
-      "subscription_retail": 22.82
+      "subscription_qib": 0.01,
+      "subscription_nii": 56.19,
+      "subscription_retail": 51.05
     },
     {
-      "id": "ipo_011",
+      "id": "ipo_012",
       "company": "Clay Craft",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -158,9 +158,9 @@
       "issue_size_cr": 110.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 13.84,
-      "gmp": 48.0,
-      "gmp_percent": 23.6,
+      "subscription_times": 101.08,
+      "gmp": 40.0,
+      "gmp_percent": 19.7,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -178,12 +178,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/clay-craft-ipo/",
-      "subscription_qib": 5.19,
-      "subscription_nii": 26.32,
-      "subscription_retail": 13.39
+      "subscription_qib": 119.19,
+      "subscription_nii": 153.04,
+      "subscription_retail": 68.19
     },
     {
-      "id": "ipo_012",
+      "id": "ipo_013",
       "company": "Diksha Polymers",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -194,7 +194,7 @@
       "issue_size_cr": 18.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.91,
+      "subscription_times": 2.84,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -215,11 +215,11 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/diksha-polymers-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 1.91,
-      "subscription_retail": 1.91
+      "subscription_nii": 2.62,
+      "subscription_retail": 3.05
     },
     {
-      "id": "ipo_013",
+      "id": "ipo_014",
       "company": "Leapfrog Engineering",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -230,7 +230,7 @@
       "issue_size_cr": 89.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.95,
+      "subscription_times": 2.68,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -251,11 +251,11 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/leapfrog-engineering-ipo/",
       "subscription_qib": 20.32,
-      "subscription_nii": 3.69,
-      "subscription_retail": 0.5
+      "subscription_nii": 5.1,
+      "subscription_retail": 0.81
     },
     {
-      "id": "ipo_014",
+      "id": "ipo_015",
       "company": "Liotech Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -266,9 +266,9 @@
       "issue_size_cr": 36.02,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.02,
-      "gmp": 55.0,
-      "gmp_percent": 17.1,
+      "subscription_times": 1.87,
+      "gmp": 45.0,
+      "gmp_percent": 14.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -287,13 +287,46 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/liotech-industries-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.44,
-      "subscription_retail": 1.59
+      "subscription_nii": 0.84,
+      "subscription_retail": 2.9
     }
   ],
   "upcoming_ipos": [
     {
       "id": "ipo_001",
+      "company": "Aastha Spintex",
+      "exchange": "NSE Emerge",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-06-29",
+      "close_date": "2026-07-01",
+      "issue_price": 0.0,
+      "issue_size_cr": 170.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/aastha-spintex-ipo/"
+    },
+    {
+      "id": "ipo_002",
       "company": "CSM Technologies",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -329,7 +362,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_002",
+      "id": "ipo_003",
       "company": "Waterways Leisure Tourism",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -365,7 +398,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_003",
+      "id": "ipo_004",
       "company": "Advit Jewels",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -377,8 +410,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 60.0,
-      "gmp_percent": 43.5,
+      "gmp": 55.0,
+      "gmp_percent": 39.9,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -398,7 +431,7 @@
       "detail_url": "https://ipowatch.in/advit-jewels-ipo/"
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_006",
       "company": "Dhanwel Hybrid Seeds",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -431,7 +464,7 @@
       "detail_url": "https://ipowatch.in/dhanwel-hybrid-seeds-ipo/"
     },
     {
-      "id": "ipo_006",
+      "id": "ipo_007",
       "company": "Jivial Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -464,7 +497,7 @@
       "detail_url": "https://ipowatch.in/jivial-industries-ipo/"
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_008",
       "company": "Shreedhar Spinners",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
