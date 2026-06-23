@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-23T10:26:21.824732",
+  "scraped_at": "2026-06-23T15:55:19.086159",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 585.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.11,
+      "subscription_times": 0.2,
       "gmp": 12.0,
       "gmp_percent": 1.5,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/cordelia-cruises-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.02,
-      "subscription_retail": 0.56
+      "subscription_nii": 0.04,
+      "subscription_retail": 1.05
     },
     {
       "id": "ipo_004",
@@ -50,7 +50,7 @@
       "issue_size_cr": 165.16,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 5.93,
+      "subscription_times": 11.23,
       "gmp": 64.0,
       "gmp_percent": 46.4,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/advit-jewels-ipo/",
-      "subscription_qib": 1.02,
-      "subscription_nii": 10.93,
-      "subscription_retail": 6.59
+      "subscription_qib": 1.11,
+      "subscription_nii": 23.8,
+      "subscription_retail": 11.63
     },
     {
       "id": "ipo_005",
@@ -86,7 +86,7 @@
       "issue_size_cr": 883.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.8,
+      "subscription_times": 1.24,
       "gmp": 2.0,
       "gmp_percent": 1.3,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/turtlemint-fintech-ipo/",
-      "subscription_qib": 1.09,
-      "subscription_nii": 0.18,
-      "subscription_retail": 0.86
+      "subscription_qib": 1.63,
+      "subscription_nii": 0.55,
+      "subscription_retail": 1.11
     },
     {
       "id": "ipo_015",
@@ -122,7 +122,7 @@
       "issue_size_cr": 32.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.02,
+      "subscription_times": 0.07,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -143,8 +143,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/jivial-industries-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.1,
-      "subscription_retail": 0.0
+      "subscription_nii": 0.31,
+      "subscription_retail": 0.01
     },
     {
       "id": "ipo_016",
@@ -158,7 +158,7 @@
       "issue_size_cr": 31.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.21,
+      "subscription_times": 0.54,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -178,9 +178,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/shreedhar-spinners-ipo/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.7,
-      "subscription_retail": 0.12
+      "subscription_qib": 0.02,
+      "subscription_nii": 1.53,
+      "subscription_retail": 0.41
     },
     {
       "id": "ipo_017",
@@ -194,7 +194,7 @@
       "issue_size_cr": 24.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.83,
+      "subscription_times": 2.18,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -215,8 +215,44 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/anubhav-plast-ipo/",
       "subscription_qib": 1.23,
-      "subscription_nii": 2.0,
-      "subscription_retail": 2.1
+      "subscription_nii": 2.49,
+      "subscription_retail": 2.6
+    },
+    {
+      "id": "ipo_018",
+      "company": "Riyaasat Lifestyle",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-06-18",
+      "close_date": "2026-06-25",
+      "issue_price": 108.0,
+      "issue_size_cr": 31.0,
+      "lot_size": 0,
+      "subscription_status": "Open",
+      "subscription_times": 0.56,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/riyaasat-lifestyle-ipo/",
+      "subscription_qib": 9.28,
+      "subscription_nii": 0.03,
+      "subscription_retail": 0.14
     }
   ],
   "upcoming_ipos": [
@@ -338,8 +374,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 14.0,
+      "gmp_percent": 10.4,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
