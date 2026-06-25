@@ -18,6 +18,9 @@ env/
 # ── Streamlit secrets (never commit API keys) ─────────────────────────────────
 .streamlit/secrets.toml
 
+# ── Firebase service account keys (never commit) ─────────────────────────────
+*firebase-adminsdk*.json
+
 # ── DRHP PDF files (large binaries — stored locally only) ────────────────────
 data/drhp_pdfs/
 
