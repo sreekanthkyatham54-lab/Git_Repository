@@ -58,8 +58,9 @@ def _log_to_firestore(ipo_id: str, session_id: str, question: str, answer: str,
             "conversation_history": pairs[-3:],
             "timestamp":            datetime.now(timezone.utc),
         })
+        st.toast("Firestore log: success")
     except Exception as e:
-        print(f"FIRESTORE LOG ERROR: {e}")
+        st.error(f"FIRESTORE LOG ERROR: {e}")
 
 
 # ── RAG CONTEXT BUILDER ───────────────────────────────────────────────────────
