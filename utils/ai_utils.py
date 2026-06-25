@@ -17,6 +17,51 @@ def get_client(api_key: str) -> anthropic.Anthropic:
     return anthropic.Anthropic(api_key=api_key)
 
 
+# ── FIRESTORE LOGGING ─────────────────────────────────────────────────────────
+def _log_to_firestore(ipo_id: str, session_id: str, question: str, answer: str,
+                      retrieved_chunks: str, messages: list) -> None:
+    """Log a Q&A exchange to Firestore. Never raises — all errors are silently swallowed."""
+    try:
+        import streamlit as st
+        import firebase_admin
+        from firebase_admin import credentials, firestore as fs
+        from datetime import datetime, timezone
+
+        if not firebase_admin._apps:
+            cred_dict = {k: v for k, v in st.secrets["firebase"].items()}
+            # TOML stores newlines in private_key as literal \n — restore them
+            if "private_key" in cred_dict:
+                cred_dict["private_key"] = cred_dict["private_key"].replace("\\n", "\n")
+            firebase_admin.initialize_app(credentials.Certificate(cred_dict))
+
+        db = fs.client()
+
+        # Convert alternating role/content list into [{question, answer}] pairs
+        pairs = []
+        i = 0
+        while i < len(messages) - 1:
+            if messages[i]["role"] == "user" and messages[i + 1]["role"] == "assistant":
+                pairs.append({
+                    "question": messages[i]["content"],
+                    "answer":   messages[i + 1]["content"],
+                })
+                i += 2
+            else:
+                i += 1
+
+        db.collection("chat_logs").add({
+            "session_id":           session_id,
+            "ipo_id":               ipo_id,
+            "question":             question,
+            "answer":               answer,
+            "retrieved_chunks":     retrieved_chunks or "",
+            "conversation_history": pairs[-3:],
+            "timestamp":            datetime.now(timezone.utc),
+        })
+    except Exception:
+        pass
+
+
 # ── RAG CONTEXT BUILDER ───────────────────────────────────────────────────────
 def build_rag_context(ipo_id: str, question: str, for_scorecard: bool = False) -> tuple:
     """
@@ -154,7 +199,18 @@ def chat_with_ipo(api_key: str, ipo: dict, messages: list, user_message: str) ->
         system     = system,
         messages   = chat_messages,
     )
-    return response.content[0].text
+    answer = response.content[0].text
+
+    _log_to_firestore(
+        ipo_id           = ipo_id,
+        session_id       = f"chat_{ipo_id}",
+        question         = user_message,
+        answer           = answer,
+        retrieved_chunks = rag_context if rag_available else "",
+        messages         = messages,
+    )
+
+    return answer
 
 
 def get_ai_recommendation(api_key: str, ipo: dict) -> dict:
