@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-27T09:20:39.285079",
+  "scraped_at": "2026-06-27T14:46:43.680234",
   "source": "live",
   "active_ipos": [
     {
@@ -125,8 +125,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 12.0,
-      "gmp_percent": 7.1,
+      "gmp": 14.0,
+      "gmp_percent": 8.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -434,8 +434,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 5.0,
-      "gmp_percent": 7.2,
+      "gmp": 8.0,
+      "gmp_percent": 11.6,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
