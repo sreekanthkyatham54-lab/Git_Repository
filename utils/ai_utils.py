@@ -17,26 +17,16 @@ def get_client(api_key: str) -> anthropic.Anthropic:
     return anthropic.Anthropic(api_key=api_key)
 
 
-# ── FIRESTORE LOGGING ─────────────────────────────────────────────────────────
-def _log_to_firestore(ipo_id: str, session_id: str, question: str, answer: str,
-                      retrieved_chunks: str, messages: list) -> None:
-    """Log a Q&A exchange to Firestore. Never raises — all errors are silently swallowed."""
+# ── LIVEEVALS LOGGING ─────────────────────────────────────────────────────────
+def _log_to_liveevals(ipo_id: str, user_message: str, answer: str,
+                      rag_context: str, rag_available: bool, messages: list) -> None:
+    """Log a Q&A exchange to LiveEvals. Never raises — failures must not block the user."""
     try:
+        import requests
         import streamlit as st
-        import firebase_admin
-        from firebase_admin import credentials, firestore as fs
-        from datetime import datetime, timezone
 
-        if not firebase_admin._apps:
-            cred_dict = {k: v for k, v in st.secrets["firebase"].items()}
-            # TOML stores newlines in private_key as literal \n — restore them
-            if "private_key" in cred_dict:
-                cred_dict["private_key"] = cred_dict["private_key"].replace("\\n", "\n")
-            firebase_admin.initialize_app(credentials.Certificate(cred_dict))
+        api_key = st.secrets["LIVEEVALS_API_KEY"]
 
-        db = fs.client()
-
-        # Convert alternating role/content list into [{question, answer}] pairs
         pairs = []
         i = 0
         while i < len(messages) - 1:
@@ -49,18 +39,27 @@ def _log_to_firestore(ipo_id: str, session_id: str, question: str, answer: str,
             else:
                 i += 1
 
-        db.collection("chat_logs").add({
-            "session_id":           session_id,
-            "ipo_id":               ipo_id,
-            "question":             question,
-            "answer":               answer,
-            "retrieved_chunks":     retrieved_chunks or "",
-            "conversation_history": pairs[-3:],
-            "timestamp":            datetime.now(timezone.utc),
-        })
-        st.toast("Firestore log: success")
+        requests.post(
+            "https://liveevals.dev/api/v1/projects/7da0d5b3-5947-4c62-b351-fef20258a54a/traces",
+            headers={"Authorization": f"Bearer {api_key}"},
+            json={
+                "input": {
+                    "question":             user_message,
+                    "ipo_name":             ipo_id,
+                    "conversation_history": pairs[-3:],
+                },
+                "output": {
+                    "retrieved_chunks": rag_context if rag_available else "",
+                    "answer":           answer,
+                },
+                "metadata": {
+                    "session_id": f"chat_{ipo_id}",
+                },
+            },
+            timeout=5,
+        )
     except Exception as e:
-        st.error(f"FIRESTORE LOG ERROR: {e}")
+        print(f"LIVEEVALS LOG ERROR: {e}")
 
 
 # ── RAG CONTEXT BUILDER ───────────────────────────────────────────────────────
@@ -202,13 +201,13 @@ def chat_with_ipo(api_key: str, ipo: dict, messages: list, user_message: str) ->
     )
     answer = response.content[0].text
 
-    _log_to_firestore(
-        ipo_id           = ipo_id,
-        session_id       = f"chat_{ipo_id}",
-        question         = user_message,
-        answer           = answer,
-        retrieved_chunks = rag_context if rag_available else "",
-        messages         = messages,
+    _log_to_liveevals(
+        ipo_id       = ipo_id,
+        user_message = user_message,
+        answer       = answer,
+        rag_context  = rag_context,
+        rag_available= rag_available,
+        messages     = messages,
     )
 
     return answer
