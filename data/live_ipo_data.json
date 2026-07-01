@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-01T05:19:27.304821",
+  "scraped_at": "2026-07-01T10:36:29.423223",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 439.5,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
-      "gmp": 26.0,
-      "gmp_percent": 15.3,
+      "subscription_times": 2.27,
+      "gmp": 29.0,
+      "gmp_percent": 17.1,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -33,7 +33,10 @@
       "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/knack-packagin-ipo/"
+      "detail_url": "https://ipowatch.in/knack-packagin-ipo/",
+      "subscription_qib": 3.26,
+      "subscription_nii": 3.64,
+      "subscription_retail": 1.11
     },
     {
       "id": "ipo_003",
@@ -47,7 +50,7 @@
       "issue_size_cr": 170.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.61,
+      "subscription_times": 4.8,
       "gmp": 6.0,
       "gmp_percent": 4.4,
       "lead_manager": "",
@@ -67,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/aastha-spintex-ipo/",
-      "subscription_qib": 1.02,
-      "subscription_nii": 2.48,
-      "subscription_retail": 1.04
+      "subscription_qib": 2.94,
+      "subscription_nii": 8.22,
+      "subscription_retail": 2.32
     },
     {
       "id": "ipo_005",
@@ -83,7 +86,7 @@
       "issue_size_cr": 37.36,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.06,
+      "subscription_times": 0.04,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -104,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/teja-engineering-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.11,
-      "subscription_retail": 0.02
+      "subscription_nii": 0.02,
+      "subscription_retail": 0.06
     },
     {
       "id": "ipo_006",
@@ -119,7 +122,7 @@
       "issue_size_cr": 34.13,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.07,
+      "subscription_times": 0.37,
       "gmp": 30.0,
       "gmp_percent": 19.0,
       "lead_manager": "",
@@ -140,8 +143,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vinit-mobile-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.01,
-      "subscription_retail": 0.11
+      "subscription_nii": 0.28,
+      "subscription_retail": 0.44
     },
     {
       "id": "ipo_007",
@@ -155,7 +158,7 @@
       "issue_size_cr": 20.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 3.03,
+      "subscription_times": 3.23,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -176,8 +179,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/seemax-resources-ipo/",
       "subscription_qib": 17.19,
-      "subscription_nii": 3.87,
-      "subscription_retail": 0.46
+      "subscription_nii": 3.91,
+      "subscription_retail": 0.85
     },
     {
       "id": "ipo_008",
@@ -191,7 +194,7 @@
       "issue_size_cr": 27.22,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.22,
+      "subscription_times": 2.25,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -211,9 +214,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sampark-india-logistics-ipo/",
-      "subscription_qib": 0.39,
-      "subscription_nii": 1.93,
-      "subscription_retail": 1.39
+      "subscription_qib": 1.43,
+      "subscription_nii": 3.98,
+      "subscription_retail": 1.98
     },
     {
       "id": "ipo_009",
@@ -227,7 +230,7 @@
       "issue_size_cr": 40.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.56,
+      "subscription_times": 13.34,
       "gmp": 41.0,
       "gmp_percent": 30.4,
       "lead_manager": "",
@@ -247,9 +250,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/kratikal-tech-ipo/",
-      "subscription_qib": 1.2,
-      "subscription_nii": 3.26,
-      "subscription_retail": 3.04
+      "subscription_qib": 5.09,
+      "subscription_nii": 13.9,
+      "subscription_retail": 17.81
     },
     {
       "id": "ipo_010",
@@ -263,7 +266,7 @@
       "issue_size_cr": 27.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.55,
+      "subscription_times": 2.17,
       "gmp": 8.0,
       "gmp_percent": 13.3,
       "lead_manager": "",
@@ -283,9 +286,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/atharva-polyplast-ipo/",
-      "subscription_qib": 0.19,
-      "subscription_nii": 2.56,
-      "subscription_retail": 1.89
+      "subscription_qib": 1.0,
+      "subscription_nii": 2.58,
+      "subscription_retail": 2.66
     },
     {
       "id": "ipo_011",
@@ -299,7 +302,7 @@
       "issue_size_cr": 44.03,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.73,
+      "subscription_times": 1.31,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -320,8 +323,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/adon-agro-commodities-ipo/",
       "subscription_qib": 22.47,
-      "subscription_nii": 0.6,
-      "subscription_retail": 0.39
+      "subscription_nii": 1.39,
+      "subscription_retail": 0.78
     },
     {
       "id": "ipo_012",
@@ -409,7 +412,7 @@
       "issue_size_cr": 48.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 1.22,
+      "subscription_times": 2.25,
       "gmp": 28.0,
       "gmp_percent": 28.3,
       "lead_manager": "",
@@ -429,9 +432,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/ic-electricals-ipo/",
-      "subscription_qib": 0.39,
-      "subscription_nii": 1.93,
-      "subscription_retail": 1.39
+      "subscription_qib": 1.43,
+      "subscription_nii": 3.98,
+      "subscription_retail": 1.98
     },
     {
       "id": "ipo_013",
@@ -471,6 +474,48 @@
     }
   ],
   "historical_ipos": [
+    {
+      "company": "Waterways Leisure Tourism",
+      "listing_date": "",
+      "issue_price": 808.0,
+      "listing_price": 681.0,
+      "current_price": 15.72,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": -15.7,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Advit Jewels",
+      "listing_date": "",
+      "issue_price": 138.0,
+      "listing_price": 188.9,
+      "current_price": 37.0,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 36.9,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Turtlemint Fintech",
+      "listing_date": "",
+      "issue_price": 152.0,
+      "listing_price": 134.9,
+      "current_price": 11.25,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": -11.2,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
     {
       "company": "Hexagon Nutrition",
       "listing_date": "",
@@ -1110,48 +1155,6 @@
       "gmp_before_listing": null,
       "gmp_predicted_gain": null,
       "actual_listing_gain": -3.4,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Orkla India",
-      "listing_date": "",
-      "issue_price": 730.0,
-      "listing_price": 750.1,
-      "current_price": 2.75,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 2.8,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Midwest",
-      "listing_date": "",
-      "issue_price": 1065.0,
-      "listing_price": 1165.0,
-      "current_price": 9.4,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 9.4,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Canara HSBC Life",
-      "listing_date": "",
-      "issue_price": 106.0,
-      "listing_price": 106.0,
-      "current_price": 0.0,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 0.0,
       "gmp_accurate": null,
       "sector": "—",
       "exchange": "BSE / NSE",
