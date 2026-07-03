@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-03T09:47:53.052912",
+  "scraped_at": "2026-07-03T15:14:40.094020",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 439.5,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 37.88,
-      "gmp": 28.0,
-      "gmp_percent": 16.5,
+      "subscription_times": 87.17,
+      "gmp": 40.0,
+      "gmp_percent": 23.5,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/knack-packagin-ipo/",
-      "subscription_qib": 30.0,
-      "subscription_nii": 104.85,
-      "subscription_retail": 14.12
+      "subscription_qib": 160.22,
+      "subscription_nii": 146.64,
+      "subscription_retail": 21.09
     },
     {
       "id": "ipo_006",
@@ -50,9 +50,9 @@
       "issue_size_cr": 48.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 4.22,
-      "gmp": 44.0,
-      "gmp_percent": 44.4,
+      "subscription_times": 7.12,
+      "gmp": 45.0,
+      "gmp_percent": 45.5,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/ic-electricals-ipo/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 5.42,
-      "subscription_retail": 6.11
+      "subscription_qib": 0.11,
+      "subscription_nii": 9.91,
+      "subscription_retail": 9.91
     }
   ],
   "upcoming_ipos": [
@@ -125,8 +125,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 135.0,
-      "gmp_percent": 32.2,
+      "gmp": 140.0,
+      "gmp_percent": 33.4,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -226,9 +226,9 @@
       "issue_size_cr": 37.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 4.22,
-      "gmp": 44.0,
-      "gmp_percent": 48.9,
+      "subscription_times": 7.12,
+      "gmp": 45.0,
+      "gmp_percent": 50.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -246,9 +246,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/modern-diagnostic-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 5.42,
-      "subscription_retail": 6.11
+      "subscription_qib": 0.11,
+      "subscription_nii": 9.91,
+      "subscription_retail": 9.91
     }
   ],
   "historical_ipos": [
