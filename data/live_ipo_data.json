@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-03T04:38:41.397859",
+  "scraped_at": "2026-07-03T09:47:53.052912",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 439.5,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 7.56,
+      "subscription_times": 37.88,
       "gmp": 28.0,
       "gmp_percent": 16.5,
       "lead_manager": "",
@@ -34,12 +34,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/knack-packagin-ipo/",
-      "subscription_qib": 3.61,
-      "subscription_nii": 20.16,
-      "subscription_retail": 4.46
+      "subscription_qib": 30.0,
+      "subscription_nii": 104.85,
+      "subscription_retail": 14.12
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_006",
       "company": "IC Electricals",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -50,7 +50,7 @@
       "issue_size_cr": 48.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 4.95,
+      "subscription_times": 4.22,
       "gmp": 44.0,
       "gmp_percent": 44.4,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/ic-electricals-ipo/",
-      "subscription_qib": 1.55,
-      "subscription_nii": 10.11,
-      "subscription_retail": 4.65
+      "subscription_qib": 0.0,
+      "subscription_nii": 5.42,
+      "subscription_retail": 6.11
     }
   ],
   "upcoming_ipos": [
@@ -150,6 +150,39 @@
     },
     {
       "id": "ipo_004",
+      "company": "Happy Steels",
+      "exchange": "NSE Emerge",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-07-09",
+      "close_date": "2026-07-13",
+      "issue_price": 66.0,
+      "issue_size_cr": 25.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/happy-steels-ipo/"
+    },
+    {
+      "id": "ipo_005",
       "company": "Devson Catalyst",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -182,7 +215,7 @@
       "detail_url": "https://ipowatch.in/devson-catalyst-ipo/"
     },
     {
-      "id": "ipo_006",
+      "id": "ipo_007",
       "company": "Modern Diagnostic",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -193,7 +226,7 @@
       "issue_size_cr": 37.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 1.74,
+      "subscription_times": 4.22,
       "gmp": 44.0,
       "gmp_percent": 48.9,
       "lead_manager": "",
@@ -213,9 +246,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/modern-diagnostic-ipo-date-review-price-allotment-details/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 1.88,
-      "subscription_retail": 2.09
+      "subscription_qib": 0.0,
+      "subscription_nii": 5.42,
+      "subscription_retail": 6.11
     }
   ],
   "historical_ipos": [
