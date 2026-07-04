@@ -1,45 +1,9 @@
 {
-  "scraped_at": "2026-07-03T15:14:40.094020",
+  "scraped_at": "2026-07-04T04:30:56.991966",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_003",
-      "company": "Knack Packaging",
-      "exchange": "NSE Emerge",
-      "ipo_type": "SME",
-      "sector": "include Clinical Chemistry",
-      "open_date": "2026-07-01",
-      "close_date": "2026-07-03",
-      "issue_price": 170.0,
-      "issue_size_cr": 439.5,
-      "lot_size": 0,
-      "subscription_status": "Open",
-      "subscription_times": 87.17,
-      "gmp": 40.0,
-      "gmp_percent": 23.5,
-      "lead_manager": "",
-      "registrar": "to the issue",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 23.17,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/knack-packagin-ipo/",
-      "subscription_qib": 160.22,
-      "subscription_nii": 146.64,
-      "subscription_retail": 21.09
-    },
-    {
-      "id": "ipo_006",
+      "id": "ipo_005",
       "company": "IC Electricals",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -149,7 +113,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_003",
       "company": "Happy Steels",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -182,7 +146,7 @@
       "detail_url": "https://ipowatch.in/happy-steels-ipo/"
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_004",
       "company": "Devson Catalyst",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -215,7 +179,7 @@
       "detail_url": "https://ipowatch.in/devson-catalyst-ipo/"
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_006",
       "company": "Modern Diagnostic",
       "exchange": "BSE SME",
       "ipo_type": "SME",
