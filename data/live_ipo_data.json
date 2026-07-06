@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-06T11:19:38.631146",
+  "scraped_at": "2026-07-06T16:24:58.689808",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 48.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 56.85,
+      "subscription_times": 66.87,
       "gmp": 45.0,
       "gmp_percent": 45.5,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/ic-electricals-ipo/",
       "subscription_qib": 3.12,
-      "subscription_nii": 74.87,
-      "subscription_retail": 79.63
+      "subscription_nii": 91.34,
+      "subscription_retail": 92.56
     }
   ],
   "upcoming_ipos": [
@@ -259,7 +259,7 @@
       "issue_size_cr": 37.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 56.85,
+      "subscription_times": 66.87,
       "gmp": 45.0,
       "gmp_percent": 50.0,
       "lead_manager": "",
@@ -280,8 +280,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/modern-diagnostic-ipo-date-review-price-allotment-details/",
       "subscription_qib": 3.12,
-      "subscription_nii": 74.87,
-      "subscription_retail": 79.63
+      "subscription_nii": 91.34,
+      "subscription_retail": 92.56
     }
   ],
   "historical_ipos": [
