@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-08T09:18:38.259983",
+  "scraped_at": "2026-07-08T15:26:08.480316",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 650.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.29,
-      "gmp": 170.0,
-      "gmp_percent": 40.6,
+      "subscription_times": 3.66,
+      "gmp": 160.0,
+      "gmp_percent": 38.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/kusumgar-ipo/",
-      "subscription_qib": 0.2,
-      "subscription_nii": 4.47,
-      "subscription_retail": 2.56
+      "subscription_qib": 0.5,
+      "subscription_nii": 7.76,
+      "subscription_retail": 3.74
     }
   ],
   "upcoming_ipos": [
@@ -53,8 +53,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 140.0,
-      "gmp_percent": 24.3,
+      "gmp": 137.0,
+      "gmp_percent": 23.8,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
