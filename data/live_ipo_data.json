@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-10T10:13:12.658714",
+  "scraped_at": "2026-07-10T15:34:44.414955",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 742.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.85,
+      "subscription_times": 1.05,
       "gmp": 30.0,
       "gmp_percent": 14.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/laser-power-infra-ipo/",
       "subscription_qib": 0.68,
-      "subscription_nii": 1.37,
-      "subscription_retail": 0.72
+      "subscription_nii": 2.03,
+      "subscription_retail": 0.85
     },
     {
       "id": "ipo_004",
@@ -50,7 +50,7 @@
       "issue_size_cr": 650.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 131.89,
+      "subscription_times": 135.8,
       "gmp": 163.0,
       "gmp_percent": 38.9,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/kusumgar-ipo/",
-      "subscription_qib": 291.84,
-      "subscription_nii": 171.33,
-      "subscription_retail": 25.74
+      "subscription_qib": 299.51,
+      "subscription_nii": 174.28,
+      "subscription_retail": 27.97
     },
     {
       "id": "ipo_007",
@@ -86,7 +86,7 @@
       "issue_size_cr": 25.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.53,
+      "subscription_times": 3.11,
       "gmp": 8.0,
       "gmp_percent": 12.1,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/happy-steels-ipo/",
       "subscription_qib": 0.63,
-      "subscription_nii": 4.39,
-      "subscription_retail": 2.83
+      "subscription_nii": 5.39,
+      "subscription_retail": 3.55
     },
     {
       "id": "ipo_008",
@@ -122,7 +122,7 @@
       "issue_size_cr": 42.34,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 24.64,
+      "subscription_times": 29.35,
       "gmp": 45.0,
       "gmp_percent": 38.1,
       "lead_manager": "",
@@ -143,8 +143,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/devson-catalyst-ipo/",
       "subscription_qib": 2.6,
-      "subscription_nii": 30.0,
-      "subscription_retail": 36.07
+      "subscription_nii": 36.48,
+      "subscription_retail": 42.92
     }
   ],
   "upcoming_ipos": [
