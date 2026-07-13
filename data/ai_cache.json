@@ -595,5 +595,6 @@
     "industry_at": "2026-06-25T16:28:27.462781",
     "news": "# Riyaasat Lifestyle IPO \u2014 Summary of Public Knowledge\n\n## Key Facts\n- **SME IPO** on BSE SME platform\n- **Issue Size:** \u20b931 crore at \u20b9108/share\n- **Timeline:** Opens 18 June 2026 | Closes 25 June 2026\n- **Sector:** Clinical Chemistry\n\n## Market Signals\n| Metric | Status |\n|--------|--------|\n| **GMP** | \u20b90 (0% premium) \u2014 **No oversubscription sentiment** |\n| **Subscription** | 1.09x \u2014 **Marginally subscribed** |\n| **Recommendation** | NEUTRAL |\n| **Promoter Holding** | 23.17% (post-IPO) |\n\n## What This Signals\n- **Weak retail interest:** GMP at par suggests investors see limited upside potential\n- **Tepid demand:** 1.09x is the bare minimum to qualify as successful\n- **No hype:** Unlike hot IPOs, this one has attracted modest subscription only\n\n## Data Limitations\n\u26a0\ufe0f **IMPORTANT:** This summary is based on **available summary data only** \u2014 the actual DRHP filing has not been indexed yet.\n\nFor deeper insights into:\n- Financial performance (revenue, profit, growth rates)\n- Risk factors & litigation\n- Business model & competitive positioning\n- Promoter backgrounds\n\n**Run `rag_indexer.py` to enable full DRHP Q&A.**\n\n---\n\n**Bottom Line:** A quiet SME offering with neutral market sentiment. The 0% GMP and 1.09x subscription suggest cautious positioning by the market.",
     "news_at": "2026-06-25T16:28:33.968938"
-  }
+  },
+  "ipo_019": {}
 }
