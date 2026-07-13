@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-13T10:38:52.122192",
+  "scraped_at": "2026-07-13T15:45:45.992421",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 742.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 31.83,
-      "gmp": 29.0,
-      "gmp_percent": 13.6,
+      "subscription_times": 41.05,
+      "gmp": 45.0,
+      "gmp_percent": 21.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/laser-power-infra-ipo/",
-      "subscription_qib": 68.64,
-      "subscription_nii": 44.28,
-      "subscription_retail": 5.46
+      "subscription_qib": 97.25,
+      "subscription_nii": 45.69,
+      "subscription_retail": 6.95
     },
     {
       "id": "ipo_009",
@@ -50,7 +50,7 @@
       "issue_size_cr": 25.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 67.62,
+      "subscription_times": 77.81,
       "gmp": 14.0,
       "gmp_percent": 21.2,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/happy-steels-ipo/",
-      "subscription_qib": 34.3,
-      "subscription_nii": 111.36,
-      "subscription_retail": 67.97
+      "subscription_qib": 59.01,
+      "subscription_nii": 113.6,
+      "subscription_retail": 73.25
     },
     {
       "id": "ipo_010",
@@ -86,7 +86,7 @@
       "issue_size_cr": 42.34,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 190.59,
+      "subscription_times": 220.35,
       "gmp": 45.0,
       "gmp_percent": 38.1,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/devson-catalyst-ipo/",
-      "subscription_qib": 116.56,
-      "subscription_nii": 248.72,
-      "subscription_retail": 217.81
+      "subscription_qib": 168.56,
+      "subscription_nii": 261.22,
+      "subscription_retail": 244.08
     }
   ],
   "upcoming_ipos": [
@@ -190,12 +190,12 @@
       "open_date": "2026-07-14",
       "close_date": "2026-07-16",
       "issue_price": 574.0,
-      "issue_size_cr": 11692.91,
+      "issue_size_cr": 9813.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 92.0,
-      "gmp_percent": 16.0,
+      "gmp": 106.0,
+      "gmp_percent": 18.5,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -266,8 +266,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 143.85,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 17.0,
+      "gmp_percent": 73.9,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -302,8 +302,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 143.85,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 17.0,
+      "gmp_percent": 9.1,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
