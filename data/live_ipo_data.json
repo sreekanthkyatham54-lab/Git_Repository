@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-13T09:40:36.356697",
+  "scraped_at": "2026-07-13T10:38:52.122192",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 742.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 8.69,
+      "subscription_times": 31.83,
       "gmp": 29.0,
       "gmp_percent": 13.6,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/laser-power-infra-ipo/",
-      "subscription_qib": 7.99,
-      "subscription_nii": 21.88,
-      "subscription_retail": 3.44
+      "subscription_qib": 68.64,
+      "subscription_nii": 44.28,
+      "subscription_retail": 5.46
     },
     {
       "id": "ipo_009",
@@ -50,7 +50,7 @@
       "issue_size_cr": 25.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 32.6,
+      "subscription_times": 67.62,
       "gmp": 14.0,
       "gmp_percent": 21.2,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/happy-steels-ipo/",
-      "subscription_qib": 9.78,
-      "subscription_nii": 54.63,
-      "subscription_retail": 36.23
+      "subscription_qib": 34.3,
+      "subscription_nii": 111.36,
+      "subscription_retail": 67.97
     },
     {
       "id": "ipo_010",
@@ -86,7 +86,7 @@
       "issue_size_cr": 42.34,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 105.52,
+      "subscription_times": 190.59,
       "gmp": 45.0,
       "gmp_percent": 38.1,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/devson-catalyst-ipo/",
-      "subscription_qib": 20.07,
-      "subscription_nii": 143.02,
-      "subscription_retail": 143.34
+      "subscription_qib": 116.56,
+      "subscription_nii": 248.72,
+      "subscription_retail": 217.81
     }
   ],
   "upcoming_ipos": [
