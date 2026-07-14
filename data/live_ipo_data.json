@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-14T03:54:12.042689",
+  "scraped_at": "2026-07-14T08:57:49.294701",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 126.25,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 0.21,
       "gmp": 5.0,
       "gmp_percent": 4.8,
       "lead_manager": "",
@@ -33,7 +33,10 @@
       "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/alpine-texworld-ipo/"
+      "detail_url": "https://ipowatch.in/alpine-texworld-ipo/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.29,
+      "subscription_retail": 0.18
     },
     {
       "id": "ipo_003",
@@ -47,7 +50,7 @@
       "issue_size_cr": 9813.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.74,
+      "subscription_times": 0.44,
       "gmp": 100.0,
       "gmp_percent": 17.4,
       "lead_manager": "",
@@ -67,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sbi-funds-management-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 1.88,
-      "subscription_retail": 2.09
+      "subscription_qib": 0.07,
+      "subscription_nii": 0.71,
+      "subscription_retail": 0.47
     },
     {
       "id": "ipo_007",
@@ -83,7 +86,7 @@
       "issue_size_cr": 160.34,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.74,
+      "subscription_times": 5.87,
       "gmp": 300.0,
       "gmp_percent": 90.6,
       "lead_manager": "",
@@ -103,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/millworks-technologies-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 1.88,
-      "subscription_retail": 2.09
+      "subscription_qib": 0.0,
+      "subscription_nii": 6.87,
+      "subscription_retail": 8.79
     }
   ],
   "upcoming_ipos": [
@@ -117,7 +120,7 @@
       "sector": "include Clinical Chemistry",
       "open_date": "2026-07-17",
       "close_date": "2026-07-21",
-      "issue_price": 0.0,
+      "issue_price": 402.0,
       "issue_size_cr": 600.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
