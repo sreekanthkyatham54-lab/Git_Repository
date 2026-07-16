@@ -1,11 +1,11 @@
 {
-  "scraped_at": "2026-07-16T09:07:51.758914",
+  "scraped_at": "2026-07-16T15:08:06.302607",
   "source": "live",
   "active_ipos": [
     {
       "id": "ipo_004",
       "company": "Alpine Texworld",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-07-14",
@@ -14,7 +14,7 @@
       "issue_size_cr": 126.25,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.96,
+      "subscription_times": 1.4,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -34,14 +34,14 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/alpine-texworld-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 0.77,
-      "subscription_retail": 1.03
+      "subscription_qib": 1.09,
+      "subscription_nii": 1.09,
+      "subscription_retail": 1.54
     },
     {
       "id": "ipo_005",
       "company": "SBI Funds Management",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-07-14",
@@ -50,9 +50,9 @@
       "issue_size_cr": 9813.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 4.15,
-      "gmp": 92.0,
-      "gmp_percent": 16.0,
+      "subscription_times": 41.73,
+      "gmp": 95.0,
+      "gmp_percent": 16.6,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -70,12 +70,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sbi-funds-management-ipo/",
-      "subscription_qib": 2.25,
-      "subscription_nii": 10.86,
-      "subscription_retail": 2.13
+      "subscription_qib": 140.11,
+      "subscription_nii": 22.51,
+      "subscription_retail": 3.76
     },
     {
-      "id": "ipo_010",
+      "id": "ipo_011",
       "company": "Sotefin Bharat",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -86,9 +86,9 @@
       "issue_size_cr": 90.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.05,
-      "gmp": 27.0,
-      "gmp_percent": 14.4,
+      "subscription_times": 0.24,
+      "gmp": 22.0,
+      "gmp_percent": 11.8,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -107,11 +107,11 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sotefin-bharat-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.06,
-      "subscription_retail": 0.07
+      "subscription_nii": 0.24,
+      "subscription_retail": 0.37
     },
     {
-      "id": "ipo_011",
+      "id": "ipo_012",
       "company": "Millworks Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -122,7 +122,7 @@
       "issue_size_cr": 160.34,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 76.79,
+      "subscription_times": 219.54,
       "gmp": 400.0,
       "gmp_percent": 120.8,
       "lead_manager": "",
@@ -142,16 +142,16 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/millworks-technologies-ipo/",
-      "subscription_qib": 1.51,
-      "subscription_nii": 116.46,
-      "subscription_retail": 102.78
+      "subscription_qib": 194.05,
+      "subscription_nii": 260.37,
+      "subscription_retail": 216.6
     }
   ],
   "upcoming_ipos": [
     {
       "id": "ipo_001",
       "company": "Lohia Corp",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-07-22",
@@ -184,7 +184,7 @@
     {
       "id": "ipo_002",
       "company": "Cube Highways Trust InvIT",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-07-22",
@@ -217,7 +217,7 @@
     {
       "id": "ipo_003",
       "company": "Caliber Mining",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2026-07-17",
@@ -227,8 +227,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 102.0,
-      "gmp_percent": 24.1,
+      "gmp": 100.0,
+      "gmp_percent": 23.6,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -253,7 +253,7 @@
     {
       "id": "ipo_006",
       "company": "Amagi Media Labs",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2027-01-13",
@@ -289,7 +289,7 @@
     {
       "id": "ipo_007",
       "company": "Bharat Coking Coal",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2027-01-09",
@@ -299,8 +299,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 143.85,
-      "gmp": 27.0,
-      "gmp_percent": 117.4,
+      "gmp": 22.0,
+      "gmp_percent": 95.7,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -360,6 +360,42 @@
     },
     {
       "id": "ipo_009",
+      "company": "Metalic Technoforge",
+      "exchange": "NSE Emerge",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-07-21",
+      "close_date": "2026-07-23",
+      "issue_price": 77.0,
+      "issue_size_cr": 49.96,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 420.09,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/metalic-technoforge-ipo/",
+      "subscription_qib": 241.75,
+      "subscription_nii": 764.38,
+      "subscription_retail": 372.5
+    },
+    {
+      "id": "ipo_010",
       "company": "Gulf Lloyds",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -392,7 +428,7 @@
       "detail_url": "https://ipowatch.in/gulf-lloyds-ipo/"
     },
     {
-      "id": "ipo_012",
+      "id": "ipo_013",
       "company": "Aritas Vinyl",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -428,9 +464,9 @@
       "subscription_retail": 2.88
     },
     {
-      "id": "ipo_013",
+      "id": "ipo_014",
       "company": "Armour Security",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2027-01-14",
@@ -464,7 +500,7 @@
       "subscription_retail": 2.58
     },
     {
-      "id": "ipo_014",
+      "id": "ipo_015",
       "company": "GRE Renew Enertech",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -500,7 +536,7 @@
       "subscription_retail": 14.1
     },
     {
-      "id": "ipo_015",
+      "id": "ipo_016",
       "company": "INDO SMC",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -536,7 +572,7 @@
       "subscription_retail": 96.13
     },
     {
-      "id": "ipo_016",
+      "id": "ipo_017",
       "company": "Narmadesh Brass",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -572,9 +608,9 @@
       "subscription_retail": 0.44
     },
     {
-      "id": "ipo_017",
+      "id": "ipo_018",
       "company": "Avana Electrosystems",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2027-01-12",
@@ -608,7 +644,7 @@
       "subscription_retail": 137.52
     },
     {
-      "id": "ipo_018",
+      "id": "ipo_019",
       "company": "Defrail Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -644,9 +680,9 @@
       "subscription_retail": 101.28
     },
     {
-      "id": "ipo_019",
+      "id": "ipo_020",
       "company": "Victory Electric Vehicles",
-      "exchange": "BSE SME",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
       "open_date": "2027-01-07",
@@ -680,7 +716,7 @@
       "subscription_retail": 0.99
     },
     {
-      "id": "ipo_020",
+      "id": "ipo_021",
       "company": "Yajur Fibres",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -716,7 +752,7 @@
       "subscription_retail": 1.51
     },
     {
-      "id": "ipo_021",
+      "id": "ipo_022",
       "company": "Gabion Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -752,7 +788,7 @@
       "subscription_retail": 867.23
     },
     {
-      "id": "ipo_022",
+      "id": "ipo_023",
       "company": "Modern Diagnostic",
       "exchange": "BSE SME",
       "ipo_type": "SME",
