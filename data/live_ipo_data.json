@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-17T09:03:00.988634",
+  "scraped_at": "2026-07-17T14:48:51.960765",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 450.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.88,
+      "subscription_times": 1.29,
       "gmp": 105.0,
       "gmp_percent": 24.8,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/caliber-mining-ipo/",
       "subscription_qib": 0.31,
-      "subscription_nii": 1.03,
-      "subscription_retail": 1.15
+      "subscription_nii": 1.69,
+      "subscription_retail": 1.69
     },
     {
       "id": "ipo_012",
@@ -50,7 +50,7 @@
       "issue_size_cr": 90.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.52,
+      "subscription_times": 0.8,
       "gmp": 18.0,
       "gmp_percent": 9.6,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sotefin-bharat-ipo/",
       "subscription_qib": 0.13,
-      "subscription_nii": 0.49,
-      "subscription_retail": 0.76
+      "subscription_nii": 1.16,
+      "subscription_retail": 1.02
     }
   ],
   "upcoming_ipos": [
