@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-19T04:19:45.461879",
+  "scraped_at": "2026-07-19T09:01:16.256942",
   "source": "live",
   "active_ipos": [
     {
@@ -717,7 +717,7 @@
       "company": "Yajur Fibres",
       "exchange": "BSE SME",
       "ipo_type": "SME",
-      "sector": "include Clinical Chemistry",
+      "sector": "—",
       "open_date": "2027-01-07",
       "close_date": "2027-01-09",
       "issue_price": 174.0,
@@ -728,7 +728,7 @@
       "gmp": 288.0,
       "gmp_percent": 165.5,
       "lead_manager": "",
-      "registrar": "to the issue",
+      "registrar": "",
       "objects": "",
       "revenue_cr": [],
       "profit_cr": [],
@@ -736,11 +736,11 @@
       "peers": [],
       "pe_ratio": 0.0,
       "industry_pe": 0.0,
-      "promoter_holding": 23.17,
+      "promoter_holding": 0.0,
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "summary": "",
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/yajur-fibres-ipo-date-review-price-allotment-details/",
