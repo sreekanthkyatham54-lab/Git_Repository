@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-20T04:34:04.916022",
+  "scraped_at": "2026-07-20T09:49:24.469723",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 450.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.29,
+      "subscription_times": 15.3,
       "gmp": 116.0,
       "gmp_percent": 27.4,
       "lead_manager": "",
@@ -34,12 +34,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/caliber-mining-ipo/",
-      "subscription_qib": 0.31,
-      "subscription_nii": 1.69,
-      "subscription_retail": 1.69
+      "subscription_qib": 0.49,
+      "subscription_nii": 43.49,
+      "subscription_retail": 11.67
     },
     {
-      "id": "ipo_012",
+      "id": "ipo_013",
       "company": "Gulf Lloyds",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -50,7 +50,7 @@
       "issue_size_cr": 18.19,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.0,
+      "subscription_times": 2.85,
       "gmp": 25.0,
       "gmp_percent": 25.0,
       "lead_manager": "",
@@ -69,10 +69,13 @@
       "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/gulf-lloyds-ipo/"
+      "detail_url": "https://ipowatch.in/gulf-lloyds-ipo/",
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.64,
+      "subscription_retail": 5.05
     },
     {
-      "id": "ipo_013",
+      "id": "ipo_014",
       "company": "Sotefin Bharat",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -83,7 +86,7 @@
       "issue_size_cr": 90.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.8,
+      "subscription_times": 2.15,
       "gmp": 13.0,
       "gmp_percent": 7.0,
       "lead_manager": "",
@@ -103,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sotefin-bharat-ipo/",
-      "subscription_qib": 0.13,
-      "subscription_nii": 1.16,
-      "subscription_retail": 1.02
+      "subscription_qib": 0.44,
+      "subscription_nii": 3.41,
+      "subscription_retail": 2.58
     }
   ],
   "upcoming_ipos": [
@@ -153,13 +156,13 @@
       "sector": "include Clinical Chemistry",
       "open_date": "2026-07-23",
       "close_date": "2026-07-27",
-      "issue_price": 0.0,
-      "issue_size_cr": 0.0,
+      "issue_price": 485.0,
+      "issue_size_cr": 3811.21,
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
       "gmp": 210.0,
-      "gmp_percent": 0.0,
+      "gmp_percent": 43.3,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -194,8 +197,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 25.0,
-      "gmp_percent": 19.7,
+      "gmp": 20.0,
+      "gmp_percent": 15.7,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -222,13 +225,13 @@
       "sector": "include Clinical Chemistry",
       "open_date": "2026-07-23",
       "close_date": "2026-07-27",
-      "issue_price": 0.0,
-      "issue_size_cr": 0.0,
+      "issue_price": 425.0,
+      "issue_size_cr": 1101.28,
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 20.0,
-      "gmp_percent": 0.0,
+      "gmp": 68.0,
+      "gmp_percent": 16.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -390,6 +393,42 @@
     },
     {
       "id": "ipo_010",
+      "company": "Silverstorm Parks",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-07-24",
+      "close_date": "2026-07-28",
+      "issue_price": 133.0,
+      "issue_size_cr": 82.43,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 1.74,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/silverstorm-parks-resorts-ipo/",
+      "subscription_qib": 1.0,
+      "subscription_nii": 1.88,
+      "subscription_retail": 2.09
+    },
+    {
+      "id": "ipo_011",
       "company": "Shree Balaji (Mala) Textiles",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -401,8 +440,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 6.7,
-      "gmp": 11.0,
-      "gmp_percent": 15.7,
+      "gmp": 14.0,
+      "gmp_percent": 20.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -425,7 +464,7 @@
       "subscription_retail": 5.71
     },
     {
-      "id": "ipo_011",
+      "id": "ipo_012",
       "company": "Metalic Technoforge",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -461,7 +500,7 @@
       "subscription_retail": 372.5
     },
     {
-      "id": "ipo_014",
+      "id": "ipo_015",
       "company": "Digilogic Systems",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -497,7 +536,7 @@
       "subscription_retail": 1.08
     },
     {
-      "id": "ipo_015",
+      "id": "ipo_016",
       "company": "Aritas Vinyl",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -533,7 +572,7 @@
       "subscription_retail": 2.88
     },
     {
-      "id": "ipo_016",
+      "id": "ipo_017",
       "company": "Armour Security",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -569,7 +608,7 @@
       "subscription_retail": 2.58
     },
     {
-      "id": "ipo_017",
+      "id": "ipo_018",
       "company": "GRE Renew Enertech",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -605,7 +644,7 @@
       "subscription_retail": 14.1
     },
     {
-      "id": "ipo_018",
+      "id": "ipo_019",
       "company": "INDO SMC",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -641,7 +680,7 @@
       "subscription_retail": 96.13
     },
     {
-      "id": "ipo_019",
+      "id": "ipo_020",
       "company": "Narmadesh Brass",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -677,7 +716,7 @@
       "subscription_retail": 0.44
     },
     {
-      "id": "ipo_020",
+      "id": "ipo_021",
       "company": "Avana Electrosystems",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -713,7 +752,7 @@
       "subscription_retail": 137.52
     },
     {
-      "id": "ipo_021",
+      "id": "ipo_022",
       "company": "Defrail Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -749,7 +788,7 @@
       "subscription_retail": 101.28
     },
     {
-      "id": "ipo_022",
+      "id": "ipo_023",
       "company": "Victory Electric Vehicles",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -785,7 +824,7 @@
       "subscription_retail": 0.99
     },
     {
-      "id": "ipo_023",
+      "id": "ipo_024",
       "company": "Yajur Fibres",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -821,7 +860,7 @@
       "subscription_retail": 1.51
     },
     {
-      "id": "ipo_024",
+      "id": "ipo_025",
       "company": "Gabion Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -857,7 +896,7 @@
       "subscription_retail": 867.23
     },
     {
-      "id": "ipo_025",
+      "id": "ipo_026",
       "company": "Modern Diagnostic",
       "exchange": "BSE SME",
       "ipo_type": "SME",
