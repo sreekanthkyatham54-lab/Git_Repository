@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-20T09:49:24.469723",
+  "scraped_at": "2026-07-20T15:15:26.634118",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 450.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 15.3,
+      "subscription_times": 25.04,
       "gmp": 116.0,
       "gmp_percent": 27.4,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/caliber-mining-ipo/",
-      "subscription_qib": 0.49,
-      "subscription_nii": 43.49,
-      "subscription_retail": 11.67
+      "subscription_qib": 1.49,
+      "subscription_nii": 75.12,
+      "subscription_retail": 17.03
     },
     {
       "id": "ipo_013",
@@ -50,7 +50,7 @@
       "issue_size_cr": 18.19,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.85,
+      "subscription_times": 4.67,
       "gmp": 25.0,
       "gmp_percent": 25.0,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/gulf-lloyds-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.64,
-      "subscription_retail": 5.05
+      "subscription_nii": 1.16,
+      "subscription_retail": 8.19
     },
     {
       "id": "ipo_014",
@@ -86,7 +86,7 @@
       "issue_size_cr": 90.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.15,
+      "subscription_times": 3.99,
       "gmp": 13.0,
       "gmp_percent": 7.0,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sotefin-bharat-ipo/",
-      "subscription_qib": 0.44,
-      "subscription_nii": 3.41,
-      "subscription_retail": 2.58
+      "subscription_qib": 2.82,
+      "subscription_nii": 6.05,
+      "subscription_retail": 3.78
     }
   ],
   "upcoming_ipos": [
