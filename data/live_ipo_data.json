@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-22T09:21:16.886337",
+  "scraped_at": "2026-07-22T15:09:07.814705",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 5000.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.02,
+      "subscription_times": 0.05,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,7 +35,7 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/cube-highways-trust-invit-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.04,
+      "subscription_nii": 0.11,
       "subscription_retail": 0.0
     },
     {
@@ -50,7 +50,7 @@
       "issue_size_cr": 18.9,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.06,
+      "subscription_times": 3.04,
       "gmp": 15.0,
       "gmp_percent": 21.4,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/shree-balaji-mala-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 1.29,
-      "subscription_retail": 3.56
+      "subscription_nii": 1.99,
+      "subscription_retail": 5.22
     },
     {
       "id": "ipo_013",
@@ -86,7 +86,7 @@
       "issue_size_cr": 49.96,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.65,
+      "subscription_times": 0.85,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/metalic-technoforge-ipo/",
-      "subscription_qib": 0.06,
-      "subscription_nii": 0.58,
-      "subscription_retail": 1.01
+      "subscription_qib": 0.48,
+      "subscription_nii": 0.63,
+      "subscription_retail": 1.15
     },
     {
       "id": "ipo_014",
@@ -122,7 +122,7 @@
       "issue_size_cr": 18.19,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 10.25,
+      "subscription_times": 10.85,
       "gmp": 3.0,
       "gmp_percent": 3.0,
       "lead_manager": "",
@@ -143,8 +143,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/gulf-lloyds-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 2.69,
-      "subscription_retail": 17.81
+      "subscription_nii": 2.86,
+      "subscription_retail": 18.83
     }
   ],
   "upcoming_ipos": [
