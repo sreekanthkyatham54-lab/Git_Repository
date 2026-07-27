@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-27T10:32:12.800287",
+  "scraped_at": "2026-07-27T15:47:58.389031",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 3811.21,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 68.16,
+      "subscription_times": 72.37,
       "gmp": 190.0,
       "gmp_percent": 39.2,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/indo-mim-ipo/",
-      "subscription_qib": 190.75,
-      "subscription_nii": 50.23,
-      "subscription_retail": 6.25
+      "subscription_qib": 204.47,
+      "subscription_nii": 50.65,
+      "subscription_retail": 6.69
     },
     {
       "id": "ipo_005",
@@ -50,7 +50,7 @@
       "issue_size_cr": 166.8,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 11.35,
+      "subscription_times": 12.24,
       "gmp": 7.0,
       "gmp_percent": 5.5,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/xtranet-technologies-ipo/",
-      "subscription_qib": 5.41,
-      "subscription_nii": 26.37,
-      "subscription_retail": 8.3
+      "subscription_qib": 7.13,
+      "subscription_nii": 26.65,
+      "subscription_retail": 8.98
     },
     {
       "id": "ipo_006",
@@ -86,7 +86,7 @@
       "issue_size_cr": 1101.28,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 4.54,
+      "subscription_times": 7.26,
       "gmp": 7.0,
       "gmp_percent": 1.6,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/lohia-corp-ipo/",
-      "subscription_qib": 4.58,
-      "subscription_nii": 6.12,
-      "subscription_retail": 2.26
+      "subscription_qib": 9.11,
+      "subscription_nii": 6.82,
+      "subscription_retail": 2.78
     },
     {
       "id": "ipo_016",
@@ -122,7 +122,7 @@
       "issue_size_cr": 28.57,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.02,
+      "subscription_times": 0.04,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -144,7 +144,7 @@
       "detail_url": "https://ipowatch.in/propshop-events-ipo/",
       "subscription_qib": 0.0,
       "subscription_nii": 0.0,
-      "subscription_retail": 0.06
+      "subscription_retail": 0.09
     },
     {
       "id": "ipo_017",
@@ -158,7 +158,7 @@
       "issue_size_cr": 24.03,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.16,
+      "subscription_times": 0.25,
       "gmp": 9.0,
       "gmp_percent": 9.5,
       "lead_manager": "",
@@ -179,8 +179,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/advance-technoforge-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.02,
-      "subscription_retail": 0.31
+      "subscription_nii": 0.14,
+      "subscription_retail": 0.37
     },
     {
       "id": "ipo_018",
@@ -194,7 +194,7 @@
       "issue_size_cr": 82.43,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.72,
+      "subscription_times": 0.96,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -215,8 +215,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/silverstorm-parks-resorts-ipo/",
       "subscription_qib": 0.99,
-      "subscription_nii": 0.51,
-      "subscription_retail": 0.65
+      "subscription_nii": 1.55,
+      "subscription_retail": 0.68
     }
   ],
   "upcoming_ipos": [
