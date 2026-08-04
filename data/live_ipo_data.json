@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-04T09:33:12.866429",
+  "scraped_at": "2026-08-04T15:28:41.214736",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 23.71,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.2,
+      "subscription_times": 0.38,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/aegeus-technologies-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.14,
-      "subscription_retail": 0.34
+      "subscription_nii": 0.27,
+      "subscription_retail": 0.65
     },
     {
       "id": "ipo_012",
@@ -50,7 +50,7 @@
       "issue_size_cr": 177.81,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 8.15,
+      "subscription_times": 11.19,
       "gmp": 80.0,
       "gmp_percent": 29.6,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/anawil-wire-engieering-ipo/",
-      "subscription_qib": 7.14,
-      "subscription_nii": 6.21,
-      "subscription_retail": 9.55
+      "subscription_qib": 8.91,
+      "subscription_nii": 9.51,
+      "subscription_retail": 13.2
     },
     {
       "id": "ipo_013",
@@ -86,7 +86,7 @@
       "issue_size_cr": 42.25,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 79.89,
+      "subscription_times": 146.76,
       "gmp": 26.0,
       "gmp_percent": 20.0,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/gv-electricals-ipo/",
-      "subscription_qib": 16.81,
-      "subscription_nii": 137.08,
-      "subscription_retail": 91.06
+      "subscription_qib": 66.42,
+      "subscription_nii": 243.24,
+      "subscription_retail": 150.75
     },
     {
       "id": "ipo_014",
@@ -122,7 +122,7 @@
       "issue_size_cr": 39.04,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.23,
+      "subscription_times": 1.5,
       "gmp": 4.0,
       "gmp_percent": 2.5,
       "lead_manager": "",
@@ -142,9 +142,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/fusion-klassroom-ipo/",
-      "subscription_qib": 0.68,
-      "subscription_nii": 1.07,
-      "subscription_retail": 1.61
+      "subscription_qib": 1.0,
+      "subscription_nii": 1.47,
+      "subscription_retail": 1.8
     }
   ],
   "upcoming_ipos": [
