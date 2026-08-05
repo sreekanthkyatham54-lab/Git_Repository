@@ -1,7 +1,40 @@
 {
-  "scraped_at": "2026-08-04T15:28:41.214736",
+  "scraped_at": "2026-08-05T03:57:34.211200",
   "source": "live",
   "active_ipos": [
+    {
+      "id": "ipo_005",
+      "company": "Ardee Industries",
+      "exchange": "NSE Emerge",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-08-05",
+      "close_date": "2026-08-07",
+      "issue_price": 53.0,
+      "issue_size_cr": 425.87,
+      "lot_size": 0,
+      "subscription_status": "Open",
+      "subscription_times": 0.0,
+      "gmp": 8.0,
+      "gmp_percent": 15.1,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/ardee-industries-ipo/"
+    },
     {
       "id": "ipo_011",
       "company": "Aegeus Technologies",
@@ -73,78 +106,6 @@
       "subscription_qib": 8.91,
       "subscription_nii": 9.51,
       "subscription_retail": 13.2
-    },
-    {
-      "id": "ipo_013",
-      "company": "G.V. Electricals",
-      "exchange": "BSE SME",
-      "ipo_type": "SME",
-      "sector": "include Clinical Chemistry",
-      "open_date": "2026-07-31",
-      "close_date": "2026-08-04",
-      "issue_price": 130.0,
-      "issue_size_cr": 42.25,
-      "lot_size": 0,
-      "subscription_status": "Open",
-      "subscription_times": 146.76,
-      "gmp": 26.0,
-      "gmp_percent": 20.0,
-      "lead_manager": "",
-      "registrar": "to the issue",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 23.17,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/gv-electricals-ipo/",
-      "subscription_qib": 66.42,
-      "subscription_nii": 243.24,
-      "subscription_retail": 150.75
-    },
-    {
-      "id": "ipo_014",
-      "company": "Fusion Klassroom",
-      "exchange": "BSE SME",
-      "ipo_type": "SME",
-      "sector": "include Clinical Chemistry",
-      "open_date": "2026-07-31",
-      "close_date": "2026-08-04",
-      "issue_price": 159.0,
-      "issue_size_cr": 39.04,
-      "lot_size": 0,
-      "subscription_status": "Open",
-      "subscription_times": 1.5,
-      "gmp": 4.0,
-      "gmp_percent": 2.5,
-      "lead_manager": "",
-      "registrar": "to the issue",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 23.17,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/fusion-klassroom-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 1.47,
-      "subscription_retail": 1.8
     }
   ],
   "upcoming_ipos": [
@@ -197,8 +158,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 245.0,
-      "gmp_percent": 28.1,
+      "gmp": 253.0,
+      "gmp_percent": 29.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -288,39 +249,6 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/technocraft-ventures-ipo/"
-    },
-    {
-      "id": "ipo_005",
-      "company": "Ardee Industries",
-      "exchange": "NSE Emerge",
-      "ipo_type": "SME",
-      "sector": "include Clinical Chemistry",
-      "open_date": "2026-08-05",
-      "close_date": "2026-08-07",
-      "issue_price": 53.0,
-      "issue_size_cr": 425.87,
-      "lot_size": 0,
-      "subscription_status": "Upcoming",
-      "subscription_times": 0.0,
-      "gmp": 7.0,
-      "gmp_percent": 13.2,
-      "lead_manager": "",
-      "registrar": "to the issue",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 23.17,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/ardee-industries-ipo/"
     },
     {
       "id": "ipo_006",
@@ -503,7 +431,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_015",
+      "id": "ipo_013",
       "company": "Brandman Retail",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -539,7 +467,7 @@
       "subscription_retail": 93.11
     },
     {
-      "id": "ipo_016",
+      "id": "ipo_014",
       "company": "Grover Jewells",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -575,7 +503,7 @@
       "subscription_retail": 15.74
     },
     {
-      "id": "ipo_017",
+      "id": "ipo_015",
       "company": "Kanishk Aluminium",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -611,7 +539,7 @@
       "subscription_retail": 1.86
     },
     {
-      "id": "ipo_018",
+      "id": "ipo_016",
       "company": "Msafe Equipments",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -647,7 +575,7 @@
       "subscription_retail": 133.16
     },
     {
-      "id": "ipo_019",
+      "id": "ipo_017",
       "company": "Accretion Nutraveda",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -683,7 +611,7 @@
       "subscription_retail": 2.19
     },
     {
-      "id": "ipo_020",
+      "id": "ipo_018",
       "company": "Kasturi Metal Composite",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -719,7 +647,7 @@
       "subscription_retail": 16.49
     },
     {
-      "id": "ipo_021",
+      "id": "ipo_019",
       "company": "Hannah Joseph Hospital",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -755,7 +683,7 @@
       "subscription_retail": 1.62
     },
     {
-      "id": "ipo_022",
+      "id": "ipo_020",
       "company": "Shayona Engineering",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -791,7 +719,7 @@
       "subscription_retail": 3.73
     },
     {
-      "id": "ipo_023",
+      "id": "ipo_021",
       "company": "KRM Ayurveda",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -827,7 +755,7 @@
       "subscription_retail": 54.21
     },
     {
-      "id": "ipo_024",
+      "id": "ipo_022",
       "company": "Digilogic Systems",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -863,7 +791,7 @@
       "subscription_retail": 1.08
     },
     {
-      "id": "ipo_025",
+      "id": "ipo_023",
       "company": "Aritas Vinyl",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -899,7 +827,7 @@
       "subscription_retail": 2.88
     },
     {
-      "id": "ipo_026",
+      "id": "ipo_024",
       "company": "Armour Security",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -935,7 +863,7 @@
       "subscription_retail": 2.58
     },
     {
-      "id": "ipo_027",
+      "id": "ipo_025",
       "company": "GRE Renew Enertech",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -947,8 +875,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 16.53,
-      "gmp": 9.0,
-      "gmp_percent": 8.6,
+      "gmp": 13.0,
+      "gmp_percent": 12.4,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -971,7 +899,7 @@
       "subscription_retail": 14.1
     },
     {
-      "id": "ipo_028",
+      "id": "ipo_026",
       "company": "INDO SMC",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1007,7 +935,7 @@
       "subscription_retail": 96.13
     },
     {
-      "id": "ipo_029",
+      "id": "ipo_027",
       "company": "Narmadesh Brass",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1043,7 +971,7 @@
       "subscription_retail": 0.44
     },
     {
-      "id": "ipo_030",
+      "id": "ipo_028",
       "company": "Avana Electrosystems",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1079,7 +1007,7 @@
       "subscription_retail": 137.52
     },
     {
-      "id": "ipo_031",
+      "id": "ipo_029",
       "company": "Defrail Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1115,7 +1043,7 @@
       "subscription_retail": 101.28
     },
     {
-      "id": "ipo_032",
+      "id": "ipo_030",
       "company": "Victory Electric Vehicles",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1151,7 +1079,7 @@
       "subscription_retail": 0.99
     },
     {
-      "id": "ipo_033",
+      "id": "ipo_031",
       "company": "Yajur Fibres",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1187,7 +1115,7 @@
       "subscription_retail": 1.51
     },
     {
-      "id": "ipo_034",
+      "id": "ipo_032",
       "company": "Gabion Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1223,7 +1151,7 @@
       "subscription_retail": 867.23
     },
     {
-      "id": "ipo_035",
+      "id": "ipo_033",
       "company": "Modern Diagnostic",
       "exchange": "BSE SME",
       "ipo_type": "SME",
