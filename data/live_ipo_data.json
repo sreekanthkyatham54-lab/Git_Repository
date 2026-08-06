@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-06T09:35:20.261785",
+  "scraped_at": "2026-08-06T15:21:40.672487",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 425.87,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 10.23,
+      "subscription_times": 14.72,
       "gmp": 15.0,
       "gmp_percent": 28.3,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/ardee-industries-ipo/",
-      "subscription_qib": 1.22,
-      "subscription_nii": 20.6,
-      "subscription_retail": 10.93
+      "subscription_qib": 1.33,
+      "subscription_nii": 31.93,
+      "subscription_retail": 14.99
     },
     {
       "id": "ipo_014",
@@ -50,7 +50,7 @@
       "issue_size_cr": 32.4,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.49,
+      "subscription_times": 4.46,
       "gmp": 30.0,
       "gmp_percent": 31.9,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/lapl-automotive-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 2.14,
-      "subscription_retail": 4.06
+      "subscription_nii": 4.21,
+      "subscription_retail": 7.12
     },
     {
       "id": "ipo_015",
@@ -86,7 +86,7 @@
       "issue_size_cr": 23.71,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 6.77,
+      "subscription_times": 29.91,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/aegeus-technologies-ipo/",
-      "subscription_qib": 2.17,
-      "subscription_nii": 10.84,
-      "subscription_retail": 7.68
+      "subscription_qib": 23.88,
+      "subscription_nii": 48.05,
+      "subscription_retail": 25.59
     },
     {
       "id": "ipo_016",
@@ -122,7 +122,7 @@
       "issue_size_cr": 42.25,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 110.63,
+      "subscription_times": 112.4,
       "gmp": 26.0,
       "gmp_percent": 20.0,
       "lead_manager": "",
@@ -142,9 +142,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/gv-electricals-ipo/",
-      "subscription_qib": 59.1,
-      "subscription_nii": 231.14,
-      "subscription_retail": 87.82
+      "subscription_qib": 58.45,
+      "subscription_nii": 230.82,
+      "subscription_retail": 91.87
     }
   ],
   "upcoming_ipos": [
