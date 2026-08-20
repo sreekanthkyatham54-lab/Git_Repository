@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-20T02:16:13.904463",
+  "scraped_at": "2026-08-20T07:32:25.122265",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 650.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 13.11,
-      "gmp": 180.0,
-      "gmp_percent": 60.0,
+      "subscription_times": 1.45,
+      "gmp": 220.0,
+      "gmp_percent": 73.3,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/tempsens-instruments-india-ipo/",
-      "subscription_qib": 9.44,
-      "subscription_nii": 22.89,
-      "subscription_retail": 11.01
+      "subscription_qib": 0.01,
+      "subscription_nii": 2.63,
+      "subscription_retail": 1.77
     },
     {
       "id": "ipo_007",
@@ -50,9 +50,9 @@
       "issue_size_cr": 550.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.9,
-      "gmp": 30.0,
-      "gmp_percent": 18.8,
+      "subscription_times": 1.31,
+      "gmp": 25.0,
+      "gmp_percent": 15.6,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/gaja-alternative-asset-management-ipo/",
       "subscription_qib": 0.1,
-      "subscription_nii": 1.12,
-      "subscription_retail": 1.27
+      "subscription_nii": 1.74,
+      "subscription_retail": 1.82
     },
     {
       "id": "ipo_008",
@@ -86,9 +86,9 @@
       "issue_size_cr": 367.18,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.94,
-      "gmp": 5.0,
-      "gmp_percent": 5.4,
+      "subscription_times": 1.13,
+      "gmp": 2.0,
+      "gmp_percent": 2.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/shankesh-jewellers-ipo/",
       "subscription_qib": 0.76,
-      "subscription_nii": 0.76,
-      "subscription_retail": 1.13
+      "subscription_nii": 0.97,
+      "subscription_retail": 1.4
     },
     {
       "id": "ipo_009",
@@ -122,9 +122,9 @@
       "issue_size_cr": 282.14,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 18.47,
-      "gmp": 77.0,
-      "gmp_percent": 21.4,
+      "subscription_times": 27.9,
+      "gmp": 80.0,
+      "gmp_percent": 22.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -142,9 +142,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sunshine-pictures-ipo/",
-      "subscription_qib": 0.14,
-      "subscription_nii": 35.59,
-      "subscription_retail": 21.61
+      "subscription_qib": 0.2,
+      "subscription_nii": 62.36,
+      "subscription_retail": 28.97
     },
     {
       "id": "ipo_020",
@@ -158,9 +158,9 @@
       "issue_size_cr": 27.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.09,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "subscription_times": 0.25,
+      "gmp": 10.0,
+      "gmp_percent": 10.1,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -179,8 +179,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/dhanwel-hybrid-seeds-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.02,
-      "subscription_retail": 0.16
+      "subscription_nii": 0.04,
+      "subscription_retail": 0.47
     },
     {
       "id": "ipo_021",
@@ -194,9 +194,9 @@
       "issue_size_cr": 27.26,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.78,
-      "gmp": 22.0,
-      "gmp_percent": 15.9,
+      "subscription_times": 0.87,
+      "gmp": 5.0,
+      "gmp_percent": 3.6,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -215,8 +215,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/mopshop-distribution-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.12,
-      "subscription_retail": 1.44
+      "subscription_nii": 0.02,
+      "subscription_retail": 1.72
     }
   ],
   "upcoming_ipos": [
@@ -228,7 +228,7 @@
       "sector": "include Clinical Chemistry",
       "open_date": "2026-08-25",
       "close_date": "2026-08-28",
-      "issue_price": 0.0,
+      "issue_price": 94.0,
       "issue_size_cr": 0.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
@@ -266,8 +266,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 200.0,
+      "gmp_percent": 20.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -301,9 +301,9 @@
       "issue_size_cr": 135.73,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 0.09,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "subscription_times": 0.25,
+      "gmp": 5.0,
+      "gmp_percent": 9.4,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -322,8 +322,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/hy-tech-engineers-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.02,
-      "subscription_retail": 0.16
+      "subscription_nii": 0.04,
+      "subscription_retail": 0.47
     },
     {
       "id": "ipo_004",
@@ -371,8 +371,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 190.0,
-      "gmp_percent": 24.1,
+      "gmp": 270.0,
+      "gmp_percent": 34.3,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -659,8 +659,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 20.0,
-      "gmp_percent": 19.8,
+      "gmp": 30.0,
+      "gmp_percent": 29.7,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
