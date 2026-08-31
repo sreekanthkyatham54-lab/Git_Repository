@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-31T06:38:49.455150",
+  "scraped_at": "2026-08-31T14:34:11.319184",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 680.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.05,
+      "subscription_times": 0.12,
       "gmp": 28.0,
       "gmp_percent": 4.9,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/purple-style-labs-ipo/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.02,
-      "subscription_retail": 0.24
+      "subscription_qib": 0.01,
+      "subscription_nii": 0.06,
+      "subscription_retail": 0.56
     },
     {
       "id": "ipo_004",
@@ -50,7 +50,7 @@
       "issue_size_cr": 720.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 12.48,
+      "subscription_times": 25.77,
       "gmp": 328.0,
       "gmp_percent": 76.5,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/esds-software-solution-ipo/",
-      "subscription_qib": 0.08,
-      "subscription_nii": 33.28,
-      "subscription_retail": 10.66
+      "subscription_qib": 0.76,
+      "subscription_nii": 73.34,
+      "subscription_retail": 19.67
     },
     {
       "id": "ipo_005",
@@ -86,7 +86,7 @@
       "issue_size_cr": 91.5,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 13.99,
+      "subscription_times": 29.06,
       "gmp": 45.0,
       "gmp_percent": 22.5,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/priority-jewels-ipo/",
-      "subscription_qib": 0.54,
-      "subscription_nii": 20.09,
-      "subscription_retail": 19.07
+      "subscription_qib": 1.68,
+      "subscription_nii": 42.34,
+      "subscription_retail": 39.02
     },
     {
       "id": "ipo_006",
@@ -122,7 +122,7 @@
       "issue_size_cr": 700.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 26.77,
+      "subscription_times": 123.79,
       "gmp": 60.0,
       "gmp_percent": 73.2,
       "lead_manager": "",
@@ -142,12 +142,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/lumino-industries-ipo/",
-      "subscription_qib": 0.48,
-      "subscription_nii": 78.75,
-      "subscription_retail": 20.4
+      "subscription_qib": 232.79,
+      "subscription_nii": 185.02,
+      "subscription_retail": 39.88
     },
     {
-      "id": "ipo_018",
+      "id": "ipo_019",
       "company": "Ashutosh Fibre",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -158,7 +158,7 @@
       "issue_size_cr": 56.35,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.41,
+      "subscription_times": 1.6,
       "gmp": 37.0,
       "gmp_percent": 40.2,
       "lead_manager": "",
@@ -179,11 +179,11 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/ashutosh-fibre-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.5,
-      "subscription_retail": 0.55
+      "subscription_nii": 1.84,
+      "subscription_retail": 2.16
     },
     {
-      "id": "ipo_019",
+      "id": "ipo_020",
       "company": "Phychem Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -194,7 +194,7 @@
       "issue_size_cr": 14.58,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.05,
+      "subscription_times": 1.26,
       "gmp": 3.0,
       "gmp_percent": 5.6,
       "lead_manager": "",
@@ -215,11 +215,11 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/phychem-technologies-ipo/",
       "subscription_qib": 3.53,
-      "subscription_nii": 0.07,
-      "subscription_retail": 0.06
+      "subscription_nii": 0.63,
+      "subscription_retail": 0.25
     },
     {
-      "id": "ipo_020",
+      "id": "ipo_021",
       "company": "Shanti Inorganics",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -230,7 +230,7 @@
       "issue_size_cr": 47.23,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.33,
+      "subscription_times": 1.25,
       "gmp": 31.0,
       "gmp_percent": 37.3,
       "lead_manager": "",
@@ -250,12 +250,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/shanti-inorganics-ipo/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.32,
-      "subscription_retail": 0.53
+      "subscription_qib": 0.23,
+      "subscription_nii": 1.61,
+      "subscription_retail": 1.72
     },
     {
-      "id": "ipo_021",
+      "id": "ipo_022",
       "company": "Paluck Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -266,7 +266,7 @@
       "issue_size_cr": 33.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 57.67,
+      "subscription_times": 99.42,
       "gmp": 25.0,
       "gmp_percent": 52.1,
       "lead_manager": "",
@@ -286,12 +286,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/paluck-technologies-ipo/",
-      "subscription_qib": 10.51,
-      "subscription_nii": 18.12,
-      "subscription_retail": 25.94
+      "subscription_qib": 10.62,
+      "subscription_nii": 34.89,
+      "subscription_retail": 47.45
     },
     {
-      "id": "ipo_022",
+      "id": "ipo_023",
       "company": "Complete Sports & Management",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -302,7 +302,7 @@
       "issue_size_cr": 74.93,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.11,
+      "subscription_times": 0.28,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -322,12 +322,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/complete-sports-and-management-ipo/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.19,
-      "subscription_retail": 0.15
+      "subscription_qib": 0.35,
+      "subscription_nii": 0.39,
+      "subscription_retail": 0.19
     },
     {
-      "id": "ipo_023",
+      "id": "ipo_024",
       "company": "Kwick Forensic Solutions",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -338,7 +338,7 @@
       "issue_size_cr": 50.77,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 101.54,
+      "subscription_times": 288.23,
       "gmp": 70.0,
       "gmp_percent": 77.8,
       "lead_manager": "",
@@ -358,9 +358,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/kwick-forensic-solutions-ipo/",
-      "subscription_qib": 7.07,
-      "subscription_nii": 112.45,
-      "subscription_retail": 150.69
+      "subscription_qib": 224.32,
+      "subscription_nii": 318.11,
+      "subscription_retail": 311.83
     }
   ],
   "upcoming_ipos": [
@@ -792,6 +792,42 @@
     },
     {
       "id": "ipo_017",
+      "company": "Fly-Hi Maritime",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-09-01",
+      "close_date": "2026-09-03",
+      "issue_price": 102.0,
+      "issue_size_cr": 52.63,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 1.74,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/fly-hi-maritime-ipo/",
+      "subscription_qib": 1.0,
+      "subscription_nii": 1.88,
+      "subscription_retail": 2.09
+    },
+    {
+      "id": "ipo_018",
       "company": "Farm Peace",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -827,7 +863,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_024",
+      "id": "ipo_025",
       "company": "Acetech E-Commerce",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -863,7 +899,7 @@
       "subscription_retail": 1.15
     },
     {
-      "id": "ipo_025",
+      "id": "ipo_026",
       "company": "Striders Impex",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -899,7 +935,7 @@
       "subscription_retail": 0.63
     },
     {
-      "id": "ipo_026",
+      "id": "ipo_027",
       "company": "Yaap Digital",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -935,7 +971,7 @@
       "subscription_retail": 1.61
     },
     {
-      "id": "ipo_027",
+      "id": "ipo_028",
       "company": "Kiaasa Retail",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -971,7 +1007,7 @@
       "subscription_retail": 2.43
     },
     {
-      "id": "ipo_028",
+      "id": "ipo_029",
       "company": "Accord Transformer",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1007,7 +1043,7 @@
       "subscription_retail": 367.59
     },
     {
-      "id": "ipo_029",
+      "id": "ipo_030",
       "company": "Mobilise App",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1043,7 +1079,7 @@
       "subscription_retail": 96.52
     },
     {
-      "id": "ipo_030",
+      "id": "ipo_031",
       "company": "Manilam Industries",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1079,7 +1115,7 @@
       "subscription_retail": 5.88
     },
     {
-      "id": "ipo_031",
+      "id": "ipo_032",
       "company": "Yashhtej Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1115,7 +1151,7 @@
       "subscription_retail": 2.35
     },
     {
-      "id": "ipo_032",
+      "id": "ipo_033",
       "company": "Fractal Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1151,7 +1187,7 @@
       "subscription_retail": 4.09
     },
     {
-      "id": "ipo_033",
+      "id": "ipo_034",
       "company": "Marushika Technology",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1187,7 +1223,7 @@
       "subscription_retail": 16.51
     },
     {
-      "id": "ipo_034",
+      "id": "ipo_035",
       "company": "PAN HR Solutions",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1223,7 +1259,7 @@
       "subscription_retail": 8.99
     },
     {
-      "id": "ipo_035",
+      "id": "ipo_036",
       "company": "Biopol Chemicals",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1259,7 +1295,7 @@
       "subscription_retail": 20.8
     },
     {
-      "id": "ipo_036",
+      "id": "ipo_037",
       "company": "Brandman Retail",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1295,7 +1331,7 @@
       "subscription_retail": 93.11
     },
     {
-      "id": "ipo_037",
+      "id": "ipo_038",
       "company": "Grover Jewells",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1331,7 +1367,7 @@
       "subscription_retail": 15.74
     },
     {
-      "id": "ipo_038",
+      "id": "ipo_039",
       "company": "Kanishk Aluminium",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1367,7 +1403,7 @@
       "subscription_retail": 1.86
     },
     {
-      "id": "ipo_039",
+      "id": "ipo_040",
       "company": "Msafe Equipments",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1403,7 +1439,7 @@
       "subscription_retail": 133.16
     },
     {
-      "id": "ipo_040",
+      "id": "ipo_041",
       "company": "Accretion Nutraveda",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1439,7 +1475,7 @@
       "subscription_retail": 2.19
     },
     {
-      "id": "ipo_041",
+      "id": "ipo_042",
       "company": "Kasturi Metal Composite",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1475,7 +1511,7 @@
       "subscription_retail": 16.49
     },
     {
-      "id": "ipo_042",
+      "id": "ipo_043",
       "company": "Hannah Joseph Hospital",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1511,7 +1547,7 @@
       "subscription_retail": 1.62
     },
     {
-      "id": "ipo_043",
+      "id": "ipo_044",
       "company": "Shayona Engineering",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1547,7 +1583,7 @@
       "subscription_retail": 3.73
     },
     {
-      "id": "ipo_044",
+      "id": "ipo_045",
       "company": "KRM Ayurveda",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1583,7 +1619,7 @@
       "subscription_retail": 54.21
     },
     {
-      "id": "ipo_045",
+      "id": "ipo_046",
       "company": "Digilogic Systems",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1619,7 +1655,7 @@
       "subscription_retail": 1.08
     },
     {
-      "id": "ipo_046",
+      "id": "ipo_047",
       "company": "Aritas Vinyl",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1655,7 +1691,7 @@
       "subscription_retail": 2.88
     },
     {
-      "id": "ipo_047",
+      "id": "ipo_048",
       "company": "Armour Security",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1691,7 +1727,7 @@
       "subscription_retail": 2.58
     },
     {
-      "id": "ipo_048",
+      "id": "ipo_049",
       "company": "GRE Renew Enertech",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1727,7 +1763,7 @@
       "subscription_retail": 14.1
     },
     {
-      "id": "ipo_049",
+      "id": "ipo_050",
       "company": "INDO SMC",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1763,7 +1799,7 @@
       "subscription_retail": 96.13
     },
     {
-      "id": "ipo_050",
+      "id": "ipo_051",
       "company": "Narmadesh Brass",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1799,7 +1835,7 @@
       "subscription_retail": 0.44
     },
     {
-      "id": "ipo_051",
+      "id": "ipo_052",
       "company": "Avana Electrosystems",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1835,7 +1871,7 @@
       "subscription_retail": 137.52
     },
     {
-      "id": "ipo_052",
+      "id": "ipo_053",
       "company": "Defrail Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1871,7 +1907,7 @@
       "subscription_retail": 101.28
     },
     {
-      "id": "ipo_053",
+      "id": "ipo_054",
       "company": "Victory Electric Vehicles",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1907,7 +1943,7 @@
       "subscription_retail": 0.99
     },
     {
-      "id": "ipo_054",
+      "id": "ipo_055",
       "company": "Yajur Fibres",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1943,7 +1979,7 @@
       "subscription_retail": 1.51
     },
     {
-      "id": "ipo_055",
+      "id": "ipo_056",
       "company": "Gabion Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1979,7 +2015,7 @@
       "subscription_retail": 867.23
     },
     {
-      "id": "ipo_056",
+      "id": "ipo_057",
       "company": "Modern Diagnostic",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -2016,6 +2052,202 @@
     }
   ],
   "historical_ipos": [
+    {
+      "company": "Augmont Enterprises",
+      "listing_date": "",
+      "issue_price": 788.0,
+      "listing_price": 961.0,
+      "current_price": 21.95,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 22.0,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Tempsens Instruments",
+      "listing_date": "",
+      "issue_price": 300.0,
+      "listing_price": 634.0,
+      "current_price": 111.33,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 111.3,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Gaja Alternative",
+      "listing_date": "",
+      "issue_price": 160.0,
+      "listing_price": 185.0,
+      "current_price": 15.63,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 15.6,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Shankesh Jewellers",
+      "listing_date": "",
+      "issue_price": 93.0,
+      "listing_price": 103.3,
+      "current_price": 11.08,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 11.1,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE SME",
+      "ipo_type": "SME"
+    },
+    {
+      "company": "Sunshine Pictures",
+      "listing_date": "",
+      "issue_price": 360.0,
+      "listing_price": 395.9,
+      "current_price": 9.97,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 10.0,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Horizon Industrial Parks",
+      "listing_date": "",
+      "issue_price": 60.0,
+      "listing_price": 60.25,
+      "current_price": 0.42,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 0.4,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE SME",
+      "ipo_type": "SME"
+    },
+    {
+      "company": "Lalithaa Jewellery Mart",
+      "listing_date": "",
+      "issue_price": 201.0,
+      "listing_price": 265.0,
+      "current_price": 31.84,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 31.8,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Behari Lal Engineering",
+      "listing_date": "",
+      "issue_price": 285.0,
+      "listing_price": 465.0,
+      "current_price": 63.16,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 63.2,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Shiprocket",
+      "listing_date": "",
+      "issue_price": 97.0,
+      "listing_price": 131.0,
+      "current_price": 35.05,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 35.1,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE SME",
+      "ipo_type": "SME"
+    },
+    {
+      "company": "Milky Mist",
+      "listing_date": "",
+      "issue_price": 140.0,
+      "listing_price": 165.0,
+      "current_price": 17.85,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 17.9,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Molbio Diagnostics",
+      "listing_date": "",
+      "issue_price": 807.0,
+      "listing_price": 980.0,
+      "current_price": 21.44,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 21.4,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Dhoot Transmission",
+      "listing_date": "",
+      "issue_price": 871.0,
+      "listing_price": 1200.0,
+      "current_price": 37.77,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 37.8,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "LEAP India",
+      "listing_date": "",
+      "issue_price": 159.0,
+      "listing_price": 165.9,
+      "current_price": 4.34,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 4.3,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
+    {
+      "company": "Technocraft Ventures",
+      "listing_date": "",
+      "issue_price": 212.0,
+      "listing_price": 284.0,
+      "current_price": 33.96,
+      "gmp_before_listing": null,
+      "gmp_predicted_gain": null,
+      "actual_listing_gain": 34.0,
+      "gmp_accurate": null,
+      "sector": "—",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard"
+    },
     {
       "company": "Ardee Industries",
       "listing_date": "",
@@ -2501,202 +2733,6 @@
       "gmp_before_listing": null,
       "gmp_predicted_gain": null,
       "actual_listing_gain": 13.5,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Omnitech Engineering",
-      "listing_date": "",
-      "issue_price": 227.0,
-      "listing_price": 202.0,
-      "current_price": 11.01,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": -11.0,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "PNGS Reva Diamond",
-      "listing_date": "",
-      "issue_price": 386.0,
-      "listing_price": 375.0,
-      "current_price": 2.85,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": -2.8,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Shree Ram Twistex",
-      "listing_date": "",
-      "issue_price": 104.0,
-      "listing_price": 68.0,
-      "current_price": 34.62,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": -34.6,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Clean Max Enviro",
-      "listing_date": "",
-      "issue_price": 1053.0,
-      "listing_price": 960.0,
-      "current_price": 8.83,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": -8.8,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Gaudium IVF",
-      "listing_date": "",
-      "issue_price": 79.0,
-      "listing_price": 83.0,
-      "current_price": 5.06,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 5.1,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE SME",
-      "ipo_type": "SME"
-    },
-    {
-      "company": "Fractal Analytics",
-      "listing_date": "",
-      "issue_price": 900.0,
-      "listing_price": 876.0,
-      "current_price": 2.67,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": -2.7,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Aye Finance",
-      "listing_date": "",
-      "issue_price": 129.0,
-      "listing_price": 129.0,
-      "current_price": 0.0,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 0.0,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Shadowfax",
-      "listing_date": "",
-      "issue_price": 124.0,
-      "listing_price": 112.6,
-      "current_price": 9.19,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": -9.2,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Amagi Media Labs",
-      "listing_date": "",
-      "issue_price": 361.0,
-      "listing_price": 318.0,
-      "current_price": 11.91,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": -11.9,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Bharat Coking Coal (BCCL)",
-      "listing_date": "",
-      "issue_price": 23.0,
-      "listing_price": 45.0,
-      "current_price": 96.0,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 95.7,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE SME",
-      "ipo_type": "SME"
-    },
-    {
-      "company": "Gujarat Kidney",
-      "listing_date": "",
-      "issue_price": 114.0,
-      "listing_price": 120.0,
-      "current_price": 5.26,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 5.3,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "KSH International",
-      "listing_date": "",
-      "issue_price": 384.0,
-      "listing_price": 370.0,
-      "current_price": 3.65,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": -3.6,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "ICICI Prudential AMC",
-      "listing_date": "",
-      "issue_price": 2165.0,
-      "listing_price": 2600.0,
-      "current_price": 20.0,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 20.1,
-      "gmp_accurate": null,
-      "sector": "—",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard"
-    },
-    {
-      "company": "Nephrocare Health",
-      "listing_date": "",
-      "issue_price": 460.0,
-      "listing_price": 490.0,
-      "current_price": 6.52,
-      "gmp_before_listing": null,
-      "gmp_predicted_gain": null,
-      "actual_listing_gain": 6.5,
       "gmp_accurate": null,
       "sector": "—",
       "exchange": "BSE / NSE",
