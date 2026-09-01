@@ -97,8 +97,19 @@ def parse_date_range(text):
             od = date(oy, om, d1).strftime("%Y-%m-%d"); cd = date(yr, mon, d2).strftime("%Y-%m-%d")
         else:
             od = date(yr, mon, d1).strftime("%Y-%m-%d"); cd = date(yr, mon, d2).strftime("%Y-%m-%d")
+        # Dates on ipowatch often omit the year, so a year-less date more than
+        # 180 days in the past could mean "next year" (scraped near a year
+        # boundary, e.g. a Jan IPO seen while scraping in December) OR it could
+        # simply be a closed/historical IPO still lingering in the listing.
+        # Only treat it as a year rollover if bumping the year forward lands
+        # within a plausible near-term IPO window (~120 days) — a bump that
+        # lands further out than that is almost certainly a stale past date,
+        # not a genuine upcoming one, and should be left alone so it resolves
+        # to "Closed" and gets filtered out.
         if (today - datetime.strptime(od, "%Y-%m-%d").date()).days > 180:
-            od = date(yr+1, mon, d1).strftime("%Y-%m-%d"); cd = date(yr+1, mon, d2).strftime("%Y-%m-%d")
+            bumped_od = date(yr+1, mon, d1).strftime("%Y-%m-%d")
+            if (datetime.strptime(bumped_od, "%Y-%m-%d").date() - today).days <= 120:
+                od = bumped_od; cd = date(yr+1, mon, d2).strftime("%Y-%m-%d")
         return od, cd
     except: return "", ""
 
