@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-03T11:48:21.486804",
+  "scraped_at": "2026-09-03T16:59:50.634503",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 459.72,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 36.91,
-      "gmp": 28.0,
-      "gmp_percent": 15.8,
+      "subscription_times": 9.44,
+      "gmp": 18.0,
+      "gmp_percent": 10.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/deepa-jewellers-ipo/",
-      "subscription_qib": 24.47,
-      "subscription_nii": 101.82,
-      "subscription_retail": 16.2
+      "subscription_qib": 4.12,
+      "subscription_nii": 17.45,
+      "subscription_retail": 9.04
     },
     {
       "id": "ipo_010",
@@ -50,9 +50,9 @@
       "issue_size_cr": 125.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 97.08,
-      "gmp": 47.0,
-      "gmp_percent": 19.7,
+      "subscription_times": 107.71,
+      "gmp": 15.0,
+      "gmp_percent": 6.3,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rays-of-belief-ipo-details/",
-      "subscription_qib": 5.38,
-      "subscription_nii": 262.38,
-      "subscription_retail": 170.04
+      "subscription_qib": 9.06,
+      "subscription_nii": 279.11,
+      "subscription_retail": 195.86
     },
     {
       "id": "ipo_014",
@@ -86,9 +86,9 @@
       "issue_size_cr": 52.63,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.96,
-      "gmp": 20.0,
-      "gmp_percent": 19.6,
+      "subscription_times": 2.12,
+      "gmp": 1.0,
+      "gmp_percent": 1.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/fly-hi-maritime-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.56,
-      "subscription_retail": 3.36
+      "subscription_nii": 0.58,
+      "subscription_retail": 3.65
     },
     {
       "id": "ipo_015",
@@ -122,7 +122,7 @@
       "issue_size_cr": 32.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.0,
+      "subscription_times": 1.16,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -143,8 +143,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/farm-peace-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 1.58,
-      "subscription_retail": 0.42
+      "subscription_nii": 1.73,
+      "subscription_retail": 0.59
     }
   ],
   "upcoming_ipos": [
@@ -293,8 +293,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 420.09,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 14.0,
+      "gmp_percent": 2.1,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -329,8 +329,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 15.0,
+      "gmp_percent": 8.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -365,8 +365,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 420.09,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 150.0,
+      "gmp_percent": 23.7,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -470,8 +470,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 420.09,
-      "gmp": 480.0,
-      "gmp_percent": 800.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
