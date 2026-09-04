@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-04T11:49:39.533815",
+  "scraped_at": "2026-09-04T16:48:54.188999",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 45.11,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 11.56,
+      "subscription_times": 13.62,
       "gmp": 55.0,
       "gmp_percent": 43.3,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/qualiance-international-ipo/",
-      "subscription_qib": 4.09,
-      "subscription_nii": 10.59,
-      "subscription_retail": 16.24
+      "subscription_qib": 4.1,
+      "subscription_nii": 13.76,
+      "subscription_retail": 18.99
     }
   ],
   "upcoming_ipos": [
