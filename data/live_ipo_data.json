@@ -1,9 +1,9 @@
 {
-  "scraped_at": "2026-09-05T15:53:23.376236",
+  "scraped_at": "2026-09-06T05:27:30.272821",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_017",
+      "id": "ipo_019",
       "company": "Qualiance International",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -75,6 +75,42 @@
     },
     {
       "id": "ipo_002",
+      "company": "Manika Plastech",
+      "exchange": "NSE Emerge",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-09-11",
+      "close_date": "2026-09-16",
+      "issue_price": 0.0,
+      "issue_size_cr": 0.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 1.74,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/manika-plastech-ipo/",
+      "subscription_qib": 1.0,
+      "subscription_nii": 1.88,
+      "subscription_retail": 2.09
+    },
+    {
+      "id": "ipo_003",
       "company": "Veegaland Developers",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -107,7 +143,7 @@
       "detail_url": "https://ipowatch.in/veegaland-developers-ipo/"
     },
     {
-      "id": "ipo_003",
+      "id": "ipo_004",
       "company": "Karamtara Engineering",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -143,7 +179,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_005",
       "company": "Manipal Payment",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -179,7 +215,7 @@
       "subscription_retail": 0.98
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_006",
       "company": "Rentomojo",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -215,7 +251,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_006",
+      "id": "ipo_007",
       "company": "Steamhouse India",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -251,7 +287,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_008",
       "company": "Asset Reconstruction",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -284,7 +320,7 @@
       "detail_url": "https://ipowatch.in/asset-reconstruction-ipo/"
     },
     {
-      "id": "ipo_008",
+      "id": "ipo_009",
       "company": "LCC Projects",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -317,7 +353,7 @@
       "detail_url": "https://ipowatch.in/lcc-projects-ipo/"
     },
     {
-      "id": "ipo_009",
+      "id": "ipo_010",
       "company": "Prasol Chemicals",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -353,7 +389,7 @@
       "subscription_retail": 372.5
     },
     {
-      "id": "ipo_010",
+      "id": "ipo_011",
       "company": "Glass Wall Systems",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -389,7 +425,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_011",
+      "id": "ipo_012",
       "company": "Kanohar Electricals",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -425,7 +461,7 @@
       "subscription_retail": 372.5
     },
     {
-      "id": "ipo_012",
+      "id": "ipo_013",
       "company": "Pranav Constructions",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -458,7 +494,43 @@
       "detail_url": "https://ipowatch.in/pranav-constructions-ipo/"
     },
     {
-      "id": "ipo_013",
+      "id": "ipo_014",
+      "company": "Raksan Transformers",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-09-10",
+      "close_date": "2026-09-15",
+      "issue_price": 0.0,
+      "issue_size_cr": 0.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 1.74,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/raksan-transformers-ipo/",
+      "subscription_qib": 1.0,
+      "subscription_nii": 1.88,
+      "subscription_retail": 2.09
+    },
+    {
+      "id": "ipo_015",
       "company": "Infrax Renewable",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -491,7 +563,7 @@
       "detail_url": "https://ipowatch.in/infrax-renewable-ipo/"
     },
     {
-      "id": "ipo_014",
+      "id": "ipo_016",
       "company": "Vinod Texworld",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -524,7 +596,7 @@
       "detail_url": "https://ipowatch.in/vinod-texworld-ipo/"
     },
     {
-      "id": "ipo_015",
+      "id": "ipo_017",
       "company": "Amtech Esters",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -560,7 +632,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_016",
+      "id": "ipo_018",
       "company": "Apana Logistics",
       "exchange": "BSE SME",
       "ipo_type": "SME",
