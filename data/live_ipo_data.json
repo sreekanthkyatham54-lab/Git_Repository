@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-08T11:49:56.789650",
+  "scraped_at": "2026-09-08T17:11:55.767984",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 500.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.37,
-      "gmp": 85.0,
-      "gmp_percent": 12.6,
+      "subscription_times": 0.44,
+      "gmp": 40.0,
+      "gmp_percent": 5.9,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/prasol-chemicals-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.25,
-      "subscription_retail": 0.64
+      "subscription_nii": 0.33,
+      "subscription_retail": 0.73
     },
     {
       "id": "ipo_012",
@@ -50,9 +50,9 @@
       "issue_size_cr": 427.89,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.05,
-      "gmp": 50.0,
-      "gmp_percent": 27.5,
+      "subscription_times": 2.54,
+      "gmp": 55.0,
+      "gmp_percent": 30.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/glass-wall-systems-ipo/",
       "subscription_qib": 0.01,
-      "subscription_nii": 2.17,
-      "subscription_retail": 3.17
+      "subscription_nii": 3.03,
+      "subscription_retail": 3.79
     },
     {
       "id": "ipo_013",
@@ -86,9 +86,9 @@
       "issue_size_cr": 1055.74,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.22,
-      "gmp": 198.0,
-      "gmp_percent": 31.3,
+      "subscription_times": 2.71,
+      "gmp": 210.0,
+      "gmp_percent": 33.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/kanohar-electricals-ipo/",
-      "subscription_qib": 0.02,
-      "subscription_nii": 3.66,
-      "subscription_retail": 2.87
+      "subscription_qib": 0.03,
+      "subscription_nii": 4.88,
+      "subscription_retail": 3.32
     },
     {
       "id": "ipo_014",
@@ -122,7 +122,7 @@
       "issue_size_cr": 351.03,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 16.56,
+      "subscription_times": 19.06,
       "gmp": 44.0,
       "gmp_percent": 35.5,
       "lead_manager": "",
@@ -142,9 +142,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/pranav-constructions-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 37.79,
-      "subscription_retail": 15.02
+      "subscription_qib": 1.04,
+      "subscription_nii": 45.8,
+      "subscription_retail": 16.56
     },
     {
       "id": "ipo_024",
@@ -158,7 +158,7 @@
       "issue_size_cr": 34.14,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.53,
+      "subscription_times": 0.62,
       "gmp": 10.0,
       "gmp_percent": 16.7,
       "lead_manager": "",
@@ -179,8 +179,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/apana-logistics-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.09,
-      "subscription_retail": 0.98
+      "subscription_nii": 0.1,
+      "subscription_retail": 1.13
     },
     {
       "id": "ipo_025",
@@ -194,7 +194,7 @@
       "issue_size_cr": 45.11,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 440.82,
+      "subscription_times": 459.22,
       "gmp": 59.0,
       "gmp_percent": 46.5,
       "lead_manager": "",
@@ -214,9 +214,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/qualiance-international-ipo/",
-      "subscription_qib": 274.62,
-      "subscription_nii": 690.07,
-      "subscription_retail": 428.68
+      "subscription_qib": 299.6,
+      "subscription_nii": 699.59,
+      "subscription_retail": 447.13
     }
   ],
   "upcoming_ipos": [
@@ -233,7 +233,7 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 200.0,
+      "gmp": 245.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "to the issue",
@@ -371,8 +371,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 58.0,
-      "gmp_percent": 22.8,
+      "gmp": 65.0,
+      "gmp_percent": 25.6,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -479,8 +479,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 15.0,
+      "gmp_percent": 18.5,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -653,8 +653,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 14.0,
-      "gmp_percent": 7.5,
+      "gmp": 25.0,
+      "gmp_percent": 13.4,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -761,8 +761,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.74,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 25.0,
+      "gmp_percent": 9.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
