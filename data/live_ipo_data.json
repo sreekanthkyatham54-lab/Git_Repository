@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-11T05:35:30.326198",
+  "scraped_at": "2026-09-11T11:55:21.321024",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 125.5,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.74,
+      "subscription_times": 1.22,
       "gmp": 13.0,
       "gmp_percent": 30.2,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/manika-plastech-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 1.88,
-      "subscription_retail": 2.09
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.87,
+      "subscription_retail": 2.07
     },
     {
       "id": "ipo_007",
@@ -50,7 +50,7 @@
       "issue_size_cr": 210.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.67,
+      "subscription_times": 1.25,
       "gmp": 24.0,
       "gmp_percent": 17.1,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/veegaland-developers-ipo/",
-      "subscription_qib": 0.48,
-      "subscription_nii": 0.42,
-      "subscription_retail": 0.89
+      "subscription_qib": 0.49,
+      "subscription_nii": 1.01,
+      "subscription_retail": 1.78
     },
     {
       "id": "ipo_008",
@@ -86,7 +86,7 @@
       "issue_size_cr": 875.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 3.8,
+      "subscription_times": 65.44,
       "gmp": 69.0,
       "gmp_percent": 27.2,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/karamtara-engineering-ipo/",
-      "subscription_qib": 2.4,
-      "subscription_nii": 6.49,
-      "subscription_retail": 3.46
+      "subscription_qib": 168.19,
+      "subscription_nii": 50.96,
+      "subscription_retail": 12.92
     },
     {
       "id": "ipo_009",
@@ -122,7 +122,7 @@
       "issue_size_cr": 805.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.31,
+      "subscription_times": 1.4,
       "gmp": 8.0,
       "gmp_percent": 2.4,
       "lead_manager": "",
@@ -142,9 +142,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/manipal-payment-ipo/",
-      "subscription_qib": 0.03,
-      "subscription_nii": 0.24,
-      "subscription_retail": 1.22
+      "subscription_qib": 1.26,
+      "subscription_nii": 1.21,
+      "subscription_retail": 2.1
     },
     {
       "id": "ipo_010",
@@ -158,7 +158,7 @@
       "issue_size_cr": 150.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 4.71,
+      "subscription_times": 71.83,
       "gmp": 138.0,
       "gmp_percent": 34.2,
       "lead_manager": "",
@@ -178,9 +178,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rentomojo-ipo/",
-      "subscription_qib": 0.45,
-      "subscription_nii": 11.6,
-      "subscription_retail": 4.2
+      "subscription_qib": 175.61,
+      "subscription_nii": 67.67,
+      "subscription_retail": 14.55
     },
     {
       "id": "ipo_011",
@@ -194,7 +194,7 @@
       "issue_size_cr": 414.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.32,
+      "subscription_times": 29.79,
       "gmp": 22.0,
       "gmp_percent": 27.2,
       "lead_manager": "",
@@ -214,9 +214,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/steamhouse-india-ipo/",
-      "subscription_qib": 1.7,
-      "subscription_nii": 2.11,
-      "subscription_retail": 2.77
+      "subscription_qib": 40.78,
+      "subscription_nii": 46.4,
+      "subscription_retail": 16.39
     },
     {
       "id": "ipo_012",
@@ -230,7 +230,7 @@
       "issue_size_cr": 732.97,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.87,
+      "subscription_times": 18.27,
       "gmp": 14.0,
       "gmp_percent": 10.1,
       "lead_manager": "",
@@ -250,9 +250,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/asset-reconstruction-ipo/",
-      "subscription_qib": 0.1,
-      "subscription_nii": 1.03,
-      "subscription_retail": 1.24
+      "subscription_qib": 48.28,
+      "subscription_nii": 14.51,
+      "subscription_retail": 2.74
     },
     {
       "id": "ipo_013",
@@ -266,7 +266,7 @@
       "issue_size_cr": 427.14,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 3.93,
+      "subscription_times": 46.49,
       "gmp": 50.0,
       "gmp_percent": 34.2,
       "lead_manager": "",
@@ -286,12 +286,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/lcc-projects-ipo/",
-      "subscription_qib": 1.16,
-      "subscription_nii": 5.49,
-      "subscription_retail": 4.84
+      "subscription_qib": 71.73,
+      "subscription_nii": 64.62,
+      "subscription_retail": 24.3
     },
     {
-      "id": "ipo_020",
+      "id": "ipo_021",
       "company": "Injecto Polymers",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -302,7 +302,7 @@
       "issue_size_cr": 56.12,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.74,
+      "subscription_times": 0.26,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -322,12 +322,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/injecto-polymers-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 1.88,
-      "subscription_retail": 2.09
+      "subscription_qib": 1.02,
+      "subscription_nii": 0.08,
+      "subscription_retail": 0.2
     },
     {
-      "id": "ipo_021",
+      "id": "ipo_022",
       "company": "Century Business Media",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -338,7 +338,7 @@
       "issue_size_cr": 17.11,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.74,
+      "subscription_times": 0.14,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -358,12 +358,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/century-business-media-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 1.88,
-      "subscription_retail": 2.09
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.41,
+      "subscription_retail": 0.1
     },
     {
-      "id": "ipo_022",
+      "id": "ipo_023",
       "company": "Maharaja & Speedex India",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -374,7 +374,7 @@
       "issue_size_cr": 80.13,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.29,
+      "subscription_times": 0.41,
       "gmp": 30.0,
       "gmp_percent": 16.1,
       "lead_manager": "",
@@ -395,11 +395,11 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/maharaja-speedex-india-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.85,
-      "subscription_retail": 0.22
+      "subscription_nii": 0.71,
+      "subscription_retail": 0.51
     },
     {
-      "id": "ipo_023",
+      "id": "ipo_024",
       "company": "Om Galaxy",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -410,7 +410,7 @@
       "issue_size_cr": 105.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.62,
+      "subscription_times": 0.91,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -430,12 +430,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/om-galaxy-ipo/",
-      "subscription_qib": 1.81,
-      "subscription_nii": 0.4,
-      "subscription_retail": 0.04
+      "subscription_qib": 3.01,
+      "subscription_nii": 0.05,
+      "subscription_retail": 0.08
     },
     {
-      "id": "ipo_024",
+      "id": "ipo_025",
       "company": "Panchatv Bharat",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -446,7 +446,7 @@
       "issue_size_cr": 24.58,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.01,
+      "subscription_times": 0.03,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -468,10 +468,10 @@
       "detail_url": "https://ipowatch.in/panchatv-bharat-ipo/",
       "subscription_qib": 0.0,
       "subscription_nii": 0.0,
-      "subscription_retail": 0.02
+      "subscription_retail": 0.06
     },
     {
-      "id": "ipo_025",
+      "id": "ipo_026",
       "company": "Raksan Transformers",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -482,7 +482,7 @@
       "issue_size_cr": 150.5,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.49,
+      "subscription_times": 1.27,
       "gmp": 28.0,
       "gmp_percent": 10.3,
       "lead_manager": "",
@@ -502,12 +502,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/raksan-transformers-ipo/",
-      "subscription_qib": 1.17,
-      "subscription_nii": 0.41,
-      "subscription_retail": 0.13
+      "subscription_qib": 3.82,
+      "subscription_nii": 0.14,
+      "subscription_retail": 0.31
     },
     {
-      "id": "ipo_026",
+      "id": "ipo_027",
       "company": "Infrax Renewable",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -518,7 +518,7 @@
       "issue_size_cr": 40.88,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.21,
+      "subscription_times": 1.95,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -539,11 +539,11 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/infrax-renewable-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.03,
-      "subscription_retail": 0.39
+      "subscription_nii": 1.26,
+      "subscription_retail": 1.83
     },
     {
-      "id": "ipo_027",
+      "id": "ipo_028",
       "company": "Vinod Texworld",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -554,7 +554,7 @@
       "issue_size_cr": 42.83,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.58,
+      "subscription_times": 1.58,
       "gmp": 20.0,
       "gmp_percent": 21.3,
       "lead_manager": "",
@@ -575,11 +575,11 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vinod-texworld-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.07,
-      "subscription_retail": 1.09
+      "subscription_nii": 0.3,
+      "subscription_retail": 2.87
     },
     {
-      "id": "ipo_028",
+      "id": "ipo_029",
       "company": "Amtech Esters",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -590,7 +590,7 @@
       "issue_size_cr": 17.88,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.82,
+      "subscription_times": 24.86,
       "gmp": 11.0,
       "gmp_percent": 14.7,
       "lead_manager": "",
@@ -610,9 +610,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/amtech-esters-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 3.47,
-      "subscription_retail": 3.58
+      "subscription_qib": 15.07,
+      "subscription_nii": 32.0,
+      "subscription_retail": 27.38
     }
   ],
   "upcoming_ipos": [
@@ -658,12 +658,12 @@
       "open_date": "2026-09-17",
       "close_date": "2026-09-21",
       "issue_price": 1785.0,
-      "issue_size_cr": 26580.0,
+      "issue_size_cr": 22561.57,
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 188.0,
-      "gmp_percent": 10.5,
+      "gmp": 200.0,
+      "gmp_percent": 11.2,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -730,7 +730,7 @@
       "issue_size_cr": 500.75,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 0.87,
+      "subscription_times": 0.14,
       "gmp": 30.0,
       "gmp_percent": 7.1,
       "lead_manager": "",
@@ -750,9 +750,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/ss-retail-ipo/",
-      "subscription_qib": 0.1,
-      "subscription_nii": 1.03,
-      "subscription_retail": 1.24
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.41,
+      "subscription_retail": 0.1
     },
     {
       "id": "ipo_005",
@@ -838,7 +838,7 @@
       "issue_size_cr": 49.81,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 0.62,
+      "subscription_times": 0.91,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -858,12 +858,45 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/axiom-gas-engineering-ipo-details/",
-      "subscription_qib": 1.81,
-      "subscription_nii": 0.4,
-      "subscription_retail": 0.04
+      "subscription_qib": 3.01,
+      "subscription_nii": 0.05,
+      "subscription_retail": 0.08
     },
     {
       "id": "ipo_016",
+      "company": "SpectraA Technology",
+      "exchange": "NSE Emerge",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-09-17",
+      "close_date": "2026-09-21",
+      "issue_price": 118.0,
+      "issue_size_cr": 42.52,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/spectraa-technology-ipo/"
+    },
+    {
+      "id": "ipo_017",
       "company": "Kheria Autocomp",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -874,7 +907,7 @@
       "issue_size_cr": 46.44,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 0.62,
+      "subscription_times": 0.91,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -894,12 +927,12 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/kheria-autocomp-ipo/",
-      "subscription_qib": 1.81,
-      "subscription_nii": 0.4,
-      "subscription_retail": 0.04
+      "subscription_qib": 3.01,
+      "subscription_nii": 0.05,
+      "subscription_retail": 0.08
     },
     {
-      "id": "ipo_017",
+      "id": "ipo_018",
       "company": "Vama Wovenfab",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -935,7 +968,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_018",
+      "id": "ipo_019",
       "company": "Shakti Polytarp",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -968,7 +1001,7 @@
       "detail_url": "https://ipowatch.in/shakti-polytarp-ipo/"
     },
     {
-      "id": "ipo_019",
+      "id": "ipo_020",
       "company": "Quanto Agroworld",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1004,7 +1037,7 @@
       "subscription_retail": 71.44
     },
     {
-      "id": "ipo_029",
+      "id": "ipo_030",
       "company": "Defrail Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1040,7 +1073,7 @@
       "subscription_retail": 101.28
     },
     {
-      "id": "ipo_030",
+      "id": "ipo_031",
       "company": "Victory Electric Vehicles",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1076,7 +1109,7 @@
       "subscription_retail": 0.99
     },
     {
-      "id": "ipo_031",
+      "id": "ipo_032",
       "company": "Yajur Fibres",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1112,7 +1145,7 @@
       "subscription_retail": 1.51
     },
     {
-      "id": "ipo_032",
+      "id": "ipo_033",
       "company": "Gabion Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
