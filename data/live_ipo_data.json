@@ -1,9 +1,9 @@
 {
-  "scraped_at": "2026-09-12T05:20:43.844884",
+  "scraped_at": "2026-09-12T11:21:01.303776",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_006",
+      "id": "ipo_007",
       "company": "Manika Plastech",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -39,7 +39,7 @@
       "subscription_retail": 2.24
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_008",
       "company": "Veegaland Developers",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -75,7 +75,7 @@
       "subscription_retail": 1.78
     },
     {
-      "id": "ipo_015",
+      "id": "ipo_016",
       "company": "Injecto Polymers",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -111,7 +111,7 @@
       "subscription_retail": 0.26
     },
     {
-      "id": "ipo_016",
+      "id": "ipo_017",
       "company": "Century Business Media",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -147,7 +147,7 @@
       "subscription_retail": 0.12
     },
     {
-      "id": "ipo_017",
+      "id": "ipo_018",
       "company": "Maharaja & Speedex India",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -159,8 +159,8 @@
       "lot_size": 0,
       "subscription_status": "Open",
       "subscription_times": 0.48,
-      "gmp": 30.0,
-      "gmp_percent": 16.1,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -183,7 +183,7 @@
       "subscription_retail": 0.56
     },
     {
-      "id": "ipo_018",
+      "id": "ipo_019",
       "company": "Om Galaxy",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -219,7 +219,7 @@
       "subscription_retail": 0.1
     },
     {
-      "id": "ipo_019",
+      "id": "ipo_020",
       "company": "Panchatv Bharat",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -255,7 +255,7 @@
       "subscription_retail": 0.07
     },
     {
-      "id": "ipo_020",
+      "id": "ipo_021",
       "company": "Raksan Transformers",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -294,6 +294,42 @@
   "upcoming_ipos": [
     {
       "id": "ipo_001",
+      "company": "A-One Steels",
+      "exchange": "NSE Emerge",
+      "ipo_type": "SME",
+      "sector": "include Clinical Chemistry",
+      "open_date": "2026-09-24",
+      "close_date": "2026-09-28",
+      "issue_price": 0.0,
+      "issue_size_cr": 405.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 1.15,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "to the issue",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 23.17,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/a-one-steels-ipo/",
+      "subscription_qib": 3.51,
+      "subscription_nii": 0.41,
+      "subscription_retail": 0.12
+    },
+    {
+      "id": "ipo_002",
       "company": "Sonaselection India",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -326,7 +362,7 @@
       "detail_url": "https://ipowatch.in/sonaselection-india-ipo/"
     },
     {
-      "id": "ipo_002",
+      "id": "ipo_003",
       "company": "NSE",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -359,7 +395,7 @@
       "detail_url": "https://ipowatch.in/nse-ipo/"
     },
     {
-      "id": "ipo_003",
+      "id": "ipo_004",
       "company": "Hero Motors",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -395,7 +431,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_005",
       "company": "SS Retail",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -431,7 +467,7 @@
       "subscription_retail": 0.12
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_006",
       "company": "Jindal Supreme",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -467,7 +503,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_008",
+      "id": "ipo_009",
       "company": "Bharat Coking Coal",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -479,8 +515,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 143.85,
-      "gmp": 7.0,
-      "gmp_percent": 30.4,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -503,7 +539,7 @@
       "subscription_retail": 49.37
     },
     {
-      "id": "ipo_009",
+      "id": "ipo_010",
       "company": "Axiom Gas Engineering",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -539,7 +575,7 @@
       "subscription_retail": 0.1
     },
     {
-      "id": "ipo_010",
+      "id": "ipo_011",
       "company": "SpectraA Technology",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -572,7 +608,7 @@
       "detail_url": "https://ipowatch.in/spectraa-technology-ipo/"
     },
     {
-      "id": "ipo_011",
+      "id": "ipo_012",
       "company": "Kheria Autocomp",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -608,7 +644,7 @@
       "subscription_retail": 0.1
     },
     {
-      "id": "ipo_012",
+      "id": "ipo_013",
       "company": "Vama Wovenfab",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -644,7 +680,7 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_013",
+      "id": "ipo_014",
       "company": "Shakti Polytarp",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -677,7 +713,7 @@
       "detail_url": "https://ipowatch.in/shakti-polytarp-ipo/"
     },
     {
-      "id": "ipo_014",
+      "id": "ipo_015",
       "company": "Quanto Agroworld",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -713,7 +749,7 @@
       "subscription_retail": 71.44
     },
     {
-      "id": "ipo_021",
+      "id": "ipo_022",
       "company": "Defrail Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -725,8 +761,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 105.54,
-      "gmp": 288.0,
-      "gmp_percent": 389.2,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -749,7 +785,7 @@
       "subscription_retail": 101.28
     },
     {
-      "id": "ipo_022",
+      "id": "ipo_023",
       "company": "Victory Electric Vehicles",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -785,7 +821,7 @@
       "subscription_retail": 0.99
     },
     {
-      "id": "ipo_023",
+      "id": "ipo_024",
       "company": "Yajur Fibres",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -797,8 +833,8 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 1.33,
-      "gmp": 288.0,
-      "gmp_percent": 165.5,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -821,7 +857,7 @@
       "subscription_retail": 1.51
     },
     {
-      "id": "ipo_024",
+      "id": "ipo_025",
       "company": "Gabion Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -833,7 +869,7 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 826.0,
-      "gmp": 0,
+      "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "to the issue",
