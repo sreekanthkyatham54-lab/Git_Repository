@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-17T12:17:45.946647",
+  "scraped_at": "2026-09-17T17:35:16.577735",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 142.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.39,
+      "subscription_times": 0.47,
       "gmp": 4.0,
       "gmp_percent": 4.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sonaselection-india-ipo/",
       "subscription_qib": 0.11,
-      "subscription_nii": 0.16,
-      "subscription_retail": 0.65
+      "subscription_nii": 0.24,
+      "subscription_retail": 0.77
     },
     {
       "id": "ipo_005",
@@ -50,7 +50,7 @@
       "issue_size_cr": 22561.57,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.38,
+      "subscription_times": 0.42,
       "gmp": 148.0,
       "gmp_percent": 8.3,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/nse-ipo/",
-      "subscription_qib": 0.18,
-      "subscription_nii": 0.6,
-      "subscription_retail": 0.39
+      "subscription_qib": 0.19,
+      "subscription_nii": 0.71,
+      "subscription_retail": 0.43
     },
     {
       "id": "ipo_006",
@@ -86,7 +86,7 @@
       "issue_size_cr": 1000.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 3.21,
+      "subscription_times": 3.58,
       "gmp": 7.0,
       "gmp_percent": 8.3,
       "lead_manager": "",
@@ -107,8 +107,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/hero-motors-ipo/",
       "subscription_qib": 0.07,
-      "subscription_nii": 3.42,
-      "subscription_retail": 4.92
+      "subscription_nii": 4.14,
+      "subscription_retail": 5.34
     },
     {
       "id": "ipo_007",
@@ -122,7 +122,7 @@
       "issue_size_cr": 500.75,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 4.95,
+      "subscription_times": 6.1,
       "gmp": 133.0,
       "gmp_percent": 31.4,
       "lead_manager": "",
@@ -142,9 +142,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/ss-retail-ipo/",
-      "subscription_qib": 0.23,
-      "subscription_nii": 7.46,
-      "subscription_retail": 6.89
+      "subscription_qib": 0.24,
+      "subscription_nii": 10.43,
+      "subscription_retail": 7.97
     },
     {
       "id": "ipo_008",
@@ -158,7 +158,7 @@
       "issue_size_cr": 124.88,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 27.39,
+      "subscription_times": 31.54,
       "gmp": 30.0,
       "gmp_percent": 32.3,
       "lead_manager": "",
@@ -178,9 +178,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/jindal-supreme-ipo/",
-      "subscription_qib": 12.49,
-      "subscription_nii": 29.09,
-      "subscription_retail": 35.19
+      "subscription_qib": 12.5,
+      "subscription_nii": 37.63,
+      "subscription_retail": 39.8
     },
     {
       "id": "ipo_020",
@@ -194,7 +194,7 @@
       "issue_size_cr": 42.52,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 4.49,
+      "subscription_times": 5.62,
       "gmp": 50.0,
       "gmp_percent": 42.4,
       "lead_manager": "",
@@ -215,8 +215,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/spectraa-technology-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 3.14,
-      "subscription_retail": 7.63
+      "subscription_nii": 4.16,
+      "subscription_retail": 9.45
     },
     {
       "id": "ipo_021",
@@ -230,7 +230,7 @@
       "issue_size_cr": 46.44,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.1,
+      "subscription_times": 0.21,
       "gmp": 10.0,
       "gmp_percent": 9.9,
       "lead_manager": "",
@@ -251,8 +251,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/kheria-autocomp-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.04,
-      "subscription_retail": 0.18
+      "subscription_nii": 0.42,
+      "subscription_retail": 0.24
     },
     {
       "id": "ipo_022",
@@ -266,7 +266,7 @@
       "issue_size_cr": 49.54,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.49,
+      "subscription_times": 2.67,
       "gmp": 70.0,
       "gmp_percent": 20.5,
       "lead_manager": "",
@@ -287,8 +287,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vama-wovenfab-ipo/",
       "subscription_qib": 1.0,
-      "subscription_nii": 2.18,
-      "subscription_retail": 2.59
+      "subscription_nii": 2.22,
+      "subscription_retail": 2.8
     },
     {
       "id": "ipo_023",
@@ -302,7 +302,7 @@
       "issue_size_cr": 26.93,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.19,
+      "subscription_times": 11.87,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -322,9 +322,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/shakti-polytarp-ipo/",
-      "subscription_qib": 2.91,
-      "subscription_nii": 3.19,
-      "subscription_retail": 1.07
+      "subscription_qib": 49.22,
+      "subscription_nii": 5.43,
+      "subscription_retail": 4.12
     },
     {
       "id": "ipo_024",
@@ -338,7 +338,7 @@
       "issue_size_cr": 31.02,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.17,
+      "subscription_times": 1.39,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -359,8 +359,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/quanto-agroworld-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 1.4,
-      "subscription_retail": 0.6
+      "subscription_nii": 1.66,
+      "subscription_retail": 0.79
     }
   ],
   "upcoming_ipos": [
@@ -376,7 +376,7 @@
       "issue_size_cr": 405.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 4.49,
+      "subscription_times": 5.62,
       "gmp": 55.0,
       "gmp_percent": 13.6,
       "lead_manager": "",
@@ -397,8 +397,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/a-one-steels-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 3.14,
-      "subscription_retail": 7.63
+      "subscription_nii": 4.16,
+      "subscription_retail": 9.45
     },
     {
       "id": "ipo_002",
@@ -661,7 +661,7 @@
       "issue_size_cr": 25.52,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 4.95,
+      "subscription_times": 6.1,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -681,9 +681,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/anand-seamless-ipo/",
-      "subscription_qib": 0.23,
-      "subscription_nii": 7.46,
-      "subscription_retail": 6.89
+      "subscription_qib": 0.24,
+      "subscription_nii": 10.43,
+      "subscription_retail": 7.97
     },
     {
       "id": "ipo_015",
