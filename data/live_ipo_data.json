@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-19T05:27:38.843226",
+  "scraped_at": "2026-09-19T11:42:01.025977",
   "source": "live",
   "active_ipos": [
     {
@@ -51,8 +51,8 @@
       "lot_size": 0,
       "subscription_status": "Open",
       "subscription_times": 1.04,
-      "gmp": 111.0,
-      "gmp_percent": 6.2,
+      "gmp": 90.0,
+      "gmp_percent": 5.0,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
