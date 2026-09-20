@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-20T11:55:00.828715",
+  "scraped_at": "2026-09-20T16:46:12.795764",
   "source": "live",
   "active_ipos": [
     {
@@ -364,9 +364,9 @@
     {
       "id": "ipo_008",
       "company": "Amagi Media Labs",
-      "exchange": "NSE Emerge",
+      "exchange": "BSE SME",
       "ipo_type": "SME",
-      "sector": "include Clinical Chemistry",
+      "sector": "—",
       "open_date": "2027-01-13",
       "close_date": "2027-01-16",
       "issue_price": 361.0,
@@ -377,7 +377,7 @@
       "gmp": 361.0,
       "gmp_percent": 100.0,
       "lead_manager": "",
-      "registrar": "to the issue",
+      "registrar": "",
       "objects": "",
       "revenue_cr": [],
       "profit_cr": [],
@@ -385,11 +385,11 @@
       "peers": [],
       "pe_ratio": 0.0,
       "industry_pe": 0.0,
-      "promoter_holding": 23.17,
+      "promoter_holding": 0.0,
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
+      "summary": "",
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/amagi-media-labs-ipo-date-review-price-allotment-details/",
