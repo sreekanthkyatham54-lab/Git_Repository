@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-06T18:52:46.634147",
+  "scraped_at": "2026-10-07T06:49:16.553193",
   "source": "live",
   "active_ipos": [
     {
@@ -14,9 +14,9 @@
       "issue_size_cr": 34.99,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.44,
-      "gmp": 7.0,
-      "gmp_percent": 8.5,
+      "subscription_times": 0.84,
+      "gmp": 15.0,
+      "gmp_percent": 18.3,
       "lead_manager": "",
       "registrar": "to the issue",
       "objects": "",
@@ -35,14 +35,14 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/rkfashion-accessories-ipo/",
       "subscription_qib": 14.11,
-      "subscription_nii": 0.5,
-      "subscription_retail": 0.16
+      "subscription_nii": 0.74,
+      "subscription_retail": 0.67
     }
   ],
   "upcoming_ipos": [
     {
       "id": "ipo_001",
-      "company": "Vishal Nirmiti",
+      "company": "Jio Platforms",
       "exchange": "BSE SME",
       "ipo_type": "SME",
       "sector": "include Clinical Chemistry",
@@ -52,8 +52,8 @@
       "issue_size_cr": 0.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 1.79,
-      "gmp": 2.0,
+      "subscription_times": 12.23,
+      "gmp": 167.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "to the issue",
@@ -72,9 +72,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/jio-platforms-ipo/",
-      "subscription_qib": 1.33,
-      "subscription_nii": 1.89,
-      "subscription_retail": 1.75
+      "subscription_qib": 7.69,
+      "subscription_nii": 25.8,
+      "subscription_retail": 9.11
     },
     {
       "id": "ipo_002",
@@ -84,8 +84,8 @@
       "sector": "include Clinical Chemistry",
       "open_date": "2026-10-13",
       "close_date": "2026-10-15",
-      "issue_price": 0.0,
-      "issue_size_cr": 0.0,
+      "issue_price": 271.0,
+      "issue_size_cr": 712.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
