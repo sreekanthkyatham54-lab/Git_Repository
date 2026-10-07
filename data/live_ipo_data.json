@@ -1,44 +1,7 @@
 {
-  "scraped_at": "2026-10-07T14:02:55.718776",
+  "scraped_at": "2026-10-07T19:17:36.222597",
   "source": "live",
-  "active_ipos": [
-    {
-      "id": "ipo_006",
-      "company": "R.K.Fashion",
-      "exchange": "BSE SME",
-      "ipo_type": "SME",
-      "sector": "include Clinical Chemistry",
-      "open_date": "2026-10-05",
-      "close_date": "2026-10-07",
-      "issue_price": 82.0,
-      "issue_size_cr": 34.99,
-      "lot_size": 0,
-      "subscription_status": "Open",
-      "subscription_times": 2.49,
-      "gmp": 15.0,
-      "gmp_percent": 18.3,
-      "lead_manager": "",
-      "registrar": "to the issue",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 23.17,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "Q-Line Biotech Ltd. (QBL) is engaged in the business of developing, manufacturing and marketing of diverse range of reagents (including kits and POC devices) & consumables and manufacturing, importing, distribution/supply of diagnostic equipment for different diagnostic healthcare needs. The company supplies diagnostic equipment and IVD products for different diagnostic healthcare needs since 2013",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/rkfashion-accessories-ipo/",
-      "subscription_qib": 14.11,
-      "subscription_nii": 1.71,
-      "subscription_retail": 2.79
-    }
-  ],
+  "active_ipos": [],
   "upcoming_ipos": [
     {
       "id": "ipo_001",
@@ -218,7 +181,7 @@
       "subscription_retail": 49.37
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_006",
       "company": "Brandman Retail",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -254,7 +217,7 @@
       "subscription_retail": 93.11
     },
     {
-      "id": "ipo_008",
+      "id": "ipo_007",
       "company": "Grover Jewells",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -290,7 +253,7 @@
       "subscription_retail": 15.74
     },
     {
-      "id": "ipo_009",
+      "id": "ipo_008",
       "company": "Kanishk Aluminium",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -326,7 +289,7 @@
       "subscription_retail": 1.86
     },
     {
-      "id": "ipo_010",
+      "id": "ipo_009",
       "company": "Msafe Equipments",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -362,7 +325,7 @@
       "subscription_retail": 133.16
     },
     {
-      "id": "ipo_011",
+      "id": "ipo_010",
       "company": "Accretion Nutraveda",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -398,7 +361,7 @@
       "subscription_retail": 2.19
     },
     {
-      "id": "ipo_012",
+      "id": "ipo_011",
       "company": "Kasturi Metal Composite",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -434,7 +397,7 @@
       "subscription_retail": 16.49
     },
     {
-      "id": "ipo_013",
+      "id": "ipo_012",
       "company": "Hannah Joseph Hospital",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -470,7 +433,7 @@
       "subscription_retail": 1.62
     },
     {
-      "id": "ipo_014",
+      "id": "ipo_013",
       "company": "Shayona Engineering",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -506,7 +469,7 @@
       "subscription_retail": 3.73
     },
     {
-      "id": "ipo_015",
+      "id": "ipo_014",
       "company": "KRM Ayurveda",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -542,7 +505,7 @@
       "subscription_retail": 54.21
     },
     {
-      "id": "ipo_016",
+      "id": "ipo_015",
       "company": "Digilogic Systems",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -578,7 +541,7 @@
       "subscription_retail": 1.08
     },
     {
-      "id": "ipo_017",
+      "id": "ipo_016",
       "company": "Aritas Vinyl",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -614,7 +577,7 @@
       "subscription_retail": 2.88
     },
     {
-      "id": "ipo_018",
+      "id": "ipo_017",
       "company": "Armour Security",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -650,7 +613,7 @@
       "subscription_retail": 2.58
     },
     {
-      "id": "ipo_019",
+      "id": "ipo_018",
       "company": "GRE Renew Enertech",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -686,7 +649,7 @@
       "subscription_retail": 14.1
     },
     {
-      "id": "ipo_020",
+      "id": "ipo_019",
       "company": "INDO SMC",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -722,7 +685,7 @@
       "subscription_retail": 96.13
     },
     {
-      "id": "ipo_021",
+      "id": "ipo_020",
       "company": "Narmadesh Brass",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -758,7 +721,7 @@
       "subscription_retail": 0.44
     },
     {
-      "id": "ipo_022",
+      "id": "ipo_021",
       "company": "Avana Electrosystems",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -794,7 +757,7 @@
       "subscription_retail": 137.52
     },
     {
-      "id": "ipo_023",
+      "id": "ipo_022",
       "company": "Defrail Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -830,7 +793,7 @@
       "subscription_retail": 101.28
     },
     {
-      "id": "ipo_024",
+      "id": "ipo_023",
       "company": "Victory Electric Vehicles",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -866,7 +829,7 @@
       "subscription_retail": 0.99
     },
     {
-      "id": "ipo_025",
+      "id": "ipo_024",
       "company": "Yajur Fibres",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -902,7 +865,7 @@
       "subscription_retail": 1.51
     },
     {
-      "id": "ipo_026",
+      "id": "ipo_025",
       "company": "Gabion Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -938,7 +901,7 @@
       "subscription_retail": 867.23
     },
     {
-      "id": "ipo_027",
+      "id": "ipo_026",
       "company": "Modern Diagnostic",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -974,7 +937,7 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_028",
+      "id": "ipo_027",
       "company": "Reliance Jio",
       "exchange": "BSE SME",
       "ipo_type": "SME",
