@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-09T13:57:22.248799",
+  "scraped_at": "2026-10-09T18:44:57.418292",
   "source": "live",
   "active_ipos": [],
   "upcoming_ipos": [
@@ -41,6 +41,78 @@
     },
     {
       "id": "ipo_002",
+      "company": "Zetwerk Manufacturing",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "—",
+      "open_date": "2026-10-15",
+      "close_date": "2026-10-19",
+      "issue_price": 0.0,
+      "issue_size_cr": 0.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 12.23,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "Kfin Technologies Ltd",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 0.0,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Zetwerk IPO open date is October 15, 2026 and the IPO will close on October 19, 2026. Zetwerk IPO is a Book built Issue. The company to raise around ₹[.] crores via IPO that comprises fresh issue of ₹2600 crores and offer for sale up to 96,837,45 equity shares with face value of ₹1 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/zetwerk-ipo/",
+      "subscription_qib": 7.69,
+      "subscription_nii": 25.8,
+      "subscription_retail": 9.11
+    },
+    {
+      "id": "ipo_003",
+      "company": "Bonfiglioli Transmissions",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "—",
+      "open_date": "2026-10-15",
+      "close_date": "2026-10-19",
+      "issue_price": 0.0,
+      "issue_size_cr": 0.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 12.23,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "MUFG Intime India Pvt",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 0.0,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Bonfiglioli Transmissions IPO open date is October 15, 2026 and the IPO will close on October 19, 2026. Bonfiglioli Transmissions IPO is a Book built Issue. The company to raise around ₹[.] crores via IPO that comprises fresh issue of ₹[.] crores and offer for sale up to 4,69,98,959 equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/bonfiglioli-transmissions-ipo/",
+      "subscription_qib": 7.69,
+      "subscription_nii": 25.8,
+      "subscription_retail": 9.11
+    },
+    {
+      "id": "ipo_004",
       "company": "Fusion CX",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -76,7 +148,7 @@
       "subscription_retail": 1.8
     },
     {
-      "id": "ipo_003",
+      "id": "ipo_005",
       "company": "HD Fire Protect",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -109,7 +181,7 @@
       "detail_url": "https://ipowatch.in/hd-fire-protect-ipo/"
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_006",
       "company": "Shadowfax",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -145,7 +217,7 @@
       "subscription_retail": 2.43
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_007",
       "company": "Amagi Media Labs",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -181,7 +253,7 @@
       "subscription_retail": 9.54
     },
     {
-      "id": "ipo_006",
+      "id": "ipo_008",
       "company": "Bharat Coking Coal",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -217,7 +289,7 @@
       "subscription_retail": 49.37
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_009",
       "company": "Vaibhav Vyapaar",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -253,7 +325,7 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_008",
+      "id": "ipo_010",
       "company": "Ravita Engineering",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -289,7 +361,7 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_009",
+      "id": "ipo_011",
       "company": "PAN HR Solutions",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -325,7 +397,7 @@
       "subscription_retail": 8.99
     },
     {
-      "id": "ipo_010",
+      "id": "ipo_012",
       "company": "Biopol Chemicals",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -361,7 +433,7 @@
       "subscription_retail": 20.8
     },
     {
-      "id": "ipo_011",
+      "id": "ipo_013",
       "company": "Brandman Retail",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -397,7 +469,7 @@
       "subscription_retail": 93.11
     },
     {
-      "id": "ipo_012",
+      "id": "ipo_014",
       "company": "Grover Jewells",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -433,7 +505,7 @@
       "subscription_retail": 15.74
     },
     {
-      "id": "ipo_013",
+      "id": "ipo_015",
       "company": "Kanishk Aluminium",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -469,7 +541,7 @@
       "subscription_retail": 1.86
     },
     {
-      "id": "ipo_014",
+      "id": "ipo_016",
       "company": "Msafe Equipments",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -505,7 +577,7 @@
       "subscription_retail": 133.16
     },
     {
-      "id": "ipo_015",
+      "id": "ipo_017",
       "company": "Accretion Nutraveda",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -541,7 +613,7 @@
       "subscription_retail": 2.19
     },
     {
-      "id": "ipo_016",
+      "id": "ipo_018",
       "company": "Kasturi Metal Composite",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -577,7 +649,7 @@
       "subscription_retail": 16.49
     },
     {
-      "id": "ipo_017",
+      "id": "ipo_019",
       "company": "Hannah Joseph Hospital",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -613,7 +685,7 @@
       "subscription_retail": 1.62
     },
     {
-      "id": "ipo_018",
+      "id": "ipo_020",
       "company": "Shayona Engineering",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -649,7 +721,7 @@
       "subscription_retail": 3.73
     },
     {
-      "id": "ipo_019",
+      "id": "ipo_021",
       "company": "KRM Ayurveda",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -685,7 +757,7 @@
       "subscription_retail": 54.21
     },
     {
-      "id": "ipo_020",
+      "id": "ipo_022",
       "company": "Digilogic Systems",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -721,7 +793,7 @@
       "subscription_retail": 1.08
     },
     {
-      "id": "ipo_021",
+      "id": "ipo_023",
       "company": "Aritas Vinyl",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -757,7 +829,7 @@
       "subscription_retail": 2.88
     },
     {
-      "id": "ipo_022",
+      "id": "ipo_024",
       "company": "Armour Security",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -793,7 +865,7 @@
       "subscription_retail": 2.58
     },
     {
-      "id": "ipo_023",
+      "id": "ipo_025",
       "company": "GRE Renew Enertech",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -829,7 +901,7 @@
       "subscription_retail": 14.1
     },
     {
-      "id": "ipo_024",
+      "id": "ipo_026",
       "company": "INDO SMC",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -865,7 +937,7 @@
       "subscription_retail": 96.13
     },
     {
-      "id": "ipo_025",
+      "id": "ipo_027",
       "company": "Narmadesh Brass",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -901,7 +973,7 @@
       "subscription_retail": 0.44
     },
     {
-      "id": "ipo_026",
+      "id": "ipo_028",
       "company": "Avana Electrosystems",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -937,7 +1009,7 @@
       "subscription_retail": 137.52
     },
     {
-      "id": "ipo_027",
+      "id": "ipo_029",
       "company": "Defrail Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -973,7 +1045,7 @@
       "subscription_retail": 101.28
     },
     {
-      "id": "ipo_028",
+      "id": "ipo_030",
       "company": "Victory Electric Vehicles",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1009,7 +1081,7 @@
       "subscription_retail": 0.99
     },
     {
-      "id": "ipo_029",
+      "id": "ipo_031",
       "company": "Yajur Fibres",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1045,7 +1117,7 @@
       "subscription_retail": 1.51
     },
     {
-      "id": "ipo_030",
+      "id": "ipo_032",
       "company": "Gabion Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1081,7 +1153,7 @@
       "subscription_retail": 867.23
     },
     {
-      "id": "ipo_031",
+      "id": "ipo_033",
       "company": "Modern Diagnostic",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1117,7 +1189,7 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_032",
+      "id": "ipo_034",
       "company": "Reliance Jio",
       "exchange": "BSE SME",
       "ipo_type": "SME",
