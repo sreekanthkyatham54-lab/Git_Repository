@@ -1,7 +1,79 @@
 {
-  "scraped_at": "2026-10-26T13:43:27.748135",
+  "scraped_at": "2026-10-26T19:07:45.044859",
   "source": "live",
   "active_ipos": [
+    {
+      "id": "ipo_003",
+      "company": "SFC Environmental",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard",
+      "sector": "—",
+      "open_date": "2026-10-27",
+      "close_date": "2026-10-29",
+      "issue_price": 330.0,
+      "issue_size_cr": 668.0,
+      "lot_size": 0,
+      "subscription_status": "Open",
+      "subscription_times": 12.23,
+      "gmp": 32.0,
+      "gmp_percent": 9.7,
+      "lead_manager": "",
+      "registrar": "MUFG Intime India Pvt",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 48.18,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "SFC Environmental Technologies IPO open date is October 27, 2026 and the IPO will close on October 29, 2026. SFC Environmental Technologies IPO is a Book built Issue. The company to raise around ₹668 crores via IPO that comprises fresh issue of ₹150 crores and offer for sale up to 1,56,82,750 equity shares with face value of ₹2 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/sfc-environmental-technologies-ipo/",
+      "subscription_qib": 7.69,
+      "subscription_nii": 25.8,
+      "subscription_retail": 9.11
+    },
+    {
+      "id": "ipo_004",
+      "company": "BLS Polymers",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard",
+      "sector": "—",
+      "open_date": "2026-10-27",
+      "close_date": "2026-10-29",
+      "issue_price": 150.0,
+      "issue_size_cr": 255.0,
+      "lot_size": 0,
+      "subscription_status": "Open",
+      "subscription_times": 1.74,
+      "gmp": 38.0,
+      "gmp_percent": 25.3,
+      "lead_manager": "",
+      "registrar": "Kfin Technologies Ltd",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 98.53,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "BLS Polymers IPO open date is October 27, 2026 and the IPO will close on October 29, 2026. BLS Polymers IPO is a Book built Issue. The company to raise around ₹255 crores via IPO that comprises fresh issue of ₹255 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/bls-polymers-ipo/",
+      "subscription_qib": 1.0,
+      "subscription_nii": 1.88,
+      "subscription_retail": 2.09
+    },
     {
       "id": "ipo_005",
       "company": "EAAA India Alternatives",
@@ -40,6 +112,39 @@
     },
     {
       "id": "ipo_018",
+      "company": "Wiscon Industries",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "—",
+      "open_date": "2026-10-27",
+      "close_date": "2026-10-29",
+      "issue_price": 204.0,
+      "issue_size_cr": 110.0,
+      "lot_size": 0,
+      "subscription_status": "Open",
+      "subscription_times": 0.0,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "Maashitla Securities Pvt",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 94.18,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Wiscon Industries IPO open date is October 27, 2026 and the IPO will close on October 29, 2026. Wiscon Industries IPO is a Bookbuilding Issue. The company to raise around ₹110 crores via IPO that comprises fresh issue of ₹88.01 crores and offer for sale up to 10,78,200 equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/wiscon-industries-ipo/"
+    },
+    {
+      "id": "ipo_019",
       "company": "Core4 Engineers",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -115,8 +220,8 @@
     {
       "id": "ipo_002",
       "company": "M.K.Sons Fine Jewels",
-      "exchange": "BSE SME",
-      "ipo_type": "SME",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard",
       "sector": "—",
       "open_date": "2026-10-28",
       "close_date": "2026-10-30",
@@ -128,7 +233,7 @@
       "gmp": 8.0,
       "gmp_percent": 4.9,
       "lead_manager": "",
-      "registrar": "",
+      "registrar": "Bigshare Services Pvt",
       "objects": "",
       "revenue_cr": [],
       "profit_cr": [],
@@ -136,11 +241,11 @@
       "peers": [],
       "pe_ratio": 0.0,
       "industry_pe": 0.0,
-      "promoter_holding": 0.0,
+      "promoter_holding": 100.0,
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "",
+      "summary": "M.K.Sons Fine Jewels IPO open date is October 28, 2026 and the IPO will close on October 30, 2026. M.K.Sons Fine Jewels IPO is a Book build Issue. The company to raise around ₹275.40 crores via IPO that comprises fresh issue of ₹220.32 crores and offer for sale up to 34,00,000 equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/mksons-fine-jewels-ipo/",
@@ -149,79 +254,43 @@
       "subscription_retail": 2.09
     },
     {
-      "id": "ipo_003",
-      "company": "SFC Environmental",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard",
-      "sector": "—",
-      "open_date": "2026-10-27",
-      "close_date": "2026-10-29",
-      "issue_price": 330.0,
-      "issue_size_cr": 668.0,
-      "lot_size": 0,
-      "subscription_status": "Upcoming",
-      "subscription_times": 12.23,
-      "gmp": 32.0,
-      "gmp_percent": 9.7,
-      "lead_manager": "",
-      "registrar": "MUFG Intime India Pvt",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 48.18,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "SFC Environmental Technologies IPO open date is October 27, 2026 and the IPO will close on October 29, 2026. SFC Environmental Technologies IPO is a Book built Issue. The company to raise around ₹668 crores via IPO that comprises fresh issue of ₹150 crores and offer for sale up to 1,56,82,750 equity shares with face value of ₹2 each.",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/sfc-environmental-technologies-ipo/",
-      "subscription_qib": 7.69,
-      "subscription_nii": 25.8,
-      "subscription_retail": 9.11
-    },
-    {
-      "id": "ipo_004",
-      "company": "BLS Polymers",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard",
-      "sector": "—",
-      "open_date": "2026-10-27",
-      "close_date": "2026-10-29",
-      "issue_price": 150.0,
-      "issue_size_cr": 255.0,
-      "lot_size": 0,
-      "subscription_status": "Upcoming",
-      "subscription_times": 1.74,
-      "gmp": 38.0,
-      "gmp_percent": 25.3,
-      "lead_manager": "",
-      "registrar": "Kfin Technologies Ltd",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 98.53,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "BLS Polymers IPO open date is October 27, 2026 and the IPO will close on October 29, 2026. BLS Polymers IPO is a Book built Issue. The company to raise around ₹255 crores via IPO that comprises fresh issue of ₹255 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/bls-polymers-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 1.88,
-      "subscription_retail": 2.09
-    },
-    {
       "id": "ipo_006",
+      "company": "PNGS Reva Diamond",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard",
+      "sector": "—",
+      "open_date": "2027-02-24",
+      "close_date": "2027-02-26",
+      "issue_price": 386.0,
+      "issue_size_cr": 380.0,
+      "lot_size": 0,
+      "subscription_status": "Upcoming",
+      "subscription_times": 1.3,
+      "gmp": 0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "Bigshare Services Pvt",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 87.45,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "PNGS Reva Diamond Jewellery IPO open date is February 24, 2026 and the IPO will close on February 26, 2026. PNGS Reva Diamond Jewellery IPO is a Book Build Issue. The company to raise around ₹380 crores via IPO that comprises fresh issue of ₹380 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/pngs-reva-diamond-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 1.1,
+      "subscription_nii": 1.62,
+      "subscription_retail": 1.37
+    },
+    {
+      "id": "ipo_007",
       "company": "Clean Max Enviro",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -257,7 +326,7 @@
       "subscription_retail": 0.07
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_008",
       "company": "Shree Ram Twistex",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -293,7 +362,7 @@
       "subscription_retail": 76.63
     },
     {
-      "id": "ipo_008",
+      "id": "ipo_009",
       "company": "Gaudium IVF",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -329,7 +398,7 @@
       "subscription_retail": 7.6
     },
     {
-      "id": "ipo_009",
+      "id": "ipo_010",
       "company": "Aye Finance",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -365,7 +434,7 @@
       "subscription_retail": 0.81
     },
     {
-      "id": "ipo_010",
+      "id": "ipo_011",
       "company": "Fractal Analytics",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -401,7 +470,7 @@
       "subscription_retail": 1.1
     },
     {
-      "id": "ipo_011",
+      "id": "ipo_012",
       "company": "Shadowfax",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -437,7 +506,7 @@
       "subscription_retail": 2.43
     },
     {
-      "id": "ipo_012",
+      "id": "ipo_013",
       "company": "Amagi Media Labs",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -473,7 +542,7 @@
       "subscription_retail": 9.54
     },
     {
-      "id": "ipo_013",
+      "id": "ipo_014",
       "company": "Bharat Coking Coal",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -509,7 +578,7 @@
       "subscription_retail": 49.37
     },
     {
-      "id": "ipo_014",
+      "id": "ipo_015",
       "company": "Antala Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -545,7 +614,7 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_015",
+      "id": "ipo_016",
       "company": "Ajwa Projects",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -581,7 +650,7 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_016",
+      "id": "ipo_017",
       "company": "Carver Roboweld",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -617,40 +686,7 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_017",
-      "company": "Wiscon Industries",
-      "exchange": "BSE SME",
-      "ipo_type": "SME",
-      "sector": "—",
-      "open_date": "2026-10-27",
-      "close_date": "2026-10-29",
-      "issue_price": 204.0,
-      "issue_size_cr": 110.0,
-      "lot_size": 0,
-      "subscription_status": "Upcoming",
-      "subscription_times": 0.0,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
-      "lead_manager": "",
-      "registrar": "Maashitla Securities Pvt",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 94.18,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "Wiscon Industries IPO open date is October 27, 2026 and the IPO will close on October 29, 2026. Wiscon Industries IPO is a Bookbuilding Issue. The company to raise around ₹110 crores via IPO that comprises fresh issue of ₹88.01 crores and offer for sale up to 10,78,200 equity shares with face value of ₹10 each.",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/wiscon-industries-ipo/"
-    },
-    {
-      "id": "ipo_019",
+      "id": "ipo_020",
       "company": "Kiaasa Retail",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -686,7 +722,7 @@
       "subscription_retail": 2.43
     },
     {
-      "id": "ipo_020",
+      "id": "ipo_021",
       "company": "Accord Transformer",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -722,7 +758,7 @@
       "subscription_retail": 367.59
     },
     {
-      "id": "ipo_021",
+      "id": "ipo_022",
       "company": "Mobilise App",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -758,7 +794,7 @@
       "subscription_retail": 96.52
     },
     {
-      "id": "ipo_022",
+      "id": "ipo_023",
       "company": "Manilam Industries",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -794,7 +830,7 @@
       "subscription_retail": 5.88
     },
     {
-      "id": "ipo_023",
+      "id": "ipo_024",
       "company": "Yashhtej Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -830,7 +866,7 @@
       "subscription_retail": 2.35
     },
     {
-      "id": "ipo_024",
+      "id": "ipo_025",
       "company": "Fractal Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -866,7 +902,7 @@
       "subscription_retail": 4.09
     },
     {
-      "id": "ipo_025",
+      "id": "ipo_026",
       "company": "Marushika Technology",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -902,7 +938,7 @@
       "subscription_retail": 16.51
     },
     {
-      "id": "ipo_026",
+      "id": "ipo_027",
       "company": "PAN HR Solutions",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -938,7 +974,7 @@
       "subscription_retail": 8.99
     },
     {
-      "id": "ipo_027",
+      "id": "ipo_028",
       "company": "Biopol Chemicals",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -974,7 +1010,7 @@
       "subscription_retail": 20.8
     },
     {
-      "id": "ipo_028",
+      "id": "ipo_029",
       "company": "Brandman Retail",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1010,7 +1046,7 @@
       "subscription_retail": 93.11
     },
     {
-      "id": "ipo_029",
+      "id": "ipo_030",
       "company": "Grover Jewells",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1046,7 +1082,7 @@
       "subscription_retail": 15.74
     },
     {
-      "id": "ipo_030",
+      "id": "ipo_031",
       "company": "Kanishk Aluminium",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1082,7 +1118,7 @@
       "subscription_retail": 1.86
     },
     {
-      "id": "ipo_031",
+      "id": "ipo_032",
       "company": "Msafe Equipments",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1118,7 +1154,7 @@
       "subscription_retail": 133.16
     },
     {
-      "id": "ipo_032",
+      "id": "ipo_033",
       "company": "Accretion Nutraveda",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1154,7 +1190,7 @@
       "subscription_retail": 2.19
     },
     {
-      "id": "ipo_033",
+      "id": "ipo_034",
       "company": "Kasturi Metal Composite",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1190,7 +1226,7 @@
       "subscription_retail": 16.49
     },
     {
-      "id": "ipo_034",
+      "id": "ipo_035",
       "company": "Hannah Joseph Hospital",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1226,7 +1262,7 @@
       "subscription_retail": 1.62
     },
     {
-      "id": "ipo_035",
+      "id": "ipo_036",
       "company": "Shayona Engineering",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1262,7 +1298,7 @@
       "subscription_retail": 3.73
     },
     {
-      "id": "ipo_036",
+      "id": "ipo_037",
       "company": "KRM Ayurveda",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1298,7 +1334,7 @@
       "subscription_retail": 54.21
     },
     {
-      "id": "ipo_037",
+      "id": "ipo_038",
       "company": "Digilogic Systems",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1334,7 +1370,7 @@
       "subscription_retail": 1.08
     },
     {
-      "id": "ipo_038",
+      "id": "ipo_039",
       "company": "Aritas Vinyl",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1370,7 +1406,7 @@
       "subscription_retail": 2.88
     },
     {
-      "id": "ipo_039",
+      "id": "ipo_040",
       "company": "Armour Security",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1406,7 +1442,7 @@
       "subscription_retail": 2.58
     },
     {
-      "id": "ipo_040",
+      "id": "ipo_041",
       "company": "GRE Renew Enertech",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1442,7 +1478,7 @@
       "subscription_retail": 14.1
     },
     {
-      "id": "ipo_041",
+      "id": "ipo_042",
       "company": "INDO SMC",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1478,7 +1514,7 @@
       "subscription_retail": 96.13
     },
     {
-      "id": "ipo_042",
+      "id": "ipo_043",
       "company": "Narmadesh Brass",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1514,7 +1550,7 @@
       "subscription_retail": 0.44
     },
     {
-      "id": "ipo_043",
+      "id": "ipo_044",
       "company": "Avana Electrosystems",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1550,7 +1586,7 @@
       "subscription_retail": 137.52
     },
     {
-      "id": "ipo_044",
+      "id": "ipo_045",
       "company": "Defrail Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1586,7 +1622,7 @@
       "subscription_retail": 101.28
     },
     {
-      "id": "ipo_045",
+      "id": "ipo_046",
       "company": "Victory Electric Vehicles",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1622,7 +1658,7 @@
       "subscription_retail": 0.99
     },
     {
-      "id": "ipo_046",
+      "id": "ipo_047",
       "company": "Yajur Fibres",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1658,7 +1694,7 @@
       "subscription_retail": 1.51
     },
     {
-      "id": "ipo_047",
+      "id": "ipo_048",
       "company": "Gabion Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1694,7 +1730,7 @@
       "subscription_retail": 867.23
     },
     {
-      "id": "ipo_048",
+      "id": "ipo_049",
       "company": "Modern Diagnostic",
       "exchange": "BSE SME",
       "ipo_type": "SME",
