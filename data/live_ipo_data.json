@@ -1,7 +1,43 @@
 {
-  "scraped_at": "2026-10-27T12:51:17.681007",
+  "scraped_at": "2026-10-27T18:39:35.266513",
   "source": "live",
   "active_ipos": [
+    {
+      "id": "ipo_002",
+      "company": "M.K.Sons Fine Jewels",
+      "exchange": "BSE / NSE",
+      "ipo_type": "Mainboard",
+      "sector": "—",
+      "open_date": "2026-10-28",
+      "close_date": "2026-10-30",
+      "issue_price": 162.0,
+      "issue_size_cr": 275.4,
+      "lot_size": 0,
+      "subscription_status": "Open",
+      "subscription_times": 1.74,
+      "gmp": 8.0,
+      "gmp_percent": 4.9,
+      "lead_manager": "",
+      "registrar": "Bigshare Services Pvt",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 100.0,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "M.K.Sons Fine Jewels IPO open date is October 28, 2026 and the IPO will close on October 30, 2026. M.K.Sons Fine Jewels IPO is a Book build Issue. The company to raise around ₹275.40 crores via IPO that comprises fresh issue of ₹220.32 crores and offer for sale up to 34,00,000 equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/mksons-fine-jewels-ipo/",
+      "subscription_qib": 1.0,
+      "subscription_nii": 1.88,
+      "subscription_retail": 2.09
+    },
     {
       "id": "ipo_003",
       "company": "SFC Environmental",
@@ -111,7 +147,79 @@
       "subscription_retail": 0.1
     },
     {
+      "id": "ipo_021",
+      "company": "Ajwa Projects",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "—",
+      "open_date": "2026-10-28",
+      "close_date": "2026-10-30",
+      "issue_price": 203.0,
+      "issue_size_cr": 38.05,
+      "lot_size": 0,
+      "subscription_status": "Open",
+      "subscription_times": 12.23,
+      "gmp": 10.0,
+      "gmp_percent": 4.9,
+      "lead_manager": "",
+      "registrar": "Kfin Technologies Ltd",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 98.9,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Ajwa Projects IPO open date is October 28, 2026 and the IPO will close on October 30, 2026. Ajwa Projects IPO is a Book built Issue. The company to raise around ₹38.05 crores via IPO that comprises fresh issue of ₹30.45 crores and offer for sale up to 3,74,400 equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/ajwa-projects-ipo/",
+      "subscription_qib": 7.69,
+      "subscription_nii": 25.8,
+      "subscription_retail": 9.11
+    },
+    {
       "id": "ipo_022",
+      "company": "Carver Roboweld",
+      "exchange": "BSE SME",
+      "ipo_type": "SME",
+      "sector": "—",
+      "open_date": "2026-10-28",
+      "close_date": "2026-10-30",
+      "issue_price": 80.0,
+      "issue_size_cr": 28.29,
+      "lot_size": 0,
+      "subscription_status": "Open",
+      "subscription_times": 12.23,
+      "gmp": 0.0,
+      "gmp_percent": 0.0,
+      "lead_manager": "",
+      "registrar": "Bigshare Services Pvt",
+      "objects": "",
+      "revenue_cr": [],
+      "profit_cr": [],
+      "years": [],
+      "peers": [],
+      "pe_ratio": 0.0,
+      "industry_pe": 0.0,
+      "promoter_holding": 90.07,
+      "listing_date": "",
+      "recommendation": "NEUTRAL",
+      "risk": "Medium",
+      "summary": "Carver Roboweld IPO open date is October 28, 2026 and the IPO will close on October 30, 2026. Carver Roboweld IPO is a Book built Issue. The company to raise around ₹28.29 crores via IPO that comprises fresh issue of ₹28.29 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
+      "risks_text": "",
+      "drhp_highlights": "",
+      "detail_url": "https://ipowatch.in/carver-roboweld-ipo/",
+      "subscription_qib": 7.69,
+      "subscription_nii": 25.8,
+      "subscription_retail": 9.11
+    },
+    {
+      "id": "ipo_023",
       "company": "Wiscon Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -145,42 +253,6 @@
       "subscription_qib": 2.0,
       "subscription_nii": 0.51,
       "subscription_retail": 0.27
-    },
-    {
-      "id": "ipo_023",
-      "company": "Core4 Engineers",
-      "exchange": "BSE SME",
-      "ipo_type": "SME",
-      "sector": "—",
-      "open_date": "2026-10-23",
-      "close_date": "2026-10-27",
-      "issue_price": 93.0,
-      "issue_size_cr": 54.82,
-      "lot_size": 0,
-      "subscription_status": "Open",
-      "subscription_times": 4.01,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
-      "lead_manager": "",
-      "registrar": "Purva Sharegistry (India) Pvt",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 82.09,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "Core4 Engineers IPO open date is October 23, 2026 and the IPO will close on October 27, 2026. Core4 Engineers IPO is a Bookbuilding Issue. The company to raise around ₹54.82 crores via IPO that comprises fresh issue of ₹54.82 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/core4-engineers-ipo/",
-      "subscription_qib": 1.96,
-      "subscription_nii": 11.15,
-      "subscription_retail": 2.12
     }
   ],
   "upcoming_ipos": [
@@ -221,22 +293,22 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_002",
-      "company": "M.K.Sons Fine Jewels",
+      "id": "ipo_006",
+      "company": "Omnitech Engineering",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
       "sector": "—",
-      "open_date": "2026-10-28",
-      "close_date": "2026-10-30",
-      "issue_price": 162.0,
-      "issue_size_cr": 275.4,
+      "open_date": "2027-02-25",
+      "close_date": "2027-02-27",
+      "issue_price": 227.0,
+      "issue_size_cr": 583.0,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 1.74,
-      "gmp": 8.0,
-      "gmp_percent": 4.9,
+      "subscription_times": 1.2,
+      "gmp": 0,
+      "gmp_percent": 0.0,
       "lead_manager": "",
-      "registrar": "Bigshare Services Pvt",
+      "registrar": "",
       "objects": "",
       "revenue_cr": [],
       "profit_cr": [],
@@ -244,20 +316,20 @@
       "peers": [],
       "pe_ratio": 0.0,
       "industry_pe": 0.0,
-      "promoter_holding": 100.0,
+      "promoter_holding": 94.08,
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "M.K.Sons Fine Jewels IPO open date is October 28, 2026 and the IPO will close on October 30, 2026. M.K.Sons Fine Jewels IPO is a Book build Issue. The company to raise around ₹275.40 crores via IPO that comprises fresh issue of ₹220.32 crores and offer for sale up to 34,00,000 equity shares with face value of ₹10 each.",
+      "summary": "Omnitech Engineering IPO open date is February 25, 2026 and the IPO will close on February 27, 2026. Omnitech Engineering IPO is a Book Build Issue. The company to raise around ₹583 crores via IPO that comprises fresh issue of ₹418 crores and offer for sale up to 72,68,722 equity shares with face value of ₹5 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/mksons-fine-jewels-ipo/",
-      "subscription_qib": 1.0,
-      "subscription_nii": 1.88,
-      "subscription_retail": 2.09
+      "detail_url": "https://ipowatch.in/omnitech-engineering-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 3.0,
+      "subscription_nii": 0.77,
+      "subscription_retail": 0.35
     },
     {
-      "id": "ipo_006",
+      "id": "ipo_007",
       "company": "PNGS Reva Diamond",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -293,7 +365,7 @@
       "subscription_retail": 1.37
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_008",
       "company": "Clean Max Enviro",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -329,7 +401,7 @@
       "subscription_retail": 0.07
     },
     {
-      "id": "ipo_008",
+      "id": "ipo_009",
       "company": "Shree Ram Twistex",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -365,7 +437,7 @@
       "subscription_retail": 76.63
     },
     {
-      "id": "ipo_009",
+      "id": "ipo_010",
       "company": "Gaudium IVF",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -401,7 +473,7 @@
       "subscription_retail": 7.6
     },
     {
-      "id": "ipo_010",
+      "id": "ipo_011",
       "company": "Aye Finance",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -437,7 +509,7 @@
       "subscription_retail": 0.81
     },
     {
-      "id": "ipo_011",
+      "id": "ipo_012",
       "company": "Fractal Analytics",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -473,7 +545,7 @@
       "subscription_retail": 1.1
     },
     {
-      "id": "ipo_012",
+      "id": "ipo_013",
       "company": "Shadowfax",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -509,7 +581,7 @@
       "subscription_retail": 2.43
     },
     {
-      "id": "ipo_013",
+      "id": "ipo_014",
       "company": "Amagi Media Labs",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -545,7 +617,7 @@
       "subscription_retail": 9.54
     },
     {
-      "id": "ipo_014",
+      "id": "ipo_015",
       "company": "Bharat Coking Coal",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -581,7 +653,7 @@
       "subscription_retail": 49.37
     },
     {
-      "id": "ipo_015",
+      "id": "ipo_016",
       "company": "Johnsoncab Electricals",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -617,7 +689,7 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_016",
+      "id": "ipo_017",
       "company": "HGS (India)",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -653,7 +725,7 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_017",
+      "id": "ipo_018",
       "company": "Maxwell Engineering",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -689,7 +761,7 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_018",
+      "id": "ipo_019",
       "company": "Vectras Enprocon",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -725,7 +797,7 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_019",
+      "id": "ipo_020",
       "company": "Antala Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -761,58 +833,22 @@
       "subscription_retail": 9.11
     },
     {
-      "id": "ipo_020",
-      "company": "Ajwa Projects",
-      "exchange": "BSE SME",
+      "id": "ipo_024",
+      "company": "Yaap Digital",
+      "exchange": "NSE Emerge",
       "ipo_type": "SME",
       "sector": "—",
-      "open_date": "2026-10-28",
-      "close_date": "2026-10-30",
-      "issue_price": 203.0,
-      "issue_size_cr": 38.05,
+      "open_date": "2027-02-25",
+      "close_date": "2027-02-27",
+      "issue_price": 145.0,
+      "issue_size_cr": 80.11,
       "lot_size": 0,
       "subscription_status": "Upcoming",
-      "subscription_times": 12.23,
-      "gmp": 10.0,
-      "gmp_percent": 4.9,
-      "lead_manager": "",
-      "registrar": "Kfin Technologies Ltd",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 98.9,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "Ajwa Projects IPO open date is October 28, 2026 and the IPO will close on October 30, 2026. Ajwa Projects IPO is a Book built Issue. The company to raise around ₹38.05 crores via IPO that comprises fresh issue of ₹30.45 crores and offer for sale up to 3,74,400 equity shares with face value of ₹10 each.",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/ajwa-projects-ipo/",
-      "subscription_qib": 7.69,
-      "subscription_nii": 25.8,
-      "subscription_retail": 9.11
-    },
-    {
-      "id": "ipo_021",
-      "company": "Carver Roboweld",
-      "exchange": "BSE SME",
-      "ipo_type": "SME",
-      "sector": "—",
-      "open_date": "2026-10-28",
-      "close_date": "2026-10-30",
-      "issue_price": 80.0,
-      "issue_size_cr": 28.29,
-      "lot_size": 0,
-      "subscription_status": "Upcoming",
-      "subscription_times": 12.23,
-      "gmp": 0.0,
+      "subscription_times": 4.26,
+      "gmp": 0,
       "gmp_percent": 0.0,
       "lead_manager": "",
-      "registrar": "Bigshare Services Pvt",
+      "registrar": "MUFG Intime India Pvt",
       "objects": "",
       "revenue_cr": [],
       "profit_cr": [],
@@ -820,20 +856,20 @@
       "peers": [],
       "pe_ratio": 0.0,
       "industry_pe": 0.0,
-      "promoter_holding": 90.07,
+      "promoter_holding": 80.19,
       "listing_date": "",
       "recommendation": "NEUTRAL",
       "risk": "Medium",
-      "summary": "Carver Roboweld IPO open date is October 28, 2026 and the IPO will close on October 30, 2026. Carver Roboweld IPO is a Book built Issue. The company to raise around ₹28.29 crores via IPO that comprises fresh issue of ₹28.29 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
+      "summary": "Yaap Digital IPO open date is February 25, 2026 and the IPO will close on February 27, 2026. Yaap Digital IPO is a Book build Issue. The company to raise around ₹80.11 crores via IPO that comprises fresh issue of ₹80.11 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
       "risks_text": "",
       "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/carver-roboweld-ipo/",
-      "subscription_qib": 7.69,
-      "subscription_nii": 25.8,
-      "subscription_retail": 9.11
+      "detail_url": "https://ipowatch.in/yaap-digital-ipo-date-review-price-allotment-details/",
+      "subscription_qib": 8.29,
+      "subscription_nii": 5.05,
+      "subscription_retail": 1.61
     },
     {
-      "id": "ipo_024",
+      "id": "ipo_025",
       "company": "Kiaasa Retail",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -869,7 +905,7 @@
       "subscription_retail": 2.43
     },
     {
-      "id": "ipo_025",
+      "id": "ipo_026",
       "company": "Accord Transformer",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -905,7 +941,7 @@
       "subscription_retail": 367.59
     },
     {
-      "id": "ipo_026",
+      "id": "ipo_027",
       "company": "Mobilise App",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -941,7 +977,7 @@
       "subscription_retail": 96.52
     },
     {
-      "id": "ipo_027",
+      "id": "ipo_028",
       "company": "Manilam Industries",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -977,7 +1013,7 @@
       "subscription_retail": 5.88
     },
     {
-      "id": "ipo_028",
+      "id": "ipo_029",
       "company": "Yashhtej Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1013,7 +1049,7 @@
       "subscription_retail": 2.35
     },
     {
-      "id": "ipo_029",
+      "id": "ipo_030",
       "company": "Fractal Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1049,7 +1085,7 @@
       "subscription_retail": 4.09
     },
     {
-      "id": "ipo_030",
+      "id": "ipo_031",
       "company": "Marushika Technology",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1085,7 +1121,7 @@
       "subscription_retail": 16.51
     },
     {
-      "id": "ipo_031",
+      "id": "ipo_032",
       "company": "PAN HR Solutions",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1121,7 +1157,7 @@
       "subscription_retail": 8.99
     },
     {
-      "id": "ipo_032",
+      "id": "ipo_033",
       "company": "Biopol Chemicals",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1157,7 +1193,7 @@
       "subscription_retail": 20.8
     },
     {
-      "id": "ipo_033",
+      "id": "ipo_034",
       "company": "Brandman Retail",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1193,7 +1229,7 @@
       "subscription_retail": 93.11
     },
     {
-      "id": "ipo_034",
+      "id": "ipo_035",
       "company": "Grover Jewells",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1229,7 +1265,7 @@
       "subscription_retail": 15.74
     },
     {
-      "id": "ipo_035",
+      "id": "ipo_036",
       "company": "Kanishk Aluminium",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1265,7 +1301,7 @@
       "subscription_retail": 1.86
     },
     {
-      "id": "ipo_036",
+      "id": "ipo_037",
       "company": "Msafe Equipments",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1301,7 +1337,7 @@
       "subscription_retail": 133.16
     },
     {
-      "id": "ipo_037",
+      "id": "ipo_038",
       "company": "Accretion Nutraveda",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1337,7 +1373,7 @@
       "subscription_retail": 2.19
     },
     {
-      "id": "ipo_038",
+      "id": "ipo_039",
       "company": "Kasturi Metal Composite",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1373,7 +1409,7 @@
       "subscription_retail": 16.49
     },
     {
-      "id": "ipo_039",
+      "id": "ipo_040",
       "company": "Hannah Joseph Hospital",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1409,7 +1445,7 @@
       "subscription_retail": 1.62
     },
     {
-      "id": "ipo_040",
+      "id": "ipo_041",
       "company": "Shayona Engineering",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1445,7 +1481,7 @@
       "subscription_retail": 3.73
     },
     {
-      "id": "ipo_041",
+      "id": "ipo_042",
       "company": "KRM Ayurveda",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1481,7 +1517,7 @@
       "subscription_retail": 54.21
     },
     {
-      "id": "ipo_042",
+      "id": "ipo_043",
       "company": "Digilogic Systems",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1517,7 +1553,7 @@
       "subscription_retail": 1.08
     },
     {
-      "id": "ipo_043",
+      "id": "ipo_044",
       "company": "Aritas Vinyl",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1553,7 +1589,7 @@
       "subscription_retail": 2.88
     },
     {
-      "id": "ipo_044",
+      "id": "ipo_045",
       "company": "Armour Security",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1589,7 +1625,7 @@
       "subscription_retail": 2.58
     },
     {
-      "id": "ipo_045",
+      "id": "ipo_046",
       "company": "GRE Renew Enertech",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1625,7 +1661,7 @@
       "subscription_retail": 14.1
     },
     {
-      "id": "ipo_046",
+      "id": "ipo_047",
       "company": "INDO SMC",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1661,7 +1697,7 @@
       "subscription_retail": 96.13
     },
     {
-      "id": "ipo_047",
+      "id": "ipo_048",
       "company": "Narmadesh Brass",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1697,7 +1733,7 @@
       "subscription_retail": 0.44
     },
     {
-      "id": "ipo_048",
+      "id": "ipo_049",
       "company": "Avana Electrosystems",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1733,7 +1769,7 @@
       "subscription_retail": 137.52
     },
     {
-      "id": "ipo_049",
+      "id": "ipo_050",
       "company": "Defrail Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1769,7 +1805,7 @@
       "subscription_retail": 101.28
     },
     {
-      "id": "ipo_050",
+      "id": "ipo_051",
       "company": "Victory Electric Vehicles",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1805,7 +1841,7 @@
       "subscription_retail": 0.99
     },
     {
-      "id": "ipo_051",
+      "id": "ipo_052",
       "company": "Yajur Fibres",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1841,7 +1877,7 @@
       "subscription_retail": 1.51
     },
     {
-      "id": "ipo_052",
+      "id": "ipo_053",
       "company": "Gabion Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1877,7 +1913,7 @@
       "subscription_retail": 867.23
     },
     {
-      "id": "ipo_053",
+      "id": "ipo_054",
       "company": "Modern Diagnostic",
       "exchange": "BSE SME",
       "ipo_type": "SME",
