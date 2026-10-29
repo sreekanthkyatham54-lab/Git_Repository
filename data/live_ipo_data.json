@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-29T06:44:32.423285",
+  "scraped_at": "2026-10-29T13:51:31.493075",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 183.06,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.06,
+      "subscription_times": 2.81,
       "gmp": 9.0,
       "gmp_percent": 11.0,
       "lead_manager": "",
@@ -34,9 +34,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/bombay-coated-special-steels-ipo/",
-      "subscription_qib": 0.0,
-      "subscription_nii": 0.05,
-      "subscription_retail": 0.14
+      "subscription_qib": 6.89,
+      "subscription_nii": 0.76,
+      "subscription_retail": 1.31
     },
     {
       "id": "ipo_002",
@@ -50,7 +50,7 @@
       "issue_size_cr": 275.4,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.73,
+      "subscription_times": 1.18,
       "gmp": 15.0,
       "gmp_percent": 9.3,
       "lead_manager": "",
@@ -70,9 +70,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/mksons-fine-jewels-ipo/",
-      "subscription_qib": 0.96,
-      "subscription_nii": 1.34,
-      "subscription_retail": 0.33
+      "subscription_qib": 0.99,
+      "subscription_nii": 2.2,
+      "subscription_retail": 0.85
     },
     {
       "id": "ipo_003",
@@ -86,7 +86,7 @@
       "issue_size_cr": 668.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.38,
+      "subscription_times": 9.47,
       "gmp": 12.0,
       "gmp_percent": 3.6,
       "lead_manager": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/sfc-environmental-technologies-ipo/",
-      "subscription_qib": 0.08,
-      "subscription_nii": 0.73,
-      "subscription_retail": 0.41
+      "subscription_qib": 18.81,
+      "subscription_nii": 12.81,
+      "subscription_retail": 2.71
     },
     {
       "id": "ipo_004",
@@ -122,7 +122,7 @@
       "issue_size_cr": 255.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 51.28,
+      "subscription_times": 241.22,
       "gmp": 51.0,
       "gmp_percent": 34.0,
       "lead_manager": "",
@@ -142,9 +142,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/bls-polymers-ipo/",
-      "subscription_qib": 12.24,
-      "subscription_nii": 128.07,
-      "subscription_retail": 40.68
+      "subscription_qib": 200.25,
+      "subscription_nii": 559.2,
+      "subscription_retail": 128.36
     },
     {
       "id": "ipo_020",
@@ -158,7 +158,7 @@
       "issue_size_cr": 23.33,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 12.23,
+      "subscription_times": 0.82,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -178,9 +178,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/antala-industries-ipo/",
-      "subscription_qib": 7.69,
-      "subscription_nii": 25.8,
-      "subscription_retail": 9.11
+      "subscription_qib": 66.72,
+      "subscription_nii": 0.36,
+      "subscription_retail": 0.05
     },
     {
       "id": "ipo_021",
@@ -194,7 +194,7 @@
       "issue_size_cr": 38.05,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.49,
+      "subscription_times": 0.87,
       "gmp": 35.0,
       "gmp_percent": 17.2,
       "lead_manager": "",
@@ -215,8 +215,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/ajwa-projects-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.08,
-      "subscription_retail": 0.9
+      "subscription_nii": 0.18,
+      "subscription_retail": 1.57
     },
     {
       "id": "ipo_022",
@@ -230,7 +230,7 @@
       "issue_size_cr": 28.29,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.26,
+      "subscription_times": 0.83,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -251,8 +251,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/carver-roboweld-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.6,
-      "subscription_retail": 0.27
+      "subscription_nii": 2.31,
+      "subscription_retail": 0.65
     },
     {
       "id": "ipo_023",
@@ -266,7 +266,7 @@
       "issue_size_cr": 110.0,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.86,
+      "subscription_times": 1.17,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -286,9 +286,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/wiscon-industries-ipo/",
-      "subscription_qib": 2.0,
-      "subscription_nii": 0.02,
-      "subscription_retail": 0.44
+      "subscription_qib": 2.24,
+      "subscription_nii": 0.62,
+      "subscription_retail": 0.66
     }
   ],
   "upcoming_ipos": [
