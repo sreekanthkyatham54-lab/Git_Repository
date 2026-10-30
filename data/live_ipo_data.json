@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-29T18:55:21.005579",
+  "scraped_at": "2026-10-30T06:45:57.848628",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 183.06,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 2.81,
+      "subscription_times": 3.14,
       "gmp": 9.0,
       "gmp_percent": 11.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/bombay-coated-special-steels-ipo/",
       "subscription_qib": 6.89,
-      "subscription_nii": 0.76,
-      "subscription_retail": 1.31
+      "subscription_nii": 1.01,
+      "subscription_retail": 1.87
     },
     {
       "id": "ipo_002",
@@ -50,9 +50,9 @@
       "issue_size_cr": 275.4,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.18,
-      "gmp": 15.0,
-      "gmp_percent": 9.3,
+      "subscription_times": 1.66,
+      "gmp": 12.0,
+      "gmp_percent": 7.4,
       "lead_manager": "",
       "registrar": "Bigshare Services Pvt",
       "objects": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/mksons-fine-jewels-ipo/",
       "subscription_qib": 0.99,
-      "subscription_nii": 2.2,
-      "subscription_retail": 0.85
+      "subscription_nii": 3.53,
+      "subscription_retail": 1.25
     },
     {
       "id": "ipo_014",
@@ -86,9 +86,9 @@
       "issue_size_cr": 56.02,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 12.23,
-      "gmp": 10.0,
-      "gmp_percent": 5.0,
+      "subscription_times": 0.15,
+      "gmp": 13.0,
+      "gmp_percent": 6.5,
       "lead_manager": "",
       "registrar": "Maashitla Securities Pvt",
       "objects": "",
@@ -106,9 +106,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/johnsoncab-electricals-ipo/",
-      "subscription_qib": 7.69,
-      "subscription_nii": 25.8,
-      "subscription_retail": 9.11
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.28,
+      "subscription_retail": 0.18
     },
     {
       "id": "ipo_015",
@@ -122,7 +122,7 @@
       "issue_size_cr": 34.56,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 12.23,
+      "subscription_times": 0.02,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -142,9 +142,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/hgs-india-ipo/",
-      "subscription_qib": 7.69,
-      "subscription_nii": 25.8,
-      "subscription_retail": 9.11
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.05,
+      "subscription_retail": 0.04
     },
     {
       "id": "ipo_016",
@@ -158,9 +158,9 @@
       "issue_size_cr": 57.64,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 12.23,
-      "gmp": 40.0,
-      "gmp_percent": 25.3,
+      "subscription_times": 0.73,
+      "gmp": 70.0,
+      "gmp_percent": 44.3,
       "lead_manager": "",
       "registrar": "Kfin Technologies Ltd",
       "objects": "",
@@ -178,9 +178,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/maxwell-engineering-solutions-ipo/",
-      "subscription_qib": 7.69,
-      "subscription_nii": 25.8,
-      "subscription_retail": 9.11
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.5,
+      "subscription_retail": 1.25
     },
     {
       "id": "ipo_017",
@@ -194,7 +194,7 @@
       "issue_size_cr": 53.05,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 12.23,
+      "subscription_times": 0.08,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -214,9 +214,9 @@
       "risks_text": "",
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vectras-enprocon-ipo/",
-      "subscription_qib": 7.69,
-      "subscription_nii": 25.8,
-      "subscription_retail": 9.11
+      "subscription_qib": 0.0,
+      "subscription_nii": 0.09,
+      "subscription_retail": 0.12
     },
     {
       "id": "ipo_018",
@@ -230,7 +230,7 @@
       "issue_size_cr": 23.33,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.82,
+      "subscription_times": 0.78,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -251,8 +251,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/antala-industries-ipo/",
       "subscription_qib": 66.72,
-      "subscription_nii": 0.36,
-      "subscription_retail": 0.05
+      "subscription_nii": 0.01,
+      "subscription_retail": 0.06
     },
     {
       "id": "ipo_019",
@@ -266,9 +266,9 @@
       "issue_size_cr": 38.05,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.87,
-      "gmp": 35.0,
-      "gmp_percent": 17.2,
+      "subscription_times": 0.95,
+      "gmp": 5.0,
+      "gmp_percent": 2.5,
       "lead_manager": "",
       "registrar": "Kfin Technologies Ltd",
       "objects": "",
@@ -287,8 +287,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/ajwa-projects-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 0.18,
-      "subscription_retail": 1.57
+      "subscription_nii": 0.2,
+      "subscription_retail": 1.7
     },
     {
       "id": "ipo_020",
@@ -302,7 +302,7 @@
       "issue_size_cr": 28.29,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 0.83,
+      "subscription_times": 1.96,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -323,8 +323,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/carver-roboweld-ipo/",
       "subscription_qib": 0.0,
-      "subscription_nii": 2.31,
-      "subscription_retail": 0.65
+      "subscription_nii": 4.5,
+      "subscription_retail": 1.97
     }
   ],
   "upcoming_ipos": [
