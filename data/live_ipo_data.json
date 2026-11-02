@@ -1,45 +1,9 @@
 {
-  "scraped_at": "2026-11-02T16:41:01.022146",
+  "scraped_at": "2026-11-02T22:17:02.521789",
   "source": "live",
   "active_ipos": [
     {
-      "id": "ipo_001",
-      "company": "Bombay Coated and Special Steels",
-      "exchange": "BSE / NSE",
-      "ipo_type": "Mainboard",
-      "sector": "—",
-      "open_date": "2026-10-29",
-      "close_date": "2026-11-02",
-      "issue_price": 82.0,
-      "issue_size_cr": 183.06,
-      "lot_size": 0,
-      "subscription_status": "Open",
-      "subscription_times": 63.89,
-      "gmp": 9.0,
-      "gmp_percent": 11.0,
-      "lead_manager": "",
-      "registrar": "Kfin Technologies Ltd",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 97.78,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "Bombay Coated and Special Steels IPO open date is October 29, 2026 and the IPO will close on November 2, 2026. Bombay Coated and Special Steels IPO is a Book build Issue. The company to raise around ₹183.06 crores via IPO that comprises fresh issue of ₹183.06 crores and offer for sale up to [.] equity shares with face value of ₹10 each.",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/bombay-coated-special-steels-ipo/",
-      "subscription_qib": 37.32,
-      "subscription_nii": 166.44,
-      "subscription_retail": 35.46
-    },
-    {
-      "id": "ipo_012",
+      "id": "ipo_011",
       "company": "Vedant Poly Fabs",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -75,7 +39,7 @@
       "subscription_retail": 0.14
     },
     {
-      "id": "ipo_013",
+      "id": "ipo_012",
       "company": "Johnsoncab Electricals",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -111,7 +75,7 @@
       "subscription_retail": 2.21
     },
     {
-      "id": "ipo_014",
+      "id": "ipo_013",
       "company": "HGS (India)",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -147,7 +111,7 @@
       "subscription_retail": 25.47
     },
     {
-      "id": "ipo_015",
+      "id": "ipo_014",
       "company": "Maxwell Engineering",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -183,7 +147,7 @@
       "subscription_retail": 109.83
     },
     {
-      "id": "ipo_016",
+      "id": "ipo_015",
       "company": "Vectras Enprocon",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -217,47 +181,11 @@
       "subscription_qib": 1.42,
       "subscription_nii": 1.13,
       "subscription_retail": 1.33
-    },
-    {
-      "id": "ipo_017",
-      "company": "Antala Industries",
-      "exchange": "BSE SME",
-      "ipo_type": "SME",
-      "sector": "—",
-      "open_date": "2026-10-29",
-      "close_date": "2026-11-02",
-      "issue_price": 67.0,
-      "issue_size_cr": 23.33,
-      "lot_size": 0,
-      "subscription_status": "Open",
-      "subscription_times": 1.13,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
-      "lead_manager": "",
-      "registrar": "Bigshare Services Pvt",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 72.93,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "Antala Industries IPO open date is October 29, 2026 and the IPO will close on November 2, 2026. Antala Industries IPO is a Book built Issue. The company to raise around ₹23.33 crores via IPO that comprises fresh issue of ₹23.33 crores and offer for sale up to [.] equity shares with face value of ₹1 each.",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/antala-industries-ipo/",
-      "subscription_qib": 66.72,
-      "subscription_nii": 0.3,
-      "subscription_retail": 0.42
     }
   ],
   "upcoming_ipos": [
     {
-      "id": "ipo_002",
+      "id": "ipo_001",
       "company": "Omnitech Engineering",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -293,7 +221,7 @@
       "subscription_retail": 0.35
     },
     {
-      "id": "ipo_003",
+      "id": "ipo_002",
       "company": "PNGS Reva Diamond",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -329,7 +257,7 @@
       "subscription_retail": 1.37
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_003",
       "company": "Clean Max Enviro",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -365,7 +293,7 @@
       "subscription_retail": 0.07
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_004",
       "company": "Shree Ram Twistex",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -401,7 +329,7 @@
       "subscription_retail": 76.63
     },
     {
-      "id": "ipo_006",
+      "id": "ipo_005",
       "company": "Gaudium IVF",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -437,7 +365,7 @@
       "subscription_retail": 7.6
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_006",
       "company": "Aye Finance",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -473,7 +401,7 @@
       "subscription_retail": 0.81
     },
     {
-      "id": "ipo_008",
+      "id": "ipo_007",
       "company": "Fractal Analytics",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -509,7 +437,7 @@
       "subscription_retail": 1.1
     },
     {
-      "id": "ipo_009",
+      "id": "ipo_008",
       "company": "Shadowfax",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -545,7 +473,7 @@
       "subscription_retail": 2.43
     },
     {
-      "id": "ipo_010",
+      "id": "ipo_009",
       "company": "Amagi Media Labs",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -581,7 +509,7 @@
       "subscription_retail": 9.54
     },
     {
-      "id": "ipo_011",
+      "id": "ipo_010",
       "company": "Bharat Coking Coal",
       "exchange": "BSE / NSE",
       "ipo_type": "Mainboard",
@@ -617,7 +545,7 @@
       "subscription_retail": 49.37
     },
     {
-      "id": "ipo_018",
+      "id": "ipo_016",
       "company": "Yaap Digital",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -653,7 +581,7 @@
       "subscription_retail": 1.61
     },
     {
-      "id": "ipo_019",
+      "id": "ipo_017",
       "company": "Kiaasa Retail",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -689,7 +617,7 @@
       "subscription_retail": 2.43
     },
     {
-      "id": "ipo_020",
+      "id": "ipo_018",
       "company": "Accord Transformer",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -725,7 +653,7 @@
       "subscription_retail": 367.59
     },
     {
-      "id": "ipo_021",
+      "id": "ipo_019",
       "company": "Mobilise App",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -761,7 +689,7 @@
       "subscription_retail": 96.52
     },
     {
-      "id": "ipo_022",
+      "id": "ipo_020",
       "company": "Manilam Industries",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -797,7 +725,7 @@
       "subscription_retail": 5.88
     },
     {
-      "id": "ipo_023",
+      "id": "ipo_021",
       "company": "Yashhtej Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -833,7 +761,7 @@
       "subscription_retail": 2.35
     },
     {
-      "id": "ipo_024",
+      "id": "ipo_022",
       "company": "Fractal Industries",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -869,7 +797,7 @@
       "subscription_retail": 4.09
     },
     {
-      "id": "ipo_025",
+      "id": "ipo_023",
       "company": "Marushika Technology",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -905,7 +833,7 @@
       "subscription_retail": 16.51
     },
     {
-      "id": "ipo_026",
+      "id": "ipo_024",
       "company": "PAN HR Solutions",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -941,7 +869,7 @@
       "subscription_retail": 8.99
     },
     {
-      "id": "ipo_027",
+      "id": "ipo_025",
       "company": "Biopol Chemicals",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -977,7 +905,7 @@
       "subscription_retail": 20.8
     },
     {
-      "id": "ipo_028",
+      "id": "ipo_026",
       "company": "Brandman Retail",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1013,7 +941,7 @@
       "subscription_retail": 93.11
     },
     {
-      "id": "ipo_029",
+      "id": "ipo_027",
       "company": "Grover Jewells",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1049,7 +977,7 @@
       "subscription_retail": 15.74
     },
     {
-      "id": "ipo_030",
+      "id": "ipo_028",
       "company": "Kanishk Aluminium",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1085,7 +1013,7 @@
       "subscription_retail": 1.86
     },
     {
-      "id": "ipo_031",
+      "id": "ipo_029",
       "company": "Msafe Equipments",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1121,7 +1049,7 @@
       "subscription_retail": 133.16
     },
     {
-      "id": "ipo_032",
+      "id": "ipo_030",
       "company": "Accretion Nutraveda",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1157,7 +1085,7 @@
       "subscription_retail": 2.19
     },
     {
-      "id": "ipo_033",
+      "id": "ipo_031",
       "company": "Kasturi Metal Composite",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1193,7 +1121,7 @@
       "subscription_retail": 16.49
     },
     {
-      "id": "ipo_034",
+      "id": "ipo_032",
       "company": "Hannah Joseph Hospital",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1229,7 +1157,7 @@
       "subscription_retail": 1.62
     },
     {
-      "id": "ipo_035",
+      "id": "ipo_033",
       "company": "Shayona Engineering",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1265,7 +1193,7 @@
       "subscription_retail": 3.73
     },
     {
-      "id": "ipo_036",
+      "id": "ipo_034",
       "company": "KRM Ayurveda",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1301,7 +1229,7 @@
       "subscription_retail": 54.21
     },
     {
-      "id": "ipo_037",
+      "id": "ipo_035",
       "company": "Digilogic Systems",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1337,7 +1265,7 @@
       "subscription_retail": 1.08
     },
     {
-      "id": "ipo_038",
+      "id": "ipo_036",
       "company": "Aritas Vinyl",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1373,7 +1301,7 @@
       "subscription_retail": 2.88
     },
     {
-      "id": "ipo_039",
+      "id": "ipo_037",
       "company": "Armour Security",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1409,7 +1337,7 @@
       "subscription_retail": 2.58
     },
     {
-      "id": "ipo_040",
+      "id": "ipo_038",
       "company": "GRE Renew Enertech",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1445,7 +1373,7 @@
       "subscription_retail": 14.1
     },
     {
-      "id": "ipo_041",
+      "id": "ipo_039",
       "company": "INDO SMC",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1481,7 +1409,7 @@
       "subscription_retail": 96.13
     },
     {
-      "id": "ipo_042",
+      "id": "ipo_040",
       "company": "Narmadesh Brass",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1517,7 +1445,7 @@
       "subscription_retail": 0.44
     },
     {
-      "id": "ipo_043",
+      "id": "ipo_041",
       "company": "Avana Electrosystems",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1553,7 +1481,7 @@
       "subscription_retail": 137.52
     },
     {
-      "id": "ipo_044",
+      "id": "ipo_042",
       "company": "Defrail Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1589,7 +1517,7 @@
       "subscription_retail": 101.28
     },
     {
-      "id": "ipo_045",
+      "id": "ipo_043",
       "company": "Victory Electric Vehicles",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -1625,7 +1553,7 @@
       "subscription_retail": 0.99
     },
     {
-      "id": "ipo_046",
+      "id": "ipo_044",
       "company": "Yajur Fibres",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1661,7 +1589,7 @@
       "subscription_retail": 1.51
     },
     {
-      "id": "ipo_047",
+      "id": "ipo_045",
       "company": "Gabion Technologies",
       "exchange": "BSE SME",
       "ipo_type": "SME",
@@ -1697,7 +1625,7 @@
       "subscription_retail": 867.23
     },
     {
-      "id": "ipo_048",
+      "id": "ipo_046",
       "company": "Modern Diagnostic",
       "exchange": "BSE SME",
       "ipo_type": "SME",
