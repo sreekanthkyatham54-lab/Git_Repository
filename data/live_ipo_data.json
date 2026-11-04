@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-04T07:13:14.540212",
+  "scraped_at": "2026-11-04T14:57:40.116736",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 56.68,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.25,
+      "subscription_times": 1.9,
       "gmp": 11.0,
       "gmp_percent": 11.7,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/vedant-poly-fabs-ipo/",
       "subscription_qib": 1.0,
-      "subscription_nii": 1.05,
-      "subscription_retail": 1.39
+      "subscription_nii": 1.38,
+      "subscription_retail": 2.26
     },
     {
       "id": "ipo_013",
@@ -50,7 +50,7 @@
       "issue_size_cr": 22.98,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 1.7,
+      "subscription_times": 4.82,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -71,8 +71,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/antala-industries-ipo/",
       "subscription_qib": 66.72,
-      "subscription_nii": 3.37,
-      "subscription_retail": 0.55
+      "subscription_nii": 22.17,
+      "subscription_retail": 0.8
     }
   ],
   "upcoming_ipos": [
