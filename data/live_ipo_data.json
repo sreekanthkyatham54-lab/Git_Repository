@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-04T20:22:46.707647",
+  "scraped_at": "2026-11-05T07:41:01.319657",
   "source": "live",
   "active_ipos": [
     {
@@ -14,7 +14,7 @@
       "issue_size_cr": 22.98,
       "lot_size": 0,
       "subscription_status": "Open",
-      "subscription_times": 4.82,
+      "subscription_times": 5.66,
       "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
@@ -35,8 +35,8 @@
       "drhp_highlights": "",
       "detail_url": "https://ipowatch.in/antala-industries-ipo/",
       "subscription_qib": 66.72,
-      "subscription_nii": 22.17,
-      "subscription_retail": 0.8
+      "subscription_nii": 23.68,
+      "subscription_retail": 1.54
     }
   ],
   "upcoming_ipos": [
