@@ -599,8 +599,11 @@ def run_scraper():
             ipo["subscription_retail"] = sub["retail"]
 
     # Step 5: Separate active vs upcoming
+    # Filter out year-bumped false positives: a genuinely upcoming IPO has no
+    # subscription data yet; non-zero subscription_times means it already ran.
     active   = [i for i in all_ipos if i["subscription_status"] == "Open"]
-    upcoming = [i for i in all_ipos if i["subscription_status"] == "Upcoming"]
+    upcoming = [i for i in all_ipos if i["subscription_status"] == "Upcoming"
+                and float(i.get("subscription_times") or 0) == 0.0]
 
     # Step 6: Historical
     time.sleep(DELAY)

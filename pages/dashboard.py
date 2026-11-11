@@ -190,7 +190,7 @@ def _render_ipo_card(ipo, is_active):
     else:
         sub_display = "—"
     try:
-        open_date_fmt = dt.strptime(str(ipo["open_date"]), "%Y-%m-%d").strftime("%d/%m/%y")
+        open_date_fmt = dt.strptime(str(ipo["open_date"]), "%Y-%m-%d").strftime("%d/%m/%Y")
     except:
         open_date_fmt = str(ipo["open_date"])
 

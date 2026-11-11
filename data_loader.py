@@ -9,6 +9,8 @@ _IST = timezone(timedelta(hours=5, minutes=30))
 def _today_ist():
     return datetime.now(_IST).date()
 
+MAX_UPCOMING_DAYS = 90  # only show IPOs opening within this many days
+
 def _recompute_status(active_ipos, upcoming_ipos):
     """
     Re-evaluate subscription_status using the current IST date.
@@ -16,6 +18,7 @@ def _recompute_status(active_ipos, upcoming_ipos):
     causing closed IPOs to linger as 'Open' until the next scrape.
     """
     today = _today_ist()
+    cutoff = today + timedelta(days=MAX_UPCOMING_DAYS)
     active, upcoming = [], []
     for ipo in active_ipos + upcoming_ipos:
         try:
@@ -24,10 +27,11 @@ def _recompute_status(active_ipos, upcoming_ipos):
             if od <= today <= cd:
                 ipo["subscription_status"] = "Open"
                 active.append(ipo)
-            elif today < od:
+            elif today < od <= cutoff:
                 ipo["subscription_status"] = "Upcoming"
                 upcoming.append(ipo)
-            # today > cd → IPO closed, drop it silently
+            # today > cd → IPO closed, drop silently
+            # od > cutoff → too far out, drop silently
         except Exception:
             active.append(ipo)  # keep if dates are unparseable
     return active, upcoming
