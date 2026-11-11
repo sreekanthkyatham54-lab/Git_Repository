@@ -28,10 +28,13 @@ def _recompute_status(active_ipos, upcoming_ipos):
                 ipo["subscription_status"] = "Open"
                 active.append(ipo)
             elif today < od <= cutoff:
-                ipo["subscription_status"] = "Upcoming"
-                upcoming.append(ipo)
+                # Drop if subscription data exists — IPO already ran (year-bump false positive)
+                if float(ipo.get("subscription_times") or 0) == 0.0:
+                    ipo["subscription_status"] = "Upcoming"
+                    upcoming.append(ipo)
             # today > cd → IPO closed, drop silently
             # od > cutoff → too far out, drop silently
+            # subscription_times > 0 for future date → year-bump false positive, drop silently
         except Exception:
             active.append(ipo)  # keep if dates are unparseable
     return active, upcoming
