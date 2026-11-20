@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-20T07:59:30.032351",
+  "scraped_at": "2026-11-20T15:48:17.008283",
   "source": "live",
   "active_ipos": [],
   "upcoming_ipos": [
@@ -49,7 +49,7 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 0,
+      "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "KFin Technologies Limited 4079615565 integris",
