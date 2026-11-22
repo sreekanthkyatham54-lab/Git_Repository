@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-21T19:59:49.253255",
+  "scraped_at": "2026-11-22T07:41:54.489101",
   "source": "live",
   "active_ipos": [],
   "upcoming_ipos": [
@@ -148,7 +148,7 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 14.0,
+      "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "MUFG Intime India Pvt Ltd 022-49186000 ajpackaging",
