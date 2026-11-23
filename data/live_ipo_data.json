@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-23T08:31:05.346672",
+  "scraped_at": "2026-11-23T18:48:55.812655",
   "source": "live",
   "active_ipos": [],
   "upcoming_ipos": [
@@ -82,8 +82,8 @@
       "lot_size": 87,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 0.0,
-      "gmp_percent": 0.0,
+      "gmp": 21.0,
+      "gmp_percent": 12.2,
       "lead_manager": "",
       "registrar": "Bigshare Services Pvt Ltd 8657578989 ipo@bigshareonline",
       "objects": "",
