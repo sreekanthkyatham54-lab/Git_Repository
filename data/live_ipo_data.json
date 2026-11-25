@@ -1,43 +1,10 @@
 {
-  "scraped_at": "2026-11-25T17:40:33.836421",
+  "scraped_at": "2026-11-25T22:16:19.333653",
   "source": "live",
   "active_ipos": [],
   "upcoming_ipos": [
     {
       "id": "ipo_001",
-      "company": "Foodlink F&B Holdings",
-      "exchange": "NSE Emerge",
-      "ipo_type": "SME",
-      "sector": "—",
-      "open_date": "2026-11-26",
-      "close_date": "2026-11-26",
-      "issue_price": 191.0,
-      "issue_size_cr": 78.0,
-      "lot_size": 78,
-      "subscription_status": "Upcoming",
-      "subscription_times": 0.0,
-      "gmp": 27.0,
-      "gmp_percent": 14.1,
-      "lead_manager": "",
-      "registrar": "MUFG Intime India Pvt Ltd 2249186000 foodlink",
-      "objects": "",
-      "revenue_cr": [],
-      "profit_cr": [],
-      "years": [],
-      "peers": [],
-      "pe_ratio": 0.0,
-      "industry_pe": 0.0,
-      "promoter_holding": 63.4,
-      "listing_date": "",
-      "recommendation": "NEUTRAL",
-      "risk": "Medium",
-      "summary": "Foodlink F&B Holdings IPO open date is November 26, 2026, and the IPO will close on November 30, 2026. Foodlink F&B Holdings IPO is a book-built issue. The company aims to raise around ₹360.76 crores via IPO that comprises fresh issue of ₹190 crores and an offer for sale of up to88,35,382equity shares with face value of ₹2 each.",
-      "risks_text": "",
-      "drhp_highlights": "",
-      "detail_url": "https://ipowatch.in/foodlink-fb-holdings-ipo-details/"
-    },
-    {
-      "id": "ipo_002",
       "company": "Integris Medtech",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -70,7 +37,7 @@
       "detail_url": "https://ipowatch.in/integris-medtech-ipo-details/"
     },
     {
-      "id": "ipo_003",
+      "id": "ipo_002",
       "company": "Matangi Rubber",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -103,7 +70,7 @@
       "detail_url": "https://ipowatch.in/matangi-rubber-ipo-details/"
     },
     {
-      "id": "ipo_004",
+      "id": "ipo_003",
       "company": "Monomark Engineering",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -136,7 +103,7 @@
       "detail_url": "https://ipowatch.in/monomark-engineering-ipo-details/"
     },
     {
-      "id": "ipo_005",
+      "id": "ipo_004",
       "company": "Encube Ethicals",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -148,7 +115,7 @@
       "lot_size": 0,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 24.0,
+      "gmp": 0.0,
       "gmp_percent": 0.0,
       "lead_manager": "",
       "registrar": "MUFG Intime India Pvt Ltd 2249186000 encubeethicals",
@@ -169,7 +136,7 @@
       "detail_url": "https://ipowatch.in/encube-ethicals-ipo-details/"
     },
     {
-      "id": "ipo_006",
+      "id": "ipo_005",
       "company": "Airpro Technology",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
@@ -202,7 +169,7 @@
       "detail_url": "https://ipowatch.in/airpro-technology-ipo-details/"
     },
     {
-      "id": "ipo_007",
+      "id": "ipo_006",
       "company": "A J Packaging",
       "exchange": "NSE Emerge",
       "ipo_type": "SME",
