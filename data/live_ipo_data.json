@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-27T09:22:47.768826",
+  "scraped_at": "2026-11-27T17:01:20.297601",
   "source": "live",
   "active_ipos": [],
   "upcoming_ipos": [
@@ -16,8 +16,8 @@
       "lot_size": 87,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 22.0,
-      "gmp_percent": 12.8,
+      "gmp": 31.0,
+      "gmp_percent": 18.0,
       "lead_manager": "",
       "registrar": "Bigshare Services Pvt Ltd 8657578989 ipo@bigshareonline",
       "objects": "",
@@ -82,8 +82,8 @@
       "lot_size": 135,
       "subscription_status": "Upcoming",
       "subscription_times": 0.0,
-      "gmp": 7.0,
-      "gmp_percent": 6.3,
+      "gmp": 3.0,
+      "gmp_percent": 2.7,
       "lead_manager": "",
       "registrar": "MUFG Intime India Pvt Ltd 2249186000 swarababy",
       "objects": "",
